@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Digital Lord</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0F172A] text-white font-sans">
+
+  <!-- Navigation Bar -->
+  <header class="bg-[#041021] py-4 px-6">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Left: Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="picture/image 4.png" alt="Logo" class="w-8 h-8">
+        <span class="text-xl font-semibold text-white">Digital Lord</span>
+      </div>
+
+      <!-- Center: Navigation Links -->
+     <nav class="hidden md:flex space-x-6">
+        <a href="index.html" >Home</a>
+        <a href="about.html" >About</a>
+        <div class="relative group">
+          <a href="service.html" class="text-white">Services</a>
+          <div class="absolute  mt-2 w-56 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50">
+            <a href="#"
+              class="block px-4 py-2 hover:bg-gray-200 hover:translate-y-0.5 transition-transform duration-150">Mobile
+              App Development</a>
+            <a href="#"
+              class="block px-4 py-2 hover:bg-gray-200 hover:translate-y-0.5 transition-transform duration-150">Digital
+              Marketing</a>
+            <a href="#"
+              class="block px-4 py-2 hover:bg-gray-200 hover:translate-y-0.5 transition-transform duration-150">Web
+              Development</a>
+            <a href="#"
+              class="block px-4 py-2 hover:bg-gray-200 hover:translate-y-0.5 transition-transform duration-150">Web
+              Security</a>
+          </div>
+        </div>
+        <a href="contact.html" >Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Top Section -->
+  <section class="bg-gradient-to-b from-[#E44D26] to-[#000150] py-16 text-center px-4">
+    <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
+    <p class="max-w-2xl mx-auto text-gray-200">
+      We’d love to hear from you! Whether you have a question about our services or want to discuss your next big project, we’re here to help.
+    </p>
+  </section>
+
+  <!-- Contact Form Section -->
+<!-- Contact Form Section -->
+<section class="bg-[#041021] py-16 px-4">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+
+    <!-- Left: Form -->
+    <div class="bg-black border border-[#E44D26] rounded-lg p-6">
+      <form id="contactForm" class="space-y-6">
+        
+        <!-- Full Name -->
+        <div>
+          <input type="text" id="name" placeholder="Full Name *" 
+            class="w-full px-4 py-2 rounded bg-white text-black placeholder-gray-500 focus:outline-none" />
+          <p id="nameError" class="text-red-500 text-sm mt-1 hidden">Full Name is required</p>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <input type="email" id="email" placeholder="Email *" 
+            class="w-full px-4 py-2 rounded bg-white text-black placeholder-gray-500 focus:outline-none" />
+          <p id="emailError" class="text-red-500 text-sm mt-1 hidden">Valid Email is required</p>
+        </div>
+
+        <!-- Message -->
+        <div>
+          <textarea id="message" rows="5" placeholder="Message *" 
+            class="w-full px-4 py-2 rounded bg-white text-black placeholder-gray-500 focus:outline-none"></textarea>
+          <p id="messageError" class="text-red-500 text-sm mt-1 hidden">Message is required</p>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" 
+          class="w-full bg-[#E44D26] hover:bg-[#c53c1d] text-white py-2 px-6 rounded transition">
+          SUBMIT NOW
+        </button>
+      </form>
+    </div>
+
+    <!-- Right: Contact Info -->
+    <div class="flex flex-col justify-center space-y-6 text-center md:text-left">
+      <div class="flex items-center space-x-3">
+        <!-- Location Icon -->
+        <svg class="w-6 h-6 fill-current text-[#2EA4FF]" viewBox="0 0 24 24">
+          <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 
+          0-2.5-1.12-2.5-2.5s1.12-2.5 
+          2.5-2.5 2.5 1.12 2.5 2.5-1.12 
+          2.5-2.5 2.5z"/>
+        </svg>
+        <p class="text-gray-300">123 Digital Lord Street, Dhaka, Bangladesh</p>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <!-- Phone Icon -->
+        <svg class="w-6 h-6 fill-current text-[#2EA4FF]" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 
+          1 0 011.05-.24c1.12.37 2.33.57 3.54.57a1 1 0 011 
+          1V20a1 1 0 01-1 1C10.29 21 3 13.71 3 
+          5a1 1 0 011-1h3.5a1 1 0 011 
+          1c0 1.21.2 2.42.57 3.54.14.37.05.78-.24 
+          1.05l-2.21 2.2z"/>
+        </svg>
+        <p class="text-gray-300">+880 123 456 789</p>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <!-- Email Icon -->
+        <svg class="w-6 h-6 fill-current text-[#2EA4FF]" viewBox="0 0 24 24">
+          <path d="M20 4H4c-1.1 0-2 .9-2 
+          2v12c0 1.1.9 2 2 
+          2h16c1.1 0 2-.9 
+          2-2V6c0-1.1-.9-2-2-2zm0 
+          4l-8 5-8-5V6l8 5 
+          8-5v2z"/>
+        </svg>
+        <p class="text-gray-300">info@digitallord.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Join Community Section -->
+  <section class="bg-[#0F172A] py-12 text-center">
+    <h2 class="text-2xl font-bold mb-6">Join the Digital Lord community</h2>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#" class="bg-[#E44D26] hover:bg-[#c53c1d] text-white py-2 px-6 rounded transition">Get Started</a>
+      <a href="#" class="bg-[#000150] hover:bg-[#0d0d8c] text-white py-2 px-6 rounded transition">Learn More</a>
+    </div>
+  </section>
+
+ <!-- Footer -->
+   <footer class="relative bg-[#041021] text-white py-10 mt-12">
+    <!-- Optional background image overlay -->
+    <div class="absolute inset-0 bg-[url('/assets/footer-bg.jpg')] bg-cover bg-center opacity-10"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-sm">©2025 Digital Lord. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="Facebook">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
+          </svg>
+        </a>
+        <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="Twitter">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
+          </svg>
+        </a>
+        <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="LinkedIn">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="script/contact-form-validation.js"></script>
+
+</body>
+</html>
