@@ -1,0 +1,126 @@
+<!-- MOBILE APP DEVELOPMENT PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile App Development | Digital Lord</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .inter-text {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0F1B2D] text-white flex flex-col min-h-screen inter-text">
+
+    <!-- Navigation Bar -->
+    <header class="bg-[#041021] py-4 px-6">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Left: Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="picture/image 4.png" alt="Logo" class="w-8 h-8">
+                <span class="text-xl font-semibold text-white">Digital Lord</span>
+            </div>
+
+            <!-- Center: Navigation Links -->
+            <nav class="hidden md:flex space-x-6 font-medium">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <div class="relative group">
+                    <a href="service.html">Services</a>
+                    <div
+                        class="absolute left-0 mt-2 w-56 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+                        <a href="mobileApp.html"
+                            class="block px-4 py-2 hover:bg-gray-200 hover:translate-y-0.5 transition-transform duration-150 rounded-t-md">
+                            Mobile App Development
+                        </a>
+                        <a href="digitalMarketing.html"
+                            class="block px-4 py-2 hover:bg-gray-200 hover:translate-y-0.5 transition-transform duration-150">
+                            Digital Marketing
+                        </a>
+                        <a href="webDev.html"
+                            class="block px-4 py-2 hover:bg-gray-200 hover:translate-y-0.5 transition-transform duration-150">
+                            Web Development
+                        </a>
+                        <a href="webSecurity.html"
+                            class="block px-4 py-2 hover:bg-gray-200 hover:translate-y-0.5 transition-transform duration-150">
+                            Web Security
+                        </a>
+                        <a href="seo.html"
+                            class="block px-4 py-2 hover:bg-gray-200 hover:translate-y-0.5 transition-transform duration-150 rounded-b-md">
+                            SEO
+                        </a>
+                    </div>
+
+                </div>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <section class="max-w-7xl mx-auto px-6 py-16">
+            <h1 class="text-4xl font-bold text-center mb-6 ">SEO</h1>
+            <p class="text-gray-300 text-center max-w-3xl mx-auto mb-12">
+                We craft high-performance, user-friendly mobile applications tailored to your business needs.
+                From concept to deployment, our expert team ensures a smooth, scalable, and secure app experience.
+            </p>
+
+            <!-- Info Cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-[#1e293b] p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold mb-3 text-[#E44D26]">iOS & Android Apps</h3>
+                    <p class="text-gray-300 text-sm">We develop native and cross-platform apps to maximize your reach
+                        and user engagement.</p>
+                </div>
+                <div class="bg-[#1e293b] p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold mb-3 text-[#E44D26]">UI/UX Design</h3>
+                    <p class="text-gray-300 text-sm">Our intuitive designs ensure a seamless user experience that keeps
+                        customers engaged.</p>
+                </div>
+                <div class="bg-[#1e293b] p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold mb-3 text-[#E44D26]">Maintenance & Support</h3>
+                    <p class="text-gray-300 text-sm">We provide ongoing updates, fixes, and enhancements to keep your
+                        app ahead.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#041021] text-white py-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm">©2025 Digital Lord. All rights reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="Facebook">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="Twitter">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="LinkedIn">
+                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                        <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
