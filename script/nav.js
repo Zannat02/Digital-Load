@@ -127,51 +127,118 @@
 
 
 
+// document.addEventListener('DOMContentLoaded', function () {
+//   const hamburgerBtn = document.getElementById('hamburger-btn');
+//   const mobileMenu = document.getElementById('mobile-menu');
+//   const dropdownBtn = document.getElementById('mobile-dropdown-btn');
+//   const dropdownMenu = document.getElementById('mobile-dropdown');
+
+//   // Mobile menu toggle
+//   if (hamburgerBtn && mobileMenu) {
+//     hamburgerBtn.addEventListener('click', function () {
+//       mobileMenu.classList.toggle('hidden');
+
+//       // Toggle hamburger ↔ cross icon
+//       if (!mobileMenu.classList.contains('hidden')) {
+//     //     hamburgerBtn.innerHTML = `<i class="fas fa-times"></i>`;
+//     //   } else {
+//     //     hamburgerBtn.innerHTML = `<i class="fas fa-bars"></i>`;
+//     //   }
+//     hamburgerBtn.innerHTML = `
+//                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+//                     </svg>
+//                 `;
+//           } else {
+//                hamburgerBtn.innerHTML = `
+//                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+//                    </svg>
+//                 `;
+//            }
+//     });
+//   }
+
+//   // Mobile dropdown toggle
+//   if (dropdownBtn && dropdownMenu) {
+//     dropdownBtn.addEventListener('click', function () {
+//       dropdownMenu.classList.toggle('hidden');
+//       dropdownBtn.querySelector('i').classList.toggle('rotate-180');
+//     });
+//   }
+
+//   // Reset on resize
+//   window.addEventListener('resize', function () {
+//     if (window.innerWidth >= 768 && mobileMenu) {
+//       mobileMenu.classList.add('hidden');
+//       hamburgerBtn.innerHTML = `<i class="fas fa-bars"></i>`;
+//     }
+//   });
+// });
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileMenu = document.getElementById('mobile-menu');
-  const dropdownBtn = document.getElementById('mobile-dropdown-btn');
-  const dropdownMenu = document.getElementById('mobile-dropdown');
+  const mobileServicesBtn = document.getElementById('mobile-services-btn');
+  const mobileDropdown = document.getElementById('mobile-dropdown');
+  const hamburgerIcon = hamburgerBtn ? hamburgerBtn.querySelector('i') : null;
 
-  // Mobile menu toggle
+  let servicesClickCount = 0;
+
+  // === Mobile Menu Toggle ===
   if (hamburgerBtn && mobileMenu) {
     hamburgerBtn.addEventListener('click', function () {
       mobileMenu.classList.toggle('hidden');
 
       // Toggle hamburger ↔ cross icon
-      if (!mobileMenu.classList.contains('hidden')) {
-    //     hamburgerBtn.innerHTML = `<i class="fas fa-times"></i>`;
-    //   } else {
-    //     hamburgerBtn.innerHTML = `<i class="fas fa-bars"></i>`;
-    //   }
-    hamburgerBtn.innerHTML = `
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                    </svg>
-                `;
-          } else {
-               hamburgerBtn.innerHTML = `
-                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                   </svg>
-                `;
-           }
+      if (hamburgerIcon) {
+        if (mobileMenu.classList.contains('hidden')) {
+          hamburgerIcon.classList.remove('fa-times');
+          hamburgerIcon.classList.add('fa-bars');
+        } else {
+          hamburgerIcon.classList.remove('fa-bars');
+          hamburgerIcon.classList.add('fa-times');
+        }
+      }
+
+      // Reset dropdown when menu closes
+      if (mobileMenu.classList.contains('hidden')) {
+        servicesClickCount = 0;
+        if (mobileDropdown) mobileDropdown.classList.add('hidden');
+      }
     });
   }
 
-  // Mobile dropdown toggle
-  if (dropdownBtn && dropdownMenu) {
-    dropdownBtn.addEventListener('click', function () {
-      dropdownMenu.classList.toggle('hidden');
-      dropdownBtn.querySelector('i').classList.toggle('rotate-180');
+  // === Services Dropdown (double tap logic) ===
+  if (mobileServicesBtn && mobileDropdown) {
+    mobileServicesBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      servicesClickCount++;
+
+      if (servicesClickCount === 1) {
+        // First click → open dropdown
+        mobileDropdown.classList.toggle('hidden');
+      } else if (servicesClickCount === 2) {
+        // Second click → go to service.html
+        window.location.href = "service.html";
+      }
+
+      // Reset counter after short delay
+      setTimeout(() => { servicesClickCount = 0; }, 800);
     });
   }
 
-  // Reset on resize
+  // === Reset on resize (desktop) ===
   window.addEventListener('resize', function () {
     if (window.innerWidth >= 768 && mobileMenu) {
       mobileMenu.classList.add('hidden');
-      hamburgerBtn.innerHTML = `<i class="fas fa-bars"></i>`;
+      if (hamburgerIcon) {
+        hamburgerIcon.classList.remove('fa-times');
+        hamburgerIcon.classList.add('fa-bars');
+      }
     }
   });
 });
