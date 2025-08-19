@@ -179,66 +179,126 @@
 
 
 
+// document.addEventListener('DOMContentLoaded', function () {
+//   const hamburgerBtn = document.getElementById('hamburger-btn');
+//   const mobileMenu = document.getElementById('mobile-menu');
+//   const mobileServicesBtn = document.getElementById('mobile-services-btn');
+//   const mobileDropdown = document.getElementById('mobile-dropdown');
+//   const hamburgerIcon = hamburgerBtn ? hamburgerBtn.querySelector('i') : null;
+
+//   let servicesClickCount = 0;
+
+//   // === Mobile Menu Toggle ===
+//   if (hamburgerBtn && mobileMenu) {
+//     hamburgerBtn.addEventListener('click', function () {
+//       mobileMenu.classList.toggle('hidden');
+
+//       // Toggle hamburger ↔ cross icon
+//       if (hamburgerIcon) {
+//         if (mobileMenu.classList.contains('hidden')) {
+//           hamburgerIcon.classList.remove('fa-times');
+//           hamburgerIcon.classList.add('fa-bars');
+//         } else {
+//           hamburgerIcon.classList.remove('fa-bars');
+//           hamburgerIcon.classList.add('fa-times');
+//         }
+//       }
+
+//       // Reset dropdown when menu closes
+//       if (mobileMenu.classList.contains('hidden')) {
+//         servicesClickCount = 0;
+//         if (mobileDropdown) mobileDropdown.classList.add('hidden');
+//       }
+//     });
+//   }
+
+//   // === Services Dropdown (double tap logic) ===
+//   if (mobileServicesBtn && mobileDropdown) {
+//     mobileServicesBtn.addEventListener('click', function (e) {
+//       e.preventDefault();
+//       servicesClickCount++;
+
+//       if (servicesClickCount === 1) {
+//         // First click → open dropdown
+//         mobileDropdown.classList.toggle('hidden');
+//       } else if (servicesClickCount === 2) {
+//         // Second click → go to service.html
+//         window.location.href = "service.html";
+//       }
+
+//       // Reset counter after short delay
+//       setTimeout(() => { servicesClickCount = 0; }, 800);
+//     });
+//   }
+
+//   // === Reset on resize (desktop) ===
+//   window.addEventListener('resize', function () {
+//     if (window.innerWidth >= 768 && mobileMenu) {
+//       mobileMenu.classList.add('hidden');
+//       if (hamburgerIcon) {
+//         hamburgerIcon.classList.remove('fa-times');
+//         hamburgerIcon.classList.add('fa-bars');
+//       }
+//     }
+//   });
+// });
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
   const mobileServicesBtn = document.getElementById('mobile-services-btn');
   const mobileDropdown = document.getElementById('mobile-dropdown');
-  const hamburgerIcon = hamburgerBtn ? hamburgerBtn.querySelector('i') : null;
 
-  let servicesClickCount = 0;
+  let dropdownOpen = false;
 
   // === Mobile Menu Toggle ===
   if (hamburgerBtn && mobileMenu) {
     hamburgerBtn.addEventListener('click', function () {
       mobileMenu.classList.toggle('hidden');
 
-      // Toggle hamburger ↔ cross icon
-      if (hamburgerIcon) {
-        if (mobileMenu.classList.contains('hidden')) {
-          hamburgerIcon.classList.remove('fa-times');
-          hamburgerIcon.classList.add('fa-bars');
-        } else {
-          hamburgerIcon.classList.remove('fa-bars');
-          hamburgerIcon.classList.add('fa-times');
-        }
+      // Toggle between hamburger ↔ cross
+      if (mobileMenu.classList.contains('hidden')) {
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      } else {
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
       }
 
-      // Reset dropdown when menu closes
-      if (mobileMenu.classList.contains('hidden')) {
-        servicesClickCount = 0;
-        if (mobileDropdown) mobileDropdown.classList.add('hidden');
-      }
+      // Reset dropdown state
+      dropdownOpen = false;
+      if (mobileDropdown) mobileDropdown.classList.add('hidden');
     });
   }
 
-  // === Services Dropdown (double tap logic) ===
+  // === Services Dropdown Logic ===
   if (mobileServicesBtn && mobileDropdown) {
     mobileServicesBtn.addEventListener('click', function (e) {
       e.preventDefault();
-      servicesClickCount++;
 
-      if (servicesClickCount === 1) {
-        // First click → open dropdown
-        mobileDropdown.classList.toggle('hidden');
-      } else if (servicesClickCount === 2) {
-        // Second click → go to service.html
+      if (!dropdownOpen) {
+        // ১ম tap → dropdown খুলবে
+        mobileDropdown.classList.remove('hidden');
+        dropdownOpen = true;
+      } else {
+        // ২য় tap (dropdown খোলা থাকলে) → service.html এ যাবে
         window.location.href = "service.html";
       }
-
-      // Reset counter after short delay
-      setTimeout(() => { servicesClickCount = 0; }, 800);
     });
   }
 
-  // === Reset on resize (desktop) ===
+  // === Reset on resize ===
   window.addEventListener('resize', function () {
     if (window.innerWidth >= 768 && mobileMenu) {
       mobileMenu.classList.add('hidden');
-      if (hamburgerIcon) {
-        hamburgerIcon.classList.remove('fa-times');
-        hamburgerIcon.classList.add('fa-bars');
-      }
+      hamburgerIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      dropdownOpen = false;
+      if (mobileDropdown) mobileDropdown.classList.add('hidden');
     }
   });
 });
