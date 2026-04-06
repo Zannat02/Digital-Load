@@ -1,0 +1,154 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Firefly Particles Demo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-black">
+
+
+  <div id="tsparticles" class="fixed top-0 left-0 w-full h-full -z-10"></div>
+
+ 
+  <div class="flex flex-col items-center justify-center h-screen text-white text-center">
+    <h1 class="text-5xl font-bold mb-4">✨ Firefly Animation</h1>
+    <p class="text-lg opacity-80 mb-8">
+      tsParticles Firefly Preset Example
+    </p>
+    <button class="px-6 py-2 bg-white text-black rounded-lg hover:scale-105 transition">
+      Explore Now
+    </button>
+  </div>
+
+  <button class="button button--hyperion">
+  <span>Click Me</span>
+</button>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-firefly@3/tsparticles.preset.firefly.bundle.min.js"></script>
+
+  <script>
+    (async () => {
+      await loadFireflyPreset(tsParticles);
+
+      await tsParticles.load({
+        id: "tsparticles",
+        options: {
+          preset: "firefly",
+          background: {
+            color: "transparent"
+          }
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyperion Button</title>
+  <style>
+    /* Base button style */
+    .button {
+      position: relative;
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
+      border: 2px solid #000;
+      background: transparent;
+      cursor: pointer;
+      overflow: hidden;
+      transition: color 0.3s ease;
+    }
+
+    /* Hyperion hover effect layer */
+    .button--hyperion::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000; /* layer color */
+      transform: scaleX(0);
+      transform-origin: 100% 50%; /* start from right */
+      transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+      z-index: 0;
+    }
+
+    /* Text stays on top */
+    .button--hyperion span {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover animation */
+    .button--hyperion:hover::before {
+      transform: scaleX(1); /* expand layer */
+    }
+
+    .button--hyperion:hover span {
+      color: #fff; /* text color change */
+    }
+
+    .letter {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(20px);
+  animation: fadeUp 0.4s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  </style>
+</head>
+<body>
+  <button class="button button--hyperion">
+    <span>Click Me</span>
+  </button>
+
+  <h2 id="animated-text" class="text-3xl md:text-4xl font-bold mb-4">
+  Flexible Pricing Plans
+</h2>
+
+<script>
+ const text = document.getElementById("animated-text");
+const letters = text.textContent.split("");
+
+text.textContent = "";
+
+letters.forEach((letter, index) => {
+  const span = document.createElement("span");
+  span.textContent = letter;
+  span.classList.add("letter");
+  // gap for spaces
+  if (letter === " ") span.style.width = "0.5em"; // word gap
+  else span.style.animationDelay = `${index * 0.05}s`;
+  text.appendChild(span);
+});
+</script>
+</body>
+</html>

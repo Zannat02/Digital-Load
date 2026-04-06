@@ -12,6 +12,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 
   <style>
@@ -59,6 +60,117 @@
 
     header {
       transition: all 0.3s ease;
+    }
+
+    .letter {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.4s forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+
+
+    /* Button hidden initially */
+    .learn-btn {
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    /* Desktop hover */
+    .service-card:hover .learn-btn {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Mobile active state */
+    .service-card.active .learn-btn {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Button design FIX */
+    .learn-more-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      color: black;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 14px;
+      font-weight: 500;
+      white-space: nowrap;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Arrow style */
+    .learn-more-btn .arrow {
+      width: 28px;
+      height: 28px;
+      background: #F16529;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+
+
+
+
+    .button {
+      position: relative;
+      display: inline-block;
+      padding: 12px 30px;
+      font-size: 16px;
+      background: transparent;
+      cursor: pointer;
+      overflow: hidden;
+      transition: color 0.3s ease;
+    }
+
+
+    .button--hyperion::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #cac8c8;
+      transform: scaleX(0);
+      transform-origin: 100% 50%;
+      transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+      z-index: 0;
+    }
+
+    /* Text stays on top */
+    .button--hyperion span {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+
+    /* Hover animation */
+    .button--hyperion:hover::before {
+      transform: scaleX(1);
+    }
+
+    .button--hyperion:hover span {
+      color: #ec0101;
     }
 
 
@@ -112,15 +224,23 @@
         display: block !important;
       }
     }
+
+    /* Mobile behavior */
+    @media (max-width: 1023px) {
+      .learn-btn {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
   </style>
 </head>
 
 <body class="text-gray-800  inter-text ">
 
-  <!-- Section 1: Hero + Navigation -->
+  <!-- Hero + Navigation -->
   <header class="absolute top-0 left-0 w-full z-10 bg-zinc-700/10 backdrop-blur-md shadow-sm">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <!-- Logo -->
+
       <div class="flex">
         <div class="w-16">
           <img src="picture/image 4.png" alt="Digital Load Logo">
@@ -160,10 +280,12 @@
 
       <!-- Desktop Button -->
       <div class="hidden md:block">
-        <button class="bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100 transition-colors">
+        <button onclick="goToPage('signIn.html')"
+          class="bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100 transition-colors">
           Sign In
         </button>
-        <button class="bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100 transition-colors">
+        <button onclick="goToPage('signUp.html')"
+          class="bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100 transition-colors">
           Sign Up
         </button>
       </div>
@@ -207,10 +329,12 @@
         <a href="contact.html" class="text-white py-2 hover:bg-zinc-700/50 rounded transition-colors">Contact Us</a>
 
         <!-- Mobile Button -->
-        <button class="w-full bg-white text-black py-2 rounded-full hover:bg-gray-100 transition-colors mt-2">
+        <button onclick="goToPage('signIn.html')"
+          class="w-full bg-white text-black py-2 rounded-full hover:bg-gray-100 transition-colors mt-2">
           Sign In
         </button>
-        <button class="w-full bg-white text-black py-2 rounded-full hover:bg-gray-100 transition-colors mt-2">
+        <button onclick="goToPage('signUp.html')"
+          class="w-full bg-white text-black py-2 rounded-full hover:bg-gray-100 transition-colors mt-2">
           Sign Up
         </button>
       </div>
@@ -225,19 +349,19 @@
     <div class="py-16 px-6">
       <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-center">
 
-        <!-- Text Content -->
+
         <div class="lg:w-1/2 text-white text-center ">
-          <!-- h1 -->
-          <h1 class=" sm:text-sm md:text-2xl font-semibold mb-4 uppercase">
+
+          <h1 id="animated-text" class=" sm:text-sm md:text-2xl font-semibold mb-4 uppercase">
             Welcome to Digital Lord
           </h1>
 
-          <!-- h2 -->
-          <h2 class=" sm:text-3xl text-4xl font-bold mb-4 uppercase">
+
+          <h2 class="pl-3 sm:text-3xl text-4xl font-bold mb-4 uppercase  ">
             Your Digital Gr<span class="text-color">o</span>wth Partner
           </h2>
 
-          <!-- Paragraph -->
+
           <p class="mb-6 text-gray-200 px-2 sm:px-4 lg:px-0 sm:text-sm">
             Welcome to Digital Lord - your ultimate destination for premium digital solutions.
             In an era driven by technology, we help businesses establish and expand their online
@@ -247,7 +371,7 @@
             partner.
           </p>
 
-          <!-- Buttons -->
+
           <div class="flex flex-col sm:flex-row sm:space-x-4 mb-4 justify-center  space-y-3 sm:space-y-0">
             <button class="color px-4 sm:px-5 py-2 rounded text-sm sm:text-base">
               Book Consultation
@@ -258,7 +382,7 @@
           </div>
         </div>
 
-        <!-- Rounded Icon -->
+
         <div class="absolute right-6 bottom-6 sm:right-10 sm:bottom-8 lg:right-40 lg:bottom-2">
           <div
             class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-[#D9D9D9] rounded-full flex items-center justify-center">
@@ -271,63 +395,102 @@
   </section>
 
 
+
+  <!-- service section -->
+
   <section class="py-16 bg-gradient-to-r from-[#000150] to-[#E44D26]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-4 sm:gap-3">
 
-        <!-- Card 1 -->
-        <div onclick="goToPage('mobileApp.html')" class="second-color p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 
-            transition-all text-center pt-20 mx-auto w-full max-w-xs cursor-pointer">
-          <div class="mb-4 flex justify-center">
-            <img src="picture/Mobile.png" alt="Mobile App Icon" class="w-12 h-12 object-contain">
-          </div>
-          <h3 class="text-sm font-semibold secondtext-color">Mobile App Development</h3>
+        <!-- CARD 1 -->
+        <div onclick="event.stopPropagation(); goToPage('mobileApp.html')"
+          class="service-card second-color relative p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all text-center pt-20 mx-auto w-full max-w-xs cursor-pointer" ">
+
+        <div class=" mb-4 flex justify-center">
+          <img src="picture/Mobile.png" class="w-12 h-12">
         </div>
+        <h3 class="text-sm font-semibold secondtext-color">Mobile App Development</h3>
 
-        <!-- Card 2 -->
-        <div onclick="goToPage('digitalMarketing.html')" class="primary-color p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 
-            transition-all text-center pt-20 mx-auto w-full max-w-xs cursor-pointer">
-          <div class="mb-4 flex justify-center">
-            <img src="picture/Marketing.png" alt="Marketing Icon" class="w-12 h-12 object-contain">
-          </div>
-          <h3 class="text-sm font-semibold secondtext-color">Digital Marketing</h3>
+        <!-- BUTTON -->
+        <div class="learn-btn absolute left-1/2 -translate-x-1/2 bottom-[-22px]">
+          <button class="learn-more-btn">
+            <span>Learn More</span>
+            <span class="arrow">→</span>
+          </button>
         </div>
+      </div>
 
-        <!-- Card 3 -->
-        <div onclick="goToPage('webDev.html')" class="second-color p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 
-            transition-all text-center pt-20 mx-auto w-full max-w-xs cursor-pointer">
-          <div class="mb-4 flex justify-center">
-            <img src="picture/monitor_white_border.png" alt="Web Development Icon" class="w-12 h-12 object-contain">
-          </div>
-          <h3 class="text-sm font-semibold secondtext-color">Web Development</h3>
-        </div>
+      <!-- CARD 2 -->
+      <div onclick="event.stopPropagation(); goToPage('digitalMarketing.html')"
+        class="service-card primary-color relative p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all text-center pt-20 mx-auto w-full max-w-xs cursor-pointer" ">
 
-        <!-- Card 4 -->
-        <div onclick="goToPage('webSecurity.html')" class="primary-color p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 
-            transition-all text-center pt-20 mx-auto w-full max-w-xs cursor-pointer">
-          <div class="mb-4 flex justify-center">
-            <img src="picture/Securiy.png" alt="Web Security Icon" class="w-12 h-12 object-contain">
-          </div>
-          <h3 class="text-sm font-semibold secondtext-color">Web Security</h3>
-        </div>
+        <div class=" mb-4 flex justify-center">
+        <img src="picture/Marketing.png" class="w-12 h-12">
+      </div>
+      <h3 class="text-sm font-semibold secondtext-color">Digital Marketing</h3>
 
-        <!-- Card 5 -->
-        <div onclick="goToPage('seo.html')" class="second-color p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 
-            transition-all text-center pt-20 mx-auto w-full max-w-xs cursor-pointer">
-          <div class="mb-4 flex justify-center">
-
-            <i class="fa-brands fa-searchengin text-white text-5xl"></i>
-          </div>
-          <h3 class="text-sm font-semibold secondtext-color">SEO</h3>
-        </div>
-
-
+      <div class="learn-btn absolute left-1/2 -translate-x-1/2 bottom-[-22px]">
+        <button class="learn-more-btn">
+          <span>Learn More</span>
+          <span class="arrow">→</span>
+        </button>
       </div>
     </div>
+
+    <!-- CARD 3 -->
+    <div onclick="event.stopPropagation(); goToPage('webDev.html')"
+      class="service-card second-color relative p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all text-center pt-20 mx-auto w-full max-w-xs cursor-pointer" ">
+
+        <div class=" mb-4 flex justify-center">
+      <img src="picture/monitor_white_border.png" class="w-12 h-12">
+    </div>
+    <h3 class="text-sm font-semibold secondtext-color">Web Development</h3>
+
+    <div class="learn-btn absolute left-1/2 -translate-x-1/2 bottom-[-22px]">
+      <button class="learn-more-btn">
+        <span>Learn More</span>
+        <span class="arrow">→</span>
+      </button>
+    </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div onclick="event.stopPropagation(); goToPage('webSecurity.html')"
+      class="service-card primary-color relative p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all text-center pt-20 mx-auto w-full max-w-xs cursor-pointer" ">
+
+        <div class=" mb-4 flex justify-center">
+      <img src="picture/Securiy.png" class="w-12 h-12">
+    </div>
+    <h3 class="text-sm font-semibold secondtext-color">Web Security</h3>
+
+    <div class="learn-btn absolute left-1/2 -translate-x-1/2 bottom-[-22px]">
+      <button class="learn-more-btn">
+        <span>Learn More</span>
+        <span class="arrow">→</span>
+      </button>
+    </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div onclick="event.stopPropagation(); goToPage('seo.html')"
+      class="service-card second-color relative p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all text-center pt-20 mx-auto w-full max-w-xs cursor-pointer" ">
+
+        <div class=" mb-4 flex justify-center">
+      <i class="fa-brands fa-searchengin text-white text-5xl"></i>
+    </div>
+    <h3 class="text-sm font-semibold secondtext-color">SEO</h3>
+
+    <div class="learn-btn absolute left-1/2 -translate-x-1/2 bottom-[-22px]">
+      <button class="learn-more-btn">
+        <span>Learn More</span>
+        <span class="arrow">→</span>
+      </button>
+    </div>
+    </div>
+
+    </div>
+    </div>
   </section>
-
-
-
 
 
 
@@ -633,7 +796,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             <img src="picture/Logo.png" alt="Brand Logo" class="w-16 h-auto mt-4">
           </div>
 
-         
+
 
         </div>
 
@@ -668,6 +831,150 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
     <img src="picture/corner-pic.png" alt="Top Decoration" class="absolute top-0 right-0 w-32 md:w-48 opacity-80 z-0">
     <img src="picture/corner-pic2.png" alt="Bottom Decoration"
       class="absolute bottom-0 left-0 w-32 md:w-48 opacity-80 z-0">
+  </section>
+
+
+
+
+  <!-- PRICING SECTION -->
+  <section id="pricing-section"
+    class="relative py-20 px-6 bg-gradient-to-r from-[#000150] to-[#E44D26] text-white overflow-hidden">
+
+    <div id="tsparticles" class="absolute inset-0 z-0"></div>
+
+    <div class="relative max-w-7xl mx-auto text-center z-10">
+
+      <h2 class="text-3xl md:text-4xl font-bold mb-2">
+        Flexible Pricing Plans
+      </h2>
+      <p class="text-gray-200 mb-12">
+        Choose a plan that fits your business needs. Simple, transparent pricing.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- BASIC -->
+        <div data-aos="zoom-in" class="bg-[#041021] p-8 rounded-xl shadow-lg hover:scale-105 transition relative z-10">
+
+          <!-- Icon + Title -->
+          <div class="flex items-center justify-center mb-2 gap-4">
+            <svg class="w-8 h-8 text-[#00C2FF]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7v13h20V7L12 2z" />
+            </svg>
+            <h3 class="text-2xl font-semibold">Basic</h3>
+          </div>
+
+          <!-- Description -->
+          <p class="text-gray-400 mb-4">Perfect for small projects and personal websites.</p>
+
+          <!-- Horizontal line -->
+          <hr class="border-gray-600 mb-4">
+
+          <!-- Price -->
+          <div class="flex items-baseline justify-center gap-2 mb-6">
+            <span class="text-4xl font-bold">$99</span>
+            <span class="text-sm text-slate-400">/monthly package</span>
+          </div>
+
+          <!-- Features list -->
+          <ul class="space-y-2 text-sm text-gray-300 mb-6 list-disc list-inside">
+            <li>1 Page Website</li>
+            <li>Basic Design</li>
+            <li>Mobile Responsive</li>
+            <li>Email Support</li>
+          </ul>
+
+          <!-- Button -->
+          <button onclick="scrollToTop()"
+            class="w-full py-2 rounded-full bg-white text-black  transition button button--hyperion">
+            <span>Get Started</span>
+          </button>
+
+        </div>
+
+        <!-- STANDARD -->
+        <div data-aos="zoom-in" class="bg-white text-black p-8 rounded-xl shadow-2xl scale-105 relative z-10">
+
+          <span class="absolute top-0 right-0 bg-[#E44D26] text-white text-xs px-3 py-1 rounded-bl-lg">Most
+            Popular</span>
+
+          <!-- Icon + Title -->
+          <div class="flex items-center justify-center mb-2 gap-4">
+            <svg class="w-8 h-8 text-[#E44D26]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z" />
+            </svg>
+            <h3 class="text-2xl font-semibold">Standard</h3>
+          </div>
+
+          <!-- Description -->
+          <p class="text-gray-500 mb-4">Ideal for small businesses with multiple pages.</p>
+
+          <!-- Horizontal line -->
+          <hr class="border-gray-300 mb-4">
+
+          <!-- Price -->
+          <div class="flex items-baseline justify-center gap-2 mb-6">
+            <span class="text-4xl font-bold">$199</span>
+            <span class="text-sm text-slate-400">/monthly package</span>
+          </div>
+
+          <!-- Features list -->
+          <ul class="space-y-2 text-sm mb-6 list-disc list-inside">
+            <li>5 Page Website</li>
+            <li>Modern UI Design</li>
+            <li>SEO Optimization</li>
+            <li>Priority Support</li>
+          </ul>
+
+          <!-- Button -->
+          <button onclick="scrollToTop()"
+            class="w-full py-2 rounded-full bg-[#E44D26] text-white transition button button--hyperion">
+            <span>Get Started</span>
+          </button>
+
+        </div>
+
+        <!-- PREMIUM -->
+        <div data-aos="zoom-in" class="bg-[#041021] p-8 rounded-xl shadow-lg hover:scale-105 transition relative z-10">
+
+          <!-- Icon + Title -->
+          <div class="flex items-center justify-center mb-2 gap-4">
+            <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 12h10v10h4V12h10z" />
+            </svg>
+            <h3 class="text-2xl font-semibold">Premium</h3>
+          </div>
+
+          <!-- Description -->
+          <p class="text-gray-400 mb-4">Complete package for agencies and advanced projects.</p>
+
+          <!-- Horizontal line -->
+          <hr class="border-gray-600 mb-4">
+
+          <!-- Price -->
+          <div class="flex items-baseline justify-center gap-2 mb-6">
+            <span class="text-4xl font-bold">$399</span>
+            <span class="text-sm text-slate-400">/monthly package</span>
+          </div>
+
+          <!-- Features list -->
+          <ul class="space-y-2 text-sm text-gray-300 mb-6 list-disc list-inside">
+            <li>Unlimited Pages</li>
+            <li>Custom Design</li>
+            <li>Full SEO + Marketing</li>
+            <li>24/7 Support</li>
+          </ul>
+
+          <!-- Button -->
+          <button onclick="scrollToTop()"
+            class="w-full py-2 rounded-full bg-white text-black transition button button--hyperion">
+            <span>Get Started</span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
   </section>
 
 
@@ -850,6 +1157,20 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
   <script src="script/nav.js"></script>
   <script src="script/page.js"></script>
   <script src="script/testimonial-slider.js"></script>
+  <script src="script/scroll.js"></script>
+  <script src="script/service-card.js"></script>
+  <script src="script/letter-animation.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script/aos-init.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-firefly@3/tsparticles.preset.firefly.bundle.min.js"></script>
+
+
+  <script src="script/firefly.js"></script>
+
 
 </body>
 

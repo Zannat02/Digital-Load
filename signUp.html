@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SignIn | Digital Load</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+
+     .inter-text {
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+    }
+
+    
+    .primary-color {
+      background-color: #F16529;
+    }
+
+    /* Background Pattern Add */
+    body {
+      position: relative;
+      background: linear-gradient(to bottom, #E44D26, #000150);
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("/picture/bg-transparent.jpg") repeat;
+      background-size: 600px;
+      opacity: 0.12; /* adjust (0.05 - 0.2) */
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Keep content above background */
+    body > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      transition: all 0.3s ease;
+    }
+
+    #mobile-menu {
+      transition: max-height 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    #mobile-menu:not(.hidden) {
+      max-height: 500px;
+      transition: max-height 0.5s ease-in;
+    }
+
+    #mobile-dropdown {
+      transition: all 0.3s ease;
+    }
+
+    @media (min-width: 768px) {
+      #mobile-menu {
+        display: none !important;
+      }
+
+      #hamburger-btn {
+        display: none !important;
+      }
+
+      nav.hidden.md\:flex {
+        display: flex !important;
+      }
+
+      .hidden.md\:block {
+        display: block !important;
+      }
+    }
+
+    @media (max-width: 767px) {
+      nav.space-x-6.hidden.md\:flex {
+        display: none !important;
+      }
+
+      .hidden.md\:block {
+        display: none !important;
+      }
+
+      #hamburger-btn {
+        display: block !important;
+      }
+    }
+  </style>
+
+</head>
+
+<body class="flex justify-center min-h-screen inter-text pt-6 pb-10">
+
+    <header class="absolute top-0 left-0 w-full z-10 bg-[#041021] backdrop-blur-md shadow-sm ">
+    <div class="w-11/12 mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex">
+        <div class="w-16">
+          <img src="picture/image 4.png" alt="Digital Load Logo">
+        </div>
+        <div class="text-white text-xl font-bold flex items-center">
+          DIGITAL <br> LOAD
+        </div>
+      </div>
+
+      <nav class="space-x-6 hidden md:flex items-center">
+        <a href="index.html" class="text-white hover:text-gray-300 transition-colors">Home</a>
+        <a href="about.html" class="text-white hover:text-gray-300 transition-colors">About</a>
+
+        <div class="relative group">
+          <a href="service.html" class="text-white hover:text-gray-300 transition-colors flex items-center">Services
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg></a>
+          <div
+            class="absolute left-0 mt-2 w-56 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+            <a href="mobileApp.html" class="block px-4 py-2 hover:bg-gray-200">Mobile App Development</a>
+            <a href="digitalMarketing.html" class="block px-4 py-2 hover:bg-gray-200">Digital Marketing</a>
+            <a href="webDev.html" class="block px-4 py-2 hover:bg-gray-200">Web Development</a>
+            <a href="webSecurity.html" class="block px-4 py-2 hover:bg-gray-200">Web Security</a>
+            <a href="seo.html" class="block px-4 py-2 hover:bg-gray-200">SEO</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="text-white hover:text-gray-300">Contact Us</a>
+      </nav>
+
+      <div class="hidden md:block">
+        <button onclick="goToPage('signIn.html')" class="bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100">
+          Sign In
+        </button>
+        <button onclick="goToPage('signUp.html')" class="bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100">
+          Sign Up
+        </button>
+      </div>
+
+      <button id="hamburger-btn" class="md:hidden text-white text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden bg-zinc-800/95 w-full px-6 hidden">
+      <div class="flex flex-col space-y-3 py-4">
+        <a href="index.html" class="text-white py-2 hover:bg-zinc-700/50 rounded">Home</a>
+        <a href="about.html" class="text-white py-2 hover:bg-zinc-700/50 rounded">About</a>
+
+        <div class="relative">
+          <button id="mobile-services-btn"
+            class="w-full text-left text-white py-2 hover:bg-zinc-700/50 rounded flex justify-between items-center">
+            Services <i class="fas fa-chevron-down ml-2 text-sm"></i>
+          </button>
+          <div id="mobile-dropdown" class="hidden bg-zinc-700/70 rounded-md mt-1 ml-3">
+            <a href="mobileApp.html" class="block px-4 py-2 text-white hover:bg-zinc-600/50">Mobile App Development</a>
+            <a href="digitalMarketing.html" class="block px-4 py-2 text-white hover:bg-zinc-600/50">Digital Marketing</a>
+            <a href="webDev.html" class="block px-4 py-2 text-white hover:bg-zinc-600/50">Web Development</a>
+            <a href="webSecurity.html" class="block px-4 py-2 text-white hover:bg-zinc-600/50">Web Security</a>
+            <a href="seo.html" class="block px-4 py-2 text-white hover:bg-zinc-600/50">SEO</a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="text-white py-2 hover:bg-zinc-700/50 rounded">Contact Us</a>
+
+        <button onclick="goToPage('signIn.html')" class="w-full bg-white text-black py-2 rounded-full mt-2">
+          Sign In
+        </button>
+        <button onclick="goToPage('signUp.html')" class="w-full bg-white text-black py-2 rounded-full mt-2">
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+
+   <div class="bg-zinc-700/10 border border-[#041021] p-8 rounded-xl shadow-lg w-full max-w-md mt-32">
+
+    <h2 class="text-2xl font-bold text-center mb-6">Create Account</h2>
+
+    <form id="signupForm">
+
+      
+      <div class="mb-4 text-center">
+        <label class="block mb-2 text-sm font-medium">Profile Picture</label>
+
+        <div class="flex flex-col items-center gap-3">
+          <img id="previewImg"
+               src="https://via.placeholder.com/100"
+               class="w-24 h-24 rounded-full object-cover border">
+
+          <input type="file" id="profilePic"
+                 accept="image/*"
+                 class="text-sm">
+        </div>
+      </div>
+
+      
+      <div class="mb-4">
+        <label class="block mb-1 text-sm font-medium">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      
+      <div class="mb-4">
+        <label class="block mb-1 text-sm font-medium">Email</label>
+        <input type="email" id="email" placeholder="Enter your email"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+     
+      <div class="mb-4">
+        <label class="block mb-1 text-sm font-medium">Password</label>
+        <input type="password" id="password" placeholder="Enter password"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      
+      <button
+        class="w-full primary-color text-white py-2 rounded-lg hover:bg-black transition">
+        Sign Up
+      </button>
+
+    </form>
+
+    
+    <p class="text-sm text-center mt-4">
+      Already have an account?
+      <a href="signIn.html" class="text-blue-600 font-medium underline">Sign In</a>
+    </p>
+
+  </div>
+
+<script src="script/nav.js"></script>
+<script src="script/page.js"></script>
+
+</body>
+</html>

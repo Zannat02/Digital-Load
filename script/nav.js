@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
 
       if (!dropdownOpen) {
-        // ১ম tap → dropdown খুলবে
+       
         mobileDropdown.classList.remove('hidden');
         dropdownOpen = true;
       } else {
-        // ২য় tap (dropdown খোলা থাকলে) → service.html এ যাবে
+      
         window.location.href = "service.html";
       }
     });
