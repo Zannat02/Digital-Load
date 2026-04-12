@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let dropdownOpen = false;
 
-  // === Mobile Menu Toggle ===
+  // Mobile Menu Toggle 
   if (hamburgerBtn && mobileMenu) {
     hamburgerBtn.addEventListener('click', function () {
       mobileMenu.classList.toggle('hidden');
 
-      // Toggle between hamburger ↔ cross
+      // Toggle between hamburger - cross
       if (mobileMenu.classList.contains('hidden')) {
         hamburgerIcon.classList.remove('hidden');
         closeIcon.classList.add('hidden');
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // === Services Dropdown Logic ===
+  // Services Dropdown Logic 
   if (mobileServicesBtn && mobileDropdown) {
     mobileServicesBtn.addEventListener('click', function (e) {
       e.preventDefault();
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // === Reset on resize ===
+  // Reset on resize 
   window.addEventListener('resize', function () {
     if (window.innerWidth >= 768 && mobileMenu) {
       mobileMenu.classList.add('hidden');

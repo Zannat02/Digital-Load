@@ -1,5 +1,3 @@
-
-
 const cards = document.querySelectorAll(".service-card");
 
 cards.forEach(card => {
