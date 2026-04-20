@@ -206,6 +206,64 @@
 
 
 
+
+
+
+    .logo-track {
+      width: max-content;
+      animation: sponsorSlide 25s linear infinite;
+    }
+
+    .logo-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes sponsorSlide {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .logo-item {
+      min-width: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .sponsor-logo {
+      width: 120px;
+      height: 60px;
+      object-fit: contain;
+      cursor: pointer;
+      transition: all .4s ease;
+
+      filter: brightness(0) invert(1);
+      opacity: .9;
+    }
+
+    /* CLICK ACTIVE */
+    .sponsor-logo.active {
+      filter: none;
+      opacity: 1;
+      transform: scale(1.08);
+    }
+
+    /* hover */
+    @media (hover: hover) and (pointer: fine) {
+      .sponsor-logo:hover {
+        transform: scale(1.05);
+        filter: none;
+        opacity: 1;
+      }
+    }
+
+
+
     /* Mobile menu animation */
     #mobile-menu {
       transition: max-height 0.3s ease-out;
@@ -263,6 +321,43 @@
         pointer-events: none;
       }
     }
+
+
+    /* sponsor section   responsive */
+
+    /* Tablet */
+    @media(max-width:1024px) {
+
+      .logo-item {
+        min-width: 110px;
+      }
+
+      .sponsor-logo {
+        width: 95px;
+        height: 50px;
+      }
+
+      .logo-track {
+        animation-duration: 20s;
+      }
+    }
+
+    /* Mobile */
+    @media(max-width:640px) {
+
+      .logo-item {
+        min-width: 90px;
+      }
+
+      .sponsor-logo {
+        width: 75px;
+        height: 40px;
+      }
+
+      .logo-track {
+        animation-duration: 15s;
+      }
+    }
   </style>
 </head>
 
@@ -275,11 +370,11 @@
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
       <div class="flex">
-        <div class="w-16">
+        <div class="w-16 ">
           <img src="picture/image 4.png" alt="Digital Load Logo">
         </div>
         <div class="text-white text-xl font-bold flex items-center">
-          DIGITAL <br> LOAD
+          DIGITAL <br> LORD
         </div>
       </div>
 
@@ -393,7 +488,7 @@
           </h1>
 
 
-          <h2 class="sm:text-2xl md:text-4xl font-bold mb-3 uppercase  ">
+          <h2 class="sm:text-3xl md:text-4xl font-bold mb-3 uppercase  ">
             Your Digital Gr<span class="text-color">o</span>wth Partner
           </h2>
 
@@ -419,10 +514,10 @@
         </div>
 
 
-        
+
         <div class="absolute right-6 bottom-6 sm:right-10 sm:bottom-8 lg:right-40 lg:bottom-6 z-50">
 
-         
+
           <a href="https://wa.me/+447824770279" target="_blank" id="whatsappBtn" class="absolute left-1/2 -translate-x-1/2 
             bottom-20 sm:bottom-24 lg:bottom-28
             w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16
@@ -434,7 +529,7 @@
             <i class="fa-brands fa-whatsapp text-white text-xl sm:text-2xl lg:text-3xl"></i>
           </a>
 
-         
+
           <div id="helpBtn"
             class="relative overflow-hidden  w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-[#D9D9D9] rounded-full flex items-center justify-center cursor-pointer">
 
@@ -547,6 +642,106 @@
   </section>
 
 
+
+  <!-- sponser section -->
+
+  <section class="py-20 px-4  relative overflow-hidden">
+
+
+    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style="background-image: url('picture/layered-waves-haikei.png');">
+    </div>
+
+
+
+
+    <div class="relative max-w-7xl mx-auto rounded-2xl z-10">
+
+
+      <div class="py-14 px-6">
+
+
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-3">
+            Trusted By Leading Brands
+          </h2>
+
+          <p class="text-white/70 text-sm md:text-base">
+            Our partners and sponsors who trust Digital Lord
+          </p>
+        </div>
+
+        <div class="overflow-hidden relative">
+
+
+          <div class="logo-track flex items-center gap-8 md:gap-10">
+
+            <!-- LOGOS -->
+            <div class="logo-item">
+              <img src="picture/amazon.png" class="sponsor-logo" alt="">
+            </div>
+
+            <div class="logo-item">
+              <img src="picture/client-logo-1 (1).png" class="sponsor-logo" alt="">
+            </div>
+
+            <div class="logo-item">
+              <img src="picture/client-logo-4.png" class="sponsor-logo" alt="">
+            </div>
+
+            <div class="logo-item">
+              <img src="picture/google.png" class="sponsor-logo" alt="">
+            </div>
+
+            <div class="logo-item">
+              <img src="picture/figma.png" class="sponsor-logo" alt="">
+            </div>
+
+            <div class="logo-item">
+              <img src="picture/spotify.png" class="sponsor-logo" alt="">
+            </div>
+
+            <div class="logo-item">
+              <img src="picture/telerama.png" class="sponsor-logo" alt="">
+            </div>
+
+            <!-- DUPLICATE -->
+            <div class="logo-item">
+              <img src="picture/amazon.png" class="sponsor-logo" alt="">
+            </div>
+
+            <div class="logo-item">
+              <img src="picture/client-logo-1 (1).png" class="sponsor-logo" alt="">
+            </div>
+
+            <div class="logo-item">
+              <img src="picture/client-logo-4.png" class="sponsor-logo" alt="">
+            </div>
+
+            <div class="logo-item">
+              <img src="picture/google.png" class="sponsor-logo" alt="">
+            </div>
+
+            <div class="logo-item">
+              <img src="picture/figma.png" class="sponsor-logo" alt="">
+            </div>
+
+            <div class="logo-item">
+              <img src="picture/spotify.png" class="sponsor-logo" alt="">
+            </div>
+
+            <div class="logo-item">
+              <img src="picture/telerama.png" class="sponsor-logo" alt="">
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section>
 
 
 
@@ -1278,6 +1473,8 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
   <script src="script/particles-init.js"></script>
   <script src="script/nav.js"></script>
   <script src="script/contact-button.js"></script>
+  <script src="script/sponser.js"></script>
+
 
   <script src="script/page.js"></script>
   <script src="script/testimonial-slider.js"></script>
