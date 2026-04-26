@@ -4,7 +4,7 @@ new DotLottie({
   canvas: document.getElementById("faq-canvas"),
   autoplay: true,
   loop: true,
-  src: "/lottie-file/FAQs.lottie",
+  src: "lottie-file/FAQs.lottie",
   renderConfig: {
     autoResize: true,
     devicePixelRatio: 2
