@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "particles-js",
      "particles-tech",
      "particles-contact"
-    //  "fqa-section"
+     
     
    
   ];
