@@ -419,7 +419,7 @@
 
 
   <!-- Hero + Navigation -->
-  <header class="fixed top-0 left-0 w-full z-[999] bg-zinc-700/10 backdrop-blur-md shadow-sm"">
+  <header class="fixed top-0 left-0 w-full z-[999] bg-zinc-700/10 backdrop-blur-md shadow-sm">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
       <div>
@@ -470,9 +470,15 @@
       </div>
 
       <!-- Mobile Hamburger Button -->
-      <button id="hamburger-btn" class="md:hidden text-white text-2xl focus:outline-none">
+      <!-- <button id="hamburger-btn" class="md:hidden text-white text-2xl focus:outline-none">
         <i class="fas fa-bars"></i>
-      </button>
+      </button> -->
+
+
+      <button id="hamburger-btn" class="md:hidden text-white text-2xl focus:outline-none">
+  <i id="hamburger-icon" class="fas fa-bars"></i>
+  <i id="close-icon" class="fas fa-times hidden"></i>
+</button>
     </div>
 
     <!-- Mobile Menu -->
