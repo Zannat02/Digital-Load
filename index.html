@@ -20,7 +20,7 @@
     .bg-hero {
       background-image: url('./picture/BG\ Image.png');
       background-size: cover;
-      height: 100vh;
+      min-height: 100vh;
       width: 100%;
       background-position: center center;
     }
@@ -328,7 +328,7 @@
     }
 
     /* Responsive adjustments */
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       #mobile-menu {
         display: none !important;
       }
@@ -430,7 +430,8 @@
       </div>
 
       <!-- Desktop Navigation -->
-      <nav class="space-x-6 hidden md:flex items-center">
+
+      <nav class="space-x-6 hidden lg:flex items-center">
         <a href="index.html" class="text-white hover:text-gray-300 transition-colors">Home</a>
         <a href="about.html" class="text-white hover:text-gray-300 transition-colors">About</a>
 
@@ -458,7 +459,8 @@
       </nav>
 
       <!-- Desktop Button -->
-      <div class="hidden md:block">
+
+      <div class="hidden lg:block">
         <button onclick="goToPage('signIn.html')"
           class="bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100 transition-colors">
           Sign In
@@ -470,19 +472,20 @@
       </div>
 
       <!-- Mobile Hamburger Button -->
-      <!-- <button id="hamburger-btn" class="md:hidden text-white text-2xl focus:outline-none">
-        <i class="fas fa-bars"></i>
-      </button> -->
 
 
-      <button id="hamburger-btn" class="md:hidden text-white text-2xl focus:outline-none">
-  <i id="hamburger-icon" class="fas fa-bars"></i>
-  <i id="close-icon" class="fas fa-times hidden"></i>
-</button>
+
+
+
+      <button id="hamburger-btn" class="lg:hidden text-white text-2xl focus:outline-none">
+        <i id="hamburger-icon" class="fas fa-bars"></i>
+        <i id="close-icon" class="fas fa-times hidden"></i>
+      </button>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden bg-zinc-800/95 w-full px-6 hidden">
+    <!-- <div id="mobile-menu" class="md:hidden bg-zinc-800/95 w-full px-6 hidden"> -->
+    <div id="mobile-menu" class="lg:hidden bg-zinc-800/95 w-full px-6 hidden">
       <div class="flex flex-col space-y-3 py-4">
         <a href="index.html" class="text-white py-2 hover:bg-zinc-700/50 rounded transition-colors">Home</a>
         <a href="about.html" class="text-white py-2 hover:bg-zinc-700/50 rounded transition-colors">About</a>
@@ -533,7 +536,8 @@
   <section class="bg-hero bg-cover bg-center text-white pt-40 pb-16 px-6 relative">
     <div id="particles-js" class="absolute inset-0 z-0"></div>
     <div class="py-16 px-6">
-      <div class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-center">
+      <div
+        class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-center md:min-h-[70vh] md:flex md:items-center md:justify-center">
 
 
         <div class="lg:w-1/2 text-white text-center ">
@@ -700,7 +704,7 @@
 
 
 
-  <!-- sponser section -->
+  <!-- sponsor section -->
 
   <section class="py-20 px-4  relative overflow-hidden">
 
@@ -804,37 +808,48 @@
 
 
 
-  <section class="py-20 px-6 bg-cover bg-center bg-no-repeat bg-[url('picture/Clip-path-group.png')]">
+  <section class="py-20 px-4 sm:px-6 bg-cover bg-center bg-no-repeat bg-[url('picture/Clip-path-group.png')]">
 
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-      <div class="secondtext-color">
-        <h2 class="text-3xl sm:2xl font-semibold mb-4 text-white">Your Growth. Our Mission</h2>
-        <p class="mb-4 text-2xl sm:xl  text-white">
+
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+
+
+      <div class="secondtext-color max-w-xl mx-auto text-center lg:text-left">
+
+        <h2 class="text-2xl sm:text-3xl md:text-3xl font-semibold mb-4 text-white leading-snug">
+          Your Growth. Our Mission
+        </h2>
+
+        <p class="mb-4 text-base sm:text-lg md:text-lg text-white leading-relaxed">
           We specialize in crafting websites that are not only visually appealing but also functionally robust. Whether
-          you're a startup aiming to build your brand or a well-established company <span
-            class="border-b-2 border-blue-500 pb-1">looking to enhance your digital footprint, our team ensures you
-            stand out.</span>
+          you're a startup aiming to build your brand or a well-established company
+          <span class="border-b-2 border-blue-500 pb-1">
+            looking to enhance your digital footprint, our team ensures you stand out.
+          </span>
         </p>
-        <p class="mb-4 text-white">
+
+        <p class="mb-4 text-white text-sm sm:text-base md:text-base leading-relaxed">
           Explore our wide array of services including website design, mobile application development, SEO, and data
           analysis. Our digital marketing strategies are built to deliver results, drive traffic, and maximize ROI.
         </p>
-        <p class="text-white">
+
+        <p class="text-white text-sm sm:text-base md:text-base leading-relaxed">
           From web applications to mobile apps, from digital marketing to SEO and web security – we bring together
           multi-talented minds under one roof. With the perfect blend of innovation and strategy, we build digital
           products that truly make a difference.
         </p>
       </div>
-      <div class="ml-0 md:ml-16 flex justify-center ">
+
+
+      <div class="flex justify-center">
         <a href="https://www.youtube.com/watch?v=K3F580_nxqY" target="_blank" rel="noopener noreferrer">
-          <img src="picture/picture1.png" alt="Watch our video" class="mt-16 md:mt-24 w-full max-w-md mx-auto " />
+          <img src="picture/picture1.png" alt="Watch our video"
+            class="mt-10 md:mt-12 lg:mt-24 w-full max-w-md mx-auto" />
         </a>
       </div>
+
     </div>
   </section>
-
-
-
 
   <!-- OUR TECHNOLOGY SECTION  -->
 
@@ -842,9 +857,9 @@
 
     <div id="particles-tech" class="absolute inset-0 z-0 pointer-events-none"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-      <!-- LEFT TEXT -->
+
       <div>
         <h2 class="font-semibold mb-4 text-4xl md:text-5xl">Our Technology</h2>
 
@@ -868,42 +883,42 @@
         </p>
       </div>
 
-      <!-- RIGHT SIDE -->
+
       <div class="flex flex-col items-center">
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 w-full">
 
-          <!-- CARD 1 -->
+
           <div data-aos="fade-right"
             class="animate__animated animate__slideInLeft bg-[#000000] shadow-md hover:shadow-lg transition flex items-center justify-center h-[160px] w-full">
             <img src="picture/html logo.png" alt="Web App Icon" class="w-12 h-12 object-contain" />
           </div>
 
-          <!-- CARD 2 -->
+
           <div data-aos="fade-left"
             class="animate__animated animate__slideInRight bg-[#000000] shadow-md hover:shadow-lg transition flex items-center justify-center h-[160px] w-full">
             <img src="picture/css10 logo.png" alt="Mobile App Icon" class="w-12 h-12 object-contain" />
           </div>
 
-          <!-- CARD 3 -->
+
           <div data-aos="fade-right"
             class="animate__animated animate__slideInLeft bg-[#000000] shadow-md hover:shadow-lg transition flex items-center justify-center h-[160px] w-full">
             <img src="picture/python logo.png" alt="SEO Icon" class="w-12 h-12 object-contain" />
           </div>
 
-          <!-- CARD 4 -->
+
           <div data-aos="fade-left"
             class="animate__animated animate__slideInRight bg-[#000000] shadow-md hover:shadow-lg transition flex items-center justify-center h-[160px] w-full">
             <img src="picture/android logo.png" alt="Marketing Icon" class="w-12 h-12 object-contain" />
           </div>
 
-          <!-- CARD 5 -->
+
           <div data-aos="fade-right"
             class="animate__animated animate__slideInLeft bg-[#000000] shadow-md hover:shadow-lg transition flex items-center justify-center h-[160px] w-full">
             <img src="picture/applecard.apple logo.png" alt="UI/UX Icon" class="w-12 h-12 object-contain" />
           </div>
 
-          <!-- CARD 6 -->
+
           <div data-aos="fade-left"
             class="animate__animated animate__slideInRight bg-[#000000] shadow-md hover:shadow-lg transition flex items-center justify-center h-[160px] w-full">
             <img src="picture/php2 logo.png" alt="Analytics Icon" class="w-12 h-12 object-contain" />
@@ -911,7 +926,7 @@
 
         </div>
 
-        <!-- BOTTOM SHAPE -->
+
         <div class="flex items-center space-x-2 mt-8">
           <div class="w-10 h-3 rounded-full bg-orange-500"></div>
           <div class="w-3 h-3 rounded-full bg-white"></div>
@@ -921,6 +936,7 @@
 
     </div>
   </section>
+
 
 
 
@@ -1174,12 +1190,12 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
         Choose a plan that fits your business needs. Simple, transparent pricing.
       </p>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid lg:grid-cols-3 gap-8 ">
 
         <!-- BASIC -->
         <div data-aos="zoom-in" class="bg-[#041021] p-8 rounded-xl shadow-lg hover:scale-105 transition relative z-10">
 
-          <!-- Icon + Title -->
+         
           <div class="flex items-center justify-center mb-2 gap-4">
             <svg class="w-8 h-8 text-[#00C2FF]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2L2 7v13h20V7L12 2z" />
@@ -1187,19 +1203,19 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             <h3 class="text-2xl font-semibold">Basic</h3>
           </div>
 
-          <!-- Description -->
+          
           <p class="text-gray-400 mb-4">Perfect for small projects and personal websites.</p>
 
-          <!-- Horizontal line -->
+         
           <hr class="border-gray-600 mb-4">
 
-          <!-- Price -->
+          
           <div class="flex items-baseline justify-center gap-2 mb-6">
             <span class="text-4xl font-bold">$99</span>
             <span class="text-sm text-slate-400">/monthly package</span>
           </div>
 
-          <!-- Features list -->
+          
           <ul class="space-y-2 text-sm text-gray-300 mb-6 list-disc list-inside">
             <li>1 Page Website</li>
             <li>Basic Design</li>
@@ -1207,7 +1223,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             <li>Email Support</li>
           </ul>
 
-          <!-- Button -->
+          
           <button onclick="scrollToTop()"
             class="w-full py-2 rounded-full bg-white text-black  transition button button--hyperion">
             <span>Get Started</span>
@@ -1221,7 +1237,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
           <span class="absolute top-0 right-0 bg-[#E44D26] text-white text-xs px-3 py-1 rounded-bl-lg">Most
             Popular</span>
 
-          <!-- Icon + Title -->
+         
           <div class="flex items-center justify-center mb-2 gap-4">
             <svg class="w-8 h-8 text-[#E44D26]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z" />
@@ -1229,19 +1245,19 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             <h3 class="text-2xl font-semibold">Standard</h3>
           </div>
 
-          <!-- Description -->
+         
           <p class="text-gray-500 mb-4">Ideal for small businesses with multiple pages.</p>
 
-          <!-- Horizontal line -->
+          
           <hr class="border-gray-300 mb-4">
 
-          <!-- Price -->
+          
           <div class="flex items-baseline justify-center gap-2 mb-6">
             <span class="text-4xl font-bold">$199</span>
             <span class="text-sm text-slate-400">/monthly package</span>
           </div>
 
-          <!-- Features list -->
+          
           <ul class="space-y-2 text-sm mb-6 list-disc list-inside">
             <li>5 Page Website</li>
             <li>Modern UI Design</li>
@@ -1249,7 +1265,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             <li>Priority Support</li>
           </ul>
 
-          <!-- Button -->
+          
           <button onclick="scrollToTop()"
             class="w-full py-2 rounded-full bg-[#E44D26] text-white transition button button--hyperion">
             <span>Get Started</span>
@@ -1260,7 +1276,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
         <!-- PREMIUM -->
         <div data-aos="zoom-in" class="bg-[#041021] p-8 rounded-xl shadow-lg hover:scale-105 transition relative z-10">
 
-          <!-- Icon + Title -->
+          
           <div class="flex items-center justify-center mb-2 gap-4">
             <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2L2 12h10v10h4V12h10z" />
@@ -1268,19 +1284,19 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             <h3 class="text-2xl font-semibold">Premium</h3>
           </div>
 
-          <!-- Description -->
+          
           <p class="text-gray-400 mb-4">Complete package for agencies and advanced projects.</p>
 
-          <!-- Horizontal line -->
+          
           <hr class="border-gray-600 mb-4">
 
-          <!-- Price -->
+         
           <div class="flex items-baseline justify-center gap-2 mb-6">
             <span class="text-4xl font-bold">$399</span>
             <span class="text-sm text-slate-400">/monthly package</span>
           </div>
 
-          <!-- Features list -->
+         
           <ul class="space-y-2 text-sm text-gray-300 mb-6 list-disc list-inside">
             <li>Unlimited Pages</li>
             <li>Custom Design</li>
@@ -1288,7 +1304,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             <li>24/7 Support</li>
           </ul>
 
-          <!-- Button -->
+        
           <button onclick="scrollToTop()"
             class="w-full py-2 rounded-full bg-white text-black transition button button--hyperion">
             <span>Get Started</span>
@@ -1332,10 +1348,10 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
 
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
-      <!-- Left FAQ -->
+     
       <div class="space-y-5">
 
-        <!-- Item -->
+       
         <div
           class="faq-item bg-[#1D64B8] rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300">
 
@@ -1364,7 +1380,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
 
         </div>
 
-        <!-- Item -->
+       
         <div
           class="faq-item bg-[#1D64B8] rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300">
 
@@ -1392,7 +1408,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
 
         </div>
 
-        <!-- Item -->
+        
         <div
           class="faq-item bg-[#1D64B8] rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300">
 
@@ -1420,7 +1436,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
 
         </div>
 
-        <!-- Item -->
+        
         <div
           class="faq-item bg-[#1D64B8] rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300">
 
@@ -1450,7 +1466,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
 
       </div>
 
-      <!-- Right Image -->
+     
       <div class="flex flex-col justify-center lg:justify-end items-center">
 
         <canvas id="faq-canvas" class="w-full  sm:max-w-2xl md:max-w-3xl lg:max-w-5xl  mb-4"></canvas>
@@ -1469,16 +1485,16 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
       <div
         class="relative rounded-3xl overflow-hidden px-6 md:px-10 py-16 min-h-[420px] md:min-h-[520px] lg:min-h-[620px]">
 
-        <!-- WORLD MAP  -->
+        
         <div class="absolute inset-0 opacity-20">
           <img src="picture/World Map (1).png" alt="World Map"
-            class="w-full h-full object-contain md:object-cover object-center select-none pointer-events-none">
+            class="w-full h-full object-cover object-center scale-110 md:scale-100">
         </div>
 
-        
+
         <div class="relative z-10 text-center max-w-3xl mx-auto pt-6">
 
-          <h2 class="text-xl md:text-5xl font-bold text-white leading-tight mb-5">
+          <h2 class="lg:text-4xl md:text-3xl sm:text-xl font-bold text-white leading-tight mb-5">
             Connecting Businesses Worldwide
           </h2>
 
@@ -1489,17 +1505,17 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
 
         </div>
 
-       
 
-        <!-- Client 1 -->
-        <div class="floating-client absolute top-[12%] left-[4%] md:left-[8%]
+
+       
+        <div class="floating-client  absolute top-[14%] left-[4%] md:left-[8%]
       w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20
       rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
 
           <img src="picture/avatar1.jpg" class="w-full h-full object-cover">
         </div>
 
-        <!-- Client 2 -->
+       
         <div class="floating-client delay-1 absolute top-[14%] right-[5%] md:right-[10%]
       w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20
       rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
@@ -1507,7 +1523,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
           <img src="picture/avatar2.jpg" class="w-full h-full object-cover">
         </div>
 
-        <!-- Client 3 -->
+       
         <div class="floating-client delay-2 absolute bottom-[18%] left-[8%] md:left-[15%]
       w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20
       rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
@@ -1515,7 +1531,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
           <img src="picture/avatar3.jpg" class="w-full h-full object-cover">
         </div>
 
-        <!-- Client 4 -->
+       
         <div class="floating-client delay-3 absolute bottom-[15%] right-[8%] md:right-[15%]
       w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20
       rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
@@ -1523,7 +1539,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
           <img src="picture/avatar4.jpg" class="w-full h-full object-cover">
         </div>
 
-        <!-- Client 5 -->
+        
         <div class="floating-client delay-4 absolute top-1/2 left-[2%] md:left-[10%] -translate-y-1/2
       w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20
       rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
@@ -1531,7 +1547,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
           <img src="picture/avatar5.jpg" class="w-full h-full object-cover">
         </div>
 
-        <!-- Client 6 -->
+      
         <div class="floating-client delay-5 absolute top-1/2 right-[2%] md:right-[10%] -translate-y-1/2
       w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20
       rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
@@ -1611,7 +1627,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
     <div class="relative z-10 max-w-5xl mx-auto bg-black border-4 border-[#E44D26] rounded-xl p-6 md:p-10">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-        <!-- LEFT COLUMN (Heading, Text, Button) -->
+        <!-- LEFT COLUMN  -->
         <div>
           <h2 class="text-white text-4xl font-semibold mb-4 leading-snug">
             Tell us what you <span class="text-color">need </span> <br>
@@ -1783,9 +1799,9 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
 
   <!-- bottom to top button -->
   <button id="scrollTopBtn"
-  class="fixed bottom-6 right-6 w-12 h-12 bg-white text-black rounded-full shadow-lg flex items-center justify-center opacity-0 scale-0 transition-all duration-300 z-[9999]">
-  <i class="fas fa-arrow-up"></i>
-</button>
+    class="fixed bottom-6 right-6 w-12 h-12 bg-white text-black rounded-full shadow-lg flex items-center justify-center opacity-0 scale-0 transition-all duration-300 z-[9999]">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
 
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
@@ -1813,7 +1829,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
   <script src="script/firefly.js"></script>
   <script src="script/fqa-section.js"></script>
   <script type="module" src="script/fqa-animation.js"></script>
-  <script  src="script/button.js"></script>
+  <script src="script/button.js"></script>
 
 
 
