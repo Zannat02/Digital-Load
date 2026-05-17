@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="picture/DL.png">
 
     <style>
         .inter-text {
@@ -67,7 +68,7 @@
 <body class="bg-[#0F1B2D] text-white flex flex-col min-h-screen inter-text">
 
     <!-- Navigation Bar -->
-    <header class="bg-[#041021] py-4 px-6">
+   <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] py-4 px-6">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <!-- Logo -->
               <div>
@@ -76,7 +77,7 @@
       </div>
 
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 items-center">
+            <nav class="hidden lg:flex space-x-6 items-center">
                 <a href="index.html" class="text-white hover:text-gray-300">Home</a>
                 <a href="about.html" class="text-white hover:text-gray-300">About</a>
 
@@ -103,16 +104,14 @@
             </nav>
 
             <!-- Mobile Menu Button -->
-            <button id="hamburger-btn" class="md:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
+            <button id="hamburger-btn" class="lg:hidden text-white focus:outline-none">
+                <i id="hamburger-icon" class="fas fa-bars"></i>
+                <i id="close-icon" class="fas fa-times hidden"></i>
             </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden bg-[#041021] px-6 py-2 hidden">
+        <div id="mobile-menu" class="lg:hidden bg-[#041021] px-6 py-2 hidden">
             <div class="flex flex-col space-y-3">
                 <a href="index.html" class="text-white py-2 hover:bg-slate-800 rounded">Home</a>
                 <a href="about.html" class="text-white py-2 hover:bg-slate-800 rounded">About</a>
@@ -149,7 +148,7 @@
 
     <!-- Main Content -->
     <main class="flex-grow">
-        <section class="max-w-7xl mx-auto px-6 py-16">
+        <section class="max-w-6xl mx-auto px-6 pt-32 pb-16">
             <h1 class="text-4xl font-bold text-center mb-6">SEO</h1>
             <p class="text-gray-300 text-center max-w-3xl mx-auto mb-12">
                 Boost your online visibility with our expert SEO services. From keyword research

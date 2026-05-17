@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="picture/DL.png">
     <style>
         .inter-text {
             font-family: "Inter", sans-serif;
@@ -64,19 +65,19 @@
     </style>
 </head>
 
-<body class="bg-[#0F1B2D] text-white flex flex-col min-h-screen inter-text">
+<body class="text-white flex flex-col min-h-screen inter-text">
 
     <!-- Navigation Bar -->
-    <header class="bg-[#041021] py-4 px-6">
+    <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] py-4 px-6">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <!-- Logo -->
-              <div>
-        <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
-      
-      </div>
+            <div>
+                <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
+
+            </div>
 
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-6 items-center">
+            <nav class="hidden lg:flex space-x-6 items-center">
                 <a href="index.html" class="text-white hover:text-gray-300">Home</a>
                 <a href="about.html" class="text-white hover:text-gray-300">About</a>
 
@@ -103,16 +104,14 @@
             </nav>
 
             <!-- Mobile Menu Button -->
-            <button id="hamburger-btn" class="md:hidden text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
+            <button id="hamburger-btn" class="lg:hidden text-white focus:outline-none">
+                <i id="hamburger-icon" class="fas fa-bars"></i>
+                <i id="close-icon" class="fas fa-times hidden"></i>
             </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden bg-[#041021] px-6 py-2 hidden">
+        <div id="mobile-menu" class="lg:hidden bg-[#041021] px-6 py-2 hidden">
             <div class="flex flex-col space-y-3">
                 <a href="index.html" class="text-white py-2 hover:bg-slate-800 rounded">Home</a>
                 <a href="about.html" class="text-white py-2 hover:bg-slate-800 rounded">About</a>
@@ -149,42 +148,489 @@
 
     <!-- Main Content -->
     <main class="flex-grow">
-        <section class="max-w-7xl mx-auto px-6 py-16">
-            <h1 class="text-4xl font-bold text-center mb-6">Web Development</h1>
-            <p class="text-gray-300 text-center max-w-3xl mx-auto mb-12">
-                Our expert web development team specializes in building fast, secure, and
-                scalable websites tailored to your business goals. From corporate websites
-                to dynamic web applications, we ensure seamless performance and
-                user-friendly experiences that drive results.
-            </p>
 
-            <!-- Info Cards -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-[#1e293b] p-6 rounded-lg shadow hover:shadow-lg transition">
-                    <h3 class="text-xl font-semibold mb-3 text-[#E44D26]">Custom Websites</h3>
-                    <p class="text-gray-300 text-sm">
-                        We create responsive, tailor-made websites designed to reflect your brand
-                        and meet your unique business needs.
-                    </p>
+        <section class="relative bg-white  bg-[url('picture/world-map.png')] bg-cover bg-center bg-no-repeat">
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/70"></div>
+
+            <!-- Content -->
+            <div class="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-16">
+
+                <h1 class="text-3xl md:text-4xl font-bold text-center mb-6">
+                    Web Development
+                </h1>
+
+                <p class="text-gray-300 text-center max-w-3xl mx-auto">
+                    Our expert web development team specializes in building fast,
+                    secure, and scalable websites tailored to your business goals.
+                    From corporate websites to dynamic web applications, we ensure
+                    seamless performance and user-friendly experiences that drive
+                    results.
+                </p>
+
+                <!-- Breadcrumb -->
+                <div class="flex justify-center items-center gap-3 mt-8 text-sm">
+
+                    <a href="index.html"
+                        class="flex items-center gap-2 text-gray-300 hover:text-[#2EA4FF] transition duration-300">
+
+                        <i class="fas fa-house text-xs"></i>
+                        Home
+
+                    </a>
+
+                    <i class="fas fa-chevron-right text-xs text-gray-400"></i>
+
+                    <span class="text-[#E44D26]">
+                        Web Development
+                    </span>
+
                 </div>
-                <div class="bg-[#1e293b] p-6 rounded-lg shadow hover:shadow-lg transition">
-                    <h3 class="text-xl font-semibold mb-3 text-[#E44D26]">E-commerce Solutions</h3>
-                    <p class="text-gray-300 text-sm">
-                        From online stores to secure payment integration, we deliver e-commerce
-                        platforms that boost sales and customer engagement.
-                    </p>
-                </div>
-                <div class="bg-[#1e293b] p-6 rounded-lg shadow hover:shadow-lg transition">
-                    <h3 class="text-xl font-semibold mb-3 text-[#E44D26]">Web App Development</h3>
-                    <p class="text-gray-300 text-sm">
-                        Our team builds powerful and scalable web applications with modern
-                        technologies to help your business grow efficiently.
-                    </p>
-                </div>
+
             </div>
-        </section>
-    </main>
 
+        </section>
+
+
+        <section class="bg-gradient-to-br from-[#041021] via-[#0B1D35] to-[#102845] py-16 md:py-24 px-6">
+
+            <div class="max-w-7xl mx-auto">
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+
+                    <!-- Left Content -->
+                    <div>
+
+                        <p class="text-[#2EA4FF] font-semibold text-sm md:text-base mb-3 whitespace-nowrap">
+                            WE CREATE MODERN WEB EXPERIENCES
+                        </p>
+
+                        <h2 class="text-2xl md:text-4xl font-bold mb-8 whitespace-nowrap">
+                            What is
+                            <span class="text-[#E44D26]">Web Development?</span>
+                        </h2>
+
+
+                        <!-- Tabs -->
+                        <div>
+
+                            <!-- Buttons -->
+                            <div class="flex gap-3 mb-8 w-full">
+
+                                <button
+                                    class="web-tab-btn active-tab flex-1 px-3 sm:px-4 md:px-6 py-3 rounded-full bg-[#2EA4FF] font-medium whitespace-nowrap text-center text-sm md:text-base"
+                                    data-tab="tab1">
+
+                                    UI / UX Design
+
+                                </button>
+
+
+                                <button
+                                    class="web-tab-btn flex-1 px-3 sm:px-4 md:px-6 py-3 rounded-full bg-[#13263F] font-medium whitespace-nowrap text-center text-sm md:text-base"
+                                    data-tab="tab2">
+
+                                    Frontend Development
+
+                                </button>
+
+                            </div>
+
+
+
+                            <!-- Tab 1 -->
+                            <div id="tab1" class="web-tab-content">
+
+                                <p class="text-gray-300 leading-8 mb-6">
+                                    We design clean, modern, and user-friendly interfaces
+                                    that help businesses build strong digital presence
+                                    and improve user engagement.
+                                </p>
+
+
+                                <ul class="space-y-4 text-gray-300">
+
+                                    <li class="flex gap-3">
+                                        <i class="fas fa-check text-[#2EA4FF] mt-1"></i>
+                                        Modern and attractive UI design.
+                                    </li>
+
+                                    <li class="flex gap-3">
+                                        <i class="fas fa-check text-[#2EA4FF] mt-1"></i>
+                                        User-friendly layouts for better experience.
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+
+
+                            <!-- Tab 2 -->
+                            <div id="tab2" class="web-tab-content hidden">
+
+                                <p class="text-gray-300 leading-8 mb-6">
+                                    We build fast, responsive, and interactive websites
+                                    using modern frontend technologies to ensure smooth
+                                    performance across all devices.
+                                </p>
+
+
+                                <ul class="space-y-4 text-gray-300">
+
+                                    <li class="flex gap-3">
+                                        <i class="fas fa-check text-[#E44D26] mt-1"></i>
+                                        Fully responsive across all devices.
+                                    </li>
+
+                                    <li class="flex gap-3">
+                                        <i class="fas fa-check text-[#E44D26] mt-1"></i>
+                                        Optimized and high-performance UI.
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <!-- Right Image -->
+                    <div class="flex justify-center">
+
+                        <img src="picture/Code typing-rafiki.png" alt="Web Development" class="w-full max-w-md">
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Why Choose Us Section -->
+        <section class="relative py-16 md:py-24 px-6 bg-[#0A1628] overflow-hidden">
+
+            <!-- Top Right Corner Decoration -->
+            <img src="picture/corner-pic.png" alt=""
+                class="absolute top-0 right-0  w-32 sm:w-40 md:w-52 lg:w-64 opacity-90">
+
+            <!-- Bottom Left Corner Decoration -->
+            <img src="picture/corner-pic2.png" alt=""
+                class="absolute bottom-0 left-0  w-32 sm:w-40 md:w-52 lg:w-64 opacity-90">
+
+            <div class="max-w-7xl mx-auto relative z-10">
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+
+                    <!-- Left Image -->
+                    <div class="flex justify-center order-1">
+
+                        <img src="picture/App development-amico.png" alt="Why Choose Us" class="w-full max-w-md">
+
+                    </div>
+
+
+
+                    <!-- Right Content -->
+                    <div class="order-2">
+
+                        <p class="text-[#2EA4FF] text-sm md:text-base    font-semibold mb-3 uppercase">
+                            Why Choose Digital Lord
+                        </p>
+
+
+                        <h2 class="text-2xl md:text-4xl font-bold mb-6">
+                            Building Digital Experiences
+                            <span class="text-[#E44D26]">That Perform</span>
+                        </h2>
+
+
+                        <p class="text-gray-300 leading-8 mb-8">
+                            At Digital Lord, we combine creativity,
+                            modern technologies, and strategic design
+                            to deliver digital solutions that help
+                            businesses grow faster and stand out online.
+                        </p>
+
+
+
+                        <!-- Progress 1 -->
+                        <div class="mb-6">
+
+                            <div class="flex justify-between mb-2 text-sm">
+
+                                <span>UI / UX Design</span>
+                                <span class="text-[#2EA4FF]">95%</span>
+
+                            </div>
+
+                            <div class="h-3 bg-[#13263F] rounded-full">
+
+                                <div class="h-full w-[95%] bg-[#2EA4FF] rounded-full"></div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Progress 2 -->
+                        <div class="mb-6">
+
+                            <div class="flex justify-between mb-2 text-sm">
+
+                                <span>Frontend Development</span>
+                                <span class="text-[#E44D26]">92%</span>
+
+                            </div>
+
+                            <div class="h-3 bg-[#13263F] rounded-full">
+
+                                <div class="h-full w-[92%] bg-[#E44D26] rounded-full"></div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Progress 3 -->
+                        <div class="mb-6">
+
+                            <div class="flex justify-between mb-2 text-sm">
+
+                                <span>Responsive Optimization</span>
+                                <span class="text-[#2EA4FF]">98%</span>
+
+                            </div>
+
+                            <div class="h-3 bg-[#13263F] rounded-full">
+
+                                <div class="h-full w-[98%] bg-[#2EA4FF] rounded-full"></div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Tech Stack Section -->
+       <section class="py-16 md:py-24 px-6 bg-gradient-to-br from-[#041021] via-[#0B1D35] to-[#041021]">
+
+            <div class="max-w-7xl mx-auto text-center">
+
+                <p class="text-[#2EA4FF] text-sm md:text-base       font-semibold mb-2">
+                    TECHNOLOGIES WE USE
+                </p>
+
+                <h2 class="text-2xl md:text-4xl font-bold mb-4">
+                    Built With Modern
+                    Technologies
+                </h2>
+
+                <p class="text-gray-400 max-w-2xl mx-auto mb-12">
+                    We use powerful and modern tools to build fast, scalable, and secure web applications.
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+
+                    <!-- CARD -->
+                    <div
+                        class="relative group p-[1px] rounded-xl bg-gradient-to-r from-[#2EA4FF] via-[#1E90FF] to-[#E44D26] animate-pulse">
+
+                        <div
+                            class="bg-[#13263F] rounded-xl p-4 flex flex-col items-center justify-center
+                            transition duration-300 transform group-hover:-translate-y-2 group-hover:rotate-x-6 group-hover:scale-105 shadow-md">
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                class="w-10 h-10 mb-2 transition-transform duration-300 group-hover:scale-110" />
+
+                            <p class="text-sm text-gray-300">React</p>
+
+                        </div>
+                    </div>
+
+
+                    <!-- CARD -->
+                    <div
+                        class="relative group p-[1px] rounded-xl bg-gradient-to-r from-[#2EA4FF] via-[#1E90FF] to-[#E44D26] animate-pulse">
+
+                        <div
+                            class="bg-[#13263F] rounded-xl p-4 flex flex-col items-center justify-center
+                            transition duration-300 transform group-hover:-translate-y-2 group-hover:rotate-x-6 group-hover:scale-105 shadow-md">
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                class="w-10 h-10 mb-2 transition-transform duration-300 group-hover:scale-110" />
+
+                            <p class="text-sm text-gray-300">Node.js</p>
+
+                        </div>
+                    </div>
+
+
+                    <!-- CARD -->
+                    <div
+                        class="relative group p-[1px] rounded-xl bg-gradient-to-r from-[#2EA4FF] via-[#1E90FF] to-[#E44D26] animate-pulse">
+
+                        <div
+                            class="bg-[#13263F] rounded-xl p-4 flex flex-col items-center justify-center
+                            transition duration-300 transform group-hover:-translate-y-2 group-hover:rotate-x-6 group-hover:scale-105 shadow-md">
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                                class="w-10 h-10 mb-2 bg-white rounded-full p-1 transition-transform duration-300 group-hover:scale-110" />
+
+                            <p class="text-sm text-gray-300">Express</p>
+
+                        </div>
+                    </div>
+
+
+                    <!-- CARD -->
+                    <div
+                        class="relative group p-[1px] rounded-xl bg-gradient-to-r from-[#2EA4FF] via-[#1E90FF] to-[#E44D26] animate-pulse">
+
+                        <div
+                            class="bg-[#13263F] rounded-xl p-4 flex flex-col items-center justify-center
+                            transition duration-300 transform group-hover:-translate-y-2 group-hover:rotate-x-6 group-hover:scale-105 shadow-md">
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                class="w-10 h-10 mb-2 transition-transform duration-300 group-hover:scale-110" />
+
+                            <p class="text-sm text-gray-300">MongoDB</p>
+
+                        </div>
+                    </div>
+
+
+                    <!-- CARD -->
+                    <div
+                        class="relative group p-[1px] rounded-xl bg-gradient-to-r from-[#2EA4FF] via-[#1E90FF] to-[#E44D26] animate-pulse">
+
+                        <div
+                            class="bg-[#13263F] rounded-xl p-4 flex flex-col items-center justify-center
+                            transition duration-300 transform group-hover:-translate-y-2 group-hover:rotate-x-6 group-hover:scale-105 shadow-md">
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                                class="w-10 h-10 mb-2 transition-transform duration-300 group-hover:scale-110" />
+
+                            <p class="text-sm text-gray-300">Tailwind</p>
+
+                        </div>
+                    </div>
+
+
+                    <!-- CARD -->
+                    <div
+                        class="relative group p-[1px] rounded-xl bg-gradient-to-r from-[#2EA4FF] via-[#1E90FF] to-[#E44D26] animate-pulse">
+
+                        <div
+                            class="bg-[#13263F] rounded-xl p-4 flex flex-col items-center justify-center
+                            transition duration-300 transform group-hover:-translate-y-2 group-hover:rotate-x-6 group-hover:scale-105 shadow-md">
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                                class="w-10 h-10 mb-2 transition-transform duration-300 group-hover:scale-110" />
+
+                            <p class="text-sm text-gray-300">Firebase</p>
+
+                        </div>
+                    </div>
+
+
+                    <!-- CARD -->
+                    <div
+                        class="relative group p-[1px] rounded-xl bg-gradient-to-r from-[#2EA4FF] via-[#1E90FF] to-[#E44D26] animate-pulse">
+
+                        <div
+                            class="bg-[#13263F] rounded-xl p-4 flex flex-col items-center justify-center
+                            transition duration-300 transform group-hover:-translate-y-2 group-hover:rotate-x-6 group-hover:scale-105 shadow-md">
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                class="w-10 h-10 mb-2 transition-transform duration-300 group-hover:scale-110" />
+
+                            <p class="text-sm text-gray-300">JavaScript</p>
+
+                        </div>
+                    </div>
+
+
+                    <!-- CARD -->
+                    <div
+                        class="relative group p-[1px] rounded-xl bg-gradient-to-r from-[#2EA4FF] via-[#1E90FF] to-[#E44D26] animate-pulse">
+
+                        <div
+                            class="bg-[#13263F] rounded-xl p-4 flex flex-col items-center justify-center
+                            transition duration-300 transform group-hover:-translate-y-2 group-hover:rotate-x-6 group-hover:scale-105 shadow-md">
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                class="w-10 h-10 mb-2 transition-transform duration-300 group-hover:scale-110" />
+
+                            <p class="text-sm text-gray-300">HTML</p>
+
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="relative group p-[1px] rounded-xl bg-gradient-to-r from-[#2EA4FF] via-[#1E90FF] to-[#E44D26] animate-pulse">
+
+                        <div
+                            class="bg-[#13263F] rounded-xl p-4 flex flex-col items-center justify-center
+                            transition duration-300 transform group-hover:-translate-y-2 group-hover:scale-105 shadow-md">
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                class="w-10 h-10 mb-2 transition-transform duration-300 group-hover:scale-110" />
+
+                            <p class="text-sm text-gray-300">CSS</p>
+
+                        </div>
+                    </div>
+
+
+                    <!-- CARD -->
+                    <div
+                        class="relative group p-[1px] rounded-xl bg-gradient-to-r from-[#2EA4FF] via-[#1E90FF] to-[#E44D26] animate-pulse">
+
+                        <div class="bg-[#13263F] rounded-xl p-4 flex flex-col items-center justify-center
+                transition duration-300 transform group-hover:-translate-y-2 group-hover:scale-105 shadow-md">
+
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                                class="w-10 h-10 mb-2 transition-transform duration-300 group-hover:scale-110 bg-white rounded-full p-1" />
+
+                            <p class="text-sm text-gray-300">GitHub</p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+    </main>
 
     <!-- Footer -->
     <footer class="bg-[#041021] text-white py-10">
@@ -214,6 +660,7 @@
     </footer>
 
     <script src="script/nav.js"></script>
+    <script src="script/web-dev.js"></script>
 
 </body>
 
