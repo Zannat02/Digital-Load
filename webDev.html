@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="icon" type="image/png" href="picture/DL.png">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
         .inter-text {
             font-family: "Inter", sans-serif;
@@ -20,6 +21,86 @@
             font-weight: <weight>;
             font-style: normal;
         }
+
+        header {
+            transition: all 0.3s ease;
+        }
+
+        /* progress bar animation */
+        .progress-bar {
+            width: 0%;
+            transition: width 1.5s ease-in-out;
+        }
+
+        .project-card {
+            will-change: transform, opacity, filter;
+        }
+
+
+        .testimonial-card {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.7s ease;
+        }
+
+        /* pricing section */
+
+        .button {
+            position: relative;
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 16px;
+            background: transparent;
+            cursor: pointer;
+            overflow: hidden;
+            transition: color 0.3s ease;
+        }
+
+        .button--hyperion::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #cac8c8;
+            transform: scaleX(0);
+            transform-origin: 100% 50%;
+            transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+            z-index: 0;
+        }
+
+        .button--hyperion span {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .button--hyperion:hover::before {
+            transform: scaleX(1);
+        }
+
+        .button--hyperion:hover span {
+            color: #ec0101;
+        }
+
+
+        .primary-color {
+            background-color: #F16529;
+        }
+
+        .second-color {
+            background-color: #041021;
+        }
+
+        .text-color {
+            color: #F16529;
+        }
+
+
 
 
         /* Desktop dropdown animation */
@@ -68,8 +149,8 @@
 <body class="text-white flex flex-col min-h-screen inter-text">
 
     <!-- Navigation Bar -->
-    <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] py-4 px-6">
-        <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
+        <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
             <!-- Logo -->
             <div>
                 <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
@@ -365,60 +446,47 @@
 
 
 
+
+
+
                         <!-- Progress 1 -->
-                        <div class="mb-6">
+                        <div class="mb-6 progress-item">
 
                             <div class="flex justify-between mb-2 text-sm">
-
                                 <span>UI / UX Design</span>
                                 <span class="text-[#2EA4FF]">95%</span>
-
                             </div>
 
-                            <div class="h-3 bg-[#13263F] rounded-full">
-
-                                <div class="h-full w-[95%] bg-[#2EA4FF] rounded-full"></div>
-
+                            <div class="h-3 bg-[#13263F] rounded-full overflow-hidden">
+                                <div class="h-full bg-[#2EA4FF] rounded-full progress-bar" data-width="95%"></div>
                             </div>
 
                         </div>
-
-
 
                         <!-- Progress 2 -->
-                        <div class="mb-6">
+                        <div class="mb-6 progress-item">
 
                             <div class="flex justify-between mb-2 text-sm">
-
                                 <span>Frontend Development</span>
                                 <span class="text-[#E44D26]">92%</span>
-
                             </div>
 
-                            <div class="h-3 bg-[#13263F] rounded-full">
-
-                                <div class="h-full w-[92%] bg-[#E44D26] rounded-full"></div>
-
+                            <div class="h-3 bg-[#13263F] rounded-full overflow-hidden">
+                                <div class="h-full bg-[#E44D26] rounded-full progress-bar" data-width="92%"></div>
                             </div>
 
                         </div>
 
-
-
                         <!-- Progress 3 -->
-                        <div class="mb-6">
+                        <div class="mb-6 progress-item">
 
                             <div class="flex justify-between mb-2 text-sm">
-
                                 <span>Responsive Optimization</span>
                                 <span class="text-[#2EA4FF]">98%</span>
-
                             </div>
 
-                            <div class="h-3 bg-[#13263F] rounded-full">
-
-                                <div class="h-full w-[98%] bg-[#2EA4FF] rounded-full"></div>
-
+                            <div class="h-3 bg-[#13263F] rounded-full overflow-hidden">
+                                <div class="h-full bg-[#2EA4FF] rounded-full progress-bar" data-width="98%"></div>
                             </div>
 
                         </div>
@@ -435,7 +503,7 @@
 
 
         <!-- Tech Stack Section -->
-       <section class="py-16 md:py-24 px-6 bg-gradient-to-br from-[#041021] via-[#0B1D35] to-[#041021]">
+        <section class="py-16 md:py-24 px-6 bg-gradient-to-br from-[#041021] via-[#0B1D35] to-[#041021]">
 
             <div class="max-w-7xl mx-auto text-center">
 
@@ -628,13 +696,641 @@
         </section>
 
 
+        <section
+            class="relative py-20 md:py-28 px-6 overflow-hidden bg-gradient-to-br from-[#041021] via-[#0B1D35] to-[#041021]">
+
+
+            <div class="absolute top-20 left-10 w-72 h-72 bg-[#2EA4FF]/20 blur-[120px] rounded-full"></div>
+
+            <div class="absolute bottom-10 right-10 w-72 h-72 bg-[#E44D26]/20 blur-[120px] rounded-full"></div>
+
+
+            <div class="max-w-7xl mx-auto relative z-10 overflow-visible">
+
+
+                <div class="text-center mb-10 md:mb-12">
+
+                    <p class="text-[#2EA4FF] font-semibold mb-3 sm:text-sm md:text-base  tracking-wide">
+                        OUR RECENT PROJECTS
+                    </p>
+
+                    <h2 class="text-2xl md:text-4xl font-bold mb-5 leading-tight">
+                        Creative Web Solutions
+                        <span class="text-[#2EA4FF]">We Built</span>
+                    </h2>
+
+                    <p class="text-gray-400 max-w-2xl mx-auto leading-8">
+                        We build high-performance websites and web applications
+                        with modern technologies, smooth user experiences,
+                        and scalable architecture.
+                    </p>
+
+                </div>
+
+
+
+
+                <div class="space-y-16 md:space-y-20 overflow-visible">
+
+
+
+
+                    <div class="project-card sticky top-20 md:top-24 z-10">
+
+                        <div class="relative overflow-hidden rounded-3xl border border-white/10
+                            bg-white/5 backdrop-blur-xl shadow-2xl">
+
+                            <div class="grid lg:grid-cols-2 gap-10 items-center p-6 md:p-10">
+
+
+                                <div class="relative">
+
+                                    <div
+                                        class="absolute -top-10 -left-10 w-40 h-40 bg-[#2EA4FF]/20 blur-[100px] rounded-full">
+                                    </div>
+
+                                    <img src="picture/nature.png" class="relative z-10 rounded-2xl shadow-2xl border border-white/10
+                                       hover:scale-105 transition duration-500 w-full" alt="Project">
+
+                                </div>
+
+
+
+
+                                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 md:p-6 border border-white/10">
+
+                                    <div class="flex items-center gap-3 mb-4">
+
+                                        <span class="w-3 h-3 rounded-full bg-[#179800] animate-pulse"></span>
+
+                                        <p class="text-[#179800] font-medium">
+                                            Frontend Web Application
+                                        </p>
+
+                                    </div>
+
+
+                                    <h3 class="text-2xl md:text-4xl font-bold mb-5">
+                                        Nature’s Platter – Organic Grocery & Bakery Website
+                                    </h3>
+
+                                    <p class="text-gray-300 leading-8 mb-7">
+                                        Nature’s Platter is a responsive grocery and bakery landing page built with HTML
+                                        and Tailwind CSS. It showcases fresh products, special offers, services, and a
+                                        modern user-friendly design.
+                                    </p>
+
+
+
+
+                                    <div class="flex flex-wrap gap-3 mb-8">
+
+                                        <span class="px-4 py-2 rounded-full bg-[#13263F]
+                                             border border-[#2EA4FF]/20 text-sm text-gray-300">
+                                            HTML
+                                        </span>
+
+                                        <span class="px-4 py-2 rounded-full bg-[#13263F]
+                                             border border-[#2EA4FF]/20 text-sm text-gray-300">
+                                            Tailwind
+                                        </span>
+
+                                        <span class="px-4 py-2 rounded-full bg-[#13263F]
+                                             border border-[#2EA4FF]/20 text-sm text-gray-300">
+                                            css
+                                        </span>
+
+                                        <!-- <span class="px-4 py-2 rounded-full bg-[#13263F]
+                                             border border-[#2EA4FF]/20 text-sm text-gray-300">
+                                            MongoDB
+                                        </span> -->
+
+                                    </div>
+
+
+
+
+                                    <div class="flex flex-wrap gap-4">
+
+                                        <a href="#" class="px-6 py-3 rounded-full bg-[#179800]
+                                           hover:bg-[#1b6d0c] transition font-medium">
+
+                                            Live Preview
+
+                                        </a>
+
+
+                                        <a href="#" class="px-6 py-3 rounded-full border border-white/20
+                                           hover:bg-white/10 transition font-medium">
+
+                                            GitHub
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                    <div class="project-card sticky top-20 md:top-24 z-10 ">
+
+                        <div class="relative overflow-hidden rounded-3xl border border-white/10
+                            bg-white/5 backdrop-blur-xl shadow-2xl">
+
+                            <div class="grid lg:grid-cols-2 gap-10 items-center p-6 md:p-10">
+
+                                <div class="relative">
+
+                                    <div
+                                        class="absolute -bottom-10 -right-10 w-40 h-40 bg-[#E44D26]/20 blur-[100px] rounded-full">
+                                    </div>
+
+                                    <img src="picture/Board.png" class="relative z-10 rounded-2xl shadow-2xl border border-white/10
+                                       hover:scale-105 transition duration-500 w-full" alt="Project">
+
+                                </div>
+
+
+
+
+                                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 md:p-6 border border-white/10">
+
+                                    <div class="flex items-center gap-3 mb-4">
+
+                                        <span class="w-3 h-3 rounded-full bg-[#3752FD] animate-pulse"></span>
+
+                                        <p class="text-[#3752FD] font-medium">
+                                            Frontend Web Application
+                                        </p>
+
+                                    </div>
+
+
+                                    <h3 class="text-2xl md:text-4xl font-bold mb-5">
+                                        A5 DevBoard – Task Management Dashboard
+                                    </h3>
+
+                                    <p class="text-gray-300 leading-8 mb-7">
+                                        A responsive task management dashboard built with HTML, Tailwind CSS, and
+                                        JavaScript. Users can complete tasks, track activity logs, switch themes, view
+                                        blogs, and manage task progress with interactive UI features.
+                                    </p>
+
+
+
+
+                                    <div class="flex flex-wrap gap-3 mb-8">
+
+                                        <span class="px-4 py-2 rounded-full bg-[#13263F]
+                                             border border-[#E44D26]/20 text-sm text-gray-300">
+                                            HTML
+                                        </span>
+
+                                        <span class="px-4 py-2 rounded-full bg-[#13263F]
+                                             border border-[#E44D26]/20 text-sm text-gray-300">
+                                            CSS
+                                        </span>
+
+                                        <span class="px-4 py-2 rounded-full bg-[#13263F]
+                                             border border-[#E44D26]/20 text-sm text-gray-300">
+                                            JavaScript
+                                        </span>
+
+                                        <span class="px-4 py-2 rounded-full bg-[#13263F]
+                                             border border-[#E44D26]/20 text-sm text-gray-300">
+                                            Tailwind
+                                        </span>
+
+                                    </div>
+
+
+
+                                    <div class="flex flex-wrap gap-4">
+
+                                        <a href="#" class="px-6 py-3 rounded-full bg-[#3752FD]
+                                           hover:bg-[#00303C] transition font-medium">
+
+                                            Live Preview
+
+                                        </a>
+
+
+                                        <a href="#" class="px-6 py-3 rounded-full border border-white/20
+                                           hover:bg-white/10 transition font-medium">
+
+                                            GitHub
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                    <div class="project-card sticky top-20 md:top-24 z-10">
+
+                        <div class="relative overflow-hidden rounded-3xl border border-white/10
+                            bg-white/5 backdrop-blur-xl shadow-2xl">
+
+                            <div class="grid lg:grid-cols-2 gap-10 items-center p-6 md:p-10">
+
+
+                                <div class="relative">
+
+                                    <div
+                                        class="absolute top-0 right-0 w-40 h-40 bg-purple-500/20 blur-[100px] rounded-full">
+                                    </div>
+
+                                    <img src="picture/freelance.png" class="relative z-10 rounded-2xl shadow-2xl border border-white/10
+                                       hover:scale-105 transition duration-500 w-full" alt="Project">
+
+                                </div>
+
+
+
+
+                                <div class="bg-white/5 backdrop-blur-md rounded-2xl p-5 md:p-6 border border-white/10">
+
+                                    <div class="flex items-center gap-3 mb-4">
+
+                                        <span class="w-3 h-3 rounded-full bg-purple-400 animate-pulse"></span>
+
+                                        <p class="text-purple-300 font-medium">
+                                            Full Stack Project
+                                        </p>
+
+                                    </div>
+
+
+                                    <h3 class="text-3xl md:text-4xl font-bold mb-5">
+                                        Freelance Marketplace
+                                    </h3>
+
+                                    <p class="text-gray-300 leading-8 mb-7">
+                                        A complete freelance marketplace platform where users
+                                        can post tasks, bid on projects, manage work,
+                                        and explore opportunities in a modern environment.
+                                    </p>
+
+
+
+
+                                    <div class="flex flex-wrap gap-3 mb-8">
+
+                                        <span class="px-4 py-2 rounded-full bg-[#13263F]
+                                             border border-purple-400/20 text-sm text-gray-300">
+                                            React
+                                        </span>
+
+                                        <span class="px-4 py-2 rounded-full bg-[#13263F]
+                                             border border-purple-400/20 text-sm text-gray-300">
+                                            Node.js
+                                        </span>
+
+                                        <span class="px-4 py-2 rounded-full bg-[#13263F]
+                                             border border-purple-400/20 text-sm text-gray-300">
+                                            Express
+                                        </span>
+
+                                        <span class="px-4 py-2 rounded-full bg-[#13263F]
+                                             border border-purple-400/20 text-sm text-gray-300">
+                                            MongoDB
+                                        </span>
+
+                                    </div>
+
+
+
+
+                                    <div class="flex flex-wrap gap-4">
+
+                                        <a href="#" class="px-6 py-3 rounded-full bg-purple-500
+                                           hover:bg-purple-600 transition font-medium">
+
+                                            Live Preview
+
+                                        </a>
+
+
+                                        <a href="#" class="px-6 py-3 rounded-full border border-white/20
+                                           hover:bg-white/10 transition font-medium">
+
+                                            GitHub
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="pricing-section"
+            class="relative py-20 px-6 bg-gradient-to-r from-[#000150] to-[#E44D26] text-white overflow-hidden">
+
+            <div id="tsparticles" class="absolute inset-0 z-0"></div>
+
+            <div class="relative max-w-7xl mx-auto text-center z-10">
+
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">
+                    Flexible Pricing Plans
+                </h2>
+                <p class="text-gray-200 mb-12">
+                    Choose a plan that fits your business needs. Simple, transparent pricing.
+                </p>
+
+                <div class="grid lg:grid-cols-3 gap-8 ">
+
+                    <!-- BASIC -->
+                    <div data-aos="zoom-in"
+                        class="bg-[#041021] p-8 rounded-xl shadow-lg hover:scale-105 transition relative z-10">
+
+
+                        <div class="flex items-center justify-center mb-2 gap-4">
+                            <svg class="w-8 h-8 text-[#00C2FF]" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7v13h20V7L12 2z" />
+                            </svg>
+                            <h3 class="text-2xl font-semibold">Basic</h3>
+                        </div>
+
+
+                        <p class="text-gray-400 mb-4">Perfect for small projects and personal websites.</p>
+
+
+                        <hr class="border-gray-600 mb-4">
+
+
+                        <div class="flex items-baseline justify-center gap-2 mb-6">
+                            <span class="text-4xl font-bold">$99</span>
+                            <span class="text-sm text-slate-400">/monthly package</span>
+                        </div>
+
+
+                        <ul class="space-y-2 text-sm text-gray-300 mb-6 list-disc list-inside">
+                            <li>1 Page Website</li>
+                            <li>Basic Design</li>
+                            <li>Mobile Responsive</li>
+                            <li>Email Support</li>
+                        </ul>
+
+
+                        <button onclick="scrollToTop()"
+                            class="w-full py-2 rounded-full bg-white text-black  transition button button--hyperion">
+                            <span>Get Started</span>
+                        </button>
+
+                    </div>
+
+                    <!-- STANDARD -->
+                    <div data-aos="zoom-in"
+                        class="bg-white text-black p-8 rounded-xl shadow-2xl scale-105 relative z-10">
+
+                        <span
+                            class="absolute top-0 right-0 bg-[#E44D26] text-white text-xs px-3 py-1 rounded-bl-lg">Most
+                            Popular</span>
+
+
+                        <div class="flex items-center justify-center mb-2 gap-4">
+                            <svg class="w-8 h-8 text-[#E44D26]" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z" />
+                            </svg>
+                            <h3 class="text-2xl font-semibold">Standard</h3>
+                        </div>
+
+
+                        <p class="text-gray-500 mb-4">Ideal for small businesses with multiple pages.</p>
+
+
+                        <hr class="border-gray-300 mb-4">
+
+
+                        <div class="flex items-baseline justify-center gap-2 mb-6">
+                            <span class="text-4xl font-bold">$199</span>
+                            <span class="text-sm text-slate-400">/monthly package</span>
+                        </div>
+
+
+                        <ul class="space-y-2 text-sm mb-6 list-disc list-inside">
+                            <li>5 Page Website</li>
+                            <li>Modern UI Design</li>
+                            <li>SEO Optimization</li>
+                            <li>Priority Support</li>
+                        </ul>
+
+
+                        <button onclick="scrollToTop()"
+                            class="w-full py-2 rounded-full bg-[#E44D26] text-white transition button button--hyperion">
+                            <span>Get Started</span>
+                        </button>
+
+                    </div>
+
+                    <!-- PREMIUM -->
+                    <div data-aos="zoom-in"
+                        class="bg-[#041021] p-8 rounded-xl shadow-lg hover:scale-105 transition relative z-10">
+
+
+                        <div class="flex items-center justify-center mb-2 gap-4">
+                            <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 12h10v10h4V12h10z" />
+                            </svg>
+                            <h3 class="text-2xl font-semibold">Premium</h3>
+                        </div>
+
+
+                        <p class="text-gray-400 mb-4">Complete package for agencies and advanced projects.</p>
+
+
+                        <hr class="border-gray-600 mb-4">
+
+
+                        <div class="flex items-baseline justify-center gap-2 mb-6">
+                            <span class="text-4xl font-bold">$399</span>
+                            <span class="text-sm text-slate-400">/monthly package</span>
+                        </div>
+
+
+                        <ul class="space-y-2 text-sm text-gray-300 mb-6 list-disc list-inside">
+                            <li>Unlimited Pages</li>
+                            <li>Custom Design</li>
+                            <li>Full SEO + Marketing</li>
+                            <li>24/7 Support</li>
+                        </ul>
+
+
+                        <button onclick="scrollToTop()"
+                            class="w-full py-2 rounded-full bg-white text-black transition button button--hyperion">
+                            <span>Get Started</span>
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="relative py-20 bg-[#071426] overflow-hidden">
+
+            <!-- background glow -->
+            <div class="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 blur-[120px] rounded-full"></div>
+            <div class="absolute bottom-10 right-10 w-72 h-72 bg-cyan-500/10 blur-[120px] rounded-full"></div>
+
+            <!--container system -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+
+                <!-- GRID (mobile first like template) -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center min-h-[500px]">
+
+                    <!-- LEFT SIDE -->
+                    <div class="lg:col-span-4 order-1">
+
+                        <p class="text-sm md:text-base text-gray-300 leading-7 mb-6 break-words">
+                            Real feedback from our clients who experienced modern UI, smooth performance and responsive
+                            design.
+                        </p>
+
+                        <h2 class="text-2xl md:text-4xl font-bold text-white leading-tight mb-8">
+                            What People Say<br>
+                            About Our Work
+                        </h2>
+
+                        <!-- buttons -->
+                        <div class="flex items-center gap-4">
+
+                            <button id="prevBtn"
+                                class="w-12 h-12 rounded-full bg-white/5 border border-white/10 backdrop-blur-md flex items-center justify-center hover:bg-blue-500/20 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+
+                            <button id="nextBtn"
+                                class="w-12 h-12 rounded-full bg-white/5 border border-white/10 backdrop-blur-md flex items-center justify-center hover:bg-blue-500/20 transition">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT SIDE -->
+                    <div class="lg:col-span-8 order-2 overflow-visible ">
+
+                        <div class="relative w-full py-10 md:pb-28 lg:py-0 lg:min-h-[520px] flex items-center">
+
+                            <!-- background card (keep same shape md/lg) -->
+                            <div class="hidden sm:block absolute top-0 left-0 md:-top-6 lg:top-0
+w-full lg:w-2/4 md:w-2/4 h-[520px] mr-auto
+            bg-gradient-to-br from-[#0A2A43] via-[#0B3A5C] to-[#041426]
+            rounded-[30px] shadow-2xl border border-white/10 ">
+
+                                <div class="absolute top-0 right-0 w-56 h-56 bg-cyan-400/20 blur-[100px] rounded-full">
+                                </div>
+                                <div
+                                    class="absolute bottom-0 left-0 w-56 h-56 bg-blue-500/20 blur-[100px] rounded-full">
+                                </div>
+
+                            </div>
+
+                       
+                            
+
+                            <!-- FLOATING CARD -->
+                            <div class="relative flex justify-center lg:justify-start lg:pl-24 z-10">
+
+                                <!-- CARD WRAPPER -->
+                                <div id="testimonialCard" class="w-full sm:w-[90%] md:w-[85%] lg:w-[70%]
+    bg-white/5 border border-white/10 backdrop-blur-xl
+    rounded-3xl p-6 sm:p-8 md:p-12 shadow-xl text-center
+    transition-all duration-500">
+
+                                    <div class="flex justify-center mb-6">
+                                        <img id="clientImage" src="https://randomuser.me/api/portraits/men/32.jpg"
+                                            class="w-16 h-16 rounded-full border-2 border-blue-400">
+                                    </div>
+
+                                    <p id="clientText" class="text-gray-300 leading-7 mb-6">
+                                        This is a testimonial card. Smooth UI, clean design and responsive layout across
+                                        all devices.
+                                    </p>
+
+                                    <h4 id="clientName" class="text-white font-semibold text-lg">
+                                        Client Name
+                                    </h4>
+
+                                    <span id="clientPosition" class="text-blue-400 text-sm block">
+                                        Position
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
 
 
     </main>
 
     <!-- Footer -->
     <footer class="bg-[#041021] text-white py-10">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
             <p class="text-sm">©2025 Digital Lord. All rights reserved.</p>
             <div class="flex space-x-4 mt-4 md:mt-0">
                 <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="Facebook">
@@ -661,6 +1357,29 @@
 
     <script src="script/nav.js"></script>
     <script src="script/web-dev.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script/sticky-scroll-animation.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script/aos-init.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="script/particles-init.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-firefly@3/tsparticles.preset.firefly.bundle.min.js"></script>
+    <script src="script/firefly.js"></script>
+    <script src="script/scroll.js"></script>
+    <script src="script/progress-bar.js"></script>
+    <script src="script/web-testimonial.js"></script>
+
+
+
+
+
 
 </body>
 
