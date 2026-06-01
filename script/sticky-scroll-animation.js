@@ -72,7 +72,7 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Mobile হলে animation run করবে না
+
 if (window.innerWidth >= 768) {
 
     const cards = gsap.utils.toArray(".project-card");
