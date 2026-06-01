@@ -17,14 +17,18 @@ cards.forEach((card, i) => {
         const nextCard = cards[i + 1];
 
         const tl = gsap.timeline({
+           
+
             scrollTrigger: {
                 trigger: card,
 
-                // animation later start 
-                start: "top top-=130",
+                start: () => window.innerWidth < 768
+                    ? "top top-=40"
+                    : "top top-=130",
 
-                // smoother duration
-                end: "+=80%",
+                end: () => window.innerWidth < 768
+                    ? "+=140%"
+                    : "+=80%",
 
                 scrub: true,
                 pin: true,
