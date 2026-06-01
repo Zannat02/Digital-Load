@@ -17,17 +17,34 @@ cards.forEach((card, i) => {
         const nextCard = cards[i + 1];
 
         const tl = gsap.timeline({
-           
 
-            scrollTrigger: {
+
+            // scrollTrigger: {
+            //     trigger: card,
+
+            //     start: () => window.innerWidth < 768
+            //         ? "top top-=40"
+            //         : "top top-=130",
+
+            //     end: () => window.innerWidth < 768
+            //         ? "+=140%"
+            //         : "+=80%",
+
+            //     scrub: true,
+            //     pin: true,
+            //     pinSpacing: false,
+            //     anticipatePin: 1
+            // }
+
+             scrollTrigger: {
                 trigger: card,
 
                 start: () => window.innerWidth < 768
-                    ? "top top-=40"
+                    ? "top top+=20"
                     : "top top-=130",
 
                 end: () => window.innerWidth < 768
-                    ? "+=140%"
+                    ? "+=250%"
                     : "+=80%",
 
                 scrub: true,
@@ -36,6 +53,8 @@ cards.forEach((card, i) => {
                 anticipatePin: 1
             }
         });
+
+
 
         // Current card blur
         tl.to(card, {
