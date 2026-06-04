@@ -86,6 +86,21 @@
             padding: 24px;
             overflow: hidden;
             text-align: center;
+            height: 100%;
+            box-sizing: border-box;
+            transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+
+            display: flex;
+            flex-direction: column;
+            min-height: 180px;
+        }
+
+
+        .service-card p {
+            flex: 1;
+
         }
 
         .service-card::before {
@@ -112,9 +127,32 @@
             }
         }
 
-        /* REMOVE HOVER EFFECT COMPLETELY */
+        /* .service-card {
+            height: 100%;
+            box-sizing: border-box;
+        } */
+
+        /* .service-card {
+            transition: none !important;
+            cursor: default;
+        }
+
         .service-card:hover {
-            transform: none !important;
+            background: rgba(255, 255, 255, 0.05) !important;
+            box-shadow: none !important;
+        } */
+
+        /* .service-card {
+            transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+        } */
+
+        .service-card:hover {
+            transform: translateY(-8px) !important;
+            background: rgba(255, 255, 255, 0.10);
+            box-shadow: 0 10px 30px rgba(85, 174, 243, 0.4),
+                0 0 20px rgba(46, 164, 255, 0.2);
         }
 
         /* ICON CENTER */
@@ -450,7 +488,7 @@
 
 
 
-        <section class="relative py-20 px-6 bg-[#081a2b] overflow-hidden">
+        <section class="relative py-20 px-6 bg-[#1e293b] overflow-hidden">
 
 
 
@@ -458,7 +496,7 @@
 
                 <!-- TITLE -->
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    <h2 class="text-2xl md:text-5xl font-bold text-white mb-4">
                         Mobile App Services
                     </h2>
                     <p class="text-gray-300 max-w-2xl mx-auto">
@@ -467,38 +505,39 @@
                 </div>
 
                 <!-- CARDS -->
-                <div class="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row gap-6 items-start">
+                <div
+                    class="flex flex-col items-center md:grid md:grid-cols-2 lg:flex lg:items-stretch lg:flex-row gap-6">
 
                     <!-- CARD 1 -->
-                    <div class="service-card lg:w-1/5 lg:translate-y-12">
+                    <div class="service-card w-full max-w-sm md:w-full  lg:w-1/5 lg:translate-y-12">
                         <div class="icon-box"><i class="fas fa-mobile-alt"></i></div>
                         <h3 class="text-white font-semibold mb-2">Android Apps</h3>
                         <p class="text-gray-300 text-sm">High performance Android development.</p>
                     </div>
 
                     <!-- CARD 2 -->
-                    <div class="service-card lg:w-1/5 lg:translate-y-6">
+                    <div class="service-card w-full max-w-sm md:w-full  lg:w-1/5 lg:translate-y-6">
                         <div class="icon-box"><i class="fab fa-apple"></i></div>
                         <h3 class="text-white font-semibold mb-2">iOS Apps</h3>
                         <p class="text-gray-300 text-sm">Smooth Apple ecosystem apps.</p>
                     </div>
 
                     <!-- CARD 3 -->
-                    <div class="service-card lg:w-1/5">
+                    <div class="service-card w-full max-w-sm md:w-full   lg:w-1/5">
                         <div class="icon-box"><i class="fas fa-layer-group"></i></div>
                         <h3 class="text-white font-semibold mb-2">Cross Platform</h3>
                         <p class="text-gray-300 text-sm">One code for all devices.</p>
                     </div>
 
                     <!-- CARD 4 -->
-                    <div class="service-card lg:w-1/5 lg:-translate-y-6">
+                    <div class="service-card w-full max-w-sm md:w-full  lg:w-1/5 lg:-translate-y-6">
                         <div class="icon-box"><i class="fas fa-paint-brush"></i></div>
                         <h3 class="text-white font-semibold mb-2">UI/UX Design</h3>
                         <p class="text-gray-300 text-sm">Modern and clean interfaces.</p>
                     </div>
 
                     <!-- CARD 5 -->
-                    <div class="service-card lg:w-1/5 lg:-translate-y-12">
+                    <div class="service-card w-full max-w-sm md:w-full   lg:w-1/5 lg:-translate-y-12">
                         <div class="icon-box"><i class="fas fa-tools"></i></div>
                         <h3 class="text-white font-semibold mb-2">Maintenance</h3>
                         <p class="text-gray-300 text-sm">Support & updates anytime.</p>
@@ -510,11 +549,615 @@
 
         </section>
 
+
+        <!-- WHY CHOOSE SECTION-->
+        <section
+            class="relative py-20 px-6 overflow-hidden bg-gradient-to-br from-[#233544] via-[#334155] to-[#1e3a8a]">
+
+
+
+            <!-- soft glow blobs -->
+            <div class="absolute top-10 left-10 w-72 h-72 bg-[#2EA4FF]/10 blur-[120px] rounded-full"></div>
+            <div class="absolute bottom-10 right-10 w-72 h-72 bg-[#F16529]/10 blur-[120px] rounded-full"></div>
+
+            <div class="relative max-w-7xl mx-auto">
+
+                <!-- TITLE -->
+                <div class="text-center mb-16">
+                    <h2 class="text-2xl md:text-5xl font-bold text-white mb-4">
+                        Why Choose Digital Lord
+                    </h2>
+                    <p class="text-gray-300 max-w-2xl mx-auto">
+                        We deliver reliable, scalable, and high-performance mobile applications
+                        tailored to your business needs.
+                    </p>
+                </div>
+
+                <!-- CARDS -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- CARD -->
+                    <div
+                        class="group relative p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md overflow-hidden transition-all duration-300 hover:bg-[#1e3a8a]">
+
+                        <!-- glow border animation -->
+                        <div
+                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
+                            <div class="absolute inset-0 rounded-2xl border border-[#2EA4FF]/40 blur-[1px]"></div>
+                        </div>
+
+                        <div class="relative text-center">
+
+                            <div
+                                class="w-12 h-12 mx-auto flex items-center justify-center text-[#F16529] text-2xl mb-4">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+
+                            <h3 class="text-white text-xl font-semibold mb-3">
+                                Custom Solutions
+                            </h3>
+
+                            <p class="text-gray-300 text-sm">
+                                Tailored mobile applications designed to meet unique business goals
+                                and requirements.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 2 -->
+                    <div
+                        class="group relative p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md overflow-hidden transition-all duration-300 hover:bg-[#1e3a8a]">
+
+                        <div
+                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
+                            <div class="absolute inset-0 rounded-2xl border border-[#2EA4FF]/40 blur-[1px]"></div>
+                        </div>
+
+                        <div class="relative text-center">
+                            <div
+                                class="w-12 h-12 mx-auto flex items-center justify-center text-[#F16529] text-2xl mb-4">
+                                <i class="fas fa-mobile-screen-button"></i>
+                            </div>
+
+                            <h3 class="text-white text-xl font-semibold mb-3">
+                                Modern UI
+                            </h3>
+
+                            <p class="text-gray-300 text-sm">
+                                Clean, responsive, and engaging interfaces built for excellent user experiences.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3 -->
+                    <div
+                        class="group relative p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md overflow-hidden transition-all duration-300 hover:bg-[#1e3a8a]">
+
+                        <div
+                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
+                            <div class="absolute inset-0 rounded-2xl border border-[#2EA4FF]/40 blur-[1px]"></div>
+                        </div>
+
+                        <div class="relative text-center">
+                            <div
+                                class="w-12 h-12 mx-auto flex items-center justify-center text-[#F16529] text-2xl mb-4">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+
+                            <h3 class="text-white text-xl font-semibold mb-3">
+                                Scalable Architecture
+                            </h3>
+
+                            <p class="text-gray-300 text-sm">
+                                Applications structured for future growth, performance, and long-term stability.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 4 -->
+                    <div
+                        class="group relative p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md overflow-hidden transition-all duration-300 hover:bg-[#1e3a8a]">
+
+                        <div
+                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
+                            <div class="absolute inset-0 rounded-2xl border border-[#2EA4FF]/40 blur-[1px]"></div>
+                        </div>
+
+                        <div class="relative text-center">
+                            <div
+                                class="w-12 h-12 mx-auto flex items-center justify-center text-[#F16529] text-2xl mb-4">
+                                <i class="fas fa-shield-halved"></i>
+                            </div>
+
+                            <h3 class="text-white text-xl font-semibold mb-3">
+                                Secure Development
+                            </h3>
+
+                            <p class="text-gray-300 text-sm">
+                                Best practices and secure coding standards to protect your application.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 5 -->
+                    <div
+                        class="group relative p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md overflow-hidden transition-all duration-300 hover:bg-[#1e3a8a]">
+
+                        <div
+                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
+                            <div class="absolute inset-0 rounded-2xl border border-[#2EA4FF]/40 blur-[1px]"></div>
+                        </div>
+
+                        <div class="relative text-center">
+                            <div
+                                class="w-12 h-12 mx-auto flex items-center justify-center text-[#F16529] text-2xl mb-4">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+
+                            <h3 class="text-white text-xl font-semibold mb-3">
+                                Fast Delivery
+                            </h3>
+
+                            <p class="text-gray-300 text-sm">
+                                Efficient development process focused on quality and timely delivery.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD 6 -->
+                    <div
+                        class="group relative p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md overflow-hidden transition-all duration-300 hover:bg-[#1e3a8a]">
+
+                        <div
+                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none">
+                            <div class="absolute inset-0 rounded-2xl border border-[#2EA4FF]/40 blur-[1px]"></div>
+                        </div>
+
+                        <div class="relative text-center">
+                            <div
+                                class="w-12 h-12 mx-auto flex items-center justify-center text-[#F16529] text-2xl mb-4">
+                                <i class="fas fa-headset"></i>
+                            </div>
+
+                            <h3 class="text-white text-xl font-semibold mb-3">
+                                Ongoing Support
+                            </h3>
+
+                            <p class="text-gray-300 text-sm">
+                                Continuous maintenance, updates, and technical assistance whenever needed.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="relative py-24 px-6 bg-[#0F1B2D] overflow-hidden">
+
+            <div class="max-w-7xl mx-auto">
+
+                <!-- TITLE -->
+                <div class="text-center mb-16">
+                    <h2 class="text-2xl md:text-5xl font-bold text-white mb-4">
+                        Development Process
+                    </h2>
+                    <p class="text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                        Our structured process ensures smooth delivery from idea to launch with proper planning,
+                        execution, and continuous support.
+                    </p>
+                </div>
+
+                <!-- CENTER LINE -->
+                <div class="relative">
+
+                    <div class="absolute left-1/2 top-0 bottom-0 w-[2px] bg-[#2EA4FF]/30 hidden md:block"></div>
+
+                    <div class="space-y-14">
+
+                        <!-- STEP 1 -->
+
+                        <div
+                            class="md:flex md:items-center md:justify-between group scroll-animate opacity-0 translate-x-[80px] transition-all duration-700 ease-out">
+
+                            <div class="md:w-1/2 md:pr-12 flex md:justify-end">
+
+                                <div
+                                    class="relative border border-white/10 bg-white/5 p-6 rounded-2xl hover:border-[#2EA4FF] transition w-full md:max-w-md">
+
+                                    <!-- ICON FIXED: ATTACHED TO LEFT BORDER CENTER -->
+                                    <div class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2">
+
+                                        <div
+                                            class="w-10 h-10 flex items-center justify-center rounded-full border border-[#2EA4FF]/40 bg-[#0F1B2D] group-hover:bg-[#2EA4FF] transition shrink-0">
+
+                                            <i class="fas fa-search text-[#2EA4FF] group-hover:text-black"></i>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- CONTENT -->
+                                    <div class="flex items-center gap-4 mb-3 ml-4">
+
+                                        <h3 class="text-[#2EA4FF] font-bold text-xl">
+                                            01. Discovery
+                                        </h3>
+
+                                    </div>
+
+                                    <p class="text-gray-300 text-sm leading-relaxed">
+                                        We start by deeply understanding your business goals, target users, and core
+                                        requirements. This helps define a clear direction for the entire project and
+                                        avoids unnecessary development risks later.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="md:w-1/2"></div>
+
+                        </div>
+
+
+                        <!-- STEP 2 -->
+                        <div
+                            class="md:flex md:items-center md:justify-between group scroll-animate opacity-0 translate-x-[-80px] transition-all duration-700 ease-out">
+
+                            <div class="md:w-1/2"></div>
+
+                            <div class="md:w-1/2 md:pl-12 flex">
+
+                                <div
+                                    class="relative border border-white/10 bg-white/5 p-6 rounded-2xl hover:border-[#2EA4FF] transition w-full md:max-w-md">
+
+                                    <!-- ICON FIXED -->
+                                    <div class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2">
+
+                                        <div
+                                            class="w-10 h-10 flex items-center justify-center rounded-full border border-[#2EA4FF]/40 bg-[#0F1B2D] group-hover:bg-[#2EA4FF] transition shrink-0">
+
+                                            <i class="fas fa-list-check text-[#2EA4FF] group-hover:text-black"></i>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex items-center gap-4 mb-3 ml-4">
+
+                                        <h3 class="text-[#2EA4FF] font-bold text-xl">
+                                            02. Planning
+                                        </h3>
+
+                                    </div>
+
+                                    <p class="text-gray-300 text-sm leading-relaxed">
+                                        We create a detailed project roadmap including features, architecture, and
+                                        technology stack. Every module is planned carefully to ensure smooth development
+                                        and scalable structure.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- STEP 3 -->
+                        <div
+                            class="md:flex md:items-center md:justify-between group scroll-animate opacity-0 translate-x-[80px] transition-all duration-700 ease-out">
+
+                            <div class="md:w-1/2 md:pr-12 flex md:justify-end">
+
+                                <div
+                                    class="relative border border-white/10 bg-white/5 p-6 rounded-2xl hover:border-[#2EA4FF] transition w-full md:max-w-md">
+
+                                    <div class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2">
+
+                                        <div
+                                            class="w-10 h-10 flex items-center justify-center rounded-full border border-[#2EA4FF]/40 bg-[#0F1B2D] group-hover:bg-[#2EA4FF] transition shrink-0">
+
+                                            <i class="fas fa-pen-nib text-[#2EA4FF] group-hover:text-black"></i>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex items-center gap-4 mb-3 ml-4">
+
+                                        <h3 class="text-[#2EA4FF] font-bold text-xl">
+                                            03. Design
+                                        </h3>
+
+                                    </div>
+
+                                    <p class="text-gray-300 text-sm leading-relaxed">
+                                        Our design phase focuses on modern UI/UX principles. We build clean, intuitive
+                                        interfaces that improve user engagement and deliver a seamless mobile
+                                        experience.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="md:w-1/2"></div>
+
+                        </div>
+
+
+                        <!-- STEP 4 -->
+                        <div
+                            class="md:flex md:items-center md:justify-between group scroll-animate opacity-0 translate-x-[-80px] transition-all duration-700 ease-out">
+
+                            <div class="md:w-1/2"></div>
+
+                            <div class="md:w-1/2 md:pl-12 flex">
+
+                                <div
+                                    class="relative border border-white/10 bg-white/5 p-6 rounded-2xl hover:border-[#2EA4FF] transition w-full md:max-w-md">
+
+                                    <div class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2">
+
+                                        <div
+                                            class="w-10 h-10 flex items-center justify-center rounded-full border border-[#2EA4FF]/40 bg-[#0F1B2D] group-hover:bg-[#2EA4FF] transition shrink-0">
+
+                                            <i class="fas fa-code text-[#2EA4FF] group-hover:text-black"></i>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex items-center gap-4 mb-3 ml-4">
+
+                                        <h3 class="text-[#2EA4FF] font-bold text-xl">
+                                            04. Development
+                                        </h3>
+
+                                    </div>
+
+                                    <p class="text-gray-300 text-sm leading-relaxed">
+                                        We convert designs into a fully functional application using scalable coding
+                                        practices. Performance, security, and responsiveness are our top priorities
+                                        during development.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- STEP 5 -->
+                        <div
+                            class="md:flex md:items-center md:justify-between group scroll-animate opacity-0 translate-x-[80px] transition-all duration-700 ease-out">
+
+                            <div class="md:w-1/2 md:pr-12 flex md:justify-end">
+
+                                <div
+                                    class="relative border border-white/10 bg-white/5 p-6 rounded-2xl hover:border-[#2EA4FF] transition w-full md:max-w-md">
+
+                                    <div class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2">
+
+                                        <div
+                                            class="w-10 h-10 flex items-center justify-center rounded-full border border-[#2EA4FF]/40 bg-[#0F1B2D] group-hover:bg-[#2EA4FF] transition shrink-0">
+
+                                            <i class="fas fa-rocket text-[#2EA4FF] group-hover:text-black"></i>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flex items-center gap-4 mb-3 ml-4">
+
+                                        <h3 class="text-[#2EA4FF] font-bold text-xl">
+                                            05. Launch
+                                        </h3>
+
+                                    </div>
+
+                                    <p class="text-gray-300 text-sm leading-relaxed">
+                                        After rigorous testing, we deploy your application and ensure everything runs
+                                        smoothly. We also provide continuous support, updates, and performance
+                                        monitoring.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="md:w-1/2"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-24 px-6 bg-[#041021]">
+
+            <div class="max-w-6xl mx-auto text-center">
+
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                    Technologies We Use
+                </h2>
+
+                <p class="text-gray-300 mb-10">
+                    Modern tools for powerful mobile applications.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4">
+
+                    <span
+                        class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white hover:border-[#2EA4FF] transition">
+                        React Native
+                    </span>
+
+                    <span
+                        class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white hover:border-[#2EA4FF] transition">
+                        Flutter
+                    </span>
+
+                    <span
+                        class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white hover:border-[#2EA4FF] transition">
+                        Firebase
+                    </span>
+
+                    <span
+                        class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white hover:border-[#2EA4FF] transition">
+                        Node.js
+                    </span>
+
+                    <span
+                        class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white hover:border-[#2EA4FF] transition">
+                        MongoDB
+                    </span>
+
+                    <span
+                        class="px-5 py-2 bg-white/5 border border-white/10 rounded-full text-white hover:border-[#2EA4FF] transition">
+                        Tailwind CSS
+                    </span>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-24 px-6 bg-[#0F1B2D]">
+
+            <div class="max-w-7xl mx-auto text-center mb-12">
+
+                <h2 class="text-2xl md:text-5xl font-bold text-white mb-4">
+                    Our Portfolio
+                </h2>
+
+                <p class="text-gray-300">
+                    Some of our recent mobile app projects.
+                </p>
+
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+
+                <!-- CARD -->
+                <div class="group relative overflow-hidden rounded-2xl border border-white/10">
+
+                    <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb"
+                        class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+
+                    <div
+                        class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-end p-5">
+                        <div>
+                            <h3 class="text-white font-bold">Food Delivery App</h3>
+                            <p class="text-gray-300 text-sm">Flutter • Firebase</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3"
+                        class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-end p-5">
+                        <div>
+                            <h3 class="text-white font-bold">Fitness App</h3>
+                            <p class="text-gray-300 text-sm">React Native</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-2xl border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c"
+                        class="w-full h-60 object-cover group-hover:scale-110 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-end p-5">
+                        <div>
+                            <h3 class="text-white font-bold">E-commerce App</h3>
+                            <p class="text-gray-300 text-sm">Flutter • Node.js</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="relative py-24 px-6 bg-[#041021]">
+
+            <div class="max-w-4xl mx-auto">
+
+                <h2 class="text-2xl md:text-5xl font-bold text-white text-center mb-12">
+                    Frequently Asked Questions
+                </h2>
+
+                <div class="space-y-4">
+
+                    <details class="bg-white/5 border border-white/10 p-4 rounded-xl">
+                        <summary class="cursor-pointer text-white font-semibold">
+                            How long does development take?
+                        </summary>
+                        <p class="text-gray-300 mt-2">
+                            It depends on complexity, usually 2–8 weeks.
+                        </p>
+                    </details>
+
+                    <details class="bg-white/5 border border-white/10 p-4 rounded-xl">
+                        <summary class="cursor-pointer text-white font-semibold">
+                            Do you provide support after launch?
+                        </summary>
+                        <p class="text-gray-300 mt-2">
+                            Yes, we provide full maintenance and updates.
+                        </p>
+                    </details>
+
+                    <details class="bg-white/5 border border-white/10 p-4 rounded-xl">
+                        <summary class="cursor-pointer text-white font-semibold">
+                            Which technologies do you use?
+                        </summary>
+                        <p class="text-gray-300 mt-2">
+                            Flutter, React Native, Firebase, Node.js, etc.
+                        </p>
+                    </details>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="relative py-28 px-6 bg-cover bg-center"
+            style="background-image:url('https://images.unsplash.com/photo-1551650975-87deedd944c3');">
+
+            <div class="absolute inset-0 bg-black/70"></div>
+
+            <div class="relative max-w-4xl mx-auto text-center">
+
+                <h2 class="text-2xl md:text-5xl font-bold text-white mb-6">
+                    Ready To Build Your App?
+                </h2>
+
+                <p class="text-gray-300 mb-8">
+                    Turn your idea into a powerful mobile application with us.
+                </p>
+
+                <a href="contact.html"
+                    class="px-8 py-4 bg-[#2EA4FF] hover:bg-blue-500 text-white rounded-full transition">
+                    Start Your Project
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
 
     <!-- Footer -->
     <footer class="bg-[#041021] text-white py-10">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
             <p class="text-sm">©2025 Digital Lord. All rights reserved.</p>
             <div class="flex space-x-4 mt-4 md:mt-0">
                 <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="Facebook">
@@ -541,6 +1184,7 @@
 
     <script src="script/nav.js"></script>
     <script src="script/mobile-app-carousel.js"></script>
+    <script src="script/process.js"></script>
 
 </body>
 
