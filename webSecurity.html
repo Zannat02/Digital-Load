@@ -17,7 +17,7 @@
         .inter-text {
             font-family: "Inter", sans-serif;
             font-optical-sizing: auto;
-            font-weight: <weight>;
+            font-weight: 400;
             font-style: normal;
         }
 
@@ -62,19 +62,143 @@
             max-height: 500px;
             transition: max-height 0.5s ease-in;
         }
+
+
+        /* 
+        section-2 */
+
+        .securityReveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .securityReveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .security-card {
+            transition: all 0.35s ease;
+        }
+
+        .security-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(228, 77, 38, 0.4);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+
+
+        /* section-3 */
+
+        .securityServiceCard {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all .4s ease;
+
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 620px;
+        }
+
+        .securityServiceCard:hover {
+            transform: translateY(-10px);
+            border-color: rgba(228, 77, 38, .5);
+            box-shadow: 0 0 35px rgba(228, 77, 38, .25);
+        }
+
+        .card-image {
+            height: 220px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .6s;
+        }
+
+        .securityServiceCard:hover .card-image img {
+            transform: scale(1.08);
+        }
+
+        .securityServiceCard .p-6 {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .securityServiceCard h3 {
+            min-height: 60px;
+        }
+
+        .service-text {
+            color: #b8c0cc;
+            line-height: 1.8;
+            flex-grow: 1;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .service-text.expanded {
+            display: block;
+            max-height: 180px;
+            overflow-y: auto;
+            padding-right: 6px;
+        }
+
+        .service-text.expanded::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .service-text.expanded::-webkit-scrollbar-thumb {
+            background: rgba(228, 77, 38, .6);
+            border-radius: 50px;
+        }
+
+        .more-text {
+            display: none;
+        }
+
+        .read-more-btn {
+            margin-top: 20px;
+            color: #E44D26;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .read-more-btn:hover {
+            color: #2EA4FF;
+        }
+
+        @media (max-width: 1279px) {
+            .securityServiceCard {
+                min-height: auto;
+            }
+        }
     </style>
 </head>
 
 <body class="bg-[#0F1B2D] text-white flex flex-col min-h-screen inter-text">
 
     <!-- Navigation Bar -->
-   <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
+    <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
         <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
             <!-- Logo -->
-             <div>
-        <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
-      
-      </div>
+            <div>
+                <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
+
+            </div>
 
             <!-- Desktop Navigation -->
             <nav class="hidden lg:flex space-x-6 items-center">
@@ -96,7 +220,7 @@
                         <a href="digitalMarketing.html" class="block px-4 py-2 hover:bg-gray-200">Digital Marketing</a>
                         <a href="webDev.html" class="block px-4 py-2 hover:bg-gray-200">Web Development</a>
                         <a href="webSecurity.html" class="block px-4 py-2 hover:bg-gray-200">Web Security</a>
-                        <a href="seo.html" class="block px-4 py-2 hover:bg-gray-200">SEO</a>
+                        <!-- <a href="seo.html" class="block px-4 py-2 hover:bg-gray-200">SEO</a> -->
                     </div>
                 </div>
 
@@ -136,8 +260,8 @@
                             class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Web Development</a>
                         <a href="webSecurity.html"
                             class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Web Security</a>
-                        <a href="seo.html"
-                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">SEO</a>
+                        <!-- <a href="seo.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">SEO</a> -->
                     </div>
                 </div>
 
@@ -148,70 +272,619 @@
 
     <!-- Main Content -->
     <main class="flex-grow">
-  <section class="max-w-6xl mx-auto px-6 pt-32 pb-16">
-    <h1 class="text-4xl font-bold text-center mb-6">Web Security</h1>
-    <p class="text-gray-300 text-center max-w-3xl mx-auto mb-12">
-      Protecting your digital assets is our top priority. Our Web Security services 
-      safeguard your website and applications from cyber threats, data breaches, and 
-      vulnerabilities. We ensure your business runs securely with the latest security 
-      standards and best practices.
-    </p>
+        <section
+            class="relative overflow-hidden bg-gradient-to-br from-[#041021] via-[#07172D] to-[#000150] pt-32 pb-20">
 
-    <!-- Info Cards -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="bg-[#1e293b] p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-3 text-[#E44D26]">Threat Protection</h3>
-        <p class="text-gray-300 text-sm">
-          Shield your website from malware, hacking attempts, and cyber attacks 
-          with advanced protection tools.
-        </p>
-      </div>
-      <div class="bg-[#1e293b] p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-3 text-[#E44D26]">Data Encryption</h3>
-        <p class="text-gray-300 text-sm">
-          We implement SSL/TLS encryption and secure protocols to protect sensitive 
-          data and ensure safe transactions.
-        </p>
-      </div>
-      <div class="bg-[#1e293b] p-6 rounded-lg shadow hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-3 text-[#E44D26]">Ongoing Monitoring</h3>
-        <p class="text-gray-300 text-sm">
-          Continuous monitoring and timely updates help prevent vulnerabilities 
-          and keep your digital systems safe.
-        </p>
-      </div>
-    </div>
-  </section>
-</main>
+            <!-- Glow Effects -->
+            <div class="absolute top-20 left-10 w-72 h-72 bg-[#E44D26]/20 rounded-full blur-[120px]">
+            </div>
+
+            <div class="absolute bottom-10 right-10 w-72 h-72 bg-[#2EA4FF]/20 rounded-full blur-[120px]">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+                <!-- Breadcrumb -->
+                <div class="mb-8">
+
+                    <nav class="flex items-center gap-2 text-sm text-gray-400">
+
+                        <a href="index.html" class="flex items-center gap-2 hover:text-[#E44D26] transition">
+                            <i class="fas fa-house text-xs"></i>
+
+                            Home
+
+                        </a>
+
+                        <i class="fas fa-chevron-right text-xs text-gray-400"></i>
+
+                        <a href="service.html" class="hover:text-[#E44D26] transition">
+
+                            Services
+
+                        </a>
+
+                        <i class="fas fa-chevron-right text-xs text-gray-400"></i>
+
+                        <span class="text-white">
+
+                            Web Security
+
+                        </span>
+
+                    </nav>
+
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- Left Content -->
+                    <div>
+
+                        <span
+                            class="inline-block bg-[#E44D26]/10 border border-[#E44D26]/30 text-[#E44D26] px-4 py-2 rounded-full text-sm mb-6">
+
+                            Advanced Web Security
+
+                        </span>
+
+                        <h1 class="text-2xl md:text-5xl  font-bold leading-tight mb-6">
+
+                            Protect Your Website From
+
+                            <span class="text-[#E44D26]">
+
+                                Cyber Threats
+
+                            </span>
+
+                        </h1>
+
+                        <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-8 max-w-xl">
+
+                            Keep your website secure with proactive monitoring,
+                            vulnerability assessments, malware protection,
+                            and industry-standard security practices.
+
+                        </p>
+
+                        <div class="flex flex-wrap gap-4">
+
+                            <a href="contact.html"
+                                class="bg-[#E44D26] hover:bg-[#c53c1d] transition px-7 py-3 rounded-lg font-semibold">
+
+                                Get Security Audit
+
+                            </a>
+
+                            <a href="contact.html" class="border border-[#2EA4FF] text-[#2EA4FF]
+                        hover:bg-[#2EA4FF] hover:text-white
+                        transition px-7 py-3 rounded-lg font-semibold">
+
+                                Contact Us
+
+                            </a>
+
+                        </div>
+
+                        <!-- Stats -->
+
+                        <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10">
+
+                            <div>
+
+                                <h3 class="text-3xl font-bold text-[#E44D26]">
+
+                                    99%
+
+                                </h3>
+
+                                <p class="text-gray-400 text-sm">
+
+                                    Threat Detection
+
+                                </p>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="text-3xl font-bold text-[#2EA4FF]">
+
+                                    24/7
+
+                                </h3>
+
+                                <p class="text-gray-400 text-sm">
+
+                                    Monitoring
+
+                                </p>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="text-3xl font-bold text-[#E44D26]">
+
+                                    100%
+
+                                </h3>
+
+                                <p class="text-gray-400 text-sm">
+
+                                    Protection Focus
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right Image -->
+
+                    <div class="relative flex justify-center">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-[#E44D26]/20 to-[#2EA4FF]/20 blur-3xl rounded-full">
+                        </div>
+
+                        <img src="picture/Login-pana.png" alt="Web Security" class="relative z-10 w-full max-w-lg">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Why Website Security Matters -->
+        <section class="relative py-24 overflow-hidden bg-gradient-to-b from-[#07172D] to-[#041021]">
+
+            <!-- Background Glow -->
+            <div class="absolute top-10 left-0 w-72 h-72 bg-[#E44D26]/10 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-0 right-0 w-72 h-72 bg-[#2EA4FF]/10 rounded-full blur-[120px]"></div>
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- Left Image -->
+                    <div class="securityReveal relative">
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-r from-[#E44D26]/20 to-[#2EA4FF]/20 blur-3xl rounded-[30px]">
+                        </div>
+
+                        <div class="relative  p-3">
+
+                            <img src="picture/4560.jpg" alt="Website Security" class="rounded-2xl w-full">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right Content -->
+                    <div class="securityReveal">
+
+                        <span
+                            class="inline-block px-4 py-2 rounded-full border border-[#2EA4FF]/30 bg-[#2EA4FF]/10 text-[#2EA4FF] text-sm mb-6">
+                            Why Security Matters
+                        </span>
+
+                        <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+
+                            Protect Your Business
+                            From
+
+                            <span class="text-[#E44D26]">
+                                Cyber Threats
+                            </span>
+
+                        </h2>
+
+                        <p class="text-gray-300 leading-relaxed mb-10">
+
+                            Every website faces security risks. A secure website
+                            protects customer data, builds trust, and keeps your
+                            business running without interruptions.
+
+                        </p>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+
+                            <div class="security-card p-5 rounded-xl border border-white/10 bg-white/5">
+                                <i class="fas fa-shield-alt text-[#E44D26] text-2xl mb-3"></i>
+                                <h4 class="font-semibold mb-2">
+                                    Prevent Data Breaches
+                                </h4>
+                                <p class="text-sm text-gray-400">
+                                    Stop attackers from accessing sensitive business data.
+                                </p>
+                            </div>
+
+                            <div class="security-card p-5 rounded-xl border border-white/10 bg-white/5">
+                                <i class="fas fa-user-lock text-[#2EA4FF] text-2xl mb-3"></i>
+                                <h4 class="font-semibold mb-2">
+                                    Protect Customer Information
+                                </h4>
+                                <p class="text-sm text-gray-400">
+                                    Keep customer records and personal data safe.
+                                </p>
+                            </div>
+
+                            <div class="security-card p-5 rounded-xl border border-white/10 bg-white/5">
+                                <i class="fas fa-handshake text-[#E44D26] text-2xl mb-3"></i>
+                                <h4 class="font-semibold mb-2">
+                                    Improve Trust
+                                </h4>
+                                <p class="text-sm text-gray-400">
+                                    Build confidence through strong website security.
+                                </p>
+                            </div>
+
+                            <div class="security-card p-5 rounded-xl border border-white/10 bg-white/5">
+                                <i class="fas fa-server text-[#2EA4FF] text-2xl mb-3"></i>
+                                <h4 class="font-semibold mb-2">
+                                    Ensure Availability
+                                </h4>
+                                <p class="text-sm text-gray-400">
+                                    Reduce downtime and keep services online.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <!-- Security Services -->
+        <section class="relative py-24 overflow-hidden bg-gradient-to-br from-[#041021] via-[#07172D] to-[#000150]">
+
+            <!-- Glow -->
+            <div class="absolute top-20 left-0 w-72 h-72 bg-[#E44D26]/10 rounded-full blur-[120px]">
+            </div>
+
+            <div class="absolute bottom-0 right-0 w-72 h-72 bg-[#2EA4FF]/10 rounded-full blur-[120px]">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+                <!-- Heading -->
+
+                <div class="text-center mb-16 securityReveal">
+
+                    <span
+                        class="inline-block px-4 py-2 rounded-full border border-[#E44D26]/30 bg-[#E44D26]/10 text-[#E44D26] text-sm mb-4">
+
+                        Security Solutions
+
+                    </span>
+
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">
+
+                        Our Security Services
+
+                    </h2>
+
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+
+                        Comprehensive protection solutions designed to keep
+                        your website secure and your business protected.
+
+                    </p>
+
+                </div>
+
+                <!-- Cards -->
+
+                <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+
+                    <!-- Card 1 -->
+
+                    <div class="securityServiceCard securityReveal">
+
+                        <div class="card-image">
+
+                            <img src="picture/vulnerability.jpg" alt="Vulnerability Assessment">
+
+                        </div>
+
+                        <div class="p-6">
+
+                            <h3 class="text-xl font-bold mb-4">
+
+                                Vulnerability Assessment
+
+                            </h3>
+
+                            <p class="service-text">
+                                Identify security weaknesses before attackers
+                                can exploit them and reduce business risks.
+
+                                <span class="more-text">
+                                    Our assessment process includes automated
+                                    scanning, manual testing, risk analysis,
+                                    and detailed reporting to help strengthen
+                                    your security posture before threats arise.
+                                </span>
+                            </p>
+
+                            <button class="read-more-btn mt-4">
+
+                                Read More →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Card 2 -->
+
+                    <div class="securityServiceCard securityReveal">
+
+                        <div class="card-image">
+
+                            <img src="picture/monitoring.jpg" alt="Security Monitoring">
+
+                        </div>
+
+                        <div class="p-6">
+
+                            <h3 class="text-xl font-bold mb-4">
+
+                                Security Monitoring
+
+                            </h3>
+
+                            <p class="service-text">
+
+                                Continuous monitoring helps identify suspicious
+                                activity and potential threats before they
+                                impact your website operations.
+
+                                <span class="more-text hidden">
+
+                                    Real-time alerts, threat intelligence,
+                                    activity tracking, and incident response
+                                    support ensure your website remains secure
+                                    around the clock.
+                                </span>
+
+                            </p>
+
+                            <button class="read-more-btn mt-4">
+
+                                Read More →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Card 3 -->
+
+                    <div class="securityServiceCard securityReveal">
+
+                        <div class="card-image">
+
+                            <img src="picture/malware.jpg" alt="Malware Protection">
+
+                        </div>
+
+                        <div class="p-6">
+
+                            <h3 class="text-xl font-bold mb-4">
+
+                                Malware Protection
+
+                            </h3>
+
+                            <p class="service-text">
+
+                                Detect, isolate, and remove malicious code that
+                                can compromise your website and customer data.
+
+                                <span class="more-text hidden">
+
+                                    We implement proactive scanning,
+                                    malware cleanup, and protection measures
+                                    to minimize future infections and attacks.
+                                </span>
+
+                            </p>
+
+                            <button class="read-more-btn mt-4">
+
+                                Read More →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Card 4 -->
+
+                    <div class="securityServiceCard securityReveal">
+
+                        <div class="card-image">
+
+                            <img src="picture/hardening.jpg" alt="Website Hardening">
+
+                        </div>
+
+                        <div class="p-6">
+
+                            <h3 class="text-xl font-bold mb-4">
+
+                                Website Hardening
+
+                            </h3>
+
+                            <p class="service-text">
+
+                                Strengthen your website by reducing attack
+                                surfaces and implementing security best
+                                practices.
+
+                                <span class="more-text hidden">
+
+                                    Server configuration improvements,
+                                    access control, security headers,
+                                    and protection layers help reduce
+                                    potential vulnerabilities.
+                                </span>
+
+                            </p>
+
+                            <button class="read-more-btn mt-4">
+
+                                Read More →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
 
     <!-- Footer -->
-    <footer class="bg-[#041021] text-white py-10">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm">©2025 Digital Lord. All rights reserved.</p>
-            <div class="flex space-x-4 mt-4 md:mt-0">
-                <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="Facebook">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
-                    </svg>
-                </a>
-                <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="Twitter">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
-                    </svg>
-                </a>
-                <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="LinkedIn">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                        <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
-                        <circle cx="4" cy="4" r="2" />
-                    </svg>
-                </a>
+    <footer>
+        <!-- Top Part -->
+        <div class="bg-[#041021] text-white px-6 py-12">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-stone-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-stone-400 transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Privacy policy</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Expertise -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Our Expertise</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="digitalMarketing.html" class="hover:text-stone-400 transition">Digital
+                                Marketing</a></li>
+                        <li><a href="mobileApp.html" class="hover:text-stone-400 transition">Mobile App Development</a>
+                        </li>
+                        <li><a href="#" class="hover:text-stone-400 transition">WordPress Development</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Software Development</a></li>
+                        <li><a href="seo.html" class="hover:text-stone-400 transition">SEO</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-stone-400 transition">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">SEO Experts</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Web Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Connect with Us -->
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Connect with Us</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-location-pin text-[#2EA4FF] text-lg"></i>
+                            <span>Digital Lord, London, UK</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone-volume text-[#2EA4FF] text-lg"></i>
+                            <span>+44 7824 770279</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-message text-[#2EA4FF] text-lg"></i>
+                            <span>info@digitallord.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Bottom Part -->
+        <div class="bg-[#191919] text-white px-6 py-4">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+
+                <!-- Left -->
+                <p class="text-sm">©2025 DIGITAL LORD. All Rights Reserved</p>
+
+                <!-- Right Social Icons -->
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="#" aria-label="Facebook">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" aria-label="Twitter">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" aria-label="LinkedIn">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+
             </div>
         </div>
     </footer>
+
+
+
     <script src="script/nav.js"></script>
+    <script src="script/web-security.js"></script>
+    <script src="script/security-card.js"></script>
 </body>
 
 </html>

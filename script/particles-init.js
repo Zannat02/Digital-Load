@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const targets = [
     "particles-js",
      "particles-tech",
-     "particles-contact",
-     "particles-digital-canvas"
+     "particles-contact"
+   
      
     
    

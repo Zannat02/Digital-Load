@@ -5,18 +5,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mobile App Development | Digital Lord</title>
+    <title>Digital Marketing | Digital Lord</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="icon" type="image/png" href="picture/DL.png">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <style>
         .inter-text {
             font-family: "Inter", sans-serif;
             font-optical-sizing: auto;
-            font-weight: <weight>;
+            font-weight: 400;
             font-style: normal;
         }
 
@@ -215,6 +217,380 @@
             transform: scale(1.08);
             filter: drop-shadow(0 10px 20px rgba(46, 164, 255, 0.35));
         }
+
+
+        section svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .why-card {
+            position: relative;
+            padding: 40px 30px;
+            border-radius: 24px;
+
+
+
+            border: 1px solid transparent;
+
+            overflow: hidden;
+
+            transition: all .4s ease;
+
+            transform: translateZ(0);
+            will-change: transform;
+        }
+
+        .why-card:hover {
+            transform: translateY(-10px);
+
+            background: rgba(255, 255, 255, 0.04);
+
+            border-color: rgba(46, 164, 255, .7);
+
+            box-shadow:
+                0 0 0 1px rgba(46, 164, 255, .4),
+                0 20px 40px rgba(46, 164, 255, .15);
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            border: 1px solid #2EA4FF;
+
+            opacity: 0;
+
+            transition: .4s ease;
+        }
+
+        .why-card:hover::before {
+            opacity: 1;
+        }
+
+        .icon-wrap {
+            width: 70px;
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 18px;
+
+            background: rgba(46, 164, 255, .12);
+
+            border: 1px solid rgba(46, 164, 255, .3);
+
+            color: #2EA4FF;
+
+            font-size: 28px;
+
+            margin-bottom: 24px;
+        }
+
+        .learn-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #2EA4FF;
+
+            font-weight: 600;
+
+            transition: .3s;
+        }
+
+        .learn-btn:hover {
+            gap: 14px;
+        }
+
+
+        /* for seo section */
+
+        .seo-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            border: 1px solid rgba(46, 164, 255, .15);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, .02);
+        }
+
+        .seo-item i {
+            color: #2EA4FF;
+            font-size: 20px;
+        }
+
+        .seo-visual {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .seo-circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 1px solid rgba(46, 164, 255, .25);
+            background: radial-gradient(circle,
+                    rgba(46, 164, 255, .18),
+                    transparent 70%);
+        }
+
+        .seo-card {
+            position: absolute;
+            padding: 24px;
+            min-width: 180px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, .03);
+            border: 1px solid rgba(46, 164, 255, .2);
+        }
+
+        .seo-card h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2EA4FF;
+            margin-bottom: 8px;
+        }
+
+        .seo-card span {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        .seo-card-1 {
+            top: 8%;
+            left: 5%;
+        }
+
+        .seo-card-2 {
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+        }
+
+        .seo-card-3 {
+            bottom: 8%;
+            left: 15%;
+        }
+
+        @media(max-width:992px) {
+
+            .seo-visual {
+                height: 400px;
+                margin-top: 40px;
+            }
+
+            .seo-circle {
+                width: 250px;
+                height: 250px;
+            }
+
+            .seo-card {
+                min-width: 150px;
+                padding: 18px;
+            }
+
+            .seo-card h3 {
+                font-size: 24px;
+            }
+
+            /* close to circle */
+
+            .seo-card-1 {
+                top: 12%;
+                left: 12%;
+            }
+
+            .seo-card-2 {
+                top: 50%;
+                right: 12%;
+                transform: translateY(-50%);
+            }
+
+            .seo-card-3 {
+                bottom: 12%;
+                left: 18%;
+            }
+        }
+
+        @media(max-width:640px) {
+
+            .seo-visual {
+                height: 320px;
+            }
+
+            .seo-circle {
+                width: 180px;
+                height: 180px;
+            }
+
+            .seo-card {
+                min-width: 115px;
+                padding: 12px;
+            }
+
+            .seo-card h3 {
+                font-size: 18px;
+                margin-bottom: 4px;
+            }
+
+            .seo-card span {
+                font-size: 12px;
+            }
+
+            .seo-card-1 {
+                top: 5%;
+                left: 0;
+            }
+
+            .seo-card-2 {
+                right: 0;
+            }
+
+            .seo-card-3 {
+                left: 5%;
+                bottom: 5%;
+            }
+        }
+
+
+
+        .case-study {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: center;
+
+            padding: 40px;
+
+            border-radius: 28px;
+
+            background: rgba(255, 255, 255, .02);
+
+            border: 1px solid rgba(46, 164, 255, .15);
+
+            transition: .4s;
+        }
+
+        .case-study:hover {
+            transform: translateY(-6px);
+
+            border-color: rgba(46, 164, 255, .4);
+
+            box-shadow: 0 20px 40px rgba(46, 164, 255, .1);
+        }
+
+        .case-left span {
+            color: #2EA4FF;
+            font-size: 14px;
+        }
+
+        .case-left h3 {
+            font-size: 30px;
+            margin: 10px 0;
+            font-weight: 700;
+        }
+
+        .case-left p {
+            color: rgba(255, 255, 255, .65);
+        }
+
+        .case-right {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .case-right div {
+            text-align: center;
+            padding: 24px;
+            border-radius: 20px;
+            background: rgba(46, 164, 255, .05);
+        }
+
+        .case-right h4 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #2EA4FF;
+            margin-bottom: 8px;
+        }
+
+        .case-right span {
+            color: rgba(255, 255, 255, .65);
+        }
+
+        @media(max-width:992px) {
+
+            .case-study {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media(max-width:640px) {
+
+            .case-right {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        /* FAQ */
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(46, 164, 255, 0.15);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: .3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(46, 164, 255, 0.4);
+        }
+
+        .faq-btn {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .faq-btn i {
+            color: #2EA4FF;
+            transition: .3s;
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s ease;
+        }
+
+        .faq-content p {
+            padding: 0 22px 22px;
+            color: rgba(255, 255, 255, .7);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-content {
+            max-height: 200px;
+        }
+
+        .faq-item.active i {
+            transform: rotate(45deg);
+        }
     </style>
 </head>
 
@@ -249,7 +625,7 @@
                         <a href="digitalMarketing.html" class="block px-4 py-2 hover:bg-gray-200">Digital Marketing</a>
                         <a href="webDev.html" class="block px-4 py-2 hover:bg-gray-200">Web Development</a>
                         <a href="webSecurity.html" class="block px-4 py-2 hover:bg-gray-200">Web Security</a>
-                        <a href="seo.html" class="block px-4 py-2 hover:bg-gray-200">SEO</a>
+                        <!-- <a href="seo.html" class="block px-4 py-2 hover:bg-gray-200">SEO</a> -->
                     </div>
                 </div>
 
@@ -289,8 +665,8 @@
                             class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Web Development</a>
                         <a href="webSecurity.html"
                             class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Web Security</a>
-                        <a href="seo.html"
-                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">SEO</a>
+                        <!-- <a href="seo.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">SEO</a> -->
                     </div>
                 </div>
 
@@ -305,7 +681,7 @@
     <main class="flex-grow">
         <section class="relative pt-32 pb-16 overflow-hidden">
 
-            <div id="particles-digital-canvas" class="absolute inset-0" style="z-index: 15;"></div>
+            <div id="particles-js" class="absolute inset-0" style="z-index: 15;"></div>
 
             <!-- FULL WIDTH BACKGROUND LAYER -->
             <div class="absolute inset-0 z-10" style="
@@ -553,7 +929,7 @@
                             About Us
                         </span>
 
-                        <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
+                        <h2 class="text-2xl md:text-5xl font-bold leading-tight mb-6">
                             Enjoy Full-Service Digital Marketing Expertise
                         </h2>
 
@@ -596,41 +972,587 @@
             </div>
 
         </section>
+
+        <section class="relative py-24 overflow-hidden  isolate">
+
+            <!-- Background Shape Image -->
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="none"
+                    class="w-full h-full absolute inset-0">
+
+                    <g mask="url(#SvgjsMask1000)" fill="none">
+                        <rect width="1440" height="560" fill="#0e2a47"></rect>
+
+                        <path
+                            d="M0,289.893C64.23,292.231,132.859,325.412,188.872,293.891C245.147,262.222,252.769,186.181,284.368,129.867C319.445,67.355,394.06,15.754,384.827,-55.33C375.607,-126.311,298.161,-166.018,240.436,-208.339C192.865,-243.215,136.405,-256.035,81.536,-277.686C20.276,-301.859,-35.097,-348.727,-100.7,-342.953C-170.867,-336.777,-242.726,-303.075,-283.399,-245.567C-323.228,-189.252,-310.156,-113.758,-311.572,-44.797C-312.822,16.069,-313.966,76.523,-291.172,132.974C-267.664,191.194,-235.511,250.67,-180.239,280.457C-126.183,309.589,-61.365,287.66,0,289.893"
+                            fill="#0b2239" />
+
+                        <path
+                            d="M1440 1077.86C1534.442 1062.598 1590.366 968.603 1661.441 904.568C1720.518 851.342 1774.525 798.401 1821.442 734.199C1879.736 654.429 1975.163 582.564 1968.806 483.969C1962.476 385.781 1854.329 331.167 1790.624 256.183C1726.168 180.315 1685.54 76.114 1592.411 40.935C1497.615 5.127 1394.828 47.264 1295.922 69.315C1190.02 92.925 1053.258 82.812 994.743 174.183C934.839 267.723 1025.269 388.693 1020.325 499.66C1016.072 595.115 940.24 684.134 967.951 775.577C996.435 869.571 1084.523 931.469 1167.233 984.434C1249.842 1037.334 1343.161 1093.51 1440 1077.86"
+                            fill="#113255" />
+                    </g>
+
+                    <defs>
+                        <mask id="SvgjsMask1000">
+                            <rect width="1440" height="560" fill="#fff" />
+                        </mask>
+                    </defs>
+                </svg>
+            </div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-6">
+
+                <!-- Heading -->
+                <div class="text-center mb-16">
+
+                    <span
+                        class="inline-block px-4 py-2 rounded-full bg-[#2EA4FF]/10 border border-[#2EA4FF]/30 text-[#2EA4FF] text-sm mb-5">
+                        Why Choose Us
+                    </span>
+
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                        Results-Driven Digital Marketing Solutions
+                    </h2>
+
+                    <p class="text-white/70 max-w-3xl mx-auto">
+                        We combine strategy, creativity, and technology to help businesses
+                        attract customers, generate leads, and grow faster online.
+                    </p>
+
+                </div>
+
+                <!-- Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+                    <!-- Card 1 -->
+                    <div class="why-card">
+
+                        <div class="icon-wrap">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">
+                            Proven Growth Strategy
+                        </h3>
+
+                        <p class="text-white/65 mb-6">
+                            We create customized marketing plans designed to increase
+                            visibility, engagement, and revenue.
+                        </p>
+
+                        <a href="#" class="learn-btn">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="why-card">
+
+                        <div class="icon-wrap">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">
+                            Targeted Advertising
+                        </h3>
+
+                        <p class="text-white/65 mb-6">
+                            Reach the right audience through data-driven campaigns
+                            optimized for conversions.
+                        </p>
+
+                        <a href="#" class="learn-btn">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="why-card">
+
+                        <div class="icon-wrap">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4">
+                            Measurable Results
+                        </h3>
+
+                        <p class="text-white/65 mb-6">
+                            Track performance with transparent reporting and
+                            continuous optimization.
+                        </p>
+
+                        <a href="#" class="learn-btn">
+                            Learn More
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="relative py-24 overflow-hidden">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- Left Content -->
+                    <div>
+
+                        <span
+                            class="inline-block px-4 py-2 rounded-full bg-[#2EA4FF]/10 border border-[#2EA4FF]/20 text-[#2EA4FF] text-sm mb-6">
+                            SEO Optimization
+                        </span>
+
+                        <h2 class="text-2xl lg:text-5xl font-bold leading-tight mb-6">
+                            Rank Higher & Get
+                            <span class="text-[#2EA4FF]">
+                                Organic Traffic
+                            </span>
+                        </h2>
+
+                        <p class="text-white/70 mb-10">
+                            We help businesses dominate search results through
+                            technical SEO, keyword strategy, content optimization,
+                            and authority building.
+                        </p>
+
+                        <div class="space-y-5">
+
+                            <div class="seo-item">
+                                <i class="fas fa-search"></i>
+                                <span>Keyword Research & Competitor Analysis</span>
+                            </div>
+
+                            <div class="seo-item">
+                                <i class="fas fa-code"></i>
+                                <span>Technical SEO Optimization</span>
+                            </div>
+
+                            <div class="seo-item">
+                                <i class="fas fa-link"></i>
+                                <span>Authority & Link Building</span>
+                            </div>
+
+                            <div class="seo-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Traffic Growth Monitoring</span>
+                            </div>
+
+                        </div>
+
+                        <a href="#"
+                            class="inline-flex items-center gap-3 mt-10 px-7 py-4 rounded-xl bg-[#2EA4FF] text-white font-semibold hover:translate-y-[-3px] transition">
+                            Get SEO Audit
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                    <!-- Right Visual -->
+                    <div class="seo-visual">
+
+                        <div class="seo-circle"></div>
+
+                        <div class="seo-card seo-card-1">
+                            <h3>+320%</h3>
+                            <span>Organic Traffic</span>
+                        </div>
+
+                        <div class="seo-card seo-card-2">
+                            <h3>#1</h3>
+                            <span>Google Ranking</span>
+                        </div>
+
+                        <div class="seo-card seo-card-3">
+                            <h3>85%</h3>
+                            <span>Lead Growth</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+        <section class="relative py-24">
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="text-center mb-16">
+
+                    <span
+                        class="inline-block px-4 py-2 rounded-full bg-[#2EA4FF]/10 border border-[#2EA4FF]/20 text-[#2EA4FF] text-sm mb-5">
+                        Success Stories
+                    </span>
+
+                    <h2 class="text-2xl lg:text-5xl font-bold mb-5">
+                        Real Results For Real Businesses
+                    </h2>
+
+                    <p class="max-w-3xl mx-auto text-white/70">
+                        See how our digital marketing strategies transformed
+                        online visibility and revenue growth.
+                    </p>
+
+                </div>
+
+                <div class="space-y-8">
+
+                    <!-- Case 1 -->
+
+                    <div class="case-study">
+
+                        <div class="case-left">
+                            <span>E-Commerce Brand</span>
+                            <h3>Organic Growth Campaign</h3>
+                            <p>
+                                SEO + Content Marketing strategy focused on
+                                increasing product visibility.
+                            </p>
+                        </div>
+
+                        <div class="case-right">
+
+                            <div>
+                                <h4>+320%</h4>
+                                <span>Traffic</span>
+                            </div>
+
+                            <div>
+                                <h4>+180%</h4>
+                                <span>Leads</span>
+                            </div>
+
+                            <div>
+                                <h4>+250%</h4>
+                                <span>Revenue</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Case 2 -->
+
+                    <div class="case-study">
+
+                        <div class="case-left">
+                            <span>Local Business</span>
+                            <h3>Google Ads Strategy</h3>
+                            <p>
+                                Optimized campaigns that reduced cost per lead
+                                and improved conversions.
+                            </p>
+                        </div>
+
+                        <div class="case-right">
+
+                            <div>
+                                <h4>4.8X</h4>
+                                <span>ROAS</span>
+                            </div>
+
+                            <div>
+                                <h4>-42%</h4>
+                                <span>CPL</span>
+                            </div>
+
+                            <div>
+                                <h4>+190%</h4>
+                                <span>Sales</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ Section -->
+        <section class="relative py-24 overflow-hidden" style="
+    background:
+    radial-gradient(circle at top left, rgba(46,164,255,0.18), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(139,92,246,0.15), transparent 35%),
+    linear-gradient(135deg, #0b2239 0%, #0e2a47 50%, #113255 100%);
+">
+
+            <div class="absolute top-0 left-0 w-96 h-96 bg-[#2EA4FF]/10 blur-[120px] rounded-full"></div>
+
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 blur-[120px] rounded-full"></div>
+
+            <div class="max-w-7xl mx-auto px-6">
+
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- Left FAQ -->
+                    <div>
+
+                        <span
+                            class="inline-block px-4 py-2 rounded-full bg-[#2EA4FF]/10 border border-[#2EA4FF]/20 text-[#2EA4FF] text-sm mb-5">
+                            FAQ
+                        </span>
+
+                        <h2 class="text-2xl md:text-5xl font-bold mb-8">
+                            Frequently Asked Questions
+                        </h2>
+
+                        <div class="space-y-4">
+
+                            <!-- Item -->
+                            <div class="faq-item">
+                                <button class="faq-btn">
+                                    <span>How long does it take to see results?</span>
+                                    <i class="fas fa-plus"></i>
+                                </button>
+
+                                <div class="faq-content">
+                                    <p>
+                                        SEO usually takes 3-6 months, while paid advertising
+                                        can generate leads almost immediately.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="faq-item">
+                                <button class="faq-btn">
+                                    <span>Do you provide social media management?</span>
+                                    <i class="fas fa-plus"></i>
+                                </button>
+
+                                <div class="faq-content">
+                                    <p>
+                                        Yes, we create content, manage campaigns,
+                                        and grow engagement across platforms.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="faq-item">
+                                <button class="faq-btn">
+                                    <span>Can you help with Google Ads?</span>
+                                    <i class="fas fa-plus"></i>
+                                </button>
+
+                                <div class="faq-content">
+                                    <p>
+                                        Absolutely. We build and optimize Google Ads
+                                        campaigns focused on conversions and ROI.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Item -->
+                            <div class="faq-item">
+                                <button class="faq-btn">
+                                    <span>Do you provide monthly reports?</span>
+                                    <i class="fas fa-plus"></i>
+                                </button>
+
+                                <div class="faq-content">
+                                    <p>
+                                        Yes, detailed reports are provided every month
+                                        with performance insights and recommendations.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right Image -->
+                    <div class="flex justify-center">
+
+                        <div class="relative top-16">
+
+                            <div class="absolute  inset-0 bg-[#2EA4FF]/10 blur-3xl rounded-full"></div>
+
+                            <img src="picture/Man thinking-rafiki.png" alt="FAQ Illustration"
+                                class="relative w-full max-w-md mx-auto">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
     </main>
+
+    <button id="scrollTopBtn"
+        class="fixed bottom-6 right-6 w-12 h-12 bg-white text-black rounded-full shadow-lg flex items-center justify-center opacity-0 scale-0 transition-all duration-300 z-[9999]">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
 
     <!-- Footer -->
-    <footer class="bg-[#041021] text-white py-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-sm">©2025 Digital Lord. All rights reserved.</p>
-            <div class="flex space-x-4 mt-4 md:mt-0">
-                <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="Facebook">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
-                    </svg>
-                </a>
-                <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="Twitter">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                        <path
-                            d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
-                    </svg>
-                </a>
-                <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="LinkedIn">
-                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                        <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
-                        <circle cx="4" cy="4" r="2" />
-                    </svg>
-                </a>
+    <footer>
+        <!-- Top Part -->
+        <div class="bg-[#041021] text-white px-6 py-12">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-stone-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-stone-400 transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Privacy policy</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Expertise -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Our Expertise</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="digitalMarketing.html" class="hover:text-stone-400 transition">Digital
+                                Marketing</a></li>
+                        <li><a href="mobileApp.html" class="hover:text-stone-400 transition">Mobile App Development</a>
+                        </li>
+                        <li><a href="#" class="hover:text-stone-400 transition">WordPress Development</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Software Development</a></li>
+                        <li><a href="seo.html" class="hover:text-stone-400 transition">SEO</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-stone-400 transition">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">SEO Experts</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Web Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Connect with Us -->
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Connect with Us</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-location-pin text-[#2EA4FF] text-lg"></i>
+                            <span>Digital Lord, London, UK</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone-volume text-[#2EA4FF] text-lg"></i>
+                            <span>+44 7824 770279</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-message text-[#2EA4FF] text-lg"></i>
+                            <span>info@digitallord.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Bottom Part -->
+        <div class="bg-[#191919] text-white px-6 py-4">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+
+                <!-- Left -->
+                <p class="text-sm">©2025 DIGITAL LORD. All Rights Reserved</p>
+
+                <!-- Right Social Icons -->
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="#" aria-label="Facebook">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" aria-label="Twitter">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" aria-label="LinkedIn">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+
             </div>
         </div>
     </footer>
-
 
     <script src="script/nav.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script/particles-init.js"></script>
     <script src="script/digital-svg-animation.js"></script>
+
+    <script src="script/button.js"></script>
+
+    <script>
+        document.querySelectorAll(".faq-btn").forEach(btn => {
+
+            btn.addEventListener("click", () => {
+
+                const item = btn.parentElement;
+
+                document.querySelectorAll(".faq-item").forEach(faq => {
+                    if (faq !== item) {
+                        faq.classList.remove("active");
+                    }
+                });
+
+                item.classList.toggle("active");
+            });
+
+        });
+    </script>
 
 
 </body>
