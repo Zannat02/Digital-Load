@@ -311,7 +311,7 @@
 
 
     /* Mobile menu animation */
-    #mobile-menu {
+    /* #mobile-menu {
       transition: max-height 0.3s ease-out;
       max-height: 0;
       overflow: hidden;
@@ -320,11 +320,27 @@
     #mobile-menu:not(.hidden) {
       max-height: 500px;
       transition: max-height 0.5s ease-in;
+    } */
+
+
+    #mobile-menu {
+      transition: max-height 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    #mobile-menu:not(.hidden) {
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
     }
 
     /* Mobile dropdown animation */
     #mobile-dropdown {
       transition: all 0.3s ease;
+    }
+
+    .rotate-180 {
+      transform: rotate(180deg);
     }
 
     /* Responsive adjustments */
@@ -455,13 +471,56 @@
           </div>
         </div>
 
+
+        <!-- Business Development Dropdown -->
+        <div class="relative group">
+          <a href="businessDevelopment.html" class="text-white hover:text-gray-300 transition-colors flex items-center">
+            Business Development
+
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+
+          </a>
+
+          <div
+            class="absolute left-0 mt-2 w-64 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+
+            <a href="swotAnalysis.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              SWOT Analysis
+            </a>
+
+            <a href="pestelAnalysis.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              PESTEL Analysis
+            </a>
+
+            <a href="marketResearch.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Market Research & Strategy
+            </a>
+
+            <a href="branding.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Branding
+            </a>
+
+            <a href="startupSupport.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Startup & SME Support
+            </a>
+
+            <a href="digitalTransformation.html"
+              class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Digital Transformation
+            </a>
+
+          </div>
+        </div>
+
         <a href="contact.html" class="text-white hover:text-gray-300 transition-colors">Contact Us</a>
       </nav>
 
       <!-- Desktop Button -->
 
       <div class="hidden lg:block">
-       
+
         <button onclick="goToPage('signUp.html')"
           class="bg-white text-black px-4 py-2 rounded-full hover:bg-gray-100 transition-colors">
           Sign Up
@@ -481,7 +540,7 @@
     </div>
 
     <!-- Mobile Menu -->
-   
+
     <div id="mobile-menu" class="lg:hidden bg-zinc-800/95 w-full px-6 hidden">
       <div class="flex flex-col space-y-3 py-4">
         <a href="index.html" class="text-white py-2 hover:bg-zinc-700/50 rounded transition-colors">Home</a>
@@ -493,10 +552,24 @@
 
         <!-- Mobile Dropdown -->
         <div class="relative">
-          <button id="mobile-services-btn"
-            class="w-full text-left text-white py-2 hover:bg-zinc-700/50 rounded flex justify-between items-center transition-colors">
-            Services <i class="fas fa-chevron-down ml-2 text-sm transition-transform"></i>
-          </button>
+        
+
+          <div class="flex justify-between items-center text-white py-2">
+
+            <a href="service.html" class="flex-1 hover:bg-zinc-700/50 rounded transition-colors">
+
+              Services
+
+            </a>
+
+            <button id="mobile-services-btn" class="ml-3 px-2">
+
+              <i id="services-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
+              </i>
+
+            </button>
+
+          </div>
           <div id="mobile-dropdown" class="hidden bg-zinc-700/70 rounded-md mt-1 ml-3 overflow-hidden">
             <a href="mobileApp.html" class="block px-4 py-2 text-white hover:bg-zinc-600/50 transition-colors">Mobile
               App Development</a>
@@ -511,10 +584,65 @@
         </div>
 
 
+
+        <!-- Business Development Mobile Dropdown -->
+
+        <div class="relative">
+
+        
+          <div class="flex justify-between items-center text-white py-2">
+
+            <a href="businessDevelopment.html" class="flex-1 hover:bg-zinc-700/50 rounded transition-colors">
+
+              Business Development
+
+            </a>
+
+            <button id="mobile-business-btn" class="ml-3 px-2">
+
+              <i id="business-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
+              </i>
+
+            </button>
+
+          </div>
+
+          <div id="mobile-business-dropdown" class="hidden bg-zinc-700/70 rounded-md mt-1 ml-3 overflow-hidden">
+
+            <a href="swotAnalysis.html" class="block px-4 py-2 text-white hover:bg-zinc-600/50 transition-colors">
+              SWOT Analysis
+            </a>
+
+            <a href="pestelAnalysis.html" class="block px-4 py-2 text-white hover:bg-zinc-600/50 transition-colors">
+              PESTEL Analysis
+            </a>
+
+            <a href="marketResearch.html" class="block px-4 py-2 text-white hover:bg-zinc-600/50 transition-colors">
+              Market Research & Strategy
+            </a>
+
+            <a href="branding.html" class="block px-4 py-2 text-white hover:bg-zinc-600/50 transition-colors">
+              Branding
+            </a>
+
+            <a href="startupSupport.html" class="block px-4 py-2 text-white hover:bg-zinc-600/50 transition-colors">
+              Startup & SME Support
+            </a>
+
+            <a href="digitalTransformation.html"
+              class="block px-4 py-2 text-white hover:bg-zinc-600/50 transition-colors">
+              Digital Transformation
+            </a>
+
+          </div>
+
+        </div>
+
+
         <a href="contact.html" class="text-white py-2 hover:bg-zinc-700/50 rounded transition-colors">Contact Us</a>
 
         <!-- Mobile Button -->
-        
+
         <button onclick="goToPage('signUp.html')"
           class="w-full bg-white text-black py-2 rounded-full hover:bg-gray-100 transition-colors mt-2">
           Sign Up
@@ -1189,7 +1317,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
         <!-- BASIC -->
         <div data-aos="zoom-in" class="bg-[#041021] p-8 rounded-xl shadow-lg hover:scale-105 transition relative z-10">
 
-         
+
           <div class="flex items-center justify-center mb-2 gap-4">
             <svg class="w-8 h-8 text-[#00C2FF]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2L2 7v13h20V7L12 2z" />
@@ -1197,19 +1325,19 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             <h3 class="text-2xl font-semibold">Basic</h3>
           </div>
 
-          
+
           <p class="text-gray-400 mb-4">Perfect for small projects and personal websites.</p>
 
-         
+
           <hr class="border-gray-600 mb-4">
 
-          
+
           <div class="flex items-baseline justify-center gap-2 mb-6">
             <span class="text-4xl font-bold">$99</span>
             <span class="text-sm text-slate-400">/monthly package</span>
           </div>
 
-          
+
           <ul class="space-y-2 text-sm text-gray-300 mb-6 list-disc list-inside">
             <li>1 Page Website</li>
             <li>Basic Design</li>
@@ -1217,7 +1345,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             <li>Email Support</li>
           </ul>
 
-          
+
           <button onclick="scrollToTop()"
             class="w-full py-2 rounded-full bg-white text-black  transition button button--hyperion">
             <span>Get Started</span>
@@ -1231,7 +1359,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
           <span class="absolute top-0 right-0 bg-[#E44D26] text-white text-xs px-3 py-1 rounded-bl-lg">Most
             Popular</span>
 
-         
+
           <div class="flex items-center justify-center mb-2 gap-4">
             <svg class="w-8 h-8 text-[#E44D26]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z" />
@@ -1239,19 +1367,19 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             <h3 class="text-2xl font-semibold">Standard</h3>
           </div>
 
-         
+
           <p class="text-gray-500 mb-4">Ideal for small businesses with multiple pages.</p>
 
-          
+
           <hr class="border-gray-300 mb-4">
 
-          
+
           <div class="flex items-baseline justify-center gap-2 mb-6">
             <span class="text-4xl font-bold">$199</span>
             <span class="text-sm text-slate-400">/monthly package</span>
           </div>
 
-          
+
           <ul class="space-y-2 text-sm mb-6 list-disc list-inside">
             <li>5 Page Website</li>
             <li>Modern UI Design</li>
@@ -1259,7 +1387,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             <li>Priority Support</li>
           </ul>
 
-          
+
           <button onclick="scrollToTop()"
             class="w-full py-2 rounded-full bg-[#E44D26] text-white transition button button--hyperion">
             <span>Get Started</span>
@@ -1270,7 +1398,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
         <!-- PREMIUM -->
         <div data-aos="zoom-in" class="bg-[#041021] p-8 rounded-xl shadow-lg hover:scale-105 transition relative z-10">
 
-          
+
           <div class="flex items-center justify-center mb-2 gap-4">
             <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2L2 12h10v10h4V12h10z" />
@@ -1278,19 +1406,19 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             <h3 class="text-2xl font-semibold">Premium</h3>
           </div>
 
-          
+
           <p class="text-gray-400 mb-4">Complete package for agencies and advanced projects.</p>
 
-          
+
           <hr class="border-gray-600 mb-4">
 
-         
+
           <div class="flex items-baseline justify-center gap-2 mb-6">
             <span class="text-4xl font-bold">$399</span>
             <span class="text-sm text-slate-400">/monthly package</span>
           </div>
 
-         
+
           <ul class="space-y-2 text-sm text-gray-300 mb-6 list-disc list-inside">
             <li>Unlimited Pages</li>
             <li>Custom Design</li>
@@ -1298,7 +1426,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             <li>24/7 Support</li>
           </ul>
 
-        
+
           <button onclick="scrollToTop()"
             class="w-full py-2 rounded-full bg-white text-black transition button button--hyperion">
             <span>Get Started</span>
@@ -1342,10 +1470,10 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
 
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
-     
+
       <div class="space-y-5">
 
-       
+
         <div
           class="faq-item bg-[#1D64B8] rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300">
 
@@ -1374,7 +1502,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
 
         </div>
 
-       
+
         <div
           class="faq-item bg-[#1D64B8] rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300">
 
@@ -1402,7 +1530,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
 
         </div>
 
-        
+
         <div
           class="faq-item bg-[#1D64B8] rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300">
 
@@ -1430,7 +1558,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
 
         </div>
 
-        
+
         <div
           class="faq-item bg-[#1D64B8] rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.25)] overflow-hidden transition-all duration-300">
 
@@ -1460,7 +1588,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
 
       </div>
 
-     
+
       <div class="flex flex-col justify-center lg:justify-end items-center">
 
         <canvas id="faq-canvas" class="w-full  sm:max-w-2xl md:max-w-3xl lg:max-w-5xl  mb-4"></canvas>
@@ -1479,7 +1607,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
       <div
         class="relative rounded-3xl overflow-hidden px-6 md:px-10 py-16 min-h-[420px] md:min-h-[520px] lg:min-h-[620px]">
 
-        
+
         <div class="absolute inset-0 opacity-20">
           <img src="picture/world-map.png" alt="World Map"
             class="w-full h-full object-cover object-center scale-110 md:scale-100">
@@ -1501,7 +1629,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
 
 
 
-       
+
         <div class="floating-client  absolute top-[14%] left-[4%] md:left-[8%]
       w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20
       rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
@@ -1509,7 +1637,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
           <img src="picture/avatar1.jpg" class="w-full h-full object-cover">
         </div>
 
-       
+
         <div class="floating-client delay-1 absolute top-[14%] right-[5%] md:right-[10%]
       w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20
       rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
@@ -1517,7 +1645,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
           <img src="picture/avatar2.jpg" class="w-full h-full object-cover">
         </div>
 
-       
+
         <div class="floating-client delay-2 absolute bottom-[18%] left-[8%] md:left-[15%]
       w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20
       rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
@@ -1525,7 +1653,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
           <img src="picture/avatar3.jpg" class="w-full h-full object-cover">
         </div>
 
-       
+
         <div class="floating-client delay-3 absolute bottom-[15%] right-[8%] md:right-[15%]
       w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20
       rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
@@ -1533,7 +1661,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
           <img src="picture/avatar4.jpg" class="w-full h-full object-cover">
         </div>
 
-        
+
         <div class="floating-client delay-4 absolute top-1/2 left-[2%] md:left-[10%] -translate-y-1/2
       w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20
       rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
@@ -1541,7 +1669,7 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
           <img src="picture/avatar5.jpg" class="w-full h-full object-cover">
         </div>
 
-      
+
         <div class="floating-client delay-5 absolute top-1/2 right-[2%] md:right-[10%] -translate-y-1/2
       w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20
       rounded-full border-4 border-white shadow-xl overflow-hidden z-20">
@@ -1628,7 +1756,8 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
             we’ll <span class="border-b-2 border-[#E44D26] pb-1">handle the rest</span>
           </h2>
           <p class="text-gray-300 mb-6 text-sm sm:text-base md:text-lg leading-relaxed max-w-full md:max-w-none">
-            Just fill out the form — our team will contact you within <br class="hidden lg:block"> 24 hours. Let’s work together and build
+            Just fill out the form — our team will contact you within <br class="hidden lg:block"> 24 hours. Let’s work
+            together and build
             something great <br class="hidden lg:block">for your business.
           </p>
           <button class="primary-color hover:bg-[#c23e1f] text-white font-bold py-2 px-6 rounded-md transition">
