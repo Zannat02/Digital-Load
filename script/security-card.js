@@ -1,5 +1,3 @@
-
-
 const readButtons = document.querySelectorAll('.read-more-btn');
 
 readButtons.forEach(button => {
