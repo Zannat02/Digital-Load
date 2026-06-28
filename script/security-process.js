@@ -1,21 +1,21 @@
-const securityReveal = document.querySelectorAll('.securityReveal');
+// const securityReveal = document.querySelectorAll('.securityReveal');
 
-const revealObserver = new IntersectionObserver(entries => {
+// const revealObserver = new IntersectionObserver(entries => {
 
-    entries.forEach(entry => {
+//     entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+//         if(entry.isIntersecting){
 
-            entry.target.classList.add('active');
+//             entry.target.classList.add('active');
 
-        }
+//         }
 
-    });
+//     });
 
-},{ threshold:0.15 });
+// },{ threshold:0.15 });
 
-securityReveal.forEach(item => {
+// securityReveal.forEach(item => {
 
-    revealObserver.observe(item);
+//     revealObserver.observe(item);
 
-});
+// });
