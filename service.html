@@ -49,16 +49,22 @@
     }
 
     /* Mobile menu animation */
-    #mobile-menu {
+       #mobile-menu {
       transition: max-height 0.3s ease-out;
       max-height: 0;
       overflow: hidden;
     }
 
     #mobile-menu:not(.hidden) {
-      max-height: 500px;
-      transition: max-height 0.5s ease-in;
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
     }
+
+    .rotate-180 {
+      transform: rotate(180deg);
+    }
+
+  
   </style>
 </head>
 
@@ -97,6 +103,53 @@
           </div>
         </div>
 
+
+                  <!-- Business Development Dropdown -->
+        <div class="relative group">
+          <a href="businessDevelopment.html" class="text-white hover:text-gray-300 transition-colors flex items-center">
+            Business Development
+
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+
+          </a>
+
+          <div
+            class="absolute left-0 mt-2 w-64 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+
+            <a href="swotAnalysis.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              SWOT Analysis
+            </a>
+
+            <a href="pestelAnalysis.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              PESTEL Analysis
+            </a>
+
+            <a href="marketResearch.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Market Research & Strategy
+            </a>
+
+            <a href="branding.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Branding
+            </a>
+
+            <a href="startupSupport.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Startup & SME Support
+            </a>
+
+            <a href="digitalTransformation.html"
+              class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Digital Transformation
+            </a>
+
+          </div>
+        </div>
+
+
+
+        
+
         <a href="contact.html" class="text-white hover:text-gray-300">Contact Us</a>
       </nav>
 
@@ -118,10 +171,22 @@
 
 
         <div class="relative">
-          <button id="mobile-services-btn"
-            class="w-full text-left text-white py-2 hover:bg-slate-800 rounded flex justify-between items-center transition-colors">
-            Services <i class="fas fa-chevron-down ml-2 text-sm transition-transform"></i>
-          </button>
+            <div class="flex justify-between items-center text-white py-2">
+
+            <a href="service.html" class="flex-1 hover:bg-slate-800 rounded transition-colors">
+
+              Services
+
+            </a>
+
+            <button id="mobile-services-btn" class="ml-3 px-2">
+
+              <i id="services-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
+              </i>
+
+            </button>
+
+          </div>
           <div id="mobile-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
             <a href="mobileApp.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Mobile App
               Development</a>
@@ -135,6 +200,64 @@
 
           </div>
         </div>
+
+
+
+        <!-- Business Development Mobile Dropdown -->
+
+          <div class="relative">
+
+
+            <div class="flex justify-between items-center text-white py-2">
+
+              <a href="businessDevelopment.html" class="flex-1 hover:bg-slate-800 rounded transition-colors">
+
+                Business Development
+
+              </a>
+
+              <button id="mobile-business-btn" class="ml-3 px-2">
+
+                <i id="business-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
+                </i>
+
+              </button>
+
+            </div>
+
+            <div id="mobile-business-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
+
+              <a href="swotAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                SWOT Analysis
+              </a>
+
+              <a href="pestelAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                PESTEL Analysis
+              </a>
+
+              <a href="marketResearch.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                Market Research & Strategy
+              </a>
+
+              <a href="branding.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                Branding
+              </a>
+
+              <a href="startupSupport.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                Startup & SME Support
+              </a>
+
+              <a href="digitalTransformation.html"
+                class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                Digital Transformation
+              </a>
+
+            </div>
+
+          </div>
+
+
+        
 
         <a href="contact.html" class="text-white py-2 hover:bg-slate-800 rounded">Contact Us</a>
       </div>
@@ -197,31 +320,105 @@
   </section>
 
   <!-- Footer -->
-  <footer class="relative bg-[#041021] text-white py-10 mt-12">
-    <!-- Optional background image overlay -->
-    <div class="absolute inset-0 bg-[url('/assets/footer-bg.jpg')] bg-cover bg-center opacity-10"></div>
+   <footer>
+    <!-- Top Part -->
+    <div class="bg-[#041021] text-white px-6 py-12">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-    <div class="relative max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-sm">©2025 Digital Lord. All rights reserved.</p>
-      <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="Facebook">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path
-              d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
-          </svg>
-        </a>
-        <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="Twitter">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path
-              d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
-          </svg>
-        </a>
-        <a href="#" class="hover:text-[#2EA4FF] transition" aria-label="LinkedIn">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
-            <circle cx="4" cy="4" r="2" />
-          </svg>
-        </a>
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="hover:text-stone-400 transition">About Us</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-stone-400 transition">Contact</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">Privacy policy</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Expertise -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Our Expertise</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="digitalMarketing.html" class="hover:text-stone-400 transition">Digital Marketing</a></li>
+            <li><a href="mobileApp.html" class="hover:text-stone-400 transition">Mobile App Development</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">WordPress Development</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">Software Development</a></li>
+            <li><a href="seo.html" class="hover:text-stone-400 transition">SEO</a></li>
+
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Services</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-stone-400 transition">Digital Marketing</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">SEO Experts</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">Web Security</a></li>
+
+          </ul>
+
+        </div>
+
+        <!-- Connect with Us -->
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Connect with Us</h3>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-center space-x-3">
+              <i class="fa-solid fa-location-pin text-[#2EA4FF] text-lg"></i>
+              <span>Digital Lord, London, UK</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fa-solid fa-phone-volume text-[#2EA4FF] text-lg"></i>
+              <span>+44 7824 770279</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fa-solid fa-message text-[#2EA4FF] text-lg"></i>
+              <span>info@digitallord.com</span>
+            </li>
+          </ul>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <!-- Bottom Part -->
+    <div class="bg-[#191919] text-white px-6 py-4">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+
+        <!-- Left -->
+        <p class="text-sm">©2025 DIGITAL LORD. All Rights Reserved</p>
+
+        <!-- Right Social Icons -->
+        <div class="flex space-x-4">
+          <!-- Facebook -->
+          <a href="#" aria-label="Facebook">
+            <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
+            </svg>
+          </a>
+          <!-- Twitter -->
+          <a href="#" aria-label="Twitter">
+            <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" aria-label="LinkedIn">
+            <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+        </div>
+
       </div>
     </div>
   </footer>

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mobile App Development | Digital Lord</title>
+    <title>Web Security | Digital Lord</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
@@ -53,15 +53,23 @@
 
         /* Mobile menu animation */
         #mobile-menu {
-            transition: max-height 0.3s ease-out;
-            max-height: 0;
-            overflow: hidden;
-        }
+      transition: max-height 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
+    }
 
-        #mobile-menu:not(.hidden) {
-            max-height: 500px;
-            transition: max-height 0.5s ease-in;
-        }
+    #mobile-menu:not(.hidden) {
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
+    }
+
+    .rotate-180 {
+      transform: rotate(180deg);
+    }
+
+
+        
+     
 
 
         /* 
@@ -525,6 +533,50 @@
                     </div>
                 </div>
 
+
+                                    <!-- Business Development Dropdown -->
+        <div class="relative group">
+          <a href="businessDevelopment.html" class="text-white hover:text-gray-300 transition-colors flex items-center">
+            Business Development
+
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+
+          </a>
+
+          <div
+            class="absolute left-0 mt-2 w-64 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+
+            <a href="swotAnalysis.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              SWOT Analysis
+            </a>
+
+            <a href="pestelAnalysis.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              PESTEL Analysis
+            </a>
+
+            <a href="marketResearch.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Market Research & Strategy
+            </a>
+
+            <a href="branding.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Branding
+            </a>
+
+            <a href="startupSupport.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Startup & SME Support
+            </a>
+
+            <a href="digitalTransformation.html"
+              class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Digital Transformation
+            </a>
+
+          </div>
+        </div>
+
+
                 <a href="contact.html" class="text-white hover:text-gray-300">Contact Us</a>
             </nav>
 
@@ -546,10 +598,22 @@
 
 
                 <div class="relative">
-                    <button id="mobile-services-btn"
-                        class="w-full text-left text-white py-2 hover:bg-slate-800 rounded flex justify-between items-center transition-colors">
-                        Services <i class="fas fa-chevron-down ml-2 text-sm transition-transform"></i>
-                    </button>
+                      <div class="flex justify-between items-center text-white py-2">
+
+            <a href="service.html" class="flex-1 hover:bg-slate-800 rounded transition-colors">
+
+              Services
+
+            </a>
+
+            <button id="mobile-services-btn" class="ml-3 px-2">
+
+              <i id="services-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
+              </i>
+
+            </button>
+
+          </div>
                     <div id="mobile-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
                         <a href="mobileApp.html"
                             class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Mobile App
@@ -565,6 +629,63 @@
                             class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">SEO</a> -->
                     </div>
                 </div>
+
+                     <!-- Business Development Mobile Dropdown -->
+
+          <div class="relative">
+
+
+            <div class="flex justify-between items-center text-white py-2">
+
+              <a href="businessDevelopment.html" class="flex-1 hover:bg-slate-800 rounded transition-colors">
+
+                Business Development
+
+              </a>
+
+              <button id="mobile-business-btn" class="ml-3 px-2">
+
+                <i id="business-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
+                </i>
+
+              </button>
+
+            </div>
+
+            <div id="mobile-business-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
+
+              <a href="swotAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                SWOT Analysis
+              </a>
+
+              <a href="pestelAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                PESTEL Analysis
+              </a>
+
+              <a href="marketResearch.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                Market Research & Strategy
+              </a>
+
+              <a href="branding.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                Branding
+              </a>
+
+              <a href="startupSupport.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                Startup & SME Support
+              </a>
+
+              <a href="digitalTransformation.html"
+                class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                Digital Transformation
+              </a>
+
+            </div>
+
+          </div>
+
+
+
+             
 
                 <a href="contact.html" class="text-white py-2 hover:bg-slate-800 rounded">Contact Us</a>
             </div>
@@ -1640,6 +1761,13 @@
     </main>
 
 
+    
+    <button id="scrollTopBtn"
+        class="fixed bottom-6 right-6 w-12 h-12 bg-white text-black rounded-full shadow-lg flex items-center justify-center opacity-0 scale-0 transition-all duration-300 z-[9999]">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
     <!-- Footer -->
     <footer>
         <!-- Top Part -->
@@ -1757,6 +1885,8 @@
     <script src="script/security-process.js"></script>
     <script src="script/threat-counter.js"></script>
     <script src="script/security-fqa.js"></script>
+    <script src="script/button.js"></script>
+
 </body>
 
 </html>
