@@ -10,15 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         button.addEventListener("click", () => {
 
-            // যদি এটিই already open থাকে
+       
             const isActive = item.classList.contains("active");
 
-            // সব close
+          
             faqItems.forEach((faq) => {
                 faq.classList.remove("active");
             });
 
-            // যদি আগে close থাকে তাহলে open হবে
+        
             if (!isActive) {
                 item.classList.add("active");
             }
