@@ -1,0 +1,446 @@
+.faq-item {
+
+    background: rgba(255,255,255,.04);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    backdrop-filter: blur(18px);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: .35s ease;
+
+    position:relative;
+
+}
+
+.faq-item::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+top:18px;
+
+width:3px;
+
+height:0;
+
+border-radius:50px;
+
+background:linear-gradient(
+180deg,
+transparent,
+#E44D26,
+#FFD27A,
+#E44D26,
+transparent);
+
+opacity:0;
+
+box-shadow:
+0 0 8px rgba(228,77,38,.6),
+0 0 16px rgba(228,77,38,.45);
+
+}
+
+.faq-item.active::before{
+
+height:65px;
+
+opacity:1;
+
+animation:shootingBorder 1.7s linear infinite;
+
+}
+
+@keyframes shootingBorder{
+
+0%{
+
+top:12px;
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+50%{
+
+top:calc(50% - 32px);
+
+opacity:1;
+
+}
+
+100%{
+
+top:calc(100% - 78px);
+
+opacity:0;
+
+}
+
+}
+
+
+.faq-item:hover{
+
+    border-color: rgba(228,77,38,.45);
+
+    transform: translateY(-3px);
+
+}
+
+.faq-item.active{
+
+border-color:#E44D26;
+
+background:rgba(255,255,255,.07);
+
+box-shadow:
+
+0 0 10px rgba(228,77,38,.18),
+
+0 0 25px rgba(228,77,38,.18),
+
+0 0 45px rgba(228,77,38,.08);
+
+}
+
+/* Button */
+
+.faq-btn{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:24px 28px;
+
+    cursor:pointer;
+
+    background:none;
+
+    border:none;
+
+    color:#fff;
+
+    font-size:19px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.faq-btn span{
+
+    text-align:left;
+
+}
+
+.faq-btn i{
+
+    color:#E44D26;
+
+    font-size:15px;
+
+    transition:.35s ease;
+
+}
+
+.faq-item.active .faq-btn i{
+
+    transform:rotate(180deg);
+
+}
+
+/* Content */
+
+.faq-content{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:
+
+    max-height .45s ease,
+
+    padding .35s ease;
+
+}
+
+.faq-content p{
+
+    color:#CBD5E1;
+
+    line-height:1.9;
+
+    padding:0 28px 0;
+
+    opacity:.85;
+
+}
+
+/* Active */
+
+.faq-item.active .faq-content{
+
+    max-height:220px;
+
+    padding-bottom:24px;
+
+}
+
+/* Image */
+.why-icon{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:rgba(228,77,38,.15);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#E44D26;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+
+
+
+
+/*  Image  */
+
+.why-image{
+
+    position: relative;
+
+    width:100%;
+
+    max-width:560px;
+
+    z-index:2;
+
+    animation:imageFloat 6s ease-in-out infinite;
+
+    filter:
+    drop-shadow(0 0 30px rgba(65,101,183,.22))
+    drop-shadow(0 0 40px rgba(228,77,38,.18));
+
+}
+
+/* Ring Light */
+
+.why-image::before{
+    display:none;
+}
+
+.relative:has(.why-image)::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:72%;
+
+    height:72%;
+
+    border-radius:50%;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:
+
+    radial-gradient(circle,
+    rgba(228,77,38,.28),
+    rgba(228,77,38,.12) 35%,
+    rgba(65,101,183,.16) 65%,
+    transparent 78%);
+
+    filter:blur(45px);
+
+    animation:ringGlow 4s ease-in-out infinite;
+
+    z-index:0;
+
+}
+
+@keyframes ringGlow{
+
+0%,100%{
+
+transform:translate(-50%,-50%) scale(.95);
+
+opacity:.75;
+
+}
+
+50%{
+
+transform:translate(-50%,-50%) scale(1.08);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes imageFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+/* ===========================
+      Tablet
+===========================*/
+
+@media (max-width:1024px){
+
+    .faq-btn{
+
+        padding:22px;
+
+        font-size:18px;
+
+    }
+
+    .faq-content p{
+
+        padding:0 22px;
+
+    }
+
+    .faq-item.active .faq-content{
+
+        padding-bottom:22px;
+
+    }
+
+
+}
+
+/* ===========================
+        Mobile
+===========================*/
+
+@media(max-width:768px){
+
+    .faq-btn{
+
+        padding:18px;
+
+        font-size:17px;
+
+    }
+
+    .faq-content p{
+
+        padding:0 18px;
+
+        font-size:15px;
+
+        line-height:1.8;
+
+    }
+
+    .faq-item.active .faq-content{
+
+        padding-bottom:18px;
+
+    }
+
+  
+    
+
+    .why-icon{
+
+        width:48px;
+
+        height:48px;
+
+        font-size:18px;
+
+    }
+
+
+  
+
+    
+
+}
+
+@media(max-width:1024px){
+
+.why-image{
+
+max-width:470px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.why-image{
+
+max-width:340px;
+
+margin:auto;
+
+display:block;
+
+}
+
+.relative:has(.why-image)::before{
+
+width:88%;
+
+height:88%;
+
+filter:blur(35px);
+
+}
+
+}
