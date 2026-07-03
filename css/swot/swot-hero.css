@@ -1,0 +1,264 @@
+.hero-btn-primary {
+
+       display: inline-flex;
+       align-items: center;
+       justify-content: center;
+       gap: 10px;
+
+       padding: 15px 34px;
+
+       background: #E44D26;
+
+       border-radius: 14px;
+
+       font-weight: 600;
+
+       color: #fff;
+
+       transition: .35s;
+
+       box-shadow:
+              0 12px 35px rgba(228, 77, 38, .35);
+
+}
+
+.hero-btn-primary:hover {
+
+       transform: translateY(-4px);
+
+       background: #cf431d;
+
+       box-shadow:
+              0 18px 45px rgba(228, 77, 38, .45);
+
+}
+
+.hero-btn-secondary {
+
+       display: inline-flex;
+       align-items: center;
+       justify-content: center;
+
+       padding: 15px 34px;
+
+       border-radius: 14px;
+
+       font-weight: 600;
+
+       color: #fff;
+
+       border: 1px solid rgba(255, 255, 255, .15);
+
+       background: rgba(255, 255, 255, .05);
+
+       backdrop-filter: blur(18px);
+
+       transition: .35s;
+
+}
+
+.hero-btn-secondary:hover {
+
+       transform: translateY(-4px);
+
+       border-color: #E44D26;
+
+       background: rgba(228, 77, 38, .08);
+
+}
+
+
+
+
+/* 
+       SWOT MATRIX
+*/
+
+.swot-matrix {
+
+       width: 360px;
+
+       display: grid;
+
+       grid-template-columns: repeat(2, 1fr);
+
+       gap: 18px;
+
+       z-index: 5;
+
+}
+
+.swot-matrix:hover {
+
+       transform: translateY(-8px);
+
+       border-color: #E44D26;
+
+       box-shadow:
+
+              0 0 30px rgba(228, 77, 38, .30),
+
+
+
+}
+
+
+/*
+       MATRIX BOX
+*/
+.matrix-box {
+
+       height: 110px;
+
+       display: flex;
+
+       flex-direction: column;
+
+       align-items: center;
+
+       justify-content: center;
+
+       gap: 10px;
+
+       border-radius: 18px;
+
+       background: rgba(255, 255, 255, .05);
+
+       border: 1px solid rgba(255, 255, 255, .08);
+
+       transition: .6s ease;
+
+       cursor: pointer;
+
+       opacity: 0;
+
+       transform: translateY(50px) scale(.9);
+
+}
+
+.matrix-box:hover {
+
+       transform: translateY(-5px);
+
+       border-color: #E44D26;
+
+       background: rgba(228, 77, 38, .08);
+
+}
+
+.matrix-box i {
+
+       font-size: 26px;
+
+       color: #E44D26;
+
+       transition: .35s;
+
+}
+
+.matrix-box:hover i {
+
+       transform: scale(1.15);
+
+       text-shadow:
+
+              0 0 18px rgba(228, 77, 38, .75);
+
+}
+
+.matrix-box span {
+
+       font-size: 15px;
+
+       font-weight: 600;
+
+       color: #fff;
+
+}
+
+.matrix-box.show {
+
+       opacity: 1;
+
+       transform: translateY(0) scale(1);
+
+}
+
+
+/* 
+       TABLET
+*/
+
+@media(max-width:1024px) {
+
+       .swot-matrix {
+
+              width: 320px;
+
+              gap: 16px;
+
+       }
+
+       .matrix-box {
+
+              height: 95px;
+
+       }
+
+       .matrix-box i {
+
+              font-size: 22px;
+
+       }
+
+       .matrix-box span {
+
+              font-size: 14px;
+
+       }
+
+       .hero-image {
+
+              max-width: 480px;
+
+       }
+
+}
+
+
+/* 
+        MOBILE
+*/
+
+@media(max-width:768px) {
+
+
+
+       .swot-matrix {
+
+              position: relative;
+
+              margin: 0 auto;
+
+              width: 320px;
+
+              max-width: 100%;
+
+              gap: 14px;
+
+       }
+
+       .matrix-box {
+
+              height: 90px;
+
+       }
+
+       .hero-btn-primary,
+       .hero-btn-secondary {
+
+              width: 100%;
+
+       }
+
+}

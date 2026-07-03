@@ -1,0 +1,861 @@
+<!--  Swot analysis-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> SWOT | Digital Lord</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="picture/DL.png">
+
+    <link rel="stylesheet" href="css/swot/swot-hero.css">
+    <link rel="stylesheet" href="css/swot/swot-why.css">
+
+
+
+    <style>
+        .inter-text {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* Desktop dropdown animation */
+        .group-hover\:opacity-100 {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .group:hover .group-hover\:opacity-100 {
+            opacity: 1;
+        }
+
+        .group-hover\:visible {
+            visibility: hidden;
+            transition: visibility 0.3s ease;
+        }
+
+        .group:hover .group-hover\:visible {
+            visibility: visible;
+        }
+
+        /* Mobile dropdown animation */
+        .group-hover\:block {
+            display: none;
+            transition: all 0.3s ease;
+        }
+
+        .group:hover .group-hover\:block {
+            display: block;
+        }
+
+        /* Mobile menu animation */
+
+
+
+
+        #mobile-menu {
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        #mobile-menu:not(.hidden) {
+            max-height: calc(100vh - 90px);
+            overflow-y: auto;
+        }
+
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="bg-[#0F172A] text-white inter-text">
+    <!-- Navigation Bar -->
+
+    <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
+        <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+            <!-- Logo -->
+            <div>
+                <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
+
+            </div>
+
+
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex space-x-6 items-center">
+                <a href="index.html" class="text-white hover:text-gray-300">Home</a>
+                <a href="about.html" class="text-white   hover:text-gray-300">About</a>
+
+                <!-- Desktop Dropdown (Hover) -->
+                <div class="relative group">
+                    <a href="service.html" class="text-white hover:text-gray-300 flex items-center">
+                        Services
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+                    <div
+                        class="absolute left-0 mt-2 w-56 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+                        <a href="mobileApp.html" class="block px-4 py-2 hover:bg-gray-200">Mobile App Development</a>
+                        <a href="digitalMarketing.html" class="block px-4 py-2 hover:bg-gray-200">Digital Marketing</a>
+                        <a href="webDev.html" class="block px-4 py-2 hover:bg-gray-200">Web Development</a>
+                        <a href="webSecurity.html" class="block px-4 py-2 hover:bg-gray-200">Web Security</a>
+                        <!-- <a href="seo.html" class="block px-4 py-2 hover:bg-gray-200">SEO</a> -->
+                    </div>
+                </div>
+
+
+
+                <!-- Business Development Dropdown -->
+                <div class="relative group">
+                    <a href="businessDevelopment.html"
+                        class="text-white hover:text-gray-300 transition-colors flex items-center">
+                        Business Development
+
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+
+                    </a>
+
+                    <div
+                        class="absolute left-0 mt-2 w-64 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+
+                        <a href="swotAnalysis.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            SWOT Analysis
+                        </a>
+
+                        <a href="pestelAnalysis.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            PESTEL Analysis
+                        </a>
+
+                        <a href="marketResearch.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            Market Research & Strategy
+                        </a>
+
+                        <a href="branding.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            Branding
+                        </a>
+
+                        <a href="startupSupport.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            Startup & SME Support
+                        </a>
+
+                        <a href="digitalTransformation.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            Digital Transformation
+                        </a>
+
+                    </div>
+                </div>
+
+
+
+
+                <a href="contact.html" class="text-white hover:text-gray-300">Contact Us</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="hamburger-btn" class="lg:hidden text-white focus:outline-none">
+                <i id="hamburger-icon" class="fas fa-bars"></i>
+                <i id="close-icon" class="fas fa-times hidden"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden bg-[#041021] px-6 py-2 hidden">
+            <div class="flex flex-col space-y-3 py-4">
+                <a href="index.html" class="text-white py-2 hover:bg-slate-800 rounded">Home</a>
+                <a href="about.html" class="text-white py-2 hover:bg-slate-800 rounded">About</a>
+
+                <!-- Mobile Dropdown (Hover) -->
+
+
+
+                <div class="relative">
+                    <div class="flex justify-between items-center text-white ">
+
+                        <a href="service.html" class="flex-1 py-2 hover:bg-slate-800 rounded transition-colors">
+
+                            Services
+
+                        </a>
+
+                        <button id="mobile-services-btn" class="ml-3 px-2">
+
+                            <i id="services-arrow"
+                                class="fas fa-chevron-down text-sm transition-transform duration-300">
+                            </i>
+
+                        </button>
+
+                    </div>
+
+                    <div id="mobile-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
+                        <a href="mobileApp.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Mobile
+                            App
+                            Development</a>
+                        <a href="digitalMarketing.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Digital
+                            Marketing</a>
+                        <a href="webDev.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Web
+                            Development</a>
+                        <a href="webSecurity.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Web
+                            Security</a>
+                        <!-- <a href="seo.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">SEO</a> -->
+                    </div>
+                </div>
+
+
+
+
+                <!-- Business Development Mobile Dropdown -->
+
+                <div class="relative">
+
+
+                    <div class="flex justify-between items-center text-white ">
+
+                        <a href="businessDevelopment.html"
+                            class="flex-1 py-2  hover:bg-slate-800 rounded transition-colors">
+
+                            Business Development
+
+                        </a>
+
+                        <button id="mobile-business-btn" class="ml-3 px-2">
+
+                            <i id="business-arrow"
+                                class="fas fa-chevron-down text-sm transition-transform duration-300">
+                            </i>
+
+                        </button>
+
+                    </div>
+
+                    <div id="mobile-business-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
+
+                        <a href="swotAnalysis.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            SWOT Analysis
+                        </a>
+
+                        <a href="pestelAnalysis.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            PESTEL Analysis
+                        </a>
+
+                        <a href="marketResearch.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            Market Research & Strategy
+                        </a>
+
+                        <a href="branding.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            Branding
+                        </a>
+
+                        <a href="startupSupport.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            Startup & SME Support
+                        </a>
+
+                        <a href="digitalTransformation.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            Digital Transformation
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+                <a href="contact.html" class="text-white py-2 hover:bg-slate-800 rounded">Contact Us</a>
+            </div>
+
+        </div>
+    </header>
+
+
+
+
+    <!-- Main About Section -->
+    <main class="flex-grow">
+
+        <!-- SWOT HERO SECTION -->
+
+        <section
+            class="relative overflow-hidden bg-gradient-to-br from-[#041021] via-[#07172D] to-[#041021] pt-36 lg:pt-44 pb-20 lg:pb-28">
+
+            <!-- Left Blue Glow -->
+            <div
+                class="absolute -left-40 top-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-[#4165B7]/30 blur-[130px] rounded-full">
+            </div>
+
+            <!-- Right Orange Glow -->
+            <div
+                class="absolute -right-40 top-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-[#E44D26]/30 blur-[130px] rounded-full">
+            </div>
+
+            <!-- Grid Pattern -->
+            <div class="absolute inset-0 opacity-[0.03]"
+                style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size:24px 24px;">
+            </div>
+
+            <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+
+                <!-- Breadcrumb  -->
+
+                <div class="flex flex-wrap items-center gap-2 text-sm text-slate-300 mb-10">
+
+                    <a href="index.html" class="flex items-center gap-2 hover:text-[#E44D26] transition">
+
+                        <i class="fas fa-home text-xs"></i>
+
+                        Home
+
+                    </a>
+
+                    <i class="fas fa-angle-right text-[10px] text-slate-500"></i>
+
+                    <a href="businessDevelopment.html" class="hover:text-[#E44D26] transition">
+
+                        Business Development
+
+                    </a>
+
+                    <i class="fas fa-angle-right text-[10px] text-slate-500"></i>
+
+                    <span class="text-[#E44D26]">
+
+                        SWOT Analysis
+
+                    </span>
+
+                </div>
+
+                <!-- Hero Content -->
+
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- Left  -->
+
+                    <div class="swot-hero-content">
+
+                        <span
+                            class="inline-flex items-center px-5 py-2 rounded-full border border-[#E44D26]/40 bg-[#E44D26]/10 text-[#E44D26] text-sm font-semibold tracking-[2px]">
+
+                            SWOT ANALYSIS
+
+                        </span>
+
+                        <h1 class="mt-7 text-2xl md:text-5xl xl:text-6xl font-bold leading-tight text-white">
+
+                            Understand Your Business
+
+                            <span class="block">
+
+                                Before Making
+
+                            </span>
+
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#E44D26] to-[#ff9d7d]">
+
+                                Strategic Decisions
+
+                            </span>
+
+                        </h1>
+
+                        <p class="mt-8 text-slate-300 text-lg leading-8 max-w-xl">
+
+                            A SWOT Analysis helps businesses identify their
+                            strengths, improve weaknesses, discover new
+                            opportunities and prepare for potential risks before
+                            making important business decisions.
+
+                        </p>
+
+                        <!-- Buttons -->
+
+                        <div class="flex flex-wrap gap-5 mt-10">
+
+                            <a href="contact.html" class="hero-btn-primary">
+
+                                Get Consultation
+
+                                <i class="fas fa-arrow-right ml-2"></i>
+
+                            </a>
+
+                            <a href="#swot-overview" class="hero-btn-secondary">
+
+                                Learn More
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right  -->
+
+                    <div class="relative flex justify-center items-center ">
+
+
+
+
+
+                        <!-- SWOT Glass Matrix -->
+
+                        <div class="swot-matrix">
+
+                            <div class="matrix-box">
+
+                                <i class="fas fa-shield-alt"></i>
+
+                                <span>Strength</span>
+
+                            </div>
+
+                            <div class="matrix-box">
+
+                                <i class="fas fa-triangle-exclamation"></i>
+
+                                <span>Weakness</span>
+
+                            </div>
+
+                            <div class="matrix-box">
+
+                                <i class="fas fa-arrow-trend-up"></i>
+
+                                <span>Opportunity</span>
+
+                            </div>
+
+                            <div class="matrix-box">
+
+                                <i class="fas fa-shield-virus"></i>
+
+                                <span>Threat</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHAT IS SWOT ANALYSIS -->
+        <section class="relative overflow-hidden py-24 swot-about-section">
+
+
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+                <!-- Heading -->
+
+                <div class="text-center max-w-3xl mx-auto mb-20">
+
+                    <span class="text-[#E44D26] uppercase tracking-[4px] font-semibold text-sm">
+
+                        WHAT IS SWOT ANALYSIS
+
+                    </span>
+
+                    <h2 class="mt-5 text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+
+                        Understand Your Business Better
+
+                    </h2>
+
+                    <p class="mt-6 text-gray-400 leading-8">
+
+                        A clear understanding of your business helps you make
+                        smarter decisions, reduce risks and discover new
+                        opportunities for long-term growth.
+
+                    </p>
+
+                </div>
+
+                <!-- Content -->
+
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+                    <!--  LEFT -->
+
+                    <div class="relative flex justify-center order-1 lg:order-none">
+
+                        <!-- Glass Circle -->
+
+                        <div class="swot-glass-circle"></div>
+
+                        <!-- Blue Glow -->
+
+                        <div class="swot-blue-glow"></div>
+
+                        <!-- Orange Glow -->
+
+                        <div class="swot-orange-glow"></div>
+
+                        <!-- Floating Icons -->
+
+                        <div class="floating-search swot-icon-tip" data-tooltip="Discover Opportunities">
+
+                            <i class="fas fa-lightbulb"></i>
+
+                            <span class="swot-tooltip">Discover Opportunities</span>
+
+                        </div>
+
+                        <div class="floating-chart swot-icon-tip" data-tooltip="Data-Driven Insights">
+
+                            <i class="fas fa-chart-pie"></i>
+
+                            <span class="swot-tooltip">Data-Driven Insights</span>
+
+                        </div>
+
+                        <!-- Illustration + Badge Wrapper -->
+                        <div class="swot-image-wrap relative w-full max-w-lg z-10">
+
+                            <img src="picture/Swot analysis-pana.png" alt="SWOT Analysis" class="w-full h-auto block">
+
+                            <!-- Glass Badge -->
+                            <div class="analysis-badge animate__animated">
+
+                                <div class="flex items-center gap-3 flex-nowrap">
+
+                                    <div class="badge-icon">
+
+                                        <i class="fas fa-chart-line"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <h4>
+
+                                            Strategic Analysis
+
+                                        </h4>
+
+                                        <p>
+
+                                            Understand.<br>
+                                            Evaluate.<br>
+                                            Grow.
+
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--  RIGHT  -->
+
+                    <div>
+
+                        <h3 class="text-3xl lg:text-4xl font-bold text-white leading-tight">
+
+                            What is SWOT Analysis?
+
+                        </h3>
+
+                        <p class="mt-7 text-gray-400 leading-8">
+
+                            Business decisions become easier when you clearly
+                            understand where your company stands today.
+
+                            SWOT Analysis is a strategic framework used to
+                            evaluate your business from four different
+                            perspectives, helping you recognize strengths,
+                            improve weaknesses, explore opportunities and
+                            prepare for potential threats.
+
+                        </p>
+
+                        <!-- Feature List -->
+
+                        <div class="mt-10 space-y-5">
+
+                            <!-- Row -->
+
+                            <div class="swot-feature">
+
+                                <div class="feature-icon">
+
+                                    <i class="fas fa-check"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+
+                                        Better Decision Making
+
+                                    </h4>
+
+                                    <p>
+
+                                        Make confident business decisions using
+                                        structured analysis and valuable insights.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Row -->
+
+                            <div class="swot-feature">
+
+                                <div class="feature-icon">
+
+                                    <i class="fas fa-check"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+
+                                        Clear Business Direction
+
+                                    </h4>
+
+                                    <p>
+
+                                        Understand where your business is today
+                                        and where it should move next.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Row -->
+
+                            <div class="swot-feature">
+
+                                <div class="feature-icon">
+
+                                    <i class="fas fa-check"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+
+                                        Identify Risks
+
+                                    </h4>
+
+                                    <p>
+
+                                        Recognize challenges early and prepare
+                                        practical solutions before they grow.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Row -->
+
+                            <div class="swot-feature">
+
+                                <div class="feature-icon">
+
+                                    <i class="fas fa-check"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+
+                                        Discover Opportunities
+
+                                    </h4>
+
+                                    <p>
+
+                                        Find new growth opportunities that can
+                                        strengthen your competitive advantage.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <!-- Top Part -->
+        <div class="bg-[#041021] text-white px-6 py-12">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-stone-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-stone-400 transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Privacy policy</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Expertise -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Our Expertise</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="digitalMarketing.html" class="hover:text-stone-400 transition">Digital
+                                Marketing</a></li>
+                        <li><a href="mobileApp.html" class="hover:text-stone-400 transition">Mobile App Development</a>
+                        </li>
+                        <li><a href="#" class="hover:text-stone-400 transition">WordPress Development</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Software Development</a></li>
+                        <li><a href="seo.html" class="hover:text-stone-400 transition">SEO</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-stone-400 transition">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">SEO Experts</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Web Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Connect with Us -->
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Connect with Us</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-location-pin text-[#2EA4FF] text-lg"></i>
+                            <span>Digital Lord, London, UK</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone-volume text-[#2EA4FF] text-lg"></i>
+                            <span>+44 7824 770279</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-message text-[#2EA4FF] text-lg"></i>
+                            <span>info@digitallord.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Bottom Part -->
+        <div class="bg-[#191919] text-white px-6 py-4">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+
+                <!-- Left -->
+                <p class="text-sm">©2025 DIGITAL LORD. All Rights Reserved</p>
+
+                <!-- Right Social Icons -->
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="#" aria-label="Facebook">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" aria-label="Twitter">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" aria-label="LinkedIn">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/nav.js"></script>
+    <script src="script/swot-hero.js"></script>
+    <script src="script/why-swot.js"></script>
+
+</body>
+
+</html>
