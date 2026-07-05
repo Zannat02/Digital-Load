@@ -1,0 +1,1120 @@
+/* ======================================================
+      FOUR COMPONENTS OF SWOT ANALYSIS
+====================================================== */
+
+.swot-components-section {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 120px 0;
+
+    background:
+        radial-gradient(circle at 0% 0%,
+            rgba(65, 101, 183, .32),
+            rgba(65, 101, 183, .14) 22%,
+            transparent 45%),
+
+        radial-gradient(circle at 100% 100%,
+            rgba(228, 77, 38, .30),
+            rgba(228, 77, 38, .13) 22%,
+            transparent 45%),
+
+        linear-gradient(180deg,
+            #041021 0%,
+            #071B37 50%,
+            #041021 100%);
+
+}
+
+/* ==========================
+      Background Glow
+========================== */
+
+.swot-left-glow {
+
+    position: absolute;
+
+    left: -220px;
+
+    top: 35%;
+
+    width: 520px;
+
+    height: 520px;
+
+    background: #4165B7;
+
+    opacity: .18;
+
+    filter: blur(150px);
+
+    border-radius: 50%;
+
+}
+
+.swot-right-glow {
+
+    position: absolute;
+
+    right: -220px;
+
+    top: 40%;
+
+    width: 520px;
+
+    height: 520px;
+
+    background: #E44D26;
+
+    opacity: .18;
+
+    filter: blur(150px);
+
+    border-radius: 50%;
+
+}
+
+/* ==========================
+      Container
+========================== */
+
+.swot-components-container {
+
+    max-width: 1280px;
+
+    margin: auto;
+
+    padding: 0 24px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/* ==========================
+        Heading
+========================== */
+
+.swot-components-heading {
+
+    max-width: 760px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+.section-tag {
+
+    color: #E44D26;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+}
+
+.swot-components-heading h2 {
+
+    color: #fff;
+
+    font-size: 52px;
+
+    font-weight: 800;
+
+    margin-top: 18px;
+
+    line-height: 1.2;
+
+}
+
+.swot-components-heading p {
+
+    color: #CBD5E1;
+
+    margin-top: 24px;
+
+    line-height: 1.9;
+
+    font-size: 17px;
+
+}
+
+/* ==========================
+        Panels
+========================== */
+
+.swot-panels {
+
+    margin-top: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+
+}
+
+/* ==========================
+      Glass Panel
+========================== */
+
+.swot-panel {
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 140px 1fr 110px;
+
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 42px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    background: rgba(255, 255, 255, .045);
+
+    backdrop-filter: blur(18px);
+
+    transition: .45s ease;
+
+}
+
+/* ==========================
+      Giant Letter
+========================== */
+
+.panel-letter {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.letter-ring {
+
+    width: 120px;
+
+    height: 120px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255, 255, 255, .10);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255, 255, 255, .02);
+
+    position: relative;
+
+}
+
+.letter-ring span {
+
+    font-size: 72px;
+
+    font-weight: 900;
+
+    color: rgba(255, 255, 255, .35);
+
+    line-height: 1;
+
+}
+
+/* ==========================
+      Content
+========================== */
+
+.panel-content h3 {
+
+    color: var(--panel-color);
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    margin-bottom: 14px;
+
+}
+
+.panel-content p {
+
+    color: #CBD5E1;
+
+    line-height: 1.9;
+
+    font-size: 16px;
+
+    max-width: 760px;
+
+}
+
+/* ==========================
+        Icon
+========================== */
+
+.panel-icon {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.panel-icon i{
+
+    font-size:42px;
+
+    color:var(--panel-color);
+
+    opacity:.95;
+
+}
+
+/* ==========================
+ Invisible layers
+========================== */
+
+.left-border {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 5px;
+
+    height: 100%;
+
+    background: transparent;
+
+}
+
+.panel-light {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+}
+
+.panel-glass {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+}
+
+/* ==========================
+      Tablet
+========================== */
+
+@media(max-width:1024px) {
+
+    .swot-components-section {
+
+        padding: 100px 0;
+
+    }
+
+    .swot-panel {
+
+        grid-template-columns: 100px 1fr 80px;
+
+        gap: 24px;
+
+        padding: 32px;
+
+    }
+
+    .letter-ring {
+
+        width: 95px;
+
+        height: 95px;
+
+    }
+
+    .letter-ring span {
+
+        font-size: 56px;
+
+    }
+
+    .panel-content h3 {
+
+        font-size: 25px;
+
+    }
+
+    .panel-icon i {
+
+        font-size: 34px;
+
+    }
+
+}
+
+/* ==========================
+      Mobile
+========================== */
+
+@media(max-width:768px) {
+
+    .swot-components-section {
+
+        padding: 80px 0;
+
+    }
+
+    .swot-components-heading h2 {
+
+        font-size: 34px;
+
+    }
+
+    .swot-components-heading p {
+
+        font-size: 15px;
+
+    }
+
+    .swot-panel {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 26px;
+
+        padding: 30px 24px;
+
+    }
+
+    .panel-letter {
+
+        order: 1;
+
+    }
+
+    .panel-content {
+
+        order: 2;
+
+    }
+
+    .panel-icon {
+
+        order: 3;
+
+    }
+
+    .letter-ring {
+
+        width: 88px;
+
+        height: 88px;
+
+    }
+
+    .letter-ring span {
+
+        font-size: 50px;
+
+    }
+
+    .panel-content h3 {
+
+        font-size: 24px;
+
+    }
+
+    .panel-content p {
+
+        font-size: 15px;
+
+    }
+
+    .panel-icon i {
+
+        font-size: 32px;
+
+    }
+
+    .left-border {
+
+        width: 100%;
+
+        height: 4px;
+
+        top: 0;
+
+    }
+
+}
+
+
+
+
+/* ======================================================
+        PREMIUM HOVER EFFECTS
+        Add below Part 2 CSS
+======================================================*/
+
+/* ------------------------------
+   Panel Hover
+------------------------------*/
+
+.swot-panel:hover {
+
+    transform: translateY(-8px);
+
+    border-color: rgba(var(--panel-color-rgb), .45);
+
+    box-shadow:
+
+        0 18px 60px rgba(0, 0, 0, .35),
+
+        0 0 35px rgba(var(--panel-color-rgb), .18);
+
+}
+
+/* ------------------------------
+   Animated Left Border
+------------------------------*/
+
+.left-border {
+
+    background: linear-gradient(180deg,
+
+            transparent,
+
+            transparent,
+
+            var(--panel-color),
+
+            var(--panel-color),
+
+            var(--panel-color),
+
+            transparent,
+
+            transparent);
+
+    background-size: 100% 250%;
+
+    opacity: 0;
+
+    transition: opacity .35s;
+
+}
+
+.swot-panel:hover .left-border {
+
+    opacity: 1;
+
+    animation: borderFlow 2.4s linear infinite;
+
+}
+
+@keyframes borderFlow {
+
+    0% {
+
+        background-position: 0 0;
+
+    }
+
+    100% {
+
+        background-position: 0 250%;
+
+    }
+
+}
+
+
+
+
+/* ======================================================
+      LETTER SVG + SHOOTING STAR (animateMotion + mpath)
+====================================================== */
+
+.letter-rings{
+
+    position:relative;
+
+    width:120px;
+
+    height:120px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.ring{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    border:1px solid rgba(var(--panel-color-rgb),.35);
+
+}
+
+.ring-outer{
+
+    width:120px;
+
+    height:120px;
+
+}
+
+.ring-inner{
+
+    width:96px;
+
+    height:96px;
+
+}
+
+ .letter-svg{
+
+    position:relative;
+
+    z-index:2;
+
+    width:70px;
+
+    height:70px;
+
+    overflow:visible;
+
+} 
+
+
+
+
+.icon-ring{
+
+    width:92px;
+
+    height:92px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(var(--panel-color-rgb),.3);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ------------------------------
+      Letter Shape (Stroke)
+------------------------------*/
+
+.letter-shape {
+
+    fill: none;
+
+    stroke: rgba(var(--panel-color-rgb), .35);
+
+    stroke-width: 13;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+    transition: stroke .5s ease, filter .5s ease;
+
+}
+
+
+
+.swot-panel:hover .letter-shape {
+
+    stroke: var(--panel-color);
+
+    filter:
+
+        drop-shadow(0 0 8px var(--panel-color)) drop-shadow(0 0 20px var(--panel-color));
+
+}
+
+/* ------------------------------
+      Shooting Star Group
+------------------------------*/
+
+.shooting-star {
+
+    opacity: 0;
+
+    transition: opacity .3s ease;
+
+}
+
+.swot-panel:hover .shooting-star {
+
+    opacity: 1;
+
+}
+
+.star-head {
+
+    fill: #ffffff;
+
+    filter:
+
+        drop-shadow(0 0 4px #ffffff) drop-shadow(0 0 10px #7fdfff) drop-shadow(0 0 16px var(--panel-color));
+
+    animation: starPulse .4s infinite alternate;
+
+} 
+
+
+
+@keyframes starPulse {
+
+    from {
+
+        r: 4;
+
+    }
+
+    to {
+
+        r: 6;
+
+    }
+
+}
+
+.star-tail {
+
+    filter: drop-shadow(0 0 6px var(--panel-color));
+
+}
+
+
+
+/* ------------------------------
+      Trail Gradient Stops
+------------------------------*/
+
+.trail-start {
+
+    stop-color: transparent;
+
+}
+
+.trail-end {
+
+    stop-color: var(--panel-color);
+
+}
+
+/* ------------------------------
+      Responsive Scaling
+------------------------------*/
+
+@media(max-width:1024px) {
+
+   .letter-rings{
+
+    width:95px;
+
+    height:95px;
+
+}
+
+.ring-outer{
+
+    width:95px;
+
+    height:95px;
+
+}
+
+.ring-inner{
+
+    width:76px;
+
+    height:76px;
+
+}
+
+.letter-svg{
+
+    width:55px;
+
+    height:55px;
+
+} 
+
+
+
+.icon-ring{
+
+    width:72px;
+
+    height:72px;
+
+}
+
+}
+
+@media(max-width:768px) {
+
+ .letter-rings{
+
+    width:88px;
+
+    height:88px;
+
+}
+
+.ring-outer{
+
+    width:88px;
+
+    height:88px;
+
+}
+
+.ring-inner{
+
+    width:70px;
+
+    height:70px;
+
+}
+
+.letter-svg{
+
+    width:51px;
+
+    height:51px;
+
+} 
+
+
+
+.icon-ring{
+
+    width:64px;
+
+    height:64px;
+
+}
+
+}
+
+/* ------------------------------
+      Giant Letter
+------------------------------*/
+
+.letter-ring {
+
+    transition: .45s ease;
+
+}
+
+.letter-ring span {
+
+    transition: .45s ease;
+
+}
+
+.swot-panel:hover .letter-ring span {
+
+    color: var(--panel-color);
+
+    text-shadow:
+
+        0 0 12px var(--panel-color),
+
+        0 0 25px var(--panel-color);
+
+}
+
+
+
+/* ------------------------------
+     Rotating Ring
+------------------------------*/
+
+.letter-ring::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -8px;
+
+    border-radius: 50%;
+
+    border: 1px dashed rgba(228, 77, 38, .20);
+
+    opacity: 0;
+
+    transition: .4s;
+
+}
+
+.swot-panel:hover .letter-ring::before {
+
+    opacity: 1;
+
+    animation: ringRotate 8s linear infinite;
+
+}
+
+@keyframes ringRotate {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+/* ------------------------------
+      Icon Hover
+------------------------------*/
+
+.panel-icon i {
+
+    transition: .45s;
+
+}
+
+.swot-panel:hover .panel-icon i{
+
+transform:scale(1.12) rotate(8deg);
+
+color:var(--panel-color);
+
+filter:drop-shadow(0 0 12px rgba(var(--panel-color-rgb),.55));
+
+}
+
+/* ------------------------------
+      Glass Shine
+------------------------------*/
+.panel-glass::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -130%;
+
+    width: 40%;
+
+    height: 100%;
+
+    background:
+
+        linear-gradient(90deg,
+
+            transparent,
+
+            rgba(255, 255, 255, .12),
+
+            transparent);
+
+    transform: skewX(-25deg);
+
+}
+
+.swot-panel:hover .panel-glass::before {
+
+    animation: glassMove 1.3s ease;
+
+}
+
+@keyframes glassMove {
+
+    100% {
+
+        left: 140%;
+
+    }
+
+}
+
+/* ------------------------------
+     Shooting Light
+------------------------------*/
+
+.panel-light::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -60%;
+
+    left: -40%;
+
+    width: 35%;
+
+    height: 220%;
+
+    background:
+
+        linear-gradient(90deg,
+
+            transparent,
+
+            rgba(255, 255, 255, .16),
+
+            transparent);
+
+    transform: rotate(25deg);
+
+    opacity: 0;
+
+}
+
+.swot-panel:hover .panel-light::before {
+
+    opacity: 1;
+
+    animation: shootLight 1.5s ease;
+
+}
+
+@keyframes shootLight {
+
+    0% {
+
+        left: -45%;
+
+    }
+
+    100% {
+
+        left: 150%;
+
+    }
+
+}
+
+/* ------------------------------
+       Content Hover
+------------------------------*/
+
+.panel-content h3,
+
+.panel-content p {
+
+    transition: .35s;
+
+}
+
+
+
+.swot-panel:hover p {
+
+    color: #eef2ff;
+
+}
+
+/* ------------------------------
+      Scroll Animation
+------------------------------*/
+
+.swot-panel {
+
+    opacity: 0;
+
+    transform: translateY(60px);
+
+}
+
+.swot-panel.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition:
+
+        opacity .9s ease,
+
+        transform .9s ease;
+
+}
+
+.swot-panel:nth-child(2).show {
+
+    transition-delay: .15s;
+
+}
+
+.swot-panel:nth-child(3).show {
+
+    transition-delay: .3s;
+
+}
+
+.swot-panel:nth-child(4).show {
+
+    transition-delay: .45s;
+
+}

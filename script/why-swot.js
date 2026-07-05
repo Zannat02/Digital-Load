@@ -1,72 +1,22 @@
-
-//  animation
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    const badge = document.querySelector(".analysis-badge");
+    const items = document.querySelectorAll(".why-item");
 
-    if (!badge) return;
+    items.forEach(item => {
 
-    const observer = new IntersectionObserver((entries, obs) => {
+        const header = item.querySelector(".why-item-header");
 
-        entries.forEach(entry => {
+        header.addEventListener("click", () => {
 
-            if (entry.isIntersecting) {
+            const isActive = item.classList.contains("active");
 
-                badge.classList.add("show");
-
-                obs.unobserve(entry.target);
-
-            }
-
-        });
-
-    }, {
-
-        threshold:0.35
-
-    });
-
-    observer.observe(badge);
-
-});
-
-
-
-
-//tooltipes
-
-document.addEventListener('DOMContentLoaded', function(){
-
-    document.querySelectorAll('.swot-icon-tip').forEach(function(icon){
-
-        icon.addEventListener('click', function(e){
-
-            e.stopPropagation();
-
-            var isActive = icon.classList.contains('active');
-
-            document.querySelectorAll('.swot-icon-tip.active').forEach(function(other){
-
-                other.classList.remove('active');
-
-            });
+            items.forEach(i => i.classList.remove("active"));
 
             if(!isActive){
 
-                icon.classList.add('active');
+                item.classList.add("active");
 
             }
-
-        });
-
-    });
-
-    document.addEventListener('click', function(){
-
-        document.querySelectorAll('.swot-icon-tip.active').forEach(function(icon){
-
-            icon.classList.remove('active');
 
         });
 
