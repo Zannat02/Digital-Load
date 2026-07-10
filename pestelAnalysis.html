@@ -1,0 +1,2402 @@
+<!-- PESTEL PAGE: Digital Lord -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> PESTEL | Digital Lord</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" type="image/png" href="picture/DL.png">
+
+
+  <link rel="stylesheet" href="css/businessDevMenu/hero.css">
+  <link rel="stylesheet" href="css/businessDevMenu/what.css">
+  <link rel="stylesheet" href="css/businessDevMenu/component.css">
+  <link rel="stylesheet" href="css/businessDevMenu/why.css">
+  <link rel="stylesheet" href="css/businessDevMenu/matrix.css">
+  <link rel="stylesheet" href="css/businessDevMenu/process.css">
+  <link rel="stylesheet" href="css/businessDevMenu/industries.css">
+  <link rel="stylesheet" href="css/businessDevMenu/fqa.css">
+  <link rel="stylesheet" href="css/businessDevMenu/cta.css">
+
+
+
+
+
+
+  <style>
+    .inter-text {
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    /* Desktop dropdown animation */
+    .group-hover\:opacity-100 {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .group:hover .group-hover\:opacity-100 {
+      opacity: 1;
+    }
+
+    .group-hover\:visible {
+      visibility: hidden;
+      transition: visibility 0.3s ease;
+    }
+
+    .group:hover .group-hover\:visible {
+      visibility: visible;
+    }
+
+    /* Mobile dropdown animation */
+    .group-hover\:block {
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    .group:hover .group-hover\:block {
+      display: block;
+    }
+
+    /* Mobile menu animation */
+
+
+
+    #mobile-menu {
+      transition: max-height 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    #mobile-menu:not(.hidden) {
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
+    }
+
+    .rotate-180 {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+
+<body class="bg-[#0F172A] text-white inter-text">
+  <!-- Navigation Bar -->
+
+  <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
+    <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+      <!-- Logo -->
+      <!-- <div>
+        <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
+
+      </div> -->
+
+      <a href="index.html" class="flex items-center gap-3">
+
+        <!-- Logo Image -->
+        <img class="h-14 w-34" src="picture/DL.png" alt="Digital Lord Logo">
+
+        <!-- Desktop Text -->
+        <div class="hidden lg:flex flex-col justify-center font-['Inter'] leading-tight">
+
+          <h4 class="text-xl font-semibold">
+            <span class="text-blue-600">Digital</span>
+            <span class="text-orange-600">Lord</span>
+          </h4>
+
+          <p class="flex items-center gap-2 text-sm mt-1">
+            <span class="text-[#F16529] font-semibold">|</span>
+            <span class="text-blue-600">
+              IT Services And Solutions
+            </span>
+          </p>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex space-x-6 items-center">
+        <a href="index.html" class="text-white hover:text-gray-300">Home</a>
+        <a href="about.html" class="text-white   hover:text-gray-300">About</a>
+
+        <!-- Desktop Dropdown (Hover) -->
+        <div class="relative group">
+          <a href="service.html" class="text-white hover:text-gray-300 flex items-center">
+            Services
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <div
+            class="absolute left-0 mt-2 w-56 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+            <a href="mobileApp.html" class="block px-4 py-2 hover:bg-gray-200">Mobile App Development</a>
+            <a href="digitalMarketing.html" class="block px-4 py-2 hover:bg-gray-200">Digital Marketing</a>
+            <a href="webDev.html" class="block px-4 py-2 hover:bg-gray-200">Web Development</a>
+            <a href="webSecurity.html" class="block px-4 py-2 hover:bg-gray-200">Web Security</a>
+            <!-- <a href="seo.html" class="block px-4 py-2 hover:bg-gray-200">SEO</a> -->
+          </div>
+        </div>
+
+
+
+        <!-- Business Development Dropdown -->
+        <div class="relative group">
+          <a href="businessDevelopment.html" class="text-white hover:text-gray-300 transition-colors flex items-center">
+            Business Development
+
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+
+          </a>
+
+          <div
+            class="absolute left-0 mt-2 w-64 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+
+            <a href="swotAnalysis.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              SWOT Analysis
+            </a>
+
+            <a href="pestelAnalysis.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              PESTEL Analysis
+            </a>
+
+            <a href="marketResearch.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Market Research & Strategy
+            </a>
+
+            <a href="branding.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Branding
+            </a>
+
+            <a href="startupSupport.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Startup & SME Support
+            </a>
+
+            <a href="digitalTransformation.html"
+              class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+              Digital Transformation
+            </a>
+
+          </div>
+        </div>
+
+
+
+
+        <a href="contact.html" class="text-white hover:text-gray-300">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="hamburger-btn" class="lg:hidden text-white focus:outline-none">
+        <i id="hamburger-icon" class="fas fa-bars"></i>
+        <i id="close-icon" class="fas fa-times hidden"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden bg-[#041021] px-6 py-2 hidden">
+      <div class="flex flex-col space-y-3 py-4">
+        <a href="index.html" class="text-white py-2 hover:bg-slate-800 rounded">Home</a>
+        <a href="about.html" class="text-white py-2 hover:bg-slate-800 rounded">About</a>
+
+        <!-- Mobile Dropdown (Hover) -->
+
+
+
+        <div class="relative">
+          <div class="flex justify-between items-center text-white ">
+
+            <a href="service.html" class="flex-1 py-2 hover:bg-slate-800 rounded transition-colors">
+
+              Services
+
+            </a>
+
+            <button id="mobile-services-btn" class="ml-3 px-2">
+
+              <i id="services-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
+              </i>
+
+            </button>
+
+          </div>
+
+          <div id="mobile-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
+            <a href="mobileApp.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Mobile
+              App
+              Development</a>
+            <a href="digitalMarketing.html"
+              class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Digital Marketing</a>
+            <a href="webDev.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Web
+              Development</a>
+            <a href="webSecurity.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Web
+              Security</a>
+            <!-- <a href="seo.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">SEO</a> -->
+          </div>
+        </div>
+
+
+
+
+        <!-- Business Development Mobile Dropdown -->
+
+        <div class="relative">
+
+
+          <div class="flex justify-between items-center text-white ">
+
+            <a href="businessDevelopment.html" class="flex-1 py-2  hover:bg-slate-800 rounded transition-colors">
+
+              Business Development
+
+            </a>
+
+            <button id="mobile-business-btn" class="ml-3 px-2">
+
+              <i id="business-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
+              </i>
+
+            </button>
+
+          </div>
+
+          <div id="mobile-business-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
+
+            <a href="swotAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+              SWOT Analysis
+            </a>
+
+            <a href="pestelAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+              PESTEL Analysis
+            </a>
+
+            <a href="marketResearch.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+              Market Research & Strategy
+            </a>
+
+            <a href="branding.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+              Branding
+            </a>
+
+            <a href="startupSupport.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+              Startup & SME Support
+            </a>
+
+            <a href="digitalTransformation.html"
+              class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+              Digital Transformation
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <a href="contact.html" class="text-white py-2 hover:bg-slate-800 rounded">Contact Us</a>
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+  <!-- Main About Section -->
+
+  <main class="flex-grow">
+
+    <!-- PESTEL HERO SECTION -->
+
+    <section
+      class="relative overflow-hidden bg-gradient-to-br from-[#041021] via-[#07172D] to-[#041021] pt-36 lg:pt-44 pb-20 lg:pb-28">
+
+      <!-- Left Blue Glow -->
+      <div
+        class="absolute -left-40 top-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-[#4165B7]/30 blur-[130px] rounded-full">
+      </div>
+
+      <!-- Right Orange Glow -->
+      <div
+        class="absolute -right-40 top-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-[#E44D26]/30 blur-[130px] rounded-full">
+      </div>
+
+      <!-- Grid Pattern -->
+      <div class="absolute inset-0 opacity-[0.03]"
+        style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size:24px 24px;">
+      </div>
+
+      <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+
+        <!-- Breadcrumb  -->
+
+        <div class="flex flex-wrap items-center gap-2 text-sm text-slate-300 mb-10">
+
+          <a href="index.html" class="flex items-center gap-2 hover:text-[#E44D26] transition">
+
+            <i class="fas fa-home text-xs"></i>
+
+            Home
+
+          </a>
+
+          <i class="fas fa-angle-right text-[10px] text-slate-500"></i>
+
+          <a href="businessDevelopment.html" class="hover:text-[#E44D26] transition">
+
+            Business Development
+
+          </a>
+
+          <i class="fas fa-angle-right text-[10px] text-slate-500"></i>
+
+          <span class="text-[#E44D26]">
+
+            PESTEL Analysis
+
+          </span>
+
+        </div>
+
+        <!-- Hero Content -->
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+          <!-- Left  -->
+
+          <div class="swot-hero-content">
+
+            <span
+              class="inline-flex items-center px-5 py-2 rounded-full border border-[#E44D26]/40 bg-[#E44D26]/10 text-[#E44D26] text-sm font-semibold tracking-[2px]">
+
+              PESTEL ANALYSIS
+
+            </span>
+
+            <h1 class="mt-7 text-2xl md:text-5xl xl:text-6xl font-bold leading-tight text-white">
+
+              Understand External Factors
+
+              <span class="block">
+
+                Before Making
+
+              </span>
+
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#E44D26] to-[#ff9d7d]">
+
+                Strategic Decisions
+
+              </span>
+
+            </h1>
+
+            <p class="mt-8 text-slate-300 text-lg leading-8 max-w-xl">
+
+              A PESTEL Analysis helps businesses evaluate the Political,
+              Economic, Social, Technological, Environmental and Legal
+              factors that shape their market before making important
+              business decisions.
+
+            </p>
+
+            <!-- Buttons -->
+
+            <div class="flex flex-wrap gap-5 mt-10">
+
+              <a href="contact.html" class="hero-btn-primary">
+
+                Get Consultation
+
+                <i class="fas fa-arrow-right ml-2"></i>
+
+              </a>
+
+              <a href="#pestel-overview" class="hero-btn-secondary">
+
+                Learn More
+
+              </a>
+
+            </div>
+
+          </div>
+
+          <!-- Right  -->
+
+          <div class="relative flex justify-center items-center ">
+
+            <!-- PESTEL Glass Matrix -->
+
+            <div class="swot-matrix pestel-grid">
+
+              <div class="matrix-box">
+
+                <i class="fas fa-landmark"></i>
+
+                <span>Political</span>
+
+              </div>
+
+              <div class="matrix-box">
+
+                <i class="fas fa-sack-dollar"></i>
+
+                <span>Economic</span>
+
+              </div>
+
+              <div class="matrix-box">
+
+                <i class="fas fa-people-group"></i>
+
+                <span>Social</span>
+
+              </div>
+
+              <div class="matrix-box">
+
+                <i class="fas fa-microchip"></i>
+
+                <span>Technological</span>
+
+              </div>
+
+              <div class="matrix-box">
+
+                <i class="fas fa-leaf"></i>
+
+                <span>Environmental</span>
+
+              </div>
+
+              <div class="matrix-box">
+
+                <i class="fas fa-scale-balanced"></i>
+
+                <span>Legal</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHAT IS PESTEL ANALYSIS -->
+    <section class="relative overflow-hidden py-24 swot-about-section">
+
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <!-- Heading -->
+
+        <div class="text-center max-w-3xl mx-auto mb-20">
+
+          <span class="text-[#E44D26] uppercase tracking-[4px] font-semibold text-sm">
+
+            WHAT IS PESTEL ANALYSIS
+
+          </span>
+
+          <h2 class="mt-5 text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+
+            Understand Your Market Better
+
+          </h2>
+
+          <p class="mt-6 text-gray-400 leading-8">
+
+            A clear understanding of the external environment helps you
+            make smarter decisions, reduce risks and plan ahead for
+            long-term growth.
+
+          </p>
+
+        </div>
+
+        <!-- Content -->
+
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+          <!--  LEFT -->
+
+          <div class="relative flex justify-center order-1 lg:order-none">
+
+            <!-- Glass Circle -->
+
+            <div class="swot-glass-circle"></div>
+
+            <!-- Blue Glow -->
+
+            <div class="swot-blue-glow"></div>
+
+            <!-- Orange Glow -->
+
+            <div class="swot-orange-glow"></div>
+
+            <!-- Floating Icons -->
+
+            <div class="floating-search swot-icon-tip" data-tooltip="Spot Market Trends">
+
+              <i class="fas fa-globe"></i>
+
+              <span class="swot-tooltip">Spot Market Trends</span>
+
+            </div>
+
+            <div class="floating-chart swot-icon-tip" data-tooltip="Data-Driven Insights">
+
+              <i class="fas fa-chart-pie"></i>
+
+              <span class="swot-tooltip">Data-Driven Insights</span>
+
+            </div>
+
+            <!-- Illustration + Badge Wrapper -->
+            <div class="swot-image-wrap relative w-full max-w-lg z-10">
+
+              <img src="picture/pestel.png" alt="PESTEL Analysis" class="w-full h-auto block">
+
+              <!-- Glass Badge -->
+              <div class="analysis-badge animate__animated">
+
+                <div class="flex items-center gap-3 flex-nowrap">
+
+                  <div class="badge-icon">
+
+                    <i class="fas fa-globe"></i>
+
+                  </div>
+
+                  <div>
+
+                    <h4>
+
+                      Market Analysis
+
+                    </h4>
+
+                    <p>
+
+                      Observe.<br>
+                      Evaluate.<br>
+                      Adapt.
+
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!--  RIGHT  -->
+
+          <div>
+
+            <h3 class="text-3xl lg:text-4xl font-bold text-white leading-tight">
+
+              What is PESTEL Analysis?
+
+            </h3>
+
+            <p class="mt-7 text-gray-400 leading-8">
+
+              Business decisions become easier when you clearly
+              understand the external forces shaping your market.
+
+              PESTEL Analysis is a strategic framework used to
+              evaluate the Political, Economic, Social, Technological,
+              Environmental and Legal factors that influence your
+              business environment.
+
+            </p>
+
+            <!-- Feature List -->
+
+            <div class="mt-10 space-y-5">
+
+              <!-- Row -->
+
+              <div class="swot-feature">
+
+                <div class="feature-icon">
+
+                  <i class="fas fa-check"></i>
+
+                </div>
+
+                <div>
+
+                  <h4>
+
+                    Understand Market Environment
+
+                  </h4>
+
+                  <p>
+
+                    Gain a clear view of the external forces
+                    shaping your industry and market position.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+              <!-- Row -->
+
+              <div class="swot-feature">
+
+                <div class="feature-icon">
+
+                  <i class="fas fa-check"></i>
+
+                </div>
+
+                <div>
+
+                  <h4>
+
+                    Identify External Risks
+
+                  </h4>
+
+                  <p>
+
+                    Recognize political, economic and legal risks
+                    before they impact your business.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+              <!-- Row -->
+
+              <div class="swot-feature">
+
+                <div class="feature-icon">
+
+                  <i class="fas fa-check"></i>
+
+                </div>
+
+                <div>
+
+                  <h4>
+
+                    Spot Regulatory Changes
+
+                  </h4>
+
+                  <p>
+
+                    Stay ahead of legal and regulatory shifts
+                    that could affect your operations.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+              <!-- Row -->
+
+              <div class="swot-feature">
+
+                <div class="feature-icon">
+
+                  <i class="fas fa-check"></i>
+
+                </div>
+
+                <div>
+
+                  <h4>
+
+                    Plan for Economic Shifts
+
+                  </h4>
+
+                  <p>
+
+                    Prepare your business strategy for changing
+                    economic and social conditions.
+
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!--
+     SIX COMPONENTS OF PESTEL ANALYSIS
+ -->
+    <section class="swot-components-section">
+
+      <!-- Background Glow -->
+      <div class="swot-left-glow"></div>
+      <div class="swot-right-glow"></div>
+
+      <div class="swot-components-container">
+
+        <!-- Heading -->
+
+        <div class="swot-components-heading">
+
+          <span class="section-tag">
+
+            SIX COMPONENTS
+
+          </span>
+
+          <h2>
+
+            The Core of PESTEL Analysis
+
+          </h2>
+
+          <p>
+
+            PESTEL Analysis is built on six essential factors that
+            help businesses evaluate the external environment, spot
+            risks and prepare for future market changes.
+
+          </p>
+
+        </div>
+
+        <!-- 
+                PANELS
+         -->
+
+        <div class="swot-panels">
+
+
+          <!-- Political -->
+
+
+          <div class="swot-panel" id="panel-political" style="--panel-color:#293681; --panel-color-rgb:41,54,129;">
+
+            <!-- Left -->
+            <div class="panel-letter">
+
+              <div class="letter-rings">
+
+                <div class="ring ring-outer"></div>
+
+                <div class="ring ring-inner"></div>
+
+                <svg class="letter-svg p-letter" viewBox="0 0 100 100">
+
+                  <path id="pLetterPath" class="letter-shape" d="M 25 85 L 25 15 L 55 15 C 72 15 72 47 55 47 L 25 47" />
+
+                  <g class="shooting-star">
+
+                    <line class="star-tail" x1="-14" y1="0" x2="0" y2="0" stroke="url(#trail-p)" stroke-width="2.6" />
+
+                    <circle class="star-head" cx="0" cy="0" r="4" />
+
+                    <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                      <mpath href="#pLetterPath" />
+
+                    </animateMotion>
+
+                  </g>
+
+                  <defs>
+
+                    <linearGradient id="trail-p" x1="0%" x2="100%">
+
+                      <stop offset="0%" class="trail-start" />
+                      <stop offset="100%" class="trail-end" />
+
+                    </linearGradient>
+
+                  </defs>
+
+                </svg>
+
+              </div>
+
+            </div>
+
+            <!-- Center -->
+
+            <div class="panel-content">
+
+              <h3>
+
+                Political
+
+              </h3>
+
+              <p>
+
+                Evaluate government policies, trade regulations, tax
+                changes and political stability that could impact
+                your business operations and long-term planning.
+
+              </p>
+
+            </div>
+
+            <!-- Right -->
+
+            <div class="panel-icon">
+
+              <div class="icon-ring">
+
+                <i class="fas fa-landmark"></i>
+
+              </div>
+
+            </div>
+
+            <!-- Animated Elements -->
+
+            <div class="left-border"></div>
+
+            <div class="panel-light"></div>
+
+            <div class="panel-glass"></div>
+
+          </div>
+
+
+          <!-- Economic -->
+
+
+          <div class="swot-panel" id="panel-economic" style="--panel-color:#EC6530; --panel-color-rgb:236,101,48;">
+
+            <div class="panel-letter">
+
+              <div class="letter-rings">
+
+                <div class="ring ring-outer"></div>
+
+                <div class="ring ring-inner"></div>
+
+                <svg class="letter-svg e-letter" viewBox="0 0 100 100">
+
+                  <path id="eLetterPath1" class="letter-shape"
+                    d="M 78 15 L 25 15 L 25 50 L 62 50 M 25 50 L 25 85 L 78 85" />
+
+                  <g class="shooting-star">
+
+                    <line class="star-tail" x1="-14" y1="0" x2="0" y2="0" stroke="url(#trail-e1)" stroke-width="2.6" />
+
+                    <circle class="star-head" cx="0" cy="0" r="4" />
+
+                    <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                      <mpath href="#eLetterPath1" />
+
+                    </animateMotion>
+
+                  </g>
+
+                  <defs>
+
+                    <linearGradient id="trail-e1" x1="0%" x2="100%">
+
+                      <stop offset="0%" class="trail-start" />
+                      <stop offset="100%" class="trail-end" />
+
+                    </linearGradient>
+
+                  </defs>
+
+                </svg>
+
+              </div>
+
+            </div>
+
+            <div class="panel-content">
+
+              <h3>
+
+                Economic
+
+              </h3>
+
+              <p>
+
+                Assess inflation, interest rates, exchange rates and
+                overall economic growth to understand how market
+                conditions affect your business performance.
+
+              </p>
+
+            </div>
+
+            <div class="panel-icon">
+
+              <div class="icon-ring">
+
+                <i class="fas fa-sack-dollar"></i>
+
+              </div>
+
+            </div>
+
+            <div class="left-border"></div>
+
+            <div class="panel-light"></div>
+
+            <div class="panel-glass"></div>
+
+          </div>
+
+
+          <!-- Social -->
+
+
+          <div class="swot-panel" id="panel-social" style="--panel-color:#8FDDDF; --panel-color-rgb:143,221,223;">
+
+            <div class="panel-letter">
+
+              <div class="letter-rings">
+
+                <div class="ring ring-outer"></div>
+
+                <div class="ring ring-inner"></div>
+
+                <svg class="letter-svg s-letter" viewBox="0 0 100 100">
+
+                  <path id="sLetterPath2" class="letter-shape"
+                    d="M 70 22 C 55 10, 26 10, 23 26 C 20 40, 42 45, 50 50 C 58 55, 80 60, 77 76 C 74 92, 44 92, 28 79" />
+
+                  <g class="shooting-star">
+
+                    <line class="star-tail" x1="-14" y1="0" x2="0" y2="0" stroke="url(#trail-s2)" stroke-width="2.6" />
+
+                    <circle class="star-head" cx="0" cy="0" r="4" />
+
+                    <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                      <mpath href="#sLetterPath2" />
+
+                    </animateMotion>
+
+                  </g>
+
+                  <defs>
+
+                    <linearGradient id="trail-s2" x1="0%" x2="100%">
+
+                      <stop offset="0%" class="trail-start" />
+                      <stop offset="100%" class="trail-end" />
+
+                    </linearGradient>
+
+                  </defs>
+
+                </svg>
+
+              </div>
+
+            </div>
+
+            <div class="panel-content">
+
+              <h3>
+
+                Social
+
+              </h3>
+
+              <p>
+
+                Understand cultural trends, consumer behavior,
+                demographics and lifestyle shifts that shape
+                demand for your products and services.
+
+              </p>
+
+            </div>
+
+            <div class="panel-icon">
+
+              <div class="icon-ring">
+
+                <i class="fas fa-people-group"></i>
+
+              </div>
+
+            </div>
+
+            <div class="left-border"></div>
+
+            <div class="panel-light"></div>
+
+            <div class="panel-glass"></div>
+
+          </div>
+
+
+          <!-- Technological -->
+
+
+          <div class="swot-panel" id="panel-technological" style="--panel-color:#E05454; --panel-color-rgb:224,84,84;">
+
+            <div class="panel-letter">
+
+              <div class="letter-rings">
+
+                <div class="ring ring-outer"></div>
+
+                <div class="ring ring-inner"></div>
+
+                <svg class="letter-svg t-letter" viewBox="0 0 100 100">
+
+                  <path id="tLetterPath2" class="letter-shape" d="M 20 20 L 50 20 L 50 82 L 50 20 L 80 20" />
+
+                  <g class="shooting-star">
+
+                    <line class="star-tail" x1="-14" y1="0" x2="0" y2="0" stroke="url(#trail-t2)" stroke-width="2.6" />
+
+                    <circle class="star-head" cx="0" cy="0" r="4" />
+
+                    <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                      <mpath href="#tLetterPath2" />
+
+                    </animateMotion>
+
+                  </g>
+
+                  <defs>
+
+                    <linearGradient id="trail-t2" x1="0%" x2="100%">
+
+                      <stop offset="0%" class="trail-start" />
+                      <stop offset="100%" class="trail-end" />
+
+                    </linearGradient>
+
+                  </defs>
+
+                </svg>
+
+              </div>
+
+            </div>
+
+            <div class="panel-content">
+
+              <h3>
+
+                Technological
+
+              </h3>
+
+              <p>
+
+                Track innovation, automation, digital transformation
+                and emerging technologies that could disrupt or
+                enhance your industry.
+
+              </p>
+
+            </div>
+
+            <div class="panel-icon">
+
+              <div class="icon-ring">
+
+                <i class="fas fa-microchip"></i>
+
+              </div>
+
+            </div>
+
+            <div class="left-border"></div>
+
+            <div class="panel-light"></div>
+
+            <div class="panel-glass"></div>
+
+          </div>
+
+
+          <!-- Environmental -->
+
+
+          <div class="swot-panel" id="panel-environmental" style="--panel-color:#4CAF7D; --panel-color-rgb:76,175,125;">
+
+            <div class="panel-letter">
+
+              <div class="letter-rings">
+
+                <div class="ring ring-outer"></div>
+
+                <div class="ring ring-inner"></div>
+
+                <svg class="letter-svg e-letter" viewBox="0 0 100 100">
+
+                  <path id="eLetterPath2" class="letter-shape"
+                    d="M 78 15 L 25 15 L 25 50 L 62 50 M 25 50 L 25 85 L 78 85" />
+
+                  <g class="shooting-star">
+
+                    <line class="star-tail" x1="-14" y1="0" x2="0" y2="0" stroke="url(#trail-e2)" stroke-width="2.6" />
+
+                    <circle class="star-head" cx="0" cy="0" r="4" />
+
+                    <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                      <mpath href="#eLetterPath2" />
+
+                    </animateMotion>
+
+                  </g>
+
+                  <defs>
+
+                    <linearGradient id="trail-e2" x1="0%" x2="100%">
+
+                      <stop offset="0%" class="trail-start" />
+                      <stop offset="100%" class="trail-end" />
+
+                    </linearGradient>
+
+                  </defs>
+
+                </svg>
+
+              </div>
+
+            </div>
+
+            <div class="panel-content">
+
+              <h3>
+
+                Environmental
+
+              </h3>
+
+              <p>
+
+                Consider sustainability, climate impact, environmental
+                regulations and resource availability that influence
+                business operations and public perception.
+
+              </p>
+
+            </div>
+
+            <div class="panel-icon">
+
+              <div class="icon-ring">
+
+                <i class="fas fa-leaf"></i>
+
+              </div>
+
+            </div>
+
+            <div class="left-border"></div>
+
+            <div class="panel-light"></div>
+
+            <div class="panel-glass"></div>
+
+          </div>
+
+
+          <!-- Legal -->
+
+
+          <div class="swot-panel" id="panel-legal" style="--panel-color:#A855F7; --panel-color-rgb:168,85,247;">
+
+            <div class="panel-letter">
+
+              <div class="letter-rings">
+
+                <div class="ring ring-outer"></div>
+
+                <div class="ring ring-inner"></div>
+
+                <svg class="letter-svg l-letter" viewBox="0 0 100 100">
+
+                  <path id="lLetterPath" class="letter-shape" d="M 28 15 L 28 85 L 78 85" />
+
+                  <g class="shooting-star">
+
+                    <line class="star-tail" x1="-14" y1="0" x2="0" y2="0" stroke="url(#trail-l)" stroke-width="2.6" />
+
+                    <circle class="star-head" cx="0" cy="0" r="4" />
+
+                    <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                      <mpath href="#lLetterPath" />
+
+                    </animateMotion>
+
+                  </g>
+
+                  <defs>
+
+                    <linearGradient id="trail-l" x1="0%" x2="100%">
+
+                      <stop offset="0%" class="trail-start" />
+                      <stop offset="100%" class="trail-end" />
+
+                    </linearGradient>
+
+                  </defs>
+
+                </svg>
+
+              </div>
+
+            </div>
+
+            <div class="panel-content">
+
+              <h3>
+
+                Legal
+
+              </h3>
+
+              <p>
+
+                Review employment laws, compliance requirements,
+                industry regulations and legal risks that businesses
+                must navigate to operate safely and responsibly.
+
+              </p>
+
+            </div>
+
+            <div class="panel-icon">
+
+              <div class="icon-ring">
+
+                <i class="fas fa-scale-balanced"></i>
+
+              </div>
+
+            </div>
+
+            <div class="left-border"></div>
+
+            <div class="panel-light"></div>
+
+            <div class="panel-glass"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHY PESTEL MATTERS -->
+    <section class="swot-why-section pestel-why">
+
+      <div class="why-sweep"></div>
+
+      <div class="why-container">
+
+        <!-- Heading -->
+
+        <div class="why-heading">
+
+          <span class="section-tag">
+
+            WHY IT MATTERS
+
+          </span>
+
+          <h2>
+
+            Why PESTEL Matters
+
+          </h2>
+
+          <p>
+
+            A well-executed PESTEL Analysis gives your business the
+            clarity to understand external forces, plan ahead and
+            grow with confidence.
+
+          </p>
+
+        </div>
+
+        <!-- Content -->
+
+        <div class="why-grid">
+
+          <!-- Left Visual -->
+
+          <div class="why-visual">
+
+            <div class="why-rotating-ring"></div>
+
+            <div class="why-center-card">
+
+              <span class="why-center-label">Market Awareness</span>
+
+              <svg class="why-chart" viewBox="0 0 220 120">
+
+                <path class="why-chart-path" d="M 10 95 L 50 75 L 90 85 L 130 45 L 170 55 L 210 15" />
+
+                <circle class="why-chart-dot" cx="210" cy="15" r="4" />
+
+              </svg>
+
+            </div>
+
+            <div class="why-orbit why-orbit-1">
+
+              <span class="why-orbit-letter">P</span>
+
+              <span class="why-orbit-label">Political</span>
+
+            </div>
+
+            <div class="why-orbit why-orbit-2">
+
+              <span class="why-orbit-letter">E</span>
+
+              <span class="why-orbit-label">Economic</span>
+
+            </div>
+
+            <div class="why-orbit why-orbit-3">
+
+              <span class="why-orbit-letter">S</span>
+
+              <span class="why-orbit-label">Social</span>
+
+            </div>
+
+            <div class="why-orbit why-orbit-4">
+
+              <span class="why-orbit-letter">T</span>
+
+              <span class="why-orbit-label">Technological</span>
+
+            </div>
+
+            <div class="why-orbit why-orbit-5">
+
+              <span class="why-orbit-letter">E</span>
+
+              <span class="why-orbit-label">Environmental</span>
+
+            </div>
+
+            <div class="why-orbit why-orbit-6">
+
+              <span class="why-orbit-letter">L</span>
+
+              <span class="why-orbit-label">Legal</span>
+
+            </div>
+
+          </div>
+
+          <!-- Right Accordion -->
+
+          <div class="why-accordion">
+
+            <!-- Item 1 -->
+
+            <div class="why-item active">
+
+              <div class="why-item-header">
+
+                <span class="why-number">01</span>
+
+                <h4>Understand Government Policy</h4>
+
+                <span class="why-toggle-icon">
+
+                  <i class="fas fa-plus"></i>
+
+                </span>
+
+              </div>
+
+              <div class="why-item-body">
+
+                <p>
+
+                  Stay ahead of political shifts and regulatory
+                  changes that could directly affect how your
+                  business operates.
+
+                </p>
+
+              </div>
+
+            </div>
+
+            <!-- Item 2 -->
+
+            <div class="why-item">
+
+              <div class="why-item-header">
+
+                <span class="why-number">02</span>
+
+                <h4>Navigate Economic Shifts</h4>
+
+                <span class="why-toggle-icon">
+
+                  <i class="fas fa-plus"></i>
+
+                </span>
+
+              </div>
+
+              <div class="why-item-body">
+
+                <p>
+
+                  Anticipate inflation, interest rate changes and
+                  economic cycles so your business can adapt
+                  quickly and stay resilient.
+
+                </p>
+
+              </div>
+
+            </div>
+
+            <!-- Item 3 -->
+
+            <div class="why-item">
+
+              <div class="why-item-header">
+
+                <span class="why-number">03</span>
+
+                <h4>Track Social Trends</h4>
+
+                <span class="why-toggle-icon">
+
+                  <i class="fas fa-plus"></i>
+
+                </span>
+
+              </div>
+
+              <div class="why-item-body">
+
+                <p>
+
+                  Understand shifting consumer behavior and
+                  cultural trends to keep your offerings relevant
+                  and appealing.
+
+                </p>
+
+              </div>
+
+            </div>
+
+            <!-- Item 4 -->
+
+            <div class="why-item">
+
+              <div class="why-item-header">
+
+                <span class="why-number">04</span>
+
+                <h4>Leverage New Technology</h4>
+
+                <span class="why-toggle-icon">
+
+                  <i class="fas fa-plus"></i>
+
+                </span>
+
+              </div>
+
+              <div class="why-item-body">
+
+                <p>
+
+                  Identify emerging technologies early and use
+                  them to gain a competitive edge in your
+                  industry.
+
+                </p>
+
+              </div>
+
+            </div>
+
+            <!-- Item 5 -->
+
+            <div class="why-item">
+
+              <div class="why-item-header">
+
+                <span class="why-number">05</span>
+
+                <h4>Plan for Environmental Impact</h4>
+
+                <span class="why-toggle-icon">
+
+                  <i class="fas fa-plus"></i>
+
+                </span>
+
+              </div>
+
+              <div class="why-item-body">
+
+                <p>
+
+                  Build sustainable practices that meet growing
+                  environmental expectations from customers and
+                  regulators alike.
+
+                </p>
+
+              </div>
+
+            </div>
+
+            <!-- Item 6 -->
+
+            <div class="why-item">
+
+              <div class="why-item-header">
+
+                <span class="why-number">06</span>
+
+                <h4>Stay Legally Compliant</h4>
+
+                <span class="why-toggle-icon">
+
+                  <i class="fas fa-plus"></i>
+
+                </span>
+
+              </div>
+
+              <div class="why-item-body">
+
+                <p>
+
+                  Reduce legal risk by staying current with
+                  industry regulations, employment law and
+                  compliance requirements.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INTERACTIVE PESTEL MATRIX -->
+    <section class="swot-matrix-section">
+
+      <div class="matrix-glow-left"></div>
+      <div class="matrix-glow-right"></div>
+
+      <div class="matrix-container">
+
+        <!-- Heading -->
+
+        <div class="matrix-heading">
+
+          <span class="section-tag">
+
+            INTERACTIVE MATRIX
+
+          </span>
+
+          <h2>
+
+            Explore Your PESTEL in Action
+
+          </h2>
+
+          <p>
+
+            Hover over each factor to see real examples of how
+            businesses apply Political, Economic, Social,
+            Technological, Environmental and Legal analysis
+            in practice.
+
+          </p>
+
+        </div>
+
+        <!-- Content -->
+
+        <div class="matrix-grid">
+
+          <!-- Left - Matrix -->
+
+          <div class="matrix-quadrants pestel-grid" id="pestelMatrixQuadrants">
+
+            <div class="quadrant" data-quadrant="political" style="--q-color:#293681; --q-color-rgb:41,54,129;">
+
+              <i class="fas fa-landmark"></i>
+
+              <span>Political</span>
+
+            </div>
+
+            <div class="quadrant" data-quadrant="economic" style="--q-color:#EC6530; --q-color-rgb:236,101,48;">
+
+              <i class="fas fa-sack-dollar"></i>
+
+              <span>Economic</span>
+
+            </div>
+
+            <div class="quadrant" data-quadrant="social" style="--q-color:#8FDDDF; --q-color-rgb:143,221,223;">
+
+              <i class="fas fa-people-group"></i>
+
+              <span>Social</span>
+
+            </div>
+
+            <div class="quadrant" data-quadrant="technological" style="--q-color:#E05454; --q-color-rgb:224,84,84;">
+
+              <i class="fas fa-microchip"></i>
+
+              <span>Technological</span>
+
+            </div>
+
+            <div class="quadrant" data-quadrant="environmental" style="--q-color:#4CAF7D; --q-color-rgb:76,175,125;">
+
+              <i class="fas fa-leaf"></i>
+
+              <span>Environmental</span>
+
+            </div>
+
+            <div class="quadrant" data-quadrant="legal" style="--q-color:#A855F7; --q-color-rgb:168,85,247;">
+
+              <i class="fas fa-scale-balanced"></i>
+
+              <span>Legal</span>
+
+            </div>
+
+          </div>
+
+          <!-- Right - Detail Panel -->
+
+          <div class="matrix-detail" id="pestelMatrixDetail" style="--q-color:#293681; --q-color-rgb:41,54,129;">
+
+            <span class="matrix-detail-tag">POLITICAL</span>
+
+            <h3 id="pestelMatrixDetailTitle">Government Policies</h3>
+
+            <p id="pestelMatrixDetailDesc">
+
+              Political decisions and government policies can directly
+              influence how a business operates, from taxation to
+              trade regulations.
+
+            </p>
+
+            <ul class="matrix-detail-list" id="pestelMatrixDetailList">
+
+              <li><i class="fas fa-check"></i> Government Policies</li>
+
+              <li><i class="fas fa-check"></i> Trade Regulations</li>
+
+              <li><i class="fas fa-check"></i> Political Stability</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+
+    <!-- OUR PESTEL ANALYSIS PROCESS -->
+    <section class="swot-process-section">
+
+      <div class="process-radar"></div>
+
+      <div class="process-conic"></div>
+
+      <div class="process-container">
+
+        <!-- Heading -->
+
+        <div class="process-heading">
+
+          <span class="section-tag">
+
+            OUR PROCESS
+
+          </span>
+
+          <h2>
+
+            Our PESTEL Analysis Process
+
+          </h2>
+
+          <p>
+
+            A structured step-by-step approach that transforms external
+            market information into clear, actionable strategic
+            insight.
+
+          </p>
+
+        </div>
+
+        <!-- Arch / Timeline -->
+
+        <div class="process-arch">
+
+          <svg class="process-connector" viewBox="0 0 1000 400" preserveAspectRatio="none">
+
+            <path d="M 40 340 Q 500 -40 960 340" />
+
+          </svg>
+
+          <div class="process-step step-1" style="--step-color:#293681; --step-color-rgb:41,54,129;">
+
+            <div class="step-node">
+
+              <i class="fas fa-magnifying-glass"></i>
+
+            </div>
+
+            <span class="step-number">01</span>
+
+            <h4>Discover</h4>
+
+            <p>Understand your business environment and the external factors that shape it.</p>
+
+          </div>
+
+          <div class="process-step step-2" style="--step-color:#EC6530; --step-color-rgb:236,101,48;">
+
+            <div class="step-node">
+
+              <i class="fas fa-flask"></i>
+
+            </div>
+
+            <span class="step-number">02</span>
+
+            <h4>Research</h4>
+
+            <p>Gather data on political, economic, social and technological trends.</p>
+
+          </div>
+
+          <div class="process-step step-3" style="--step-color:#8FDDDF; --step-color-rgb:143,221,223;">
+
+            <div class="step-node">
+
+              <i class="fas fa-chart-line"></i>
+
+            </div>
+
+            <span class="step-number">03</span>
+
+            <h4>Analyze</h4>
+
+            <p>Evaluate each PESTEL factor in depth to understand its impact.</p>
+
+          </div>
+
+          <div class="process-step step-4" style="--step-color:#E05454; --step-color-rgb:224,84,84;">
+
+            <div class="step-node">
+
+              <i class="fas fa-chess"></i>
+
+            </div>
+
+            <span class="step-number">04</span>
+
+            <h4>Strategy</h4>
+
+            <p>Build a practical strategy aligned with the external market landscape.</p>
+
+          </div>
+
+          <div class="process-step step-5" style="--step-color:#293681; --step-color-rgb:41,54,129;">
+
+            <div class="step-node">
+
+              <i class="fas fa-list-check"></i>
+
+            </div>
+
+            <span class="step-number">05</span>
+
+            <h4>Recommendations</h4>
+
+            <p>Deliver clear, actionable recommen<br class="block md:hidden">dations ready for execution.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- INDUSTRIES WE SUPPORT -->
+    <section class="relative overflow-hidden py-24 lg:py-28 industries-section pestel-industries">
+
+      <!-- Background Image -->
+      <div class="absolute inset-0 industries-bg"></div>
+
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 industries-overlay"></div>
+
+      <div class="relative max-w-7xl mx-auto px-6 lg:px-10">
+
+        <!-- Heading -->
+
+        <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+
+          <span class="text-[#E44D26] uppercase tracking-[4px] font-semibold text-sm">
+
+            WHO WE SERVE
+
+          </span>
+
+          <h2 class="mt-5 text-2xl md:text-5xl font-bold text-white leading-tight">
+
+            Industries We Support
+
+          </h2>
+
+          <p class="mt-6 text-gray-300 leading-8">
+
+            Our PESTEL Analysis approach adapts to businesses across a wide
+            range of industries, helping each one navigate external
+            market forces with confidence.
+
+          </p>
+
+        </div>
+
+        <!-- Industries Grid -->
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 lg:gap-6">
+
+          <div class="industry-card" style="--card-color:#293681;">
+
+            <i class="fas fa-heart-pulse"></i>
+
+            <span>Healthcare</span>
+
+          </div>
+
+          <div class="industry-card" style="--card-color:#EC6530;">
+
+            <i class="fas fa-graduation-cap"></i>
+
+            <span>Education</span>
+
+          </div>
+
+          <div class="industry-card" style="--card-color:#8FDDDF;">
+
+            <i class="fas fa-cart-shopping"></i>
+
+            <span>Retail</span>
+
+          </div>
+
+          <div class="industry-card" style="--card-color:#E05454;">
+
+            <i class="fas fa-microchip"></i>
+
+            <span>Technology</span>
+
+          </div>
+
+          <div class="industry-card" style="--card-color:#293681;">
+
+            <i class="fas fa-industry"></i>
+
+            <span>Manufacturing</span>
+
+          </div>
+
+          <div class="industry-card" style="--card-color:#EC6530;">
+
+            <i class="fas fa-rocket"></i>
+
+            <span>Startups</span>
+
+          </div>
+
+          <div class="industry-card" style="--card-color:#8FDDDF;">
+
+            <i class="fas fa-sack-dollar"></i>
+
+            <span>Finance</span>
+
+          </div>
+
+          <div class="industry-card" style="--card-color:#E05454;">
+
+            <i class="fas fa-building"></i>
+
+            <span>Real Estate</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FAQ SECTION -->
+    <section class="relative overflow-hidden py-24 lg:py-28" style="
+    background:
+    radial-gradient(circle at 15% 20%, rgba(65,101,183,.14), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(228,77,38,.12), transparent 40%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.015) 0px, rgba(255,255,255,.015) 1px, transparent 1px, transparent 40px),
+    linear-gradient(160deg, #041021 0%, #071B37 55%, #041021 100%);
+">
+
+      <!-- Glow -->
+      <div
+        class="absolute -left-40 top-1/3 w-[480px] h-[480px] bg-[#4165B7]/15 blur-[140px] rounded-full pointer-events-none">
+      </div>
+      <div
+        class="absolute -right-40 bottom-1/4 w-[480px] h-[480px] bg-[#E44D26]/15 blur-[140px] rounded-full pointer-events-none">
+      </div>
+
+      <div class="relative max-w-4xl mx-auto px-6 lg:px-10">
+
+        <!-- Heading -->
+
+        <div class="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+
+          <span class="text-[#E44D26] uppercase tracking-[4px] font-semibold text-sm">
+
+            FAQ
+
+          </span>
+
+          <h2 class="mt-5 text-2xl md:text-5xl font-bold text-white leading-tight">
+
+            Frequently Asked Questions
+
+          </h2>
+
+          <p class="mt-6 text-gray-400 leading-8">
+
+            Answers to common questions about PESTEL Analysis and how it
+            can help your business grow.
+
+          </p>
+
+        </div>
+
+        <!-- Accordion -->
+
+        <div class="flex flex-col gap-4 faq-accordion">
+
+          <!-- Item 1 -->
+
+          <div class="faq-item active">
+
+            <button class="faq-btn">
+
+              <span>What is PESTEL Analysis?</span>
+
+              <i class="fas fa-plus"></i>
+
+            </button>
+
+            <div class="faq-content">
+
+              <p>
+
+                PESTEL Analysis is a strategic framework used to evaluate
+                the Political, Economic, Social, Technological,
+                Environmental and Legal factors that impact a business.
+
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Item 2 -->
+
+          <div class="faq-item">
+
+            <button class="faq-btn">
+
+              <span>Who needs PESTEL?</span>
+
+              <i class="fas fa-plus"></i>
+
+            </button>
+
+            <div class="faq-content">
+
+              <p>
+
+                Any business looking to understand external market
+                forces, from startups to large enterprises, can
+                benefit from a PESTEL Analysis.
+
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Item 3 -->
+
+          <div class="faq-item">
+
+            <button class="faq-btn">
+
+              <span>How long does it take?</span>
+
+              <i class="fas fa-plus"></i>
+
+            </button>
+
+            <div class="faq-content">
+
+              <p>
+
+                Depending on the size and complexity of your business,
+                a thorough PESTEL Analysis typically takes anywhere
+                from a few days to a couple of weeks.
+
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Item 4 -->
+
+          <div class="faq-item">
+
+            <button class="faq-btn">
+
+              <span>How often should PESTEL be updated?</span>
+
+              <i class="fas fa-plus"></i>
+
+            </button>
+
+            <div class="faq-content">
+
+              <p>
+
+                It's recommended to revisit your PESTEL Analysis at
+                least once a year, or whenever significant political
+                or economic changes occur.
+
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Item 5 -->
+
+          <div class="faq-item">
+
+            <button class="faq-btn">
+
+              <span>Can startups use PESTEL?</span>
+
+              <i class="fas fa-plus"></i>
+
+            </button>
+
+            <div class="faq-content">
+
+              <p>
+
+                Absolutely. PESTEL Analysis is especially valuable for
+                startups, helping them understand the external
+                landscape before entering a market.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- FINAL CTA -->
+<section class="relative overflow-hidden py-24 lg:py-28 bg-[#071b38] cta-section pestel-cta">
+
+    <!-- Floating Particles -->
+    <span class="cta-particle" style="--p-color:#293681; top:15%; left:8%; animation-delay:0s;"></span>
+    <span class="cta-particle" style="--p-color:#8FDDDF; top:70%; left:12%; animation-delay:1s;"></span>
+    <span class="cta-particle" style="--p-color:#4CAF7D; top:20%; right:10%; animation-delay:2s;"></span>
+    <span class="cta-particle" style="--p-color:#A855F7; top:65%; right:8%; animation-delay:1.5s;"></span>
+
+    <div class="relative max-w-5xl mx-auto px-6 lg:px-10">
+
+        <div class="cta-card">
+
+            <div class="cta-border-glow"></div>
+
+            <div class="relative z-10 text-center py-16 px-8 lg:py-20 lg:px-16">
+
+                <span
+                    class="inline-flex items-center px-5 py-2 rounded-full border border-[#E44D26]/40 bg-[#E44D26]/10 text-[#E44D26] text-sm font-semibold tracking-[2px]">
+
+                    GET STARTED
+
+                </span>
+
+                <h2 class="mt-7 text-2xl md:text-5xl font-bold leading-tight text-white">
+
+                    Ready to Understand
+
+                    <span class="block">
+
+                        Your Market Better?
+
+                    </span>
+
+                </h2>
+
+                <p class="mt-7 text-slate-300 text-lg leading-8 max-w-xl mx-auto">
+
+                    Book your PESTEL Consultation today and get clear,
+                    actionable insight into the political, economic,
+                    social and technological forces shaping your business.
+
+                </p>
+
+                <div class="mt-10">
+
+                    <a href="contact.html" class="cta-btn">
+
+                        Contact Us
+
+                        <i class="fas fa-arrow-right ml-2"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+  </main>
+
+
+  <button id="scrollTopBtn"
+    class="fixed bottom-6 right-6 w-12 h-12 bg-white text-black rounded-full shadow-lg flex items-center justify-center opacity-0 scale-0 transition-all duration-300 z-[9999]">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <footer>
+    <!-- Top Part -->
+    <div class="bg-[#041021] text-white px-6 py-12">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="about.html" class="hover:text-stone-400 transition">About Us</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-stone-400 transition">Contact</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">Privacy policy</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Expertise -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Our Expertise</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="digitalMarketing.html" class="hover:text-stone-400 transition">Digital Marketing</a></li>
+            <li><a href="mobileApp.html" class="hover:text-stone-400 transition">Mobile App Development</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">WordPress Development</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">Software Development</a></li>
+            <li><a href="seo.html" class="hover:text-stone-400 transition">SEO</a></li>
+
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Services</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-stone-400 transition">Digital Marketing</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">SEO Experts</a></li>
+            <li><a href="#" class="hover:text-stone-400 transition">Web Security</a></li>
+
+          </ul>
+
+        </div>
+
+        <!-- Connect with Us -->
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Connect with Us</h3>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-center space-x-3">
+              <i class="fa-solid fa-location-pin text-[#2EA4FF] text-lg"></i>
+              <span>Digital Lord, London, UK</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fa-solid fa-phone-volume text-[#2EA4FF] text-lg"></i>
+              <span>+44 7824 770279</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fa-solid fa-message text-[#2EA4FF] text-lg"></i>
+              <span>info@digitallord.com</span>
+            </li>
+          </ul>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <!-- Bottom Part -->
+    <div class="bg-[#191919] text-white px-6 py-4">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+
+        <!-- Left -->
+        <p class="text-sm">©2025 DIGITAL LORD. All Rights Reserved</p>
+
+        <!-- Right Social Icons -->
+        <div class="flex space-x-4">
+          <!-- Facebook -->
+          <a href="#" aria-label="Facebook">
+            <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
+            </svg>
+          </a>
+          <!-- Twitter -->
+          <a href="#" aria-label="Twitter">
+            <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" aria-label="LinkedIn">
+            <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="script/nav.js"></script>
+  <script src="script/businessDevMenu/swot-hero.js"></script>
+  <script src="script/businessDevMenu/what-swot.js"></script>
+  <script src="script/businessDevMenu/swot-component.js"></script>
+  <script src="script/businessDevMenu/why-swot.js"></script>
+  <script src="script/businessDevMenu/pestel-matrix.js"></script>
+  <script src="script/businessDevMenu/fqa.js"></script>
+
+</body>
+
+</html>

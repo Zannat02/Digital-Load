@@ -1,0 +1,988 @@
+/* ======================================================
+      WHY SWOT MATTERS
+====================================================== */
+
+.swot-why-section {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 120px 0;
+
+    background: linear-gradient(135deg,
+            #041021 0%,
+            #071B37 45%,
+            #041021 100%);
+
+}
+
+.why-sweep {
+
+    position: absolute;
+
+    top: -20%;
+
+    left: -10%;
+
+    width: 70%;
+
+    height: 140%;
+
+    background: linear-gradient(120deg,
+            rgba(65, 101, 183, .14),
+            transparent 60%);
+
+    transform: rotate(-8deg);
+
+    pointer-events: none;
+
+}
+
+.why-container {
+
+    max-width: 1280px;
+
+    margin: auto;
+
+    padding: 0 24px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/* ==========================
+        Heading
+========================== */
+
+.why-heading {
+
+    max-width: 760px;
+
+    margin: 0 auto 80px;
+
+    text-align: center;
+
+}
+
+.why-heading h2 {
+
+    color: #fff;
+
+    font-size: 48px;
+
+    font-weight: 800;
+
+    margin-top: 18px;
+
+    line-height: 1.2;
+
+}
+
+.why-heading p {
+
+    color: #CBD5E1;
+
+    margin-top: 24px;
+
+    line-height: 1.9;
+
+    font-size: 17px;
+
+}
+
+/* ==========================
+        Grid
+========================== */
+
+.why-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+/* ==========================
+      LEFT VISUAL
+========================== */
+
+.why-visual {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 480px;
+
+}
+
+.why-rotating-ring {
+
+    position: absolute;
+
+    width: 380px;
+
+    height: 380px;
+
+    border-radius: 50%;
+
+    border: 1px dashed rgba(228, 77, 38, .25);
+
+    animation: whyRingSpin 30s linear infinite;
+
+}
+
+.why-rotating-ring::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 30px;
+
+    border-radius: 50%;
+
+    border: 1px dashed rgba(65, 101, 183, .25);
+
+}
+
+@keyframes whyRingSpin {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+.why-center-card {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 260px;
+
+    height: 200px;
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(255, 255, 255, .10);
+
+    background: rgba(255, 255, 255, .05);
+
+    backdrop-filter: blur(18px);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 20px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
+
+}
+
+.why-center-label {
+
+    color: #CBD5E1;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+}
+
+.why-chart {
+
+    width: 100%;
+
+    height: auto;
+
+    overflow: visible;
+
+}
+
+.why-chart-path {
+
+    fill: none;
+
+    stroke: #E44D26;
+
+    stroke-width: 3;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+    filter: drop-shadow(0 0 6px rgba(228, 77, 38, .6));
+
+    stroke-dasharray: 400;
+
+    stroke-dashoffset: 400;
+
+    animation: whyDrawLine 3s ease-in-out infinite;
+
+}
+
+.why-chart-dot {
+
+    fill: #ff9d7d;
+
+    filter: drop-shadow(0 0 6px rgba(228, 77, 38, .8));
+
+}
+
+@keyframes whyDrawLine {
+
+    0% {
+
+        stroke-dashoffset: 400;
+
+    }
+
+    50% {
+
+        stroke-dashoffset: 0;
+
+    }
+
+    90% {
+
+        stroke-dashoffset: 0;
+
+    }
+
+    100% {
+
+        stroke-dashoffset: -400;
+
+    }
+
+}
+
+/* ==========================
+      Orbit Badges
+========================== */
+
+.why-orbit {
+
+    position: absolute;
+
+    z-index: 4;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255, 255, 255, .10);
+
+    background: rgba(255, 255, 255, .05);
+
+    backdrop-filter: blur(14px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .3);
+
+    animation: whyFloat 4s ease-in-out infinite;
+
+}
+
+.why-orbit-letter {
+
+    width: 34px;
+
+    height: 34px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: 800;
+
+    font-size: 16px;
+
+    flex-shrink: 0;
+
+}
+
+.why-orbit-label {
+
+    color: #CBD5E1;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+}
+
+.why-orbit-1 {
+
+    top: 6%;
+
+    left: 2%;
+
+    animation-delay: 0s;
+
+}
+
+.why-orbit-1 .why-orbit-letter {
+
+    background: rgba(41, 54, 129, .25);
+
+    color: #7d8cf0;
+
+}
+
+.why-orbit-2 {
+
+    top: 6%;
+
+    right: 2%;
+
+    animation-delay: 1s;
+
+}
+
+.why-orbit-2 .why-orbit-letter {
+
+    background: rgba(236, 101, 48, .2);
+
+    color: #EC6530;
+
+}
+
+.why-orbit-3 {
+
+    bottom: 6%;
+
+    left: 2%;
+
+    animation-delay: 2s;
+
+}
+
+.why-orbit-3 .why-orbit-letter {
+
+    background: rgba(143, 221, 223, .2);
+
+    color: #8FDDDF;
+
+}
+
+.why-orbit-4 {
+
+    bottom: 6%;
+
+    right: 2%;
+
+    animation-delay: 3s;
+
+}
+
+.why-orbit-4 .why-orbit-letter {
+
+    background: rgba(224, 84, 84, .2);
+
+    color: #E05454;
+
+}
+
+@keyframes whyFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-12px);
+
+    }
+
+}
+
+/* ==========================
+      RIGHT ACCORDION
+========================== */
+
+.why-accordion {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+
+}
+
+.why-item {
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    background: rgba(255, 255, 255, .03);
+
+    overflow: hidden;
+
+    transition: border-color .35s ease, background .35s ease;
+
+}
+
+.why-item:nth-child(1),
+.why-item:nth-child(5) {
+
+    --item-color: #293681;
+
+    --item-color-rgb: 41, 54, 129;
+
+}
+
+.why-item:nth-child(2) {
+
+    --item-color: #EC6530;
+
+    --item-color-rgb: 236, 101, 48;
+
+}
+
+.why-item:nth-child(3) {
+
+    --item-color: #8FDDDF;
+
+    --item-color-rgb: 143, 221, 223;
+
+}
+
+.why-item:nth-child(4) {
+
+    --item-color: #E05454;
+
+    --item-color-rgb: 224, 84, 84;
+
+}
+
+.why-item.active {
+
+    border-color: rgba(var(--item-color-rgb), .45);
+
+    background: rgba(255, 255, 255, .05);
+
+}
+
+.why-item-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 22px 26px;
+
+    cursor: pointer;
+
+}
+
+.why-number {
+
+    width: 44px;
+
+    height: 44px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: 800;
+
+    font-size: 15px;
+
+    color: #CBD5E1;
+
+    border: 2px solid rgba(255, 255, 255, .15);
+
+    flex-shrink: 0;
+
+    transition: .35s ease;
+
+}
+
+.why-item.active .why-number {
+
+    color: var(--item-color);
+
+    border-color: var(--item-color);
+
+    box-shadow: 0 0 16px rgba(var(--item-color-rgb), .4);
+
+}
+
+.why-item-header h4 {
+
+    flex: 1;
+
+    color: #fff;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+}
+
+.why-toggle-icon {
+
+    width: 34px;
+
+    height: 34px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255, 255, 255, .06);
+
+    color: #CBD5E1;
+
+    flex-shrink: 0;
+
+    transition: transform .35s ease, color .35s ease, background .35s ease;
+
+}
+
+.why-item.active .why-toggle-icon {
+
+    transform: rotate(135deg);
+
+    color: var(--item-color);
+
+    background: rgba(var(--item-color-rgb), .15);
+
+}
+
+.why-item-body {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height .4s ease;
+
+}
+
+.why-item.active .why-item-body {
+
+    max-height: 200px;
+
+}
+
+.why-item-body p {
+
+    color: #CBD5E1;
+
+    line-height: 1.8;
+
+    font-size: 15.5px;
+
+    padding: 0 26px 24px 90px;
+
+}
+
+/* ==========================
+      Tablet
+========================== */
+
+@media(max-width:1024px) {
+
+    .swot-why-section {
+
+        padding: 100px 0;
+
+    }
+
+    .why-heading h2 {
+
+        font-size: 48px;
+
+    }
+
+    .why-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+
+    }
+
+    .why-visual {
+
+        min-height: 420px;
+
+    }
+
+    .why-rotating-ring {
+
+        width: 320px;
+
+        height: 320px;
+
+    }
+
+    .why-center-card {
+
+        width: 220px;
+
+        height: 170px;
+
+    }
+
+    .why-orbit {
+
+        padding: 10px 14px;
+
+    }
+
+    .why-orbit-label {
+
+        font-size: 13px;
+
+    }
+
+}
+
+/* ==========================
+      Mobile
+========================== */
+
+@media(max-width:768px) {
+
+    .swot-why-section {
+
+        padding: 80px 0;
+
+    }
+
+    .why-heading h2 {
+
+        font-size: 24px;
+
+    }
+
+    .why-heading p {
+
+        font-size: 15px;
+
+    }
+
+    .why-visual {
+
+        min-height: 520px;
+
+    }
+
+    .why-rotating-ring {
+
+        width: 260px;
+
+        height: 260px;
+
+    }
+
+    .why-center-card {
+
+        width: 190px;
+
+        height: 150px;
+
+        padding: 14px;
+
+    }
+
+    .why-center-label {
+
+        font-size: 12px;
+
+    }
+
+    .why-orbit {
+
+        padding: 8px 12px;
+
+        gap: 8px;
+
+    }
+
+    .why-orbit-letter {
+
+        width: 28px;
+
+        height: 28px;
+
+        font-size: 14px;
+
+    }
+
+    .why-orbit-label {
+
+        font-size: 12px;
+
+    }
+
+    .why-item-header {
+
+        padding: 18px 18px;
+
+        gap: 14px;
+
+    }
+
+    .why-number {
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 13px;
+
+    }
+
+    .why-item-header h4 {
+
+        font-size: 16px;
+
+    }
+
+    .why-toggle-icon {
+
+        width: 30px;
+
+        height: 30px;
+
+    }
+
+    .why-item-body p {
+
+        padding: 0 18px 20px 72px;
+
+        font-size: 14.5px;
+
+    }
+
+}
+
+@media(max-width:480px) {
+
+    .why-rotating-ring {
+
+        width: 220px;
+
+        height: 220px;
+
+    }
+
+    .why-orbit-1 {
+        top: 2%;
+        left: 0;
+    }
+
+    .why-orbit-2 {
+        top: 2%;
+        right: 0;
+    }
+
+    .why-orbit-3 {
+        bottom: 2%;
+        left: 0;
+    }
+
+    .why-orbit-4 {
+        bottom: 2%;
+        right: 0;
+    }
+
+    .why-item-body p {
+
+        padding: 0 16px 18px 16px;
+
+    }
+
+}
+
+
+
+/* ======================================================
+      WHY PESTEL MATTERS — EXTRA (5th & 6th item/orbit)
+     ====================================================== */
+
+.pestel-why .why-item:nth-child(5) {
+
+    --item-color: #4CAF7D;
+
+    --item-color-rgb: 76, 175, 125;
+
+}
+
+.pestel-why .why-item:nth-child(6) {
+
+    --item-color: #A855F7;
+
+    --item-color-rgb: 168, 85, 247;
+
+}
+
+/* ==========================
+      Orbit 5 & 6 (Desktop)
+========================== */
+
+.pestel-why .why-orbit-5 {
+
+    top: 38%;
+
+    left: -6%;
+
+    animation-delay: 1.5s;
+
+}
+
+.pestel-why .why-orbit-5 .why-orbit-letter {
+
+    background: rgba(76, 175, 125, .2);
+
+    color: #4CAF7D;
+
+}
+
+.pestel-why .why-orbit-6 {
+
+    top: 38%;
+
+    right: -6%;
+
+    animation-delay: 2.5s;
+
+}
+
+.pestel-why .why-orbit-6 .why-orbit-letter {
+
+    background: rgba(168, 85, 247, .2);
+
+    color: #A855F7;
+
+}
+
+/* ==========================
+      Tablet
+========================== */
+
+@media(max-width:1024px) {
+
+    .pestel-why .why-orbit-5 {
+
+        top: 38%;
+
+        left: 4%;
+
+    }
+
+    .pestel-why .why-orbit-6 {
+
+        top: 38%;
+
+        right: 4%;
+
+    }
+
+}
+
+/* ==========================
+      Mobile
+========================== */
+
+@media(max-width:768px) {
+
+    .pestel-why .why-orbit-5 {
+
+        top: 40%;
+
+        left: 6%;
+
+    }
+
+    .pestel-why .why-orbit-6 {
+
+        top: 40%;
+
+        right: 6%;
+
+    }
+
+}
+
+@media(max-width:480px) {
+
+    .pestel-why .why-orbit-5 {
+
+        top: 42%;
+
+        left: 2%;
+
+    }
+
+    .pestel-why .why-orbit-6 {
+
+        top: 42%;
+
+        right: 2%;
+
+    }
+
+}

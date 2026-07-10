@@ -1,0 +1,163 @@
+/* ======================================================
+      FAQ ACCORDION
+====================================================== */
+
+.faq-accordion .faq-item{
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.03);
+
+    backdrop-filter:blur(14px);
+
+    overflow:hidden;
+
+    transition:border-color .35s ease, background .35s ease;
+
+}
+
+.faq-accordion .faq-item.active{
+
+    border-color:rgba(228,77,38,.4);
+
+    background:rgba(255,255,255,.05);
+
+}
+
+.faq-accordion .faq-btn{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    padding:22px 26px;
+
+    cursor:pointer;
+
+    background:transparent;
+
+    border:none;
+
+    text-align:left;
+
+}
+
+.faq-accordion .faq-btn span{
+
+    color:#fff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+.faq-accordion .faq-btn i{
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.06);
+
+    color:#CBD5E1;
+
+    flex-shrink:0;
+
+    font-size:14px;
+
+    transition:transform .35s ease, color .35s ease, background .35s ease;
+
+}
+
+.faq-accordion .faq-item.active .faq-btn i{
+
+    transform:rotate(135deg);
+
+    color:#E44D26;
+
+    background:rgba(228,77,38,.15);
+
+}
+
+.faq-accordion .faq-content{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .4s ease;
+
+}
+
+.faq-accordion .faq-item.active .faq-content{
+
+    max-height:200px;
+
+}
+
+.faq-accordion .faq-content p{
+
+    color:#CBD5E1;
+
+    line-height:1.8;
+
+    font-size:15.5px;
+
+    padding:0 26px 24px;
+
+}
+
+/* ==========================
+      Mobile
+========================== */
+
+@media(max-width:640px){
+
+.faq-accordion .faq-btn{
+
+    padding:18px 18px;
+
+    gap:14px;
+
+}
+
+.faq-accordion .faq-btn span{
+
+    font-size:15.5px;
+
+}
+
+.faq-accordion .faq-btn i{
+
+    width:30px;
+
+    height:30px;
+
+}
+
+.faq-accordion .faq-content p{
+
+    padding:0 18px 20px;
+
+    font-size:14.5px;
+
+}
+
+}

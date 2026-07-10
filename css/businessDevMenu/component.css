@@ -126,7 +126,7 @@
 
     color: #fff;
 
-    font-size: 52px;
+    font-size: 48px;
 
     font-weight: 800;
 
@@ -400,7 +400,7 @@
 
     .swot-components-heading h2 {
 
-        font-size: 34px;
+        font-size: 24px;
 
     }
 
@@ -1116,5 +1116,25 @@ filter:drop-shadow(0 0 12px rgba(var(--panel-color-rgb),.55));
 .swot-panel:nth-child(4).show {
 
     transition-delay: .45s;
+
+}
+
+
+
+
+/* ======================================================
+      EXTRA SCROLL-DELAY FOR 5TH & 6TH PANEL
+      (PESTEL only — SWOT never has a 5th/6th panel,
+     ====================================================== */
+
+.swot-panel:nth-child(5).show {
+
+    transition-delay: .6s;
+
+}
+
+.swot-panel:nth-child(6).show {
+
+    transition-delay: .75s;
 
 }

@@ -1,0 +1,172 @@
+/* ======================================================
+      INDUSTRIES WE SUPPORT
+====================================================== */
+
+.industries-section{
+
+    background-color:#041021;
+
+}
+
+.industries-bg{
+
+    background-image:url('../../picture/industries-bg.png');
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+/* ==========================
+      Industry Card
+========================== */
+
+.industry-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:14px;
+
+    padding:32px 20px;
+
+    border-radius:20px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(14px);
+
+    transition:.4s ease;
+
+    cursor:pointer;
+
+}
+
+.industry-card i{
+
+    font-size:32px;
+
+    color:var(--card-color);
+
+    opacity:.9;
+
+    transition:.4s ease;
+
+}
+
+.industry-card span{
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    text-align:center;
+
+}
+
+.industry-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--card-color);
+
+    background:rgba(255,255,255,.06);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.35);
+
+}
+
+.industry-card:hover i{
+
+    opacity:1;
+
+    transform:scale(1.15);
+
+    filter:drop-shadow(0 0 10px var(--card-color));
+
+}
+
+/* ==========================
+      Tablet
+========================== */
+
+@media(max-width:1024px){
+
+.industry-card{
+
+    padding:26px 16px;
+
+}
+
+.industry-card i{
+
+    font-size:28px;
+
+}
+
+.industry-card span{
+
+    font-size:14px;
+
+}
+
+}
+
+/* ==========================
+      Mobile
+========================== */
+
+@media(max-width:640px){
+
+.industry-card{
+
+    padding:22px 14px;
+
+    gap:10px;
+
+}
+
+.industry-card i{
+
+    font-size:24px;
+
+}
+
+.industry-card span{
+
+    font-size:13px;
+
+}
+
+}
+
+
+
+/* ======================================================
+      PESTEL INDUSTRIES — Background Image Override
+     
+====================================================== */
+
+.pestel-industries .industries-bg{
+
+    background-image:url('../../picture/pestel-industry.png');
+
+    background-size:cover;
+
+    background-position:center;
+
+}

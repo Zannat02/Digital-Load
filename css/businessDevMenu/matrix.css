@@ -1,0 +1,576 @@
+/* ======================================================
+      INTERACTIVE SWOT MATRIX
+====================================================== */
+
+.swot-matrix-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:120px 0;
+
+    background:linear-gradient(
+    180deg,
+    #041021 0%,
+    #071B37 50%,
+    #041021 100%);
+
+}
+
+.matrix-glow-left{
+
+    position:absolute;
+
+    left:-200px;
+
+    top:15%;
+
+    width:480px;
+
+    height:480px;
+
+    background:#4165B7;
+
+    opacity:.16;
+
+    filter:blur(140px);
+
+    border-radius:50%;
+
+}
+
+.matrix-glow-right{
+
+    position:absolute;
+
+    right:-200px;
+
+    bottom:10%;
+
+    width:480px;
+
+    height:480px;
+
+    background:#E44D26;
+
+    opacity:.14;
+
+    filter:blur(140px);
+
+    border-radius:50%;
+
+}
+
+.matrix-container{
+
+    max-width:1280px;
+
+    margin:auto;
+
+    padding:0 24px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ==========================
+        Heading
+========================== */
+
+.matrix-heading{
+
+    max-width:760px;
+
+    margin:0 auto 80px;
+
+    text-align:center;
+
+}
+
+.matrix-heading h2{
+
+    color:#fff;
+
+    font-size:48px;
+
+    font-weight:800;
+
+    margin-top:18px;
+
+    line-height:1.2;
+
+}
+
+.matrix-heading p{
+
+    color:#CBD5E1;
+
+    margin-top:24px;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+}
+
+/* ==========================
+        Grid
+========================== */
+
+.matrix-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+/* ==========================
+      Quadrants
+========================== */
+
+.matrix-quadrants{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:20px;
+
+}
+
+.quadrant{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:16px;
+
+    aspect-ratio:1/1;
+
+    border-radius:24px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(16px);
+
+    cursor:pointer;
+
+    transition:.4s ease;
+
+}
+
+.quadrant i{
+
+    font-size:34px;
+
+    color:var(--q-color);
+
+    opacity:.85;
+
+    transition:.4s ease;
+
+}
+
+.quadrant span{
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.quadrant::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:24px;
+
+    background:radial-gradient(
+    circle at center,
+    rgba(var(--q-color-rgb),.18),
+    transparent 70%);
+
+    opacity:0;
+
+    transition:opacity .4s ease;
+
+}
+
+.quadrant.is-active{
+
+    border-color:rgba(var(--q-color-rgb),.5);
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.35),
+
+    0 0 30px rgba(var(--q-color-rgb),.2);
+
+}
+
+.quadrant.is-active::before{
+
+    opacity:1;
+
+}
+
+.quadrant.is-active i{
+
+    opacity:1;
+
+    transform:scale(1.1);
+
+}
+
+.matrix-quadrants.has-active .quadrant:not(.is-active){
+
+    opacity:.4;
+
+    transform:scale(.96);
+
+}
+
+/* ==========================
+      Detail Panel
+========================== */
+
+.matrix-detail{
+
+    position:relative;
+
+    padding:48px;
+
+    border-radius:28px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.045);
+
+    backdrop-filter:blur(18px);
+
+    transition:border-color .4s ease;
+
+}
+
+.matrix-detail{
+
+    border-color:rgba(var(--q-color-rgb),.35);
+
+}
+
+.matrix-detail-tag{
+
+    display:inline-block;
+
+    color:var(--q-color);
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+}
+
+.matrix-detail h3{
+
+    color:#fff;
+
+    font-size:30px;
+
+    font-weight:800;
+
+    margin-top:16px;
+
+    transition:.3s ease;
+
+}
+
+.matrix-detail p{
+
+    color:#CBD5E1;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+    margin-top:16px;
+
+    transition:.3s ease;
+
+}
+
+.matrix-detail-list{
+
+    margin-top:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.matrix-detail-list li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#eef2ff;
+
+    font-size:15.5px;
+
+    font-weight:600;
+
+}
+
+.matrix-detail-list li i{
+
+    width:30px;
+
+    height:30px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(var(--q-color-rgb),.15);
+
+    color:var(--q-color);
+
+    font-size:13px;
+
+    flex-shrink:0;
+
+}
+
+.matrix-fade{
+
+    animation:matrixFadeIn .4s ease;
+
+}
+
+@keyframes matrixFadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(10px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ==========================
+      Tablet
+========================== */
+
+@media(max-width:1024px){
+
+.swot-matrix-section{
+
+    padding:100px 0;
+
+}
+
+.matrix-heading h2{
+
+    font-size:48px;
+
+}
+
+.matrix-grid{
+
+    grid-template-columns:1fr;
+
+    gap:60px;
+
+}
+
+.matrix-quadrants{
+
+    max-width:460px;
+
+    margin:0 auto;
+
+}
+
+.matrix-detail{
+
+    padding:38px;
+
+}
+
+}
+
+/* ==========================
+      Mobile
+========================== */
+
+@media(max-width:768px){
+
+.swot-matrix-section{
+
+    padding:80px 0;
+
+}
+
+.matrix-heading h2{
+
+    font-size:24px;
+
+}
+
+.matrix-heading p{
+
+    font-size:15px;
+
+}
+
+.matrix-quadrants{
+
+    gap:14px;
+
+    max-width:340px;
+
+}
+
+.quadrant i{
+
+    font-size:26px;
+
+}
+
+.quadrant span{
+
+    font-size:15px;
+
+}
+
+.matrix-detail{
+
+    padding:28px;
+
+}
+
+.matrix-detail h3{
+
+    font-size:24px;
+
+}
+
+.matrix-detail p{
+
+    font-size:15px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.matrix-quadrants{
+
+    max-width:280px;
+
+}
+
+.quadrant{
+
+    border-radius:18px;
+
+    gap:10px;
+
+}
+
+.quadrant i{
+
+    font-size:22px;
+
+}
+
+.quadrant span{
+
+    font-size:13px;
+
+}
+
+}
+
+
+
+
+/* ======================================================
+      PESTEL MATRIX — 6-Item Grid Modifier
+     
+====================================================== */
+
+.matrix-quadrants.pestel-grid{
+
+    grid-template-columns:repeat(2, 1fr);
+
+}
+
+@media(min-width:1025px){
+
+.matrix-quadrants.pestel-grid{
+
+    grid-template-columns:repeat(3, 1fr);
+
+}
+
+}
+
+@media(max-width:480px){
+
+.matrix-quadrants.pestel-grid{
+
+    max-width:340px;
+
+}
+
+}
