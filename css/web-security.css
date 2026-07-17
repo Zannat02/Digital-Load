@@ -1,0 +1,423 @@
+  /* 
+        section-2 */
+
+        .securityReveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .securityReveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .security-card {
+            transition: all 0.35s ease;
+        }
+
+        .security-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(228, 77, 38, 0.4);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+
+
+        /* section-3 */
+
+        .securityServiceCard {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all .4s ease;
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .securityServiceCard:hover {
+            transform: translateY(-10px);
+            border-color: rgba(228, 77, 38, .5);
+            box-shadow: 0 0 35px rgba(228, 77, 38, .25);
+        }
+
+        .card-image {
+            height: 220px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .6s;
+        }
+
+        .securityServiceCard:hover .card-image img {
+            transform: scale(1.08);
+        }
+
+        .securityServiceCard .p-6 {
+            display: block;
+        }
+
+        .securityServiceCard h3 {
+            min-height: 60px;
+        }
+
+        .service-text {
+            color: #b8c0cc;
+            line-height: 1.8;
+
+
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .service-text.expanded {
+            display: block;
+            max-height: 180px;
+            overflow-y: auto;
+            padding-right: 6px;
+
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .service-text.expanded::-webkit-scrollbar {
+            /* width: 4px; */
+
+            display: none;
+        }
+
+        .service-text.expanded::-webkit-scrollbar-thumb {
+            background: rgba(228, 77, 38, .6);
+            border-radius: 50px;
+        }
+
+        .more-text {
+            display: none;
+        }
+
+        .read-more-btn {
+            margin-top: 8px;
+            color: #E44D26;
+            font-weight: 600;
+            transition: .3s;
+        }
+
+        .read-more-btn:hover {
+            color: #2EA4FF;
+        }
+
+        @media (max-width: 1279px) {
+            .securityServiceCard {
+                min-height: auto;
+            }
+        }
+
+
+
+        /* 
+   Security Process Section
+*/
+
+        .securityTimeline {
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom,
+                    #E44D26,
+                    #2EA4FF);
+            border-radius: 50px;
+            opacity: .25;
+        }
+
+        .timeline-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 90px;
+            position: relative;
+        }
+
+        .timeline-row.left {
+            justify-content: flex-start;
+        }
+
+        .timeline-row.right {
+            justify-content: flex-end;
+        }
+
+        .timeline-card {
+            width: 42%;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            border-radius: 24px;
+            transition: .4s ease;
+            position: relative;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(228, 77, 38, .5);
+            box-shadow: 0 0 35px rgba(228, 77, 38, .25);
+        }
+
+        .timeline-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .timeline-card p {
+            color: #b8c0cc;
+            line-height: 1.8;
+        }
+
+        .timeline-dot {
+            width: 22px;
+            height: 22px;
+            background: #E44D26;
+            border: 4px solid #07172D;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 25px rgba(228, 77, 38, .7);
+        }
+
+        .step-badge {
+            position: absolute;
+            top: -15px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg,
+                    #E44D26,
+                    #ff7b57);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        @media(max-width:991px) {
+
+            .timeline-line {
+                left: 20px;
+            }
+
+            .timeline-row {
+                justify-content: flex-start !important;
+                padding-left: 60px;
+            }
+
+            .timeline-card {
+                width: 100%;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+        }
+
+        .securityReveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all .8s ease;
+        }
+
+        .securityReveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+
+        /* Threat Statistics */
+
+        .securityStatCard {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: 35px 25px;
+            transition: all .4s ease;
+        }
+
+        .securityStatCard:hover {
+            transform: translateY(-8px);
+            border-color: rgba(228, 77, 38, .4);
+            box-shadow: 0 0 35px rgba(228, 77, 38, .18);
+        }
+
+        .counter {
+            line-height: 1;
+        }
+
+
+        /* Security Features */
+
+        .featureItem {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+
+            border-radius: 16px;
+            padding: 18px 20px;
+
+            color: white;
+            transition: .4s ease;
+        }
+
+        .featureItem:hover {
+            transform: translateY(-5px);
+            border-color: rgba(228, 77, 38, .4);
+            box-shadow: 0 0 25px rgba(228, 77, 38, .15);
+        }
+
+        .featureItem i {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: rgba(228, 77, 38, .12);
+
+            color: #E44D26;
+
+            font-size: 20px;
+
+            transition: .4s ease;
+        }
+
+        .featureItem:hover i {
+            background: #E44D26;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .featureItem span {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .securityFeatureImage {
+            position: relative;
+        }
+
+        .securityFeatureImage::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+
+            background: radial-gradient(circle,
+                    rgba(228, 77, 38, .2),
+                    transparent 70%);
+
+            filter: blur(40px);
+        }
+
+        .securityFeatureImage img {
+            width: 100%;
+            max-width: 550px;
+            margin: auto;
+            display: block;
+
+            animation: securityFloat 5s ease-in-out infinite;
+        }
+
+        @keyframes securityFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+        }
+
+
+ 
+
+        /* FAQ Section */
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(228, 77, 38, 0.15);
+            border-radius: 18px;
+            overflow: hidden;
+            transition: .3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(228, 77, 38, 0.45);
+            box-shadow: 0 0 25px rgba(228, 77, 38, 0.12);
+        }
+
+        .faq-btn {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px;
+            font-weight: 600;
+            text-align: left;
+            color: white;
+        }
+
+        .faq-btn i {
+            color: #E44D26;
+            transition: .3s;
+            flex-shrink: 0;
+        }
+
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .4s ease;
+        }
+
+        .faq-content p {
+            padding: 0 22px 22px;
+            color: rgba(255, 255, 255, .7);
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-content {
+            max-height: 200px;
+        }
+
+        .faq-item.active i {
+            transform: rotate(45deg);
+        }

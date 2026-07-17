@@ -12,6 +12,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="icon" type="image/png" href="picture/DL.png">
+
+    <!-- <link rel="stylesheet" href="css/nav.css"> -->
     <style>
         .inter-text {
             font-family: "Inter", sans-serif;
@@ -55,7 +57,7 @@
             visibility: visible;
         }
 
-        /* Mobile dropdown animation */
+        
         .group-hover\:block {
             display: none;
             transition: all 0.3s ease;
@@ -65,23 +67,23 @@
             display: block;
         }
 
-        /* Mobile menu animation */
-       
+     
+
 
         #mobile-menu {
-      transition: max-height 0.3s ease-out;
-      max-height: 0;
-      overflow: hidden;
-    }
+            transition: max-height 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
 
-    #mobile-menu:not(.hidden) {
-      max-height: calc(100vh - 90px);
-      overflow-y: auto;
-    }
+        #mobile-menu:not(.hidden) {
+            max-height: calc(100vh - 90px);
+            overflow-y: auto;
+        }
 
-    .rotate-180 {
-      transform: rotate(180deg);
-    }
+        .rotate-180 {
+            transform: rotate(180deg);
+        }
 
         /* GLOW BORDER */
         .service-card {
@@ -133,7 +135,7 @@
             }
         }
 
-       
+
 
         .service-card:hover {
             transform: translateY(-8px) !important;
@@ -162,35 +164,32 @@
     <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
         <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
             <!-- Logo -->
-            <!-- <div>
-                <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
+         
 
-            </div> -->
 
-            
-       <a href="index.html" class="flex items-center gap-3">
+            <a href="index.html" class="flex items-center gap-3">
 
-        <!-- Logo Image -->
-        <img class="h-14 w-34" src="picture/DL.png" alt="Digital Lord Logo">
+                <!-- Logo Image -->
+                <img class="h-9 w-auto sm:h-10 md:h-14" src="picture/DL.png" alt="Digital Lord Logo">
 
-        <!-- Desktop Text -->
-        <div class="hidden lg:flex flex-col justify-center font-['Inter'] leading-tight">
+                <!-- Desktop Text -->
+                <div class="hidden lg:flex flex-col justify-center font-['Inter'] leading-tight">
 
-          <h4 class="text-xl font-semibold">
-            <span class="text-blue-600">Digital</span>
-            <span class="text-orange-600">Lord</span>
-          </h4>
+                    <h4 class="text-xl font-semibold">
+                        <span class="text-blue-600">Digital</span>
+                        <span class="text-orange-600">Lord</span>
+                    </h4>
 
-          <p class="flex items-center gap-2 text-sm mt-1">
-            <span class="text-[#F16529] font-semibold">|</span>
-            <span class="text-blue-600">
-              IT Services And Solutions
-            </span>
-          </p>
+                    <p class="flex items-center gap-2 text-sm mt-1">
+                        <span class="text-[#F16529] font-semibold">|</span>
+                        <span class="text-blue-600">
+                            IT Services And Solutions
+                        </span>
+                    </p>
 
-        </div>
+                </div>
 
-      </a>
+            </a>
 
             <!-- Desktop Navigation -->
             <nav class="hidden lg:flex space-x-6 items-center">
@@ -218,47 +217,54 @@
 
 
 
-                 <!-- Business Development Dropdown -->
-        <div class="relative group">
-          <a href="businessDevelopment.html" class="text-white hover:text-gray-300 transition-colors flex items-center">
-            Business Development
+                <!-- Business Development Dropdown -->
+                <div class="relative group">
+                    <a href="businessDevelopment.html"
+                        class="text-white hover:text-gray-300 transition-colors flex items-center">
+                        Business Development
 
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
 
-          </a>
+                    </a>
 
-          <div
-            class="absolute left-0 mt-2 w-64 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+                    <div
+                        class="absolute left-0 mt-2 w-64 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
 
-            <a href="swotAnalysis.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
-              SWOT Analysis
-            </a>
+                        <a href="swotAnalysis.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            SWOT Analysis
+                        </a>
 
-            <a href="pestelAnalysis.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
-              PESTEL Analysis
-            </a>
+                        <a href="pestelAnalysis.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            PESTEL Analysis
+                        </a>
 
-            <a href="marketResearch.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
-              Market Research & Strategy
-            </a>
+                        <a href="marketResearch.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            Market Research & Strategy
+                        </a>
 
-            <a href="branding.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
-              Branding
-            </a>
+                        <a href="branding.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            Branding
+                        </a>
 
-            <a href="startupSupport.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
-              Startup & SME Support
-            </a>
+                        <a href="startupSupport.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            Startup & SME Support
+                        </a>
 
-            <a href="digitalTransformation.html"
-              class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
-              Digital Transformation
-            </a>
+                        <a href="digitalTransformation.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            Digital Transformation
+                        </a>
 
-          </div>
-        </div>
+                    </div>
+                </div>
 
 
 
@@ -284,22 +290,23 @@
 
 
                 <div class="relative">
-                   <div class="flex justify-between items-center text-white ">
+                    <div class="flex justify-between items-center text-white ">
 
-            <a href="service.html" class="flex-1 py-2  over:bg-slate-800 rounded transition-colors">
+                        <a href="service.html" class="flex-1 py-2  over:bg-slate-800 rounded transition-colors">
 
-              Services
+                            Services
 
-            </a>
+                        </a>
 
-            <button id="mobile-services-btn" class="ml-3 px-2">
+                        <button id="mobile-services-btn" class="ml-3 px-2">
 
-              <i id="services-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
-              </i>
+                            <i id="services-arrow"
+                                class="fas fa-chevron-down text-sm transition-transform duration-300">
+                            </i>
 
-            </button>
+                        </button>
 
-          </div>
+                    </div>
                     <div id="mobile-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
                         <a href="mobileApp.html"
                             class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Mobile App
@@ -315,70 +322,79 @@
                             class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">SEO</a> -->
                     </div>
                 </div>
-                
-
-                 <!-- Business Development Mobile Dropdown -->
-
-          <div class="relative">
 
 
-            <div class="flex justify-between items-center text-white ">
+                <!-- Business Development Mobile Dropdown -->
 
-              <a href="businessDevelopment.html" class="flex-1 py-2  hover:bg-slate-800 rounded transition-colors">
+                <div class="relative">
 
-                Business Development
 
-              </a>
+                    <div class="flex justify-between items-center text-white ">
 
-              <button id="mobile-business-btn" class="ml-3 px-2">
+                        <a href="businessDevelopment.html"
+                            class="flex-1 py-2  hover:bg-slate-800 rounded transition-colors">
 
-                <i id="business-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
-                </i>
+                            Business Development
 
-              </button>
+                        </a>
 
-            </div>
+                        <button id="mobile-business-btn" class="ml-3 px-2">
 
-            <div id="mobile-business-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
+                            <i id="business-arrow"
+                                class="fas fa-chevron-down text-sm transition-transform duration-300">
+                            </i>
 
-              <a href="swotAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                SWOT Analysis
-              </a>
+                        </button>
 
-              <a href="pestelAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                PESTEL Analysis
-              </a>
+                    </div>
 
-              <a href="marketResearch.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                Market Research & Strategy
-              </a>
+                    <div id="mobile-business-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
 
-              <a href="branding.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                Branding
-              </a>
+                        <a href="swotAnalysis.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            SWOT Analysis
+                        </a>
 
-              <a href="startupSupport.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                Startup & SME Support
-              </a>
+                        <a href="pestelAnalysis.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            PESTEL Analysis
+                        </a>
 
-              <a href="digitalTransformation.html"
-                class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                Digital Transformation
-              </a>
+                        <a href="marketResearch.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            Market Research & Strategy
+                        </a>
 
-            </div>
+                        <a href="branding.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            Branding
+                        </a>
 
-          </div>
+                        <a href="startupSupport.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            Startup & SME Support
+                        </a>
 
-             
+                        <a href="digitalTransformation.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            Digital Transformation
+                        </a>
 
-      
-        
+                    </div>
+
+                </div>
+
+
+
+
+
 
                 <a href="contact.html" class="text-white py-2 hover:bg-slate-800 rounded">Contact Us</a>
             </div>
         </div>
     </header>
+
+
+    
     <!-- Main Content -->
     <main class="flex-grow">
 
@@ -386,7 +402,7 @@
 
 
         <!-- HERO SECTION -->
-        <section class="relative min-h-screen overflow-hidden flex items-center pt-24 md:pt-28 lg:pt-32">
+        <section class="relative min-h-[100svh] overflow-hidden flex items-center pt-28 md:pt-32 lg:pt-32">
 
             <!-- SLIDER -->
             <div id="heroSlider" class="absolute inset-0">
@@ -404,13 +420,14 @@
                     <!-- CONTENT -->
                     <div class="relative z-20 h-full flex items-center justify-center text-center">
 
-                        <div class="max-w-4xl px-6">
+                        <div class="max-w-4xl px-6 pb-16 sm:pb-6">
 
                             <!-- BREADCRUMB -->
-                            <div
-                                class="flex items-center justify-center gap-2 text-sm text-gray-300 mb-6 animate-[fadeInUp_0.6s_ease]">
+                            <!-- <div
+                                class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs sm:text-sm text-gray-300 mb-6 animate-[fadeInUp_0.6s_ease]">
 
-                                <a href="index.html" class="flex items-center gap-2   hover:text-[#2EA4FF] transition">
+                                <a href="index.html"
+                                    class="flex items-center gap-1 whitespace-nowrap hover:text-[#2EA4FF] transition">
 
                                     <i class="fas fa-house text-xs"></i>
                                     Home
@@ -420,7 +437,56 @@
                                     <i class="fa-solid fa-chevron-right text-xs"></i>
                                 </span>
 
+                                <a href="service.html" class="whitespace-nowrap hover:text-[#2EA4FF] transition">
+                                    Service
+                                </a>
+
+                                <span>
+                                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </span>
+
+                                <span class="text-[#2EA4FF] whitespace-nowrap">
+                                    Mobile App Development
+                                </span>
+
+                            </div>
+
+                           
+                            <h1
+                                class="text-3xl md:text-5xl font-bold leading-tight text-white mb-6 animate-[fadeInUp_1s_ease]">
+
+                                Build Smart
                                 <span class="text-[#2EA4FF]">
+                                    Mobile Apps
+                                </span>
+                                For Business
+
+                            </h1> -->
+
+                                 <!-- BREADCRUMB -->
+                            <div
+                                class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs sm:text-sm text-gray-300 mb-6 animate-[fadeInUp_0.6s_ease]">
+
+                                <a href="index.html"
+                                    class="flex items-center gap-1 whitespace-nowrap hover:text-[#2EA4FF] transition">
+
+                                    <i class="fas fa-house text-xs"></i>
+                                    Home
+                                </a>
+
+                                <span>
+                                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </span>
+
+                                <a href="service.html" class="whitespace-nowrap hover:text-[#2EA4FF] transition">
+                                    Service
+                                </a>
+
+                                <span>
+                                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </span>
+
+                                <span class="text-[#2EA4FF] whitespace-nowrap">
                                     Mobile App Development
                                 </span>
 
@@ -477,12 +543,13 @@
 
                     <div class="relative z-20 h-full flex items-center justify-center text-center">
 
-                        <div class="max-w-4xl px-6">
+                        <div class="max-w-4xl px-6 pb-16 sm:pb-6">
 
-                            <div
-                                class="flex items-center justify-center gap-2 text-sm text-gray-300 mb-6 animate-[fadeInUp_0.6s_ease]">
+                            <!-- <div
+                                class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs sm:text-sm text-gray-300 mb-6 animate-[fadeInUp_0.6s_ease]">
 
-                                <a href="index.html" class="hover:text-[#2EA4FF] transition">
+                                <a href="index.html"
+                                    class="flex items-center gap-1 whitespace-nowrap hover:text-[#2EA4FF] transition">
                                     <i class="fas fa-house text-xs"></i>
                                     Home
                                 </a>
@@ -491,7 +558,51 @@
                                     <i class="fa-solid fa-chevron-right text-xs"></i>
                                 </span>
 
+                                <a href="service.html" class="whitespace-nowrap hover:text-[#2EA4FF] transition">
+                                    Service
+                                </a>
+
+                                <span>
+                                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </span>
+
+                                <span class="text-[#2EA4FF] whitespace-nowrap">
+                                    Mobile App Development
+                                </span>
+
+                            </div>
+
+                            <h1
+                                class="text-3xl md:text-5xl font-bold leading-tight text-white mb-6 animate-[fadeInUp_1s_ease]">
+
+                                Modern UI &
                                 <span class="text-[#2EA4FF]">
+                                    Smooth Experience
+                                </span>
+
+                            </h1> -->
+                               <div
+                                class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs sm:text-sm text-gray-300 mb-6 animate-[fadeInUp_0.6s_ease]">
+
+                                <a href="index.html"
+                                    class="flex items-center gap-1 whitespace-nowrap hover:text-[#2EA4FF] transition">
+                                    <i class="fas fa-house text-xs"></i>
+                                    Home
+                                </a>
+
+                                <span>
+                                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </span>
+
+                                <a href="service.html" class="whitespace-nowrap hover:text-[#2EA4FF] transition">
+                                    Service
+                                </a>
+
+                                <span>
+                                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </span>
+
+                                <span class="text-[#2EA4FF] whitespace-nowrap">
                                     Mobile App Development
                                 </span>
 
@@ -506,6 +617,7 @@
                                 </span>
 
                             </h1>
+
 
                             <p
                                 class="text-gray-300 text-sm md:text-base    leading-8 max-w-2xl mx-auto mb-8 animate-[fadeInUp_1.2s_ease]">
@@ -544,12 +656,13 @@
 
                     <div class="relative z-20 h-full flex items-center justify-center text-center">
 
-                        <div class="max-w-4xl px-6">
+                        <div class="max-w-4xl px-6 pb-16 sm:pb-6">
 
-                            <div
-                                class="flex items-center justify-center gap-2 text-sm text-gray-300 mb-6 animate-[fadeInUp_0.6s_ease]">
+                            <!-- <div
+                                class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs sm:text-sm text-gray-300 mb-6 animate-[fadeInUp_0.6s_ease]">
 
-                                <a href="index.html" class="hover:text-[#2EA4FF] transition">
+                                <a href="index.html"
+                                    class="flex items-center gap-1 whitespace-nowrap hover:text-[#2EA4FF] transition">
                                     <i class="fas fa-house text-xs"></i>
                                     Home
                                 </a>
@@ -558,7 +671,53 @@
                                     <i class="fa-solid fa-chevron-right text-xs"></i>
                                 </span>
 
+                                <a href="service.html" class="whitespace-nowrap hover:text-[#2EA4FF] transition">
+                                    Service
+                                </a>
+
+                                <span>
+                                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </span>
+
+                                <span class="text-[#2EA4FF] whitespace-nowrap">
+                                    Mobile App Development
+                                </span>
+
+                            </div>
+
+                            <h1 class="text-3xl md:text-5xl font-bold text-white mb-6 animate-[fadeInUp_1s_ease]">
+
+                                Android & iOS
                                 <span class="text-[#2EA4FF]">
+                                    App Solutions
+                                </span>
+
+                            </h1> -->
+
+                            <div class="max-w-4xl px-6 pb-16 sm:pb-6">
+
+                            <div
+                                class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs sm:text-sm text-gray-300 mb-6 animate-[fadeInUp_0.6s_ease]">
+
+                                <a href="index.html"
+                                    class="flex items-center gap-1 whitespace-nowrap hover:text-[#2EA4FF] transition">
+                                    <i class="fas fa-house text-xs"></i>
+                                    Home
+                                </a>
+
+                                <span>
+                                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </span>
+
+                                <a href="service.html" class="whitespace-nowrap hover:text-[#2EA4FF] transition">
+                                    Service
+                                </a>
+
+                                <span>
+                                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                                </span>
+
+                                <span class="text-[#2EA4FF] whitespace-nowrap">
                                     Mobile App Development
                                 </span>
 
@@ -603,8 +762,9 @@
             </div>
 
             <!-- DOTS -->
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-30">
-
+            <div class="absolute bottom-4 sm:bottom-6 lg:bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-30">
+               
+                <!-- absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-30 -->
                 <button class="dot w-3 h-3 rounded-full bg-white"></button>
 
                 <button class="dot w-3 h-3 rounded-full bg-white/40"></button>
@@ -1284,118 +1444,123 @@
         </section>
 
     </main>
-      
-       <!-- bottom to top button -->
-  <button id="scrollTopBtn"
-    class="fixed bottom-6 right-6 w-12 h-12 bg-white text-black rounded-full shadow-lg flex items-center justify-center opacity-0 scale-0 transition-all duration-300 z-[9999]">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+
+    <!-- bottom to top button -->
+    <button id="scrollTopBtn"
+        class="fixed bottom-6 right-6 w-12 h-12 bg-white text-black rounded-full shadow-lg flex items-center justify-center opacity-0 scale-0 transition-all duration-300 z-[9999]">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
 
 
-   <!-- FOOTER SECTION -->
-  <footer>
-    <!-- Top Part -->
-    <div class="bg-[#041021] text-white px-6 py-12">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- FOOTER SECTION -->
+    <footer>
+        <!-- Top Part -->
+        <div class="bg-[#041021] text-white px-6 py-12">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <!-- Quick Links -->
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="about.html" class="hover:text-stone-400 transition">About Us</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">Blog</a></li>
-            <li><a href="contact.html" class="hover:text-stone-400 transition">Contact</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">Privacy policy</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">Sitemap</a></li>
-          </ul>
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-stone-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-stone-400 transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Privacy policy</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Expertise -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Our Expertise</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="digitalMarketing.html" class="hover:text-stone-400 transition">Digital
+                                Marketing</a></li>
+                        <li><a href="mobileApp.html" class="hover:text-stone-400 transition">Mobile App Development</a>
+                        </li>
+                        <li><a href="#" class="hover:text-stone-400 transition">WordPress Development</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Software Development</a></li>
+                        <li><a href="seo.html" class="hover:text-stone-400 transition">SEO</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-stone-400 transition">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">SEO Experts</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Web Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Connect with Us -->
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Connect with Us</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-location-pin text-[#2EA4FF] text-lg"></i>
+                            <span>Digital Lord, London, UK</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone-volume text-[#2EA4FF] text-lg"></i>
+                            <span>+44 7824 770279</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-message text-[#2EA4FF] text-lg"></i>
+                            <span>info@digitallord.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
         </div>
 
-        <!-- Our Expertise -->
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Our Expertise</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="digitalMarketing.html" class="hover:text-stone-400 transition">Digital Marketing</a></li>
-            <li><a href="mobileApp.html" class="hover:text-stone-400 transition">Mobile App Development</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">WordPress Development</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">Software Development</a></li>
-            <li><a href="seo.html" class="hover:text-stone-400 transition">SEO</a></li>
+        <!-- Bottom Part -->
+        <div class="bg-[#191919] text-white px-6 py-4">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
 
-          </ul>
+                <!-- Left -->
+                <p class="text-sm">©2025 DIGITAL LORD. All Rights Reserved</p>
+
+                <!-- Right Social Icons -->
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="#" aria-label="Facebook">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" aria-label="Twitter">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" aria-label="LinkedIn">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
         </div>
-
-        <!-- Services -->
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Services</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="#" class="hover:text-stone-400 transition">Digital Marketing</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">SEO Experts</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">Web Security</a></li>
-
-          </ul>
-
-        </div>
-
-        <!-- Connect with Us -->
-
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Connect with Us</h3>
-          <ul class="space-y-4 text-sm">
-            <li class="flex items-center space-x-3">
-              <i class="fa-solid fa-location-pin text-[#2EA4FF] text-lg"></i>
-              <span>Digital Lord, London, UK</span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <i class="fa-solid fa-phone-volume text-[#2EA4FF] text-lg"></i>
-              <span>+44 7824 770279</span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <i class="fa-solid fa-message text-[#2EA4FF] text-lg"></i>
-              <span>info@digitallord.com</span>
-            </li>
-          </ul>
-        </div>
-
-
-
-      </div>
-    </div>
-
-    <!-- Bottom Part -->
-    <div class="bg-[#191919] text-white px-6 py-4">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-
-        <!-- Left -->
-        <p class="text-sm">©2025 DIGITAL LORD. All Rights Reserved</p>
-
-        <!-- Right Social Icons -->
-        <div class="flex space-x-4">
-          <!-- Facebook -->
-          <a href="#" aria-label="Facebook">
-            <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
-            </svg>
-          </a>
-          <!-- Twitter -->
-          <a href="#" aria-label="Twitter">
-            <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
-            </svg>
-          </a>
-          <!-- LinkedIn -->
-          <a href="#" aria-label="LinkedIn">
-            <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
-              <circle cx="4" cy="4" r="2" />
-            </svg>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </footer>
+    </footer>
 
     <script src="script/nav.js"></script>
     <script src="script/mobile-app-carousel.js"></script>

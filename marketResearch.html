@@ -3,466 +3,1941 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Digital Lord</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="icon" type="image/png" href="picture/DL.png">
-
-  <style>
-    .inter-text {
-      font-family: "Inter", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-    }
-
-    /* Desktop dropdown animation */
-    .group-hover\:opacity-100 {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .group:hover .group-hover\:opacity-100 {
-      opacity: 1;
-    }
-
-    .group-hover\:visible {
-      visibility: hidden;
-      transition: visibility 0.3s ease;
-    }
-
-    .group:hover .group-hover\:visible {
-      visibility: visible;
-    }
-
-    /* Mobile dropdown animation */
-    .group-hover\:block {
-      display: none;
-      transition: all 0.3s ease;
-    }
-
-    .group:hover .group-hover\:block {
-      display: block;
-    }
-
-    /* Mobile menu animation */
-
-    /*#mobile-menu {
-      transition: max-height 0.3s ease-out;
-      max-height: 0;
-      overflow: hidden;
-    }
-
-    #mobile-menu:not(.hidden) {
-      max-height: 500px;
-      transition: max-height 0.5s ease-in;
-    }*/
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Research & Strategy | Digital Lord</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="picture/DL.png">
 
 
-    #mobile-menu {
-      transition: max-height 0.3s ease-out;
-      max-height: 0;
-      overflow: hidden;
-    }
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/businessDevMenu/hero.css">
+    <link rel="stylesheet" href="css/businessDevMenu/what.css">
+    <link rel="stylesheet" href="css/businessDevMenu/component.css">
+    <link rel="stylesheet" href="css/businessDevMenu/why.css">
 
-    #mobile-menu:not(.hidden) {
-      max-height: calc(100vh - 90px);
-      overflow-y: auto;
-    }
+    <link rel="stylesheet" href="css/businessDevMenu/matrix.css">
+    <link rel="stylesheet" href="css/businessDevMenu/process.css">
+    <link rel="stylesheet" href="css/businessDevMenu/fqa.css">
+    <link rel="stylesheet" href="css/businessDevMenu/cta.css">
 
-    .rotate-180 {
-      transform: rotate(180deg);
-    }
-  </style>
+  
 </head>
 
 <body class="bg-[#0F172A] text-white inter-text">
-  <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
 
-  <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
-    <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-      <!-- Logo -->
-      <!-- <div>
-        <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
+    <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
+        <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+          
 
-      </div> -->
+            <a href="index.html" class="flex items-center gap-3">
 
-       <a href="index.html" class="flex items-center gap-3">
+                <!-- Logo Image -->
+                <img class="h-9 w-auto sm:h-10 md:h-14" src="picture/DL.png" alt="Digital Lord Logo">
 
-        <!-- Logo Image -->
-        <img class="h-14 w-34" src="picture/DL.png" alt="Digital Lord Logo">
+                <!-- Desktop Text -->
+                <div class="hidden lg:flex flex-col justify-center font-['Inter'] leading-tight">
 
-        <!-- Desktop Text -->
-        <div class="hidden lg:flex flex-col justify-center font-['Inter'] leading-tight">
+                    <h4 class="text-xl font-semibold">
+                        <span class="text-blue-600">Digital</span>
+                        <span class="text-orange-600">Lord</span>
+                    </h4>
 
-          <h4 class="text-xl font-semibold">
-            <span class="text-blue-600">Digital</span>
-            <span class="text-orange-600">Lord</span>
-          </h4>
+                    <p class="flex items-center gap-2 text-sm mt-1">
+                        <span class="text-[#F16529] font-semibold">|</span>
+                        <span class="text-blue-600">
+                            IT Services And Solutions
+                        </span>
+                    </p>
 
-          <p class="flex items-center gap-2 text-sm mt-1">
-            <span class="text-[#F16529] font-semibold">|</span>
-            <span class="text-blue-600">
-              IT Services And Solutions
-            </span>
-          </p>
-
-        </div>
-
-      </a>
-
-
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden lg:flex space-x-6 items-center">
-        <a href="index.html" class="text-white hover:text-gray-300">Home</a>
-        <a href="about.html" class="text-white   hover:text-gray-300">About</a>
-
-        <!-- Desktop Dropdown (Hover) -->
-        <div class="relative group">
-          <a href="service.html" class="text-white hover:text-gray-300 flex items-center">
-            Services
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </a>
-          <div
-            class="absolute left-0 mt-2 w-56 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
-            <a href="mobileApp.html" class="block px-4 py-2 hover:bg-gray-200">Mobile App Development</a>
-            <a href="digitalMarketing.html" class="block px-4 py-2 hover:bg-gray-200">Digital Marketing</a>
-            <a href="webDev.html" class="block px-4 py-2 hover:bg-gray-200">Web Development</a>
-            <a href="webSecurity.html" class="block px-4 py-2 hover:bg-gray-200">Web Security</a>
-            <!-- <a href="seo.html" class="block px-4 py-2 hover:bg-gray-200">SEO</a> -->
-          </div>
-        </div>
-
-
-
-        <!-- Business Development Dropdown -->
-        <div class="relative group">
-          <a href="businessDevelopment.html" class="text-white hover:text-gray-300 transition-colors flex items-center">
-            Business Development
-
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-
-          </a>
-
-          <div
-            class="absolute left-0 mt-2 w-64 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
-
-            <a href="swotAnalysis.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
-              SWOT Analysis
-            </a>
-
-            <a href="pestelAnalysis.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
-              PESTEL Analysis
-            </a>
-
-            <a href="marketResearch.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
-              Market Research & Strategy
-            </a>
-
-            <a href="branding.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
-              Branding
-            </a>
-
-            <a href="startupSupport.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
-              Startup & SME Support
-            </a>
-
-            <a href="digitalTransformation.html"
-              class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
-              Digital Transformation
-            </a>
-
-          </div>
-        </div>
-
-
-
-
-        <a href="contact.html" class="text-white hover:text-gray-300">Contact Us</a>
-      </nav>
-
-      <!-- Mobile Menu Button -->
-      <button id="hamburger-btn" class="lg:hidden text-white focus:outline-none">
-        <i id="hamburger-icon" class="fas fa-bars"></i>
-        <i id="close-icon" class="fas fa-times hidden"></i>
-      </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="lg:hidden bg-[#041021] px-6 py-2 hidden">
-      <div class="flex flex-col space-y-3 py-4">
-        <a href="index.html" class="text-white py-2 hover:bg-slate-800 rounded">Home</a>
-        <a href="about.html" class="text-white py-2 hover:bg-slate-800 rounded">About</a>
-
-        <!-- Mobile Dropdown (Hover) -->
-
-
-
-        <div class="relative">
-           <div class="flex justify-between items-center text-white ">
-
-            <a href="service.html" class="flex-1 py-2 hover:bg-slate-800 rounded transition-colors">
-
-              Services
+                </div>
 
             </a>
 
-            <button id="mobile-services-btn" class="ml-3 px-2">
 
-              <i id="services-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
-              </i>
 
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex space-x-6 items-center">
+                <a href="index.html" class="text-white hover:text-gray-300">Home</a>
+                <a href="about.html" class="text-white   hover:text-gray-300">About</a>
+
+                <!-- Desktop Dropdown (Hover) -->
+                <div class="relative group">
+                    <a href="service.html" class="text-white hover:text-gray-300 flex items-center">
+                        Services
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </a>
+                    <div
+                        class="absolute left-0 mt-2 w-56 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+                        <a href="mobileApp.html" class="block px-4 py-2 hover:bg-gray-200">Mobile App Development</a>
+                        <a href="digitalMarketing.html" class="block px-4 py-2 hover:bg-gray-200">Digital Marketing</a>
+                        <a href="webDev.html" class="block px-4 py-2 hover:bg-gray-200">Web Development</a>
+                        <a href="webSecurity.html" class="block px-4 py-2 hover:bg-gray-200">Web Security</a>
+                        <!-- <a href="seo.html" class="block px-4 py-2 hover:bg-gray-200">SEO</a> -->
+                    </div>
+                </div>
+
+
+
+                <!-- Business Development Dropdown -->
+                <div class="relative group">
+                    <a href="businessDevelopment.html"
+                        class="text-white hover:text-gray-300 transition-colors flex items-center">
+                        Business Development
+
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+
+                    </a>
+
+                    <div
+                        class="absolute left-0 mt-2 w-64 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+
+                        <a href="swotAnalysis.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            SWOT Analysis
+                        </a>
+
+                        <a href="pestelAnalysis.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            PESTEL Analysis
+                        </a>
+
+                        <a href="marketResearch.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            Market Research & Strategy
+                        </a>
+
+                        <a href="branding.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            Branding
+                        </a>
+
+                        <a href="startupSupport.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            Startup & SME Support
+                        </a>
+
+                        <a href="digitalTransformation.html"
+                            class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
+                            Digital Transformation
+                        </a>
+
+                    </div>
+                </div>
+
+
+
+
+                <a href="contact.html" class="text-white hover:text-gray-300">Contact Us</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="hamburger-btn" class="lg:hidden text-white focus:outline-none">
+                <i id="hamburger-icon" class="fas fa-bars"></i>
+                <i id="close-icon" class="fas fa-times hidden"></i>
             </button>
+        </div>
 
-          </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden bg-[#041021] px-6 py-2 hidden">
+            <div class="flex flex-col space-y-3 py-4">
+                <a href="index.html" class="text-white py-2 hover:bg-slate-800 rounded">Home</a>
+                <a href="about.html" class="text-white py-2 hover:bg-slate-800 rounded">About</a>
 
-            <div id="mobile-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
-              <a href="mobileApp.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Mobile
-                App
-                Development</a>
-              <a href="digitalMarketing.html"
-                class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Digital Marketing</a>
-              <a href="webDev.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Web
-                Development</a>
-              <a href="webSecurity.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Web
-                Security</a>
-              <!-- <a href="seo.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">SEO</a> -->
+                <!-- Mobile Dropdown (Hover) -->
+
+
+
+                <div class="relative">
+                    <div class="flex justify-between items-center text-white ">
+
+                        <a href="service.html" class="flex-1 py-2 hover:bg-slate-800 rounded transition-colors">
+
+                            Services
+
+                        </a>
+
+                        <button id="mobile-services-btn" class="ml-3 px-2">
+
+                            <i id="services-arrow"
+                                class="fas fa-chevron-down text-sm transition-transform duration-300">
+                            </i>
+
+                        </button>
+
+                    </div>
+
+                    <div id="mobile-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
+                        <a href="mobileApp.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Mobile
+                            App
+                            Development</a>
+                        <a href="digitalMarketing.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Digital
+                            Marketing</a>
+                        <a href="webDev.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Web
+                            Development</a>
+                        <a href="webSecurity.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">Web
+                            Security</a>
+                        <!-- <a href="seo.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">SEO</a> -->
+                    </div>
+                </div>
+
+
+
+
+                <!-- Business Development Mobile Dropdown -->
+
+                <div class="relative">
+
+
+                    <div class="flex justify-between items-center text-white ">
+
+                        <a href="businessDevelopment.html"
+                            class="flex-1 py-2  hover:bg-slate-800 rounded transition-colors">
+
+                            Business Development
+
+                        </a>
+
+                        <button id="mobile-business-btn" class="ml-3 px-2">
+
+                            <i id="business-arrow"
+                                class="fas fa-chevron-down text-sm transition-transform duration-300">
+                            </i>
+
+                        </button>
+
+                    </div>
+
+                    <div id="mobile-business-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
+
+                        <a href="swotAnalysis.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            SWOT Analysis
+                        </a>
+
+                        <a href="pestelAnalysis.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            PESTEL Analysis
+                        </a>
+
+                        <a href="marketResearch.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            Market Research & Strategy
+                        </a>
+
+                        <a href="branding.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            Branding
+                        </a>
+
+                        <a href="startupSupport.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            Startup & SME Support
+                        </a>
+
+                        <a href="digitalTransformation.html"
+                            class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+                            Digital Transformation
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+                <a href="contact.html" class="text-white py-2 hover:bg-slate-800 rounded">Contact Us</a>
             </div>
-          </div>
+
+        </div>
+    </header>
 
 
 
 
-          <!-- Business Development Mobile Dropdown -->
+    <!-- Main About Section -->
 
-          <div class="relative">
+    <main class="flex-grow">
 
+        <!-- MARKET RESEARCH HERO SECTION -->
 
-            <div class="flex justify-between items-center text-white ">
+        <section
+            class="relative overflow-hidden bg-gradient-to-br from-[#041021] via-[#07172D] to-[#041021] pt-36 lg:pt-44 pb-20 lg:pb-28">
 
-              <a href="businessDevelopment.html" class="flex-1 py-2  hover:bg-slate-800 rounded transition-colors">
+            <!-- Left Blue Glow -->
+            <div
+                class="absolute -left-40 top-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-[#4165B7]/30 blur-[130px] rounded-full">
+            </div>
 
-                Business Development
+            <!-- Right Orange Glow -->
+            <div
+                class="absolute -right-40 top-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-[#E44D26]/30 blur-[130px] rounded-full">
+            </div>
 
-              </a>
+            <!-- Grid Pattern -->
+            <div class="absolute inset-0 opacity-[0.03]"
+                style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size:24px 24px;">
+            </div>
 
-              <button id="mobile-business-btn" class="ml-3 px-2">
+            <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
 
-                <i id="business-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
-                </i>
+                <!-- Breadcrumb  -->
 
-              </button>
+                <div class="flex flex-wrap items-center gap-2 text-sm text-slate-300 mb-10">
+
+                    <a href="index.html" class="flex items-center gap-2 hover:text-[#E44D26] transition">
+
+                        <i class="fas fa-home text-xs"></i>
+
+                        Home
+
+                    </a>
+
+                    <i class="fas fa-angle-right text-[10px] text-slate-500"></i>
+
+                    <a href="businessDevelopment.html" class="hover:text-[#E44D26] transition">
+
+                        Business Development
+
+                    </a>
+
+                    <i class="fas fa-angle-right text-[10px] text-slate-500"></i>
+
+                    <span class="text-[#E44D26]">
+
+                        Market Research & Strategy
+
+                    </span>
+
+                </div>
+
+                <!-- Hero Content -->
+
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                    <!-- Left  -->
+
+                    <div class="swot-hero-content">
+
+                        <span
+                            class="inline-flex items-center px-5 py-2 rounded-full border border-[#E44D26]/40 bg-[#E44D26]/10 text-[#E44D26] text-sm font-semibold tracking-[2px]">
+
+                            MARKET RESEARCH & STRATEGY
+
+                        </span>
+
+                        <h1 class="mt-7 text-2xl md:text-5xl xl:text-6xl font-bold leading-tight text-white">
+
+                            Make Smarter Moves
+
+                            <span class="block">
+
+                                With Data-Driven
+
+                            </span>
+
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#E44D26] to-[#ff9d7d]">
+
+                                Market Insight
+
+                            </span>
+
+                        </h1>
+
+                        <p class="mt-8 text-slate-300 text-lg leading-8 max-w-xl">
+
+                            We help businesses understand their market, customers
+                            and competitors through in-depth research, then turn
+                            that insight into a clear, actionable growth strategy.
+
+                        </p>
+
+                        <!-- Buttons -->
+
+                        <div class="flex flex-wrap gap-5 mt-10">
+
+                            <a href="contact.html" class="hero-btn-primary">
+
+                                Get Consultation
+
+                                <i class="fas fa-arrow-right ml-2"></i>
+
+                            </a>
+
+                            <a href="#market-overview" class="hero-btn-secondary">
+
+                                Learn More
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right  -->
+
+                    <div class="relative flex justify-center items-center ">
+
+                        <!-- Market Research Glass Matrix -->
+
+                        <div class="swot-matrix">
+
+                            <div class="matrix-box">
+
+                                <i class="fas fa-magnifying-glass-chart"></i>
+
+                                <span>Market Research</span>
+
+                            </div>
+
+                            <div class="matrix-box">
+
+                                <i class="fas fa-chart-line"></i>
+
+                                <span>Data Analysis</span>
+
+                            </div>
+
+                            <div class="matrix-box">
+
+                                <i class="fas fa-chess"></i>
+
+                                <span>Strategy</span>
+
+                            </div>
+
+                            <div class="matrix-box">
+
+                                <i class="fas fa-gauge-high"></i>
+
+                                <span>Performance</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div id="mobile-business-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
+        </section>
 
-              <a href="swotAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                SWOT Analysis
-              </a>
 
-              <a href="pestelAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                PESTEL Analysis
-              </a>
+        <!-- WHAT IS MARKET RESEARCH & STRATEGY -->
+        <section class="relative overflow-hidden py-24 swot-about-section">
 
-              <a href="marketResearch.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                Market Research & Strategy
-              </a>
+            <div class="max-w-7xl mx-auto px-6 lg:px-10">
 
-              <a href="branding.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                Branding
-              </a>
+                <!-- Heading -->
 
-              <a href="startupSupport.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                Startup & SME Support
-              </a>
+                <div class="text-center max-w-3xl mx-auto mb-20">
 
-              <a href="digitalTransformation.html"
-                class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                Digital Transformation
-              </a>
+                    <span class="text-[#E44D26] uppercase tracking-[4px] font-semibold text-sm">
+
+                        WHAT IS MARKET RESEARCH & STRATEGY
+
+                    </span>
+
+                    <h2 class="mt-5 text-2xl  md:text-5xl font-bold text-white leading-tight">
+
+                        Understand Your Market Before You Move
+
+                    </h2>
+
+                    <p class="mt-6 text-gray-400 leading-8">
+
+                        A clear picture of your market and customers helps you make
+                        smarter decisions, reduce risk and build strategies that
+                        actually work.
+
+                    </p>
+
+                </div>
+
+                <!-- Content -->
+
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+                    <!--  LEFT -->
+
+                    <div class="relative flex justify-center order-1 lg:order-none">
+
+                        <!-- Glass Circle -->
+
+                        <div class="swot-glass-circle"></div>
+
+                        <!-- Blue Glow -->
+
+                        <div class="swot-blue-glow"></div>
+
+                        <!-- Orange Glow -->
+
+                        <div class="swot-orange-glow"></div>
+
+                        <!-- Floating Icons -->
+
+                        <div class="floating-search swot-icon-tip" data-tooltip="Competitor Insights">
+
+                            <i class="fas fa-users-viewfinder"></i>
+
+                            <span class="swot-tooltip">Competitor Insights</span>
+
+                        </div>
+
+                        <div class="floating-chart swot-icon-tip" data-tooltip="Data-Driven Strategy">
+
+                            <i class="fas fa-chart-pie"></i>
+
+                            <span class="swot-tooltip">Data-Driven Strategy</span>
+
+                        </div>
+
+                        <!-- Illustration + Badge Wrapper -->
+                        <div class="swot-image-wrap relative w-full max-w-lg z-10">
+
+                            <img src="picture/Bear market-bro.png" alt="Market Research & Strategy"
+                                class="w-full h-auto block">
+
+                            <!-- Glass Badge -->
+                            <div class="analysis-badge animate__animated">
+
+                                <div class="flex items-center gap-3 flex-nowrap">
+
+                                    <div class="badge-icon">
+
+                                        <i class="fas fa-magnifying-glass-chart"></i>
+
+                                    </div>
+
+                                    <div>
+
+                                        <h4>
+
+                                            Market Insight
+
+                                        </h4>
+
+                                        <p>
+
+                                            Research.<br>
+                                            Analyze.<br>
+                                            Strategize.
+
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--  RIGHT  -->
+
+                    <div>
+
+                        <h3 class="text-3xl lg:text-4xl font-bold text-white leading-tight">
+
+                            What is Market Research & Strategy?
+
+                        </h3>
+
+                        <p class="mt-7 text-gray-400 leading-8">
+
+                            Every strong business decision starts with a clear
+                            understanding of the market you operate in.
+
+                            Market Research & Strategy combines deep research into
+                            your customers, competitors and industry trends with a
+                            practical strategy to help your business grow with
+                            confidence and clarity.
+
+                        </p>
+
+                        <!-- Feature List -->
+
+                        <div class="mt-10 space-y-5">
+
+                            <!-- Row -->
+
+                            <div class="swot-feature">
+
+                                <div class="feature-icon">
+
+                                    <i class="fas fa-check"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+
+                                        Know Your Customers
+
+                                    </h4>
+
+                                    <p>
+
+                                        Understand who your customers are, what they
+                                        need and how they make buying decisions.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Row -->
+
+                            <div class="swot-feature">
+
+                                <div class="feature-icon">
+
+                                    <i class="fas fa-check"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+
+                                        Analyze the Competition
+
+                                    </h4>
+
+                                    <p>
+
+                                        See where you stand against competitors and
+                                        find opportunities to stand out.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Row -->
+
+                            <div class="swot-feature">
+
+                                <div class="feature-icon">
+
+                                    <i class="fas fa-check"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+
+                                        Spot Market Trends
+
+                                    </h4>
+
+                                    <p>
+
+                                        Stay ahead of shifting demand and emerging
+                                        opportunities in your industry.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Row -->
+
+                            <div class="swot-feature">
+
+                                <div class="feature-icon">
+
+                                    <i class="fas fa-check"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <h4>
+
+                                        Build a Winning Strategy
+
+                                    </h4>
+
+                                    <p>
+
+                                        Turn research and data into a clear roadmap
+                                        for sustainable business growth.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
-          </div>
+        </section>
+
+
+
+        <!--
+     FOUR PILLARS OF MARKET RESEARCH & STRATEGY
+ -->
+        <section class="swot-components-section">
+
+            <!-- Background Glow -->
+            <div class="swot-left-glow"></div>
+            <div class="swot-right-glow"></div>
+
+            <div class="swot-components-container">
+
+                <!-- Heading -->
+
+                <div class="swot-components-heading">
+
+                    <span class="section-tag">
+
+                        FOUR PILLARS
+
+                    </span>
+
+                    <h2>
+
+                        The Core of Our Approach
+
+                    </h2>
+
+                    <p>
+
+                        Our Market Research & Strategy service is built on four
+                        essential pillars that turn raw data into clear, confident
+                        business decisions.
+
+                    </p>
+
+                </div>
+
+                <!-- 
+                PANELS
+         -->
+
+                <div class="swot-panels">
+
+
+                    <!-- Market Research -->
+
+
+                    <div class="swot-panel" id="panel-research"
+                        style="--panel-color:#293681; --panel-color-rgb:41,54,129;">
+
+                        <!-- Left -->
+                        <div class="panel-letter">
+
+                            <div class="letter-rings">
+
+                                <div class="ring ring-outer"></div>
+
+                                <div class="ring ring-inner"></div>
+
+                                <svg class="letter-svg icon-magnifier" viewBox="0 0 100 100">
+
+                                    <path id="researchIconPath" class="letter-shape"
+                                        d="M 42 20 C 58 20 70 32 70 48 C 70 64 58 76 42 76 C 26 76 14 64 14 48 C 14 32 26 20 42 20 Z M 63 63 L 86 86" />
+
+                                    <g class="shooting-star">
+
+                                        <line class="star-tail" x1="-14" y1="0" x2="0" y2="0"
+                                            stroke="url(#trail-research)" stroke-width="2.6" />
+
+                                        <circle class="star-head" cx="0" cy="0" r="4" />
+
+                                        <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                                            <mpath href="#researchIconPath" />
+
+                                        </animateMotion>
+
+                                    </g>
+
+                                    <defs>
+
+                                        <linearGradient id="trail-research" x1="0%" x2="100%">
+
+                                            <stop offset="0%" class="trail-start" />
+                                            <stop offset="100%" class="trail-end" />
+
+                                        </linearGradient>
+
+                                    </defs>
+
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Center -->
+
+                        <div class="panel-content">
+
+                            <h3>
+
+                                Market Research
+
+                            </h3>
+
+                            <p>
+
+                                Understand your customers, competitors and industry
+                                landscape through in-depth research. We uncover the
+                                insights that reveal what your market truly needs.
+
+                            </p>
+
+                        </div>
+
+                        <!-- Right -->
+
+                        <div class="panel-icon">
+
+                            <div class="icon-ring">
+
+                                <i class="fas fa-magnifying-glass-chart"></i>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Animated Elements -->
+
+                        <div class="left-border"></div>
+
+                        <div class="panel-light"></div>
+
+                        <div class="panel-glass"></div>
+
+                    </div>
+
+
+                    <!-- Data Analysis -->
+
+
+                    <div class="swot-panel" id="panel-analysis"
+                        style="--panel-color:#EC6530; --panel-color-rgb:236,101,48;">
+
+                        <div class="panel-letter">
+
+                            <div class="letter-rings">
+
+                                <div class="ring ring-outer"></div>
+
+                                <div class="ring ring-inner"></div>
+
+                                <svg class="letter-svg icon-chart" viewBox="0 0 100 100">
+
+                                    <path id="analysisIconPath" class="letter-shape"
+                                        d="M 18 85 L 18 15 M 18 85 L 88 85 M 32 85 L 32 55 L 46 55 L 46 85 M 46 85 L 46 40 L 60 40 L 60 85 M 60 85 L 60 25 L 74 25 L 74 85" />
+
+                                    <g class="shooting-star">
+
+                                        <line class="star-tail" x1="-14" y1="0" x2="0" y2="0"
+                                            stroke="url(#trail-analysis)" stroke-width="2.6" />
+
+                                        <circle class="star-head" cx="0" cy="0" r="4" />
+
+                                        <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                                            <mpath href="#analysisIconPath" />
+
+                                        </animateMotion>
+
+                                    </g>
+
+                                    <defs>
+
+                                        <linearGradient id="trail-analysis" x1="0%" x2="100%">
+
+                                            <stop offset="0%" class="trail-start" />
+                                            <stop offset="100%" class="trail-end" />
+
+                                        </linearGradient>
+
+                                    </defs>
+
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="panel-content">
+
+                            <h3>
+
+                                Data Analysis
+
+                            </h3>
+
+                            <p>
+
+                                Turn raw market data into clear patterns and trends.
+                                Our analysis highlights the statistics that matter
+                                most for your business decisions.
+
+                            </p>
+
+                        </div>
+
+                        <div class="panel-icon">
+
+                            <div class="icon-ring">
+
+                                <i class="fas fa-chart-line"></i>
+
+                            </div>
+
+                        </div>
+
+                        <div class="left-border"></div>
+
+                        <div class="panel-light"></div>
+
+                        <div class="panel-glass"></div>
+
+                    </div>
+
+
+                    <!-- Strategy Development -->
+
+
+                    <div class="swot-panel" id="panel-strategy"
+                        style="--panel-color:#8FDDDF; --panel-color-rgb:143,221,223;">
+
+                        <div class="panel-letter">
+
+                            <div class="letter-rings">
+
+                                <div class="ring ring-outer"></div>
+
+                                <div class="ring ring-inner"></div>
+
+                                <svg class="letter-svg icon-target" viewBox="0 0 100 100">
+
+                                    <path id="strategyIconPath" class="letter-shape"
+                                        d="M 50 12 A 38 38 0 1 1 49.9 12 Z M 50 32 A 18 18 0 1 1 49.9 32 Z M 50 45 A 5 5 0 1 1 49.9 45 Z" />
+
+                                    <g class="shooting-star">
+
+                                        <line class="star-tail" x1="-14" y1="0" x2="0" y2="0"
+                                            stroke="url(#trail-strategy)" stroke-width="2.6" />
+
+                                        <circle class="star-head" cx="0" cy="0" r="4" />
+
+                                        <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                                            <mpath href="#strategyIconPath" />
+
+                                        </animateMotion>
+
+                                    </g>
+
+                                    <defs>
+
+                                        <linearGradient id="trail-strategy" x1="0%" x2="100%">
+
+                                            <stop offset="0%" class="trail-start" />
+                                            <stop offset="100%" class="trail-end" />
+
+                                        </linearGradient>
+
+                                    </defs>
+
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="panel-content">
+
+                            <h3>
+
+                                Strategy Development
+
+                            </h3>
+
+                            <p>
+
+                                Convert research and data into a practical, actionable
+                                business strategy tailored to your goals, market
+                                position and available resources.
+
+                            </p>
+
+                        </div>
+
+                        <div class="panel-icon">
+
+                            <div class="icon-ring">
+
+                                <i class="fas fa-chess"></i>
+
+                            </div>
+
+                        </div>
+
+                        <div class="left-border"></div>
+
+                        <div class="panel-light"></div>
+
+                        <div class="panel-glass"></div>
+
+                    </div>
+
+
+                    <!-- Performance Tracking -->
+
+
+                    <div class="swot-panel" id="panel-performance"
+                        style="--panel-color:#E05454; --panel-color-rgb:224,84,84;">
+
+                        <div class="panel-letter">
+
+                            <div class="letter-rings">
+
+                                <div class="ring ring-outer"></div>
+
+                                <div class="ring ring-inner"></div>
+
+                                <svg class="letter-svg icon-gauge" viewBox="0 0 100 100">
+
+                                    <path id="performanceIconPath" class="letter-shape"
+                                        d="M 15 70 A 35 35 0 1 1 85 70 M 50 70 L 68 40" />
+
+                                    <g class="shooting-star">
+
+                                        <line class="star-tail" x1="-14" y1="0" x2="0" y2="0"
+                                            stroke="url(#trail-performance)" stroke-width="2.6" />
+
+                                        <circle class="star-head" cx="0" cy="0" r="4" />
+
+                                        <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                                            <mpath href="#performanceIconPath" />
+
+                                        </animateMotion>
+
+                                    </g>
+
+                                    <defs>
+
+                                        <linearGradient id="trail-performance" x1="0%" x2="100%">
+
+                                            <stop offset="0%" class="trail-start" />
+                                            <stop offset="100%" class="trail-end" />
+
+                                        </linearGradient>
+
+                                    </defs>
+
+                                </svg>
+
+                            </div>
+
+                        </div>
+
+                        <div class="panel-content">
+
+                            <h3>
+
+                                Performance Tracking
+
+                            </h3>
+
+                            <p>
+
+                                Monitor key performance indicators and market response
+                                over time, so your strategy keeps evolving with real
+                                results, not assumptions.
+
+                            </p>
+
+                        </div>
+
+                        <div class="panel-icon">
+
+                            <div class="icon-ring">
+
+                                <i class="fas fa-gauge-high"></i>
+
+                            </div>
+
+                        </div>
+
+                        <div class="left-border"></div>
+
+                        <div class="panel-light"></div>
+
+                        <div class="panel-glass"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- WHY MARKET RESEARCH & STRATEGY MATTERS -->
+        <section class="swot-why-section">
+
+            <div class="why-sweep"></div>
+
+            <div class="why-container">
+
+                <!-- Heading -->
+
+                <div class="why-heading">
+
+                    <span class="section-tag">
+
+                        WHY IT MATTERS
+
+                    </span>
+
+                    <h2>
+
+                        Why Market Research & Strategy Matters
+
+                    </h2>
+
+                    <p>
+
+                        A well-executed market research and strategy process gives
+                        your business the clarity to make confident decisions and
+                        grow with purpose.
+
+                    </p>
+
+                </div>
+
+                <!-- Content -->
+
+                <div class="why-grid">
+
+                    <!-- Left Visual -->
+
+                    <div class="why-visual">
+
+                        <div class="why-rotating-ring"></div>
+
+                        <div class="why-center-card">
+
+                            <span class="why-center-label">Business Growth</span>
+
+                            <svg class="why-chart" viewBox="0 0 220 120">
+
+                                <path class="why-chart-path" d="M 10 95 L 50 75 L 90 85 L 130 45 L 170 55 L 210 15" />
+
+                                <circle class="why-chart-dot" cx="210" cy="15" r="4" />
+
+                            </svg>
+
+                        </div>
+
+                        <div class="why-orbit why-orbit-1">
+
+                            <span class="why-orbit-letter"><i class="fas fa-magnifying-glass-chart"></i></span>
+
+                            <span class="why-orbit-label">Research</span>
+
+                        </div>
+
+                        <div class="why-orbit why-orbit-2">
+
+                            <span class="why-orbit-letter"><i class="fas fa-chart-line"></i></span>
+
+                            <span class="why-orbit-label">Analysis</span>
+
+                        </div>
+
+                        <div class="why-orbit why-orbit-3">
+
+                            <span class="why-orbit-letter"><i class="fas fa-chess"></i></span>
+
+                            <span class="why-orbit-label">Strategy</span>
+
+                        </div>
+
+                        <div class="why-orbit why-orbit-4">
+
+                            <span class="why-orbit-letter"><i class="fas fa-gauge-high"></i></span>
+
+                            <span class="why-orbit-label">Performance</span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right Accordion -->
+
+                    <div class="why-accordion">
+
+                        <!-- Item 1 -->
+
+                        <div class="why-item active">
+
+                            <div class="why-item-header">
+
+                                <span class="why-number">01</span>
+
+                                <h4>Better Decisions</h4>
+
+                                <span class="why-toggle-icon">
+
+                                    <i class="fas fa-plus"></i>
+
+                                </span>
+
+                            </div>
+
+                            <div class="why-item-body">
+
+                                <p>
+
+                                    Solid research replaces guesswork with real
+                                    evidence, helping you make confident decisions
+                                    backed by data.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Item 2 -->
+
+                        <div class="why-item">
+
+                            <div class="why-item-header">
+
+                                <span class="why-number">02</span>
+
+                                <h4>Understand Your Customers</h4>
+
+                                <span class="why-toggle-icon">
+
+                                    <i class="fas fa-plus"></i>
+
+                                </span>
+
+                            </div>
+
+                            <div class="why-item-body">
+
+                                <p>
+
+                                    Get a clear picture of who your customers are and
+                                    what truly drives their purchasing decisions.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Item 3 -->
+
+                        <div class="why-item">
+
+                            <div class="why-item-header">
+
+                                <span class="why-number">03</span>
+
+                                <h4>Stay Ahead of Competitors</h4>
+
+                                <span class="why-toggle-icon">
+
+                                    <i class="fas fa-plus"></i>
+
+                                </span>
+
+                            </div>
+
+                            <div class="why-item-body">
+
+                                <p>
+
+                                    Identify what competitors are doing well and
+                                    where the gaps are that your business can fill.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Item 4 -->
+
+                        <div class="why-item">
+
+                            <div class="why-item-header">
+
+                                <span class="why-number">04</span>
+
+                                <h4>Reduce Business Risk</h4>
+
+                                <span class="why-toggle-icon">
+
+                                    <i class="fas fa-plus"></i>
+
+                                </span>
+
+                            </div>
+
+                            <div class="why-item-body">
+
+                                <p>
+
+                                    Spot potential risks early by understanding
+                                    market shifts before they impact your business.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Item 5 -->
+
+                        <div class="why-item">
+
+                            <div class="why-item-header">
+
+                                <span class="why-number">05</span>
+
+                                <h4>Drive Sustainable Growth</h4>
+
+                                <span class="why-toggle-icon">
+
+                                    <i class="fas fa-plus"></i>
+
+                                </span>
+
+                            </div>
+
+                            <div class="why-item-body">
+
+                                <p>
+
+                                    Build a strategy grounded in real insight, not
+                                    assumptions, for long-term, sustainable growth.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERACTIVE MARKET RESEARCH MATRIX -->
+        <section class="swot-matrix-section">
+
+            <div class="matrix-glow-left"></div>
+            <div class="matrix-glow-right"></div>
+
+            <div class="matrix-container">
+
+                <!-- Heading -->
+
+                <div class="matrix-heading">
+
+                    <span class="section-tag">
+
+                        INTERACTIVE OVERVIEW
+
+                    </span>
+
+                    <h2>
+
+                        Explore Our Approach in Action
+
+                    </h2>
+
+                    <p>
+
+                        Hover over each pillar to see real examples of how we turn
+                        research and data into strategy and measurable results.
+
+                    </p>
+
+                </div>
+
+                <!-- Content -->
+
+                <div class="matrix-grid">
+
+                    <!-- Left - Matrix -->
+
+                    <div class="matrix-quadrants" id="marketMatrixQuadrants">
+
+                        <div class="quadrant" data-quadrant="research"
+                            style="--q-color:#293681; --q-color-rgb:41,54,129;">
+
+                            <i class="fas fa-magnifying-glass-chart"></i>
+
+                            <span>Market Research</span>
+
+                        </div>
+
+                        <div class="quadrant" data-quadrant="analysis"
+                            style="--q-color:#EC6530; --q-color-rgb:236,101,48;">
+
+                            <i class="fas fa-chart-line"></i>
+
+                            <span>Data Analysis</span>
+
+                        </div>
+
+                        <div class="quadrant" data-quadrant="strategy"
+                            style="--q-color:#8FDDDF; --q-color-rgb:143,221,223;">
+
+                            <i class="fas fa-chess"></i>
+
+                            <span>Strategy</span>
+
+                        </div>
+
+                        <div class="quadrant" data-quadrant="performance"
+                            style="--q-color:#E05454; --q-color-rgb:224,84,84;">
+
+                            <i class="fas fa-gauge-high"></i>
+
+                            <span>Performance</span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right - Detail Panel -->
+
+                    <div class="matrix-detail" id="marketMatrixDetail"
+                        style="--q-color:#293681; --q-color-rgb:41,54,129;">
+
+                        <span class="matrix-detail-tag">MARKET RESEARCH</span>
+
+                        <h3 id="marketMatrixDetailTitle">Customer Insights</h3>
+
+                        <p id="marketMatrixDetailDesc">
+
+                            Understanding who your customers are and what drives
+                            their decisions is the foundation of any successful
+                            business strategy.
+
+                        </p>
+
+                        <ul class="matrix-detail-list" id="marketMatrixDetailList">
+
+                            <li><i class="fas fa-check"></i> Customer Insights</li>
+
+                            <li><i class="fas fa-check"></i> Competitor Analysis</li>
+
+                            <li><i class="fas fa-check"></i> Industry Trends</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OUR MARKET RESEARCH & STRATEGY PROCESS -->
+        <section class="swot-process-section">
+
+            <div class="process-radar"></div>
+
+            <div class="process-conic"></div>
+
+            <div class="process-container">
+
+                <!-- Heading -->
+
+                <div class="process-heading">
+
+                    <span class="section-tag">
+
+                        OUR PROCESS
+
+                    </span>
+
+                    <h2>
+
+                        Our Research & Strategy Process
+
+                    </h2>
+
+                    <p>
+
+                        A structured step-by-step approach that transforms market
+                        data into a clear, actionable growth strategy.
+
+                    </p>
+
+                </div>
+
+                <!-- Arch / Timeline -->
+
+                <div class="process-arch">
+
+                    <svg class="process-connector" viewBox="0 0 1000 400" preserveAspectRatio="none">
+
+                        <path d="M 40 340 Q 500 -40 960 340" />
+
+                    </svg>
+
+                    <div class="process-step step-1" style="--step-color:#293681; --step-color-rgb:41,54,129;">
+
+                        <div class="step-node">
+
+                            <i class="fas fa-magnifying-glass"></i>
+
+                        </div>
+
+                        <span class="step-number">01</span>
+
+                        <h4>Discover</h4>
+
+                        <p>Understand your business, goals and current market position.</p>
+
+                    </div>
+
+                    <div class="process-step step-2" style="--step-color:#EC6530; --step-color-rgb:236,101,48;">
+
+                        <div class="step-node">
+
+                            <i class="fas fa-flask"></i>
+
+                        </div>
+
+                        <span class="step-number">02</span>
+
+                        <h4>Research</h4>
+
+                        <p>Gather data on customers, competitors and market trends.</p>
+
+                    </div>
+
+                    <div class="process-step step-3" style="--step-color:#8FDDDF; --step-color-rgb:143,221,223;">
+
+                        <div class="step-node">
+
+                            <i class="fas fa-chart-line"></i>
+
+                        </div>
+
+                        <span class="step-number">03</span>
+
+                        <h4>Analyze</h4>
+
+                        <p>Turn raw data into clear patterns, trends and insight.</p>
+
+                    </div>
+
+                    <div class="process-step step-4" style="--step-color:#E05454; --step-color-rgb:224,84,84;">
+
+                        <div class="step-node">
+
+                            <i class="fas fa-chess"></i>
+
+                        </div>
+
+                        <span class="step-number">04</span>
+
+                        <h4>Strategy</h4>
+
+                        <p>Build a practical strategy aligned with your business goals.</p>
+
+                    </div>
+
+                    <div class="process-step step-5" style="--step-color:#293681; --step-color-rgb:41,54,129;">
+
+                        <div class="step-node">
+
+                            <i class="fas fa-list-check"></i>
+
+                        </div>
+
+                        <span class="step-number">05</span>
+
+                        <h4>Recommen<br class="block md:hidden"> dations</h4>
+
+                        <p>Deliver clear, actionable recommen<br class="block md:hidden">dations ready for execution.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ SECTION -->
+        <section class="relative overflow-hidden py-24 lg:py-28" style="
+    background:
+    radial-gradient(circle at 15% 20%, rgba(65,101,183,.14), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(228,77,38,.12), transparent 40%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.015) 0px, rgba(255,255,255,.015) 1px, transparent 1px, transparent 40px),
+    linear-gradient(160deg, #041021 0%, #071B37 55%, #041021 100%);
+">
+
+            <!-- Glow -->
+            <div
+                class="absolute -left-40 top-1/3 w-[480px] h-[480px] bg-[#4165B7]/15 blur-[140px] rounded-full pointer-events-none">
+            </div>
+            <div
+                class="absolute -right-40 bottom-1/4 w-[480px] h-[480px] bg-[#E44D26]/15 blur-[140px] rounded-full pointer-events-none">
+            </div>
+
+            <div class="relative max-w-4xl mx-auto px-6 lg:px-10">
+
+                <!-- Heading -->
+
+                <div class="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+
+                    <span class="text-[#E44D26] uppercase tracking-[4px] font-semibold text-sm">
+
+                        FAQ
+
+                    </span>
+
+                    <h2 class="mt-5 text-2xl md:text-5xl font-bold text-white leading-tight">
+
+                        Frequently Asked Questions
+
+                    </h2>
+
+                    <p class="mt-6 text-gray-400 leading-8">
+
+                        Answers to common questions about our Market Research &
+                        Strategy service and how it can help your business grow.
+
+                    </p>
+
+                </div>
+
+                <!-- Accordion -->
+
+                <div class="flex flex-col gap-4 faq-accordion">
+
+                    <!-- Item 1 -->
+
+                    <div class="faq-item active">
+
+                        <button class="faq-btn">
+
+                            <span>What is Market Research & Strategy?</span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-content">
+
+                            <p>
+
+                                It's a service that combines in-depth research into
+                                your customers, competitors and industry with a
+                                practical strategy to help your business grow.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Item 2 -->
+
+                    <div class="faq-item">
+
+                        <button class="faq-btn">
+
+                            <span>Who needs market research?</span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-content">
+
+                            <p>
+
+                                Any business planning to launch a new product,
+                                enter a new market, or refine its strategy can
+                                benefit from thorough market research.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Item 3 -->
+
+                    <div class="faq-item">
+
+                        <button class="faq-btn">
+
+                            <span>How long does the process take?</span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-content">
+
+                            <p>
+
+                                Depending on the scope of your business and market,
+                                a full research and strategy process typically
+                                takes a few weeks to complete.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Item 4 -->
+
+                    <div class="faq-item">
+
+                        <button class="faq-btn">
+
+                            <span>How often should strategy be reviewed?</span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-content">
+
+                            <p>
+
+                                We recommend reviewing your strategy at least once
+                                a year, or whenever significant market shifts
+                                occur.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Item 5 -->
+
+                    <div class="faq-item">
+
+                        <button class="faq-btn">
+
+                            <span>Can startups benefit from this service?</span>
+
+                            <i class="fas fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-content">
+
+                            <p>
+
+                                Absolutely. Early market research helps startups
+                                validate ideas, understand their audience and avoid
+                                costly mistakes.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
 
 
+    </main>
+
+
+       <button id="scrollTopBtn"
+        class="fixed bottom-6 right-6 w-12 h-12 bg-white text-black rounded-full shadow-lg flex items-center justify-center opacity-0 scale-0 transition-all duration-300 z-[9999]">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <footer>
+        <!-- Top Part -->
+        <div class="bg-[#041021] text-white px-6 py-12">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about.html" class="hover:text-stone-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-stone-400 transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Privacy policy</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Sitemap</a></li>
+                    </ul>
+                </div>
+
+                <!-- Our Expertise -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Our Expertise</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="digitalMarketing.html" class="hover:text-stone-400 transition">Digital
+                                Marketing</a></li>
+                        <li><a href="mobileApp.html" class="hover:text-stone-400 transition">Mobile App Development</a>
+                        </li>
+                        <li><a href="#" class="hover:text-stone-400 transition">WordPress Development</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Software Development</a></li>
+                        <li><a href="seo.html" class="hover:text-stone-400 transition">SEO</a></li>
+
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-stone-400 transition">Digital Marketing</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">SEO Experts</a></li>
+                        <li><a href="#" class="hover:text-stone-400 transition">Web Security</a></li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Connect with Us -->
+
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Connect with Us</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-location-pin text-[#2EA4FF] text-lg"></i>
+                            <span>Digital Lord, London, UK</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-phone-volume text-[#2EA4FF] text-lg"></i>
+                            <span>+44 7824 770279</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-message text-[#2EA4FF] text-lg"></i>
+                            <span>info@digitallord.com</span>
+                        </li>
+                    </ul>
+                </div>
 
 
 
-
-
-          <a href="contact.html" class="text-white py-2 hover:bg-slate-800 rounded">Contact Us</a>
+            </div>
         </div>
 
-      </div>
-  </header>
+        <!-- Bottom Part -->
+        <div class="bg-[#191919] text-white px-6 py-4">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
 
+                <!-- Left -->
+                <p class="text-sm">©2025 DIGITAL LORD. All Rights Reserved</p>
 
+                <!-- Right Social Icons -->
+                <div class="flex space-x-4">
+                    <!-- Facebook -->
+                    <a href="#" aria-label="Facebook">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
+                        </svg>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="#" aria-label="Twitter">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" aria-label="LinkedIn">
+                        <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                </div>
 
-
-  <!-- Main About Section -->
-
-  <section class="max-w-6xl mx-auto px-6 pt-32 pb-16">
-    <h1 class="text-4xl font-bold mb-12 text-center">About</h1>
-
-    <div class="grid md:grid-cols-2 gap-10">
-
-      <!-- Left Column (vertical accent line) -->
-      <div class="relative pl-6 border-l-4 border-[#E44D26] space-y-6">
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">At Digital Lord, our mission is to empower businesses with
-            cutting-edge digital solutions that drive growth and innovation. With years of experience in the tech
-            industry, we bring together a team of talented professionals passionate about delivering results.</p>
+            </div>
         </div>
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">We specialize in crafting high-quality, cost-effective
-            digital products tailored to your business needs. From startups to enterprises, we help organizations build
-            a strong digital foundation that stands out in a competitive landscape.</p>
-        </div>
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">What sets us apart is our commitment to innovation,
-            transparency, and client satisfaction. We don’t just build websites or apps — we build relationships based
-            on trust, communication, and shared success.</p>
-        </div>
-      </div>
+    </footer>
 
-      <!-- Right Column -->
-      <div class="space-y-6">
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">Our team continuously learns and adapts to the ever-changing
-            world of technology, ensuring that our solutions are modern, scalable, and future-ready.</p>
-        </div>
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">We serve clients across industries — from e-commerce and
-            education to healthcare and finance — and treat every project as a new opportunity to exceed expectations.
-          </p>
-        </div>
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow border-l-4 border-[#E44D26]">
-          <p class="text-[#E44D26] font-semibold italic leading-relaxed">Choose Digital Lord – where your digital
-            transformation begins and grows.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <footer>
-    <!-- Top Part -->
-    <div class="bg-[#041021] text-white px-6 py-12">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- Quick Links -->
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="about.html" class="hover:text-stone-400 transition">About Us</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">Blog</a></li>
-            <li><a href="contact.html" class="hover:text-stone-400 transition">Contact</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">Privacy policy</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">Sitemap</a></li>
-          </ul>
-        </div>
-
-        <!-- Our Expertise -->
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Our Expertise</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="digitalMarketing.html" class="hover:text-stone-400 transition">Digital Marketing</a></li>
-            <li><a href="mobileApp.html" class="hover:text-stone-400 transition">Mobile App Development</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">WordPress Development</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">Software Development</a></li>
-            <li><a href="seo.html" class="hover:text-stone-400 transition">SEO</a></li>
-
-          </ul>
-        </div>
-
-        <!-- Services -->
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Services</h3>
-          <ul class="space-y-2 text-sm">
-            <li><a href="#" class="hover:text-stone-400 transition">Digital Marketing</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">SEO Experts</a></li>
-            <li><a href="#" class="hover:text-stone-400 transition">Web Security</a></li>
-
-          </ul>
-
-        </div>
-
-        <!-- Connect with Us -->
-
-        <div>
-          <h3 class="text-xl font-semibold mb-4">Connect with Us</h3>
-          <ul class="space-y-4 text-sm">
-            <li class="flex items-center space-x-3">
-              <i class="fa-solid fa-location-pin text-[#2EA4FF] text-lg"></i>
-              <span>Digital Lord, London, UK</span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <i class="fa-solid fa-phone-volume text-[#2EA4FF] text-lg"></i>
-              <span>+44 7824 770279</span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <i class="fa-solid fa-message text-[#2EA4FF] text-lg"></i>
-              <span>info@digitallord.com</span>
-            </li>
-          </ul>
-        </div>
-
-
-
-      </div>
-    </div>
-
-    <!-- Bottom Part -->
-    <div class="bg-[#191919] text-white px-6 py-4">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-
-        <!-- Left -->
-        <p class="text-sm">©2025 DIGITAL LORD. All Rights Reserved</p>
-
-        <!-- Right Social Icons -->
-        <div class="flex space-x-4">
-          <!-- Facebook -->
-          <a href="#" aria-label="Facebook">
-            <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898v-2.89h2.54V9.845c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.128 22 16.991 22 12z" />
-            </svg>
-          </a>
-          <!-- Twitter -->
-          <a href="#" aria-label="Twitter">
-            <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016.5 3c-2.49 0-4.5 2.01-4.5 4.5 0 .35.04.69.1 1.02C8.09 8.4 5.43 6.9 3.57 4.5a4.52 4.52 0 00-.61 2.27c0 1.57.8 2.96 2.02 3.77a4.48 4.48 0 01-2.04-.56v.06c0 2.2 1.56 4.03 3.63 4.44a4.48 4.48 0 01-2.03.08c.57 1.78 2.23 3.08 4.2 3.12a9 9 0 01-5.6 1.94c-.36 0-.71-.02-1.06-.06A12.75 12.75 0 007.29 21c8.4 0 13-6.96 13-13 0-.2 0-.39-.01-.58A9.3 9.3 0 0023 3z" />
-            </svg>
-          </a>
-          <!-- LinkedIn -->
-          <a href="#" aria-label="LinkedIn">
-            <svg class="w-6 h-6 text-white hover:text-[#2EA4FF] transition" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2z" />
-              <circle cx="4" cy="4" r="2" />
-            </svg>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </footer>
-
-  <script src="script/nav.js"></script>
+    <script src="script/nav.js"></script>
+    <script src="script/businessDevMenu/swot-hero.js"></script>
+    <script src="script/businessDevMenu/what-swot.js"></script>
+    <script src="script/businessDevMenu/swot-component.js"></script>
+    <script src="script/businessDevMenu/why-swot.js"></script>
+    <script src="script/businessDevMenu/market-matrix.js"></script>
+    <script src="script/businessDevMenu/fqa.js"></script>
+    <script src="script/button.js"></script>
 
 </body>
 

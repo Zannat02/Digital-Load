@@ -1,0 +1,605 @@
+/* =======================================================
+   YOUR VISION → OUR EXECUTION
+   Part 2A
+======================================================= */
+
+.vision-section{
+    position:relative;
+    overflow:hidden;
+    padding:120px 0;
+    background:
+        radial-gradient(circle at left top, rgba(228,77,38,.18), transparent 30%),
+        radial-gradient(circle at right bottom, rgba(46,164,255,.15), transparent 35%),
+        linear-gradient(180deg,#061223,#081a30,#061223);
+}
+
+/* Floating Glow */
+
+.vision-glow{
+    position:absolute;
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    filter:blur(130px);
+    z-index:0;
+}
+
+.vision-glow-1{
+    top:-150px;
+    left:-120px;
+    background:#E44D26;
+    opacity:.18;
+}
+
+.vision-glow-2{
+    right:-120px;
+    bottom:-120px;
+    background:#2EA4FF;
+    opacity:.18;
+}
+
+/* subtle grid */
+
+.vision-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.03) 1px, transparent 1px);
+
+    background-size:60px 60px;
+
+    mask-image:linear-gradient(to bottom,transparent,black 10%,black 90%,transparent);
+
+    pointer-events:none;
+
+}
+
+
+
+/* Timeline */
+
+.vision-timeline{
+
+    position:relative;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:20px 0;
+
+}
+
+/* Center Line */
+
+.vision-timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    transform:translateX(-50%);
+
+    width:4px;
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        to bottom,
+        #E44D26,
+        #ff7b54,
+        #2EA4FF
+    );
+
+    box-shadow:
+        0 0 25px rgba(228,77,38,.25);
+
+}
+
+/* Timeline Item */
+
+.vision-item{
+
+    position:relative;
+
+    width:50%;
+
+    margin-bottom:80px;
+
+}
+
+.vision-item.left{
+
+    padding-right:80px;
+
+    text-align:right;
+
+}
+
+.vision-item.right{
+
+    margin-left:50%;
+
+    padding-left:80px;
+
+}
+
+/* Number */
+
+.vision-number{
+
+    position:absolute;
+
+    top:20px;
+
+    font-size:4rem;
+
+    font-weight:800;
+
+    opacity:.12;
+
+    color:#fff;
+
+    line-height:1;
+
+    user-select:none;
+
+}
+
+.vision-item.left .vision-number{
+
+    right:30px;
+
+}
+
+.vision-item.right .vision-number{
+
+    left:30px;
+
+}
+
+/* Card */
+
+.vision-card{
+
+    position:relative;
+
+   
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    overflow:hidden;
+
+}
+
+/* Card Glow */
+
+.vision-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(228,77,38,.08);
+
+    top:-120px;
+
+    right:-120px;
+
+}
+
+/* Icon */
+
+.vision-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:linear-gradient(135deg,#E44D26,#ff7b54);
+
+    color:#fff;
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 15px 35px rgba(228,77,38,.25);
+
+}
+
+.vision-item.left .vision-icon{
+
+    margin-left:auto;
+
+}
+
+.vision-item.right .vision-icon{
+
+    margin-right:auto;
+
+}
+
+
+
+
+
+
+/* ------------------------------
+   Smooth Animation
+--------------------------------*/
+
+.vision-card,
+.vision-icon,
+.vision-number{
+    transition:all .45s ease;
+}
+
+.vision-card::before{
+    transition:all .45s ease;
+}
+
+/* ------------------------------
+   Hover Effect
+--------------------------------*/
+
+.vision-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#E44D26;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.35),
+        0 0 30px rgba(228,77,38,.18);
+
+}
+
+.vision-card:hover::before{
+
+    transform:scale(1.35);
+
+    background:rgba(228,77,38,.14);
+
+}
+
+.vision-card:hover .vision-icon{
+
+    transform:rotate(-8deg) scale(1.08);
+
+    box-shadow:
+        0 18px 35px rgba(228,77,38,.35);
+
+}
+
+.vision-card:hover h3{
+
+    color:#E44D26;
+
+}
+
+.vision-card:hover .vision-number{
+
+    opacity:.2;
+
+}
+
+/* ------------------------------
+   Timeline Dot
+--------------------------------*/
+
+.vision-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    background:#E44D26;
+
+    border:5px solid #081a30;
+
+    top:48px;
+
+    z-index:20;
+
+    box-shadow:
+        0 0 0 10px rgba(228,77,38,.12),
+        0 0 18px rgba(228,77,38,.45);
+
+}
+
+.vision-item.left::after{
+
+    right:-10px;
+
+    transform:translateX(50%);
+
+}
+
+.vision-item.right::after{
+
+    left:-10px;
+
+    transform:translateX(-50%);
+
+}
+
+/* 
+   Floating Animation
+*/
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.vision-item:nth-child(2) .vision-card{
+
+    animation:floatCard 6s ease-in-out infinite;
+
+}
+
+.vision-item:nth-child(4) .vision-card{
+
+    animation:floatCard 7s ease-in-out infinite;
+
+}
+
+/* 
+   Timeline Glow
+*/
+
+@keyframes glowLine{
+
+    0%{
+
+        box-shadow:0 0 15px rgba(228,77,38,.15);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 30px rgba(228,77,38,.35),
+        0 0 50px rgba(46,164,255,.18);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 15px rgba(228,77,38,.15);
+
+    }
+
+}
+
+.vision-timeline::before{
+
+    animation:glowLine 4s linear infinite;
+
+}
+
+/* 
+   Tablet
+ */
+
+@media (max-width:992px){
+
+    .vision-section{
+
+        padding:90px 0;
+
+    }
+
+    .vision-item.left{
+
+        padding-right:45px;
+
+    }
+
+    .vision-item.right{
+
+        padding-left:45px;
+
+    }
+
+    .vision-card{
+
+        padding:28px;
+
+    }
+
+    .vision-number{
+
+        font-size:3rem;
+
+    }
+
+}
+
+/* 
+   Mobile
+*/
+
+@media (max-width:1023px){
+
+    .vision-timeline::before{
+
+        left:30px;
+
+        transform:none;
+
+    }
+
+    .vision-item{
+
+        width:100%;
+
+        margin-left:0 !important;
+
+        padding-left:80px !important;
+
+        padding-right:0 !important;
+
+        text-align:left !important;
+
+        margin-bottom:45px;
+
+    }
+
+    .vision-item.left,
+    .vision-item.right{
+
+        width:100%;
+
+        margin-left:0;
+
+        padding-left:80px;
+
+        padding-right:0;
+
+        text-align:left;
+
+    }
+
+    .vision-item.left::after,
+    .vision-item.right::after{
+
+        left:30px;
+
+        right:auto;
+
+        transform:translateX(-50%);
+
+    }
+
+    .vision-number{
+
+        left:75px !important;
+
+        right:auto !important;
+
+    }
+
+    .vision-icon{
+
+        margin-left:0 !important;
+
+        margin-right:0 !important;
+
+    }
+
+}
+
+/* 
+   Small Mobile
+ */
+
+@media (max-width:480px){
+
+    .vision-section{
+
+        padding:75px 0;
+
+    }
+
+    .vision-heading h2{
+
+        font-size:2rem;
+
+    }
+
+    .vision-badge{
+
+        font-size:.8rem;
+
+        padding:8px 16px;
+
+    }
+
+    .vision-card{
+
+        border-radius:20px;
+
+        padding:22px;
+
+    }
+
+    .vision-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:24px;
+
+    }
+
+    .vision-number{
+
+        font-size:2.3rem;
+
+    }
+
+    .vision-footer h3{
+
+        font-size:1.5rem;
+
+    }
+
+}

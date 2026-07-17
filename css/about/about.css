@@ -1,0 +1,225 @@
+/* 
+      WHAT SETS US APART
+*/
+
+.about-values-section{
+
+    background:#081527;
+
+}
+
+.values-stripes{
+
+    position:absolute;
+
+    inset:0;
+
+    background:repeating-linear-gradient(
+
+    115deg,
+
+    transparent 0px,
+
+    transparent 60px,
+
+    rgba(255,255,255,.025) 60px,
+
+    rgba(255,255,255,.025) 62px
+
+    );
+
+    pointer-events:none;
+
+}
+
+.values-glow{
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:900px;
+
+    height:340px;
+
+    background:linear-gradient(
+
+    90deg,
+
+    rgba(46,164,255,.12),
+
+    rgba(241,101,41,.12));
+
+    filter:blur(120px);
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+}
+
+/* ==========================
+      Value Panel
+========================== */
+
+.value-panel{
+
+    position:relative;
+
+    padding:32px 26px;
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.03);
+
+    backdrop-filter:blur(16px);
+
+    overflow:hidden;
+
+    transition:.4s ease;
+
+}
+
+.value-panel:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(var(--v-color-rgb),.5);
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.35),
+
+    0 0 30px rgba(var(--v-color-rgb),.18);
+
+}
+
+.value-icon-wrap{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(var(--v-color-rgb),.12);
+
+    color:var(--v-color);
+
+    font-size:23px;
+
+    transition:.4s ease;
+
+}
+
+.value-panel:hover .value-icon-wrap{
+
+    transform:rotate(-8deg) scale(1.08);
+
+    box-shadow:0 0 20px rgba(var(--v-color-rgb),.4);
+
+}
+
+.value-panel h3{
+
+    margin-top:20px;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    color:#fff;
+
+}
+
+.value-panel p{
+
+    margin-top:10px;
+
+    color:#94A3B8;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+
+.value-glow{
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:22px;
+
+    background:radial-gradient(
+
+    circle at 30% 0%,
+
+    rgba(var(--v-color-rgb),.14),
+
+    transparent 60%);
+
+    opacity:0;
+
+    transition:opacity .4s ease;
+
+    pointer-events:none;
+
+}
+
+.value-panel:hover .value-glow{
+
+    opacity:1;
+
+}
+
+/* ==========================
+      Mobile
+========================== */
+
+@media(max-width:640px){
+
+.value-panel{
+
+    padding:26px 22px;
+
+}
+
+.value-icon-wrap{
+
+    width:50px;
+
+    height:50px;
+
+    font-size:20px;
+
+}
+
+.value-panel h3{
+
+    font-size:17px;
+
+    margin-top:16px;
+
+}
+
+.value-panel p{
+
+    font-size:13.5px;
+
+}
+
+}

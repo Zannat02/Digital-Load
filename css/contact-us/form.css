@@ -1,0 +1,236 @@
+   /* 
+   CONTACT FORM SECTION BACKGROUND */
+
+.contact-form-section{
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* Base Background */
+
+.contact-form-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #041021 0%,
+            #07182a 45%,
+            #041021 100%
+        );
+
+    z-index:-3;
+
+}
+
+/* Abstract Wave */
+
+.contact-form-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-30%;
+
+    background:
+
+        radial-gradient(circle at 15% 20%,
+            rgba(228,77,38,.08),
+            transparent 28%),
+
+        radial-gradient(circle at 85% 75%,
+            rgba(46,164,255,.08),
+            transparent 30%),
+
+        conic-gradient(
+            from 220deg,
+            transparent,
+            rgba(255,255,255,.03),
+            transparent
+        );
+
+    filter:blur(10px);
+
+    animation:contactRotate 22s linear infinite;
+
+    z-index:-2;
+
+}
+
+/* Floating Light */
+
+.contact-form-section .contact-light{
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    filter:blur(110px);
+
+    opacity:.12;
+
+    z-index:-1;
+
+}
+
+.contact-form-section .contact-light.orange{
+
+    background:#E44D26;
+
+    top:-120px;
+
+    right:-120px;
+
+}
+
+.contact-form-section .contact-light.blue{
+
+    background:#2EA4FF;
+
+    bottom:-120px;
+
+    left:-120px;
+
+}
+
+/* Small Floating Dots */
+
+.contact-form-section .contact-dots{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+
+    background-size:36px 36px;
+
+    mask-image:linear-gradient(to bottom,
+        transparent,
+        black 15%,
+        black 85%,
+        transparent);
+
+    opacity:.25;
+
+    z-index:-1;
+
+}
+
+@keyframes contactRotate{
+
+    from{
+
+        transform:rotate(0deg) scale(1);
+
+    }
+
+    to{
+
+        transform:rotate(360deg) scale(1.08);
+
+    }
+
+}
+
+
+
+/* 
+   THANK YOU SECTION
+ */
+
+.thank-you-section{
+
+    position:relative;
+
+    background:
+    linear-gradient(180deg,#071629 0%,#041021 100%);
+
+}
+
+/* Soft Glow */
+
+.thank-glow{
+
+    position:absolute;
+
+    width:340px;
+
+    height:340px;
+
+    border-radius:50%;
+
+    filter:blur(120px);
+
+    opacity:.15;
+
+}
+
+.thank-glow-1{
+
+    background:#E44D26;
+
+    top:-150px;
+
+    left:-120px;
+
+}
+
+.thank-glow-2{
+
+    background:#2EA4FF;
+
+    bottom:-150px;
+
+    right:-120px;
+
+}
+
+/* Elegant Lines */
+
+.thank-you-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    repeating-linear-gradient(
+
+        90deg,
+
+        rgba(255,255,255,.025) 0,
+
+        rgba(255,255,255,.025) 1px,
+
+        transparent 1px,
+
+        transparent 90px
+
+    );
+
+    mask-image:linear-gradient(to bottom,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent);
+
+    pointer-events:none;
+
+}

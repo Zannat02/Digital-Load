@@ -1,0 +1,55 @@
+ .inter-text {
+      font-family: "Inter", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    /* Desktop dropdown animation */
+    /* .group-hover\:opacity-100 {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .group:hover .group-hover\:opacity-100 {
+      opacity: 1;
+    } */
+
+    .group-hover\:visible {
+      visibility: hidden;
+      transition: visibility 0.3s ease;
+    }
+
+    .group:hover .group-hover\:visible {
+      visibility: visible;
+    }
+
+    /* Mobile dropdown animation */
+    .group-hover\:block {
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    .group:hover .group-hover\:block {
+      display: block;
+    }
+
+    /* Mobile menu animation */
+
+   
+
+
+    #mobile-menu {
+      transition: max-height 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    #mobile-menu:not(.hidden) {
+      max-height: calc(100vh - 90px);
+      overflow-y: auto;
+    }
+
+    .rotate-180 {
+      transform: rotate(180deg);
+    }

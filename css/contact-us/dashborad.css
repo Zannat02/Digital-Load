@@ -1,0 +1,329 @@
+/* =======================================================
+   BUSINESS GROWTH DASHBOARD
+======================================================= */
+
+/* Section Background */
+
+.growth-dashboard-section{
+    background:
+        linear-gradient(135deg,#041021 0%,#07182c 45%,#0b223d 100%);
+    position:relative;
+}
+
+/* ===============================
+   Abstract Background
+================================*/
+
+.growth-dashboard-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            rgba(255,255,255,.015) 0px,
+            rgba(255,255,255,.015) 2px,
+            transparent 2px,
+            transparent 34px
+        );
+    pointer-events:none;
+}
+
+/* Large Orange Shape */
+
+.growth-shape{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(110px);
+    z-index:0;
+}
+
+.growth-shape-1{
+
+    width:420px;
+    height:420px;
+
+    background:#E44D26;
+
+    top:-180px;
+    right:-160px;
+
+    opacity:.18;
+
+}
+
+/* Blue Shape */
+
+.growth-shape-2{
+
+    width:380px;
+    height:380px;
+
+    background:#2EA4FF;
+
+    bottom:-150px;
+    left:-120px;
+
+    opacity:.16;
+
+}
+
+/* ===============================
+   Dashboard Card
+================================*/
+
+.growth-chart-card{
+
+    position:relative;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+    transition:.45s;
+
+}
+
+.growth-chart-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(228,77,38,.08);
+
+    right:-120px;
+    top:-120px;
+
+}
+
+/* Hover */
+
+.growth-chart-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#E44D26;
+
+    box-shadow:
+        0 25px 55px rgba(0,0,0,.35),
+        0 0 40px rgba(228,77,38,.15);
+
+}
+
+/* ===============================
+   Progress Bars
+================================*/
+
+.growth-bar-bg{
+
+    width:100%;
+
+    height:12px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.08);
+
+    overflow:hidden;
+
+}
+
+.growth-bar{
+
+    height:100%;
+
+    border-radius:999px;
+
+    width:0;
+
+    background:linear-gradient(
+        90deg,
+        #E44D26,
+        #ff8b69,
+        #2EA4FF
+    );
+
+}
+
+/* Individual Width */
+
+.projects-bar{
+
+    animation:projectsBar 2s forwards;
+
+}
+
+.satisfaction-bar{
+
+    animation:satisfactionBar 2s .2s forwards;
+
+}
+
+.industries-bar{
+
+    animation:industriesBar 2s .4s forwards;
+
+}
+
+.support-bar{
+
+    animation:supportBar 2s .6s forwards;
+
+}
+
+/* ===============================
+   Stats Cards
+================================*/
+
+.growth-stat-card{
+
+    position:relative;
+
+    border-radius:24px;
+
+    padding:32px 24px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
+
+    overflow:hidden;
+
+}
+
+.growth-stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #E44D26,
+        #2EA4FF
+    );
+
+}
+
+.growth-stat-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#E44D26;
+
+    box-shadow:
+        0 18px 45px rgba(228,77,38,.18);
+
+}
+
+.growth-stat-card h3{
+
+    font-size:3rem;
+
+    color:#fff;
+
+    font-weight:800;
+
+    margin-bottom:14px;
+
+}
+
+.growth-stat-card p{
+
+    color:#c5d0df;
+
+    line-height:1.7;
+
+}
+
+/* ===============================
+   Animation
+================================*/
+
+@keyframes projectsBar{
+
+    from{
+
+        width:0;
+
+    }
+
+    to{
+
+        width:92%;
+
+    }
+
+}
+
+@keyframes satisfactionBar{
+
+    from{
+
+        width:0;
+
+    }
+
+    to{
+
+        width:98%;
+
+    }
+
+}
+
+@keyframes industriesBar{
+
+    from{
+
+        width:0;
+
+    }
+
+    to{
+
+        width:68%;
+
+    }
+
+}
+
+@keyframes supportBar{
+
+    from{
+
+        width:0;
+
+    }
+
+    to{
+
+        width:100%;
+
+    }
+
+}

@@ -1,117 +1,4 @@
 
-
-// document.addEventListener('DOMContentLoaded', function () {
-
-//   const hamburgerBtn = document.getElementById('hamburger-btn');
-//   const mobileMenu = document.getElementById('mobile-menu');
-//   const hamburgerIcon = document.getElementById('hamburger-icon');
-//   const closeIcon = document.getElementById('close-icon');
-//   const mobileServicesBtn = document.getElementById('mobile-services-btn');
-//   const mobileDropdown = document.getElementById('mobile-dropdown');
-
-//   let dropdownOpen = false;
-
-
-//   if (hamburgerIcon && closeIcon) {
-//     hamburgerIcon.classList.remove('hidden');
-//     closeIcon.classList.add('hidden');
-//   }
-
-
-//   if (hamburgerBtn && mobileMenu) {
-//     hamburgerBtn.addEventListener('click', function () {
-//       mobileMenu.classList.toggle('hidden');
-
-
-//       if (mobileMenu.classList.contains('hidden')) {
-//         if (hamburgerIcon && closeIcon) {
-//           hamburgerIcon.classList.remove('hidden');
-//           closeIcon.classList.add('hidden');
-//         }
-//       } else {
-//         if (hamburgerIcon && closeIcon) {
-//           hamburgerIcon.classList.add('hidden');
-//           closeIcon.classList.remove('hidden');
-//         }
-//       }
-
-
-//       dropdownOpen = false;
-//       if (mobileDropdown) mobileDropdown.classList.add('hidden');
-//     });
-//   }
-
-
-//   if (mobileServicesBtn && mobileDropdown) {
-//     mobileServicesBtn.addEventListener('click', function (e) {
-//       e.preventDefault();
-
-//       if (!dropdownOpen) {
-//         mobileDropdown.classList.remove('hidden');
-//         dropdownOpen = true;
-//       } else {
-//         window.location.href = "service.html";
-//       }
-//     });
-//   }
-
-
-//   window.addEventListener('resize', function () {
-//     if (window.innerWidth >= 1024 && mobileMenu) {
-//       mobileMenu.classList.add('hidden');
-
-//       if (hamburgerIcon && closeIcon) {
-//         hamburgerIcon.classList.remove('hidden');
-//         closeIcon.classList.add('hidden');
-//       }
-
-//       dropdownOpen = false;
-//       if (mobileDropdown) mobileDropdown.classList.add('hidden');
-//     }
-//   });
-
-// });
-
-
-
-
-// if (mobileServicesBtn && mobileDropdown) {
-//   mobileServicesBtn.addEventListener('click', function (e) {
-//     e.preventDefault();
-
-//     if (!dropdownOpen) {
-//       mobileDropdown.classList.remove('hidden');
-//       dropdownOpen = true;
-//     } else {
-//       window.location.href = "service.html";
-//     }
-//   });
-// }
-
-
-
-// if (mobileBusinessBtn && mobileBusinessDropdown) {
-
-//   mobileBusinessBtn.addEventListener('click', function (e) {
-
-//     e.preventDefault();
-
-//     if (!businessDropdownOpen) {
-
-//       mobileBusinessDropdown.classList.remove('hidden');
-//       businessDropdownOpen = true;
-
-//     } else {
-
-//       window.location.href = "businessDevelopment.html";
-
-//     }
-
-//   });
-
-// }
-
-
 document.addEventListener('DOMContentLoaded', function () {
 
   const hamburgerBtn = document.getElementById('hamburger-btn');
@@ -176,45 +63,8 @@ document.addEventListener('DOMContentLoaded', function () {
       businessArrow.classList.remove('rotate-180');
     }
 
-    dropdownOpen = false;
-    businessDropdownOpen = false;
 
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   const mobileHeaderStyles = document.createElement('style');
@@ -231,9 +81,23 @@ document.addEventListener('DOMContentLoaded', function () {
       overflow-x: clip;
     }
 
+    header > div:first-of-type {
+      min-height: 88px;
+      box-sizing: border-box;
+    }
+
+    @media (orientation: landscape) and (max-height: 500px) {
+      header > div:first-of-type {
+        min-height: 56px;
+        padding-top: 0.4rem !important;
+        padding-bottom: 0.4rem !important;
+      }
+
+    }
+
     @media (max-width: 1023px) {
-      header {
-        position: relative;
+      header > div:first-of-type {
+        min-height: 72px;
       }
 
       header > div:first-of-type {
@@ -248,26 +112,22 @@ document.addEventListener('DOMContentLoaded', function () {
         box-sizing: border-box;
       }
 
-      header img {
-        max-width: min(9.5rem, 58vw);
-        height: auto;
-        object-fit: contain;
-      }
 
       header nav {
         display: none !important;
       }
 
-      #hamburger-btn {
+   #hamburger-btn {
         display: flex !important;
         align-items: center;
         justify-content: center;
-        flex: 0 0 44px;
-        width: 44px;
-        height: 44px;
+        flex: 0 0 38px;
+        width: 38px;
+        height: 38px;
         margin-left: auto;
         border-radius: 9999px;
         background: rgba(255, 255, 255, 0.08);
+        font-size: 1.1rem;
       }
 
       #hamburger-btn svg,
@@ -477,9 +337,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('pageshow', function () {
 
-  closeMobileMenu();
+    closeMobileMenu();
 
-});
+  });
 
 });
 

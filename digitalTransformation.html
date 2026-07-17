@@ -1,11 +1,11 @@
-<!-- ABOUT PAGE: Digital Lord -->
+<!-- DIGITAL TRANSFORMATION PAGE: Digital Lord -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Digital Lord</title>
+  <title>Digital Transformation | Digital Lord</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
@@ -13,72 +13,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="picture/DL.png">
 
-  <style>
-    .inter-text {
-      font-family: "Inter", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-    }
 
-    /* Desktop dropdown animation */
-    .group-hover\:opacity-100 {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .group:hover .group-hover\:opacity-100 {
-      opacity: 1;
-    }
-
-    .group-hover\:visible {
-      visibility: hidden;
-      transition: visibility 0.3s ease;
-    }
-
-    .group:hover .group-hover\:visible {
-      visibility: visible;
-    }
-
-    /* Mobile dropdown animation */
-    .group-hover\:block {
-      display: none;
-      transition: all 0.3s ease;
-    }
-
-    .group:hover .group-hover\:block {
-      display: block;
-    }
-
-    /* Mobile menu animation */
-
-    /*#mobile-menu {
-      transition: max-height 0.3s ease-out;
-      max-height: 0;
-      overflow: hidden;
-    }
-
-    #mobile-menu:not(.hidden) {
-      max-height: 500px;
-      transition: max-height 0.5s ease-in;
-    }*/
+     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/businessDevMenu/hero.css">
+    <link rel="stylesheet" href="css/businessDevMenu/what.css">
+    <link rel="stylesheet" href="css/businessDevMenu/component.css">
+    <link rel="stylesheet" href="css/businessDevMenu/why.css">
+    <link rel="stylesheet" href="css/businessDevMenu/matrix.css">
+    <link rel="stylesheet" href="css/businessDevMenu/process.css">
+    <link rel="stylesheet" href="css/businessDevMenu/fqa.css">
+    <link rel="stylesheet" href="css/businessDevMenu/cta.css">
 
 
-    #mobile-menu {
-      transition: max-height 0.3s ease-out;
-      max-height: 0;
-      overflow: hidden;
-    }
-
-    #mobile-menu:not(.hidden) {
-      max-height: calc(100vh - 90px);
-      overflow-y: auto;
-    }
-
-    .rotate-180 {
-      transform: rotate(180deg);
-    }
-  </style>
 </head>
 
 <body class="bg-[#0F172A] text-white inter-text">
@@ -86,16 +32,12 @@
 
   <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
     <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-      <!-- Logo -->
-      <!-- <div>
-        <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
-
-      </div> -->
+     
 
        <a href="index.html" class="flex items-center gap-3">
 
         <!-- Logo Image -->
-        <img class="h-14 w-34" src="picture/DL.png" alt="Digital Lord Logo">
+        <img class="h-9 w-auto sm:h-10 md:h-14" src="picture/DL.png" alt="Digital Lord Logo">
 
         <!-- Desktop Text -->
         <div class="hidden lg:flex flex-col justify-center font-['Inter'] leading-tight">
@@ -313,51 +255,1609 @@
 
 
 
-  <!-- Main About Section -->
+<main class="flex-grow">
 
-  <section class="max-w-6xl mx-auto px-6 pt-32 pb-16">
-    <h1 class="text-4xl font-bold mb-12 text-center">About</h1>
+    <!-- DIGITAL TRANSFORMATION HERO SECTION -->
 
-    <div class="grid md:grid-cols-2 gap-10">
+    <section
+        class="relative overflow-hidden bg-gradient-to-br from-[#041021] via-[#07172D] to-[#041021] pt-36 lg:pt-44 pb-20 lg:pb-28">
 
-      <!-- Left Column (vertical accent line) -->
-      <div class="relative pl-6 border-l-4 border-[#E44D26] space-y-6">
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">At Digital Lord, our mission is to empower businesses with
-            cutting-edge digital solutions that drive growth and innovation. With years of experience in the tech
-            industry, we bring together a team of talented professionals passionate about delivering results.</p>
+        <!-- Left Blue Glow -->
+        <div
+            class="absolute -left-40 top-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-[#4165B7]/30 blur-[130px] rounded-full">
         </div>
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">We specialize in crafting high-quality, cost-effective
-            digital products tailored to your business needs. From startups to enterprises, we help organizations build
-            a strong digital foundation that stands out in a competitive landscape.</p>
-        </div>
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">What sets us apart is our commitment to innovation,
-            transparency, and client satisfaction. We don’t just build websites or apps — we build relationships based
-            on trust, communication, and shared success.</p>
-        </div>
-      </div>
 
-      <!-- Right Column -->
-      <div class="space-y-6">
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">Our team continuously learns and adapts to the ever-changing
-            world of technology, ensuring that our solutions are modern, scalable, and future-ready.</p>
+        <!-- Right Orange Glow -->
+        <div
+            class="absolute -right-40 top-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-[#E44D26]/30 blur-[130px] rounded-full">
         </div>
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">We serve clients across industries — from e-commerce and
-            education to healthcare and finance — and treat every project as a new opportunity to exceed expectations.
-          </p>
+
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0 opacity-[0.03]"
+            style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size:24px 24px;">
         </div>
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow border-l-4 border-[#E44D26]">
-          <p class="text-[#E44D26] font-semibold italic leading-relaxed">Choose Digital Lord – where your digital
-            transformation begins and grows.</p>
+
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+
+            <!-- Breadcrumb  -->
+
+            <div class="flex flex-wrap items-center gap-2 text-sm text-slate-300 mb-10">
+
+                <a href="index.html" class="flex items-center gap-2 hover:text-[#E44D26] transition">
+
+                    <i class="fas fa-home text-xs"></i>
+
+                    Home
+
+                </a>
+
+                <i class="fas fa-angle-right text-[10px] text-slate-500"></i>
+
+                <a href="businessDevelopment.html" class="hover:text-[#E44D26] transition">
+
+                    Business Development
+
+                </a>
+
+                <i class="fas fa-angle-right text-[10px] text-slate-500"></i>
+
+                <span class="text-[#E44D26]">
+
+                    Digital Transformation
+
+                </span>
+
+            </div>
+
+            <!-- Hero Content -->
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Left  -->
+
+                <div class="swot-hero-content">
+
+                    <span
+                        class="inline-flex items-center px-5 py-2 rounded-full border border-[#E44D26]/40 bg-[#E44D26]/10 text-[#E44D26] text-sm font-semibold tracking-[2px]">
+
+                        DIGITAL TRANSFORMATION
+
+                    </span>
+
+                    <h1 class="mt-7 text-2xl md:text-5xl xl:text-6xl font-bold leading-tight text-white">
+
+                        Modernize Your Business
+
+                        <span class="block">
+
+                            For the
+
+                        </span>
+
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#E44D26] to-[#ff9d7d]">
+
+                            Digital Era
+
+                        </span>
+
+                    </h1>
+
+                    <p class="mt-8 text-slate-300 text-lg leading-8 max-w-xl">
+
+                        We help businesses modernize operations through
+                        automation, cloud migration, system integration and
+                        smarter data strategy, built for how work happens
+                        today.
+
+                    </p>
+
+                    <!-- Buttons -->
+
+                    <div class="flex flex-wrap gap-5 mt-10">
+
+                        <a href="contact.html" class="hero-btn-primary">
+
+                            Get Consultation
+
+                            <i class="fas fa-arrow-right ml-2"></i>
+
+                        </a>
+
+                        <a href="#digital-overview" class="hero-btn-secondary">
+
+                            Learn More
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Right  -->
+
+                <div class="relative flex justify-center items-center ">
+
+                    <!-- Digital Transformation Glass Matrix -->
+
+                    <div class="swot-matrix">
+
+                        <div class="matrix-box">
+
+                            <i class="fas fa-gears"></i>
+
+                            <span>Process Automation</span>
+
+                        </div>
+
+                        <div class="matrix-box">
+
+                            <i class="fas fa-cloud"></i>
+
+                            <span>Cloud Migration</span>
+
+                        </div>
+
+                        <div class="matrix-box">
+
+                            <i class="fas fa-diagram-project"></i>
+
+                            <span>System Integration</span>
+
+                        </div>
+
+                        <div class="matrix-box">
+
+                            <i class="fas fa-database"></i>
+
+                            <span>Data Strategy</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
+
+    </section>
+
+     <!-- WHAT IS DIGITAL TRANSFORMATION -->
+<section class="relative overflow-hidden py-24 swot-about-section">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <!-- Heading -->
+
+        <div class="text-center max-w-3xl mx-auto mb-20">
+
+            <span class="text-[#E44D26] uppercase tracking-[4px] font-semibold text-sm">
+
+                WHAT IS DIGITAL TRANSFORMATION
+
+            </span>
+
+            <h2 class="mt-5 text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+
+                More Than New Technology
+
+            </h2>
+
+            <p class="mt-6 text-gray-400 leading-8">
+
+                True digital transformation reshapes how your business
+                operates, not just the tools it uses.
+
+            </p>
+
+        </div>
+
+        <!-- Content -->
+
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+            <!--  LEFT -->
+
+            <div class="relative flex justify-center order-1 lg:order-none">
+
+                <!-- Glass Circle -->
+
+                <div class="swot-glass-circle"></div>
+
+                <!-- Blue Glow -->
+
+                <div class="swot-blue-glow"></div>
+
+                <!-- Orange Glow -->
+
+                <div class="swot-orange-glow"></div>
+
+                <!-- Floating Icons -->
+
+                <div class="floating-search swot-icon-tip" data-tooltip="Smarter Workflows">
+
+                    <i class="fas fa-gears"></i>
+
+                    <span class="swot-tooltip">Smarter Workflows</span>
+
+                </div>
+
+                <div class="floating-chart swot-icon-tip" data-tooltip="Cloud-Powered Growth">
+
+                    <i class="fas fa-cloud"></i>
+
+                    <span class="swot-tooltip">Cloud-Powered Growth</span>
+
+                </div>
+
+                <!-- Illustration + Badge Wrapper -->
+                <div class="swot-image-wrap relative w-full max-w-lg z-10">
+
+                    <img src="picture/Digital transformation-bro.png" alt="Digital Transformation" class="w-full h-auto block">
+
+                    <!-- Glass Badge -->
+                    <div class="analysis-badge animate__animated">
+
+                        <div class="flex items-center gap-3 flex-nowrap">
+
+                            <div class="badge-icon">
+
+                                <i class="fas fa-bolt"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4>
+
+                                    Digital Shift
+
+                                </h4>
+
+                                <p>
+
+                                    Automate.<br>
+                                    Integrate.<br>
+                                    Scale.
+
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--  RIGHT  -->
+
+            <div>
+
+                <h3 class="text-3xl lg:text-4xl font-bold text-white leading-tight">
+
+                    What is Digital Transformation?
+
+                </h3>
+
+                <p class="mt-7 text-gray-400 leading-8">
+
+                    Digital Transformation is more than adopting new
+                    software. It's about rethinking how your business
+                    operates so technology actually removes friction
+                    instead of adding to it.
+
+                    We help you automate manual processes, move to the
+                    cloud, connect disconnected systems and build a data
+                    strategy that supports smarter decisions.
+
+                </p>
+
+                <!-- Feature List -->
+
+                <div class="mt-10 space-y-5">
+
+                    <!-- Row -->
+
+                    <div class="swot-feature">
+
+                        <div class="feature-icon">
+
+                            <i class="fas fa-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>
+
+                                Automate Repetitive Work
+
+                            </h4>
+
+                            <p>
+
+                                Free your team from manual tasks by
+                                automating the workflows that slow you down.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Row -->
+
+                    <div class="swot-feature">
+
+                        <div class="feature-icon">
+
+                            <i class="fas fa-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>
+
+                                Move to the Cloud
+
+                            </h4>
+
+                            <p>
+
+                                Access your systems and data securely from
+                                anywhere, without heavy on-site infrastructure.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Row -->
+
+                    <div class="swot-feature">
+
+                        <div class="feature-icon">
+
+                            <i class="fas fa-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>
+
+                                Connect Your Systems
+
+                            </h4>
+
+                            <p>
+
+                                Integrate the tools you already use so data
+                                flows smoothly across your business.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Row -->
+
+                    <div class="swot-feature">
+
+                        <div class="feature-icon">
+
+                            <i class="fas fa-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>
+
+                                Make Data-Driven Decisions
+
+                            </h4>
+
+                            <p>
+
+                                Build a clear data strategy that turns
+                                information into confident business decisions.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
-  </section>
+
+</section>
+
+
+   <!--
+     FOUR PILLARS OF DIGITAL TRANSFORMATION
+ -->
+<section class="swot-components-section">
+
+    <!-- Background Glow -->
+    <div class="swot-left-glow"></div>
+    <div class="swot-right-glow"></div>
+
+    <div class="swot-components-container">
+
+        <!-- Heading -->
+
+        <div class="swot-components-heading">
+
+            <span class="section-tag">
+
+                FOUR PILLARS
+
+            </span>
+
+            <h2>
+
+                The Core of Our Approach
+
+            </h2>
+
+            <p>
+
+                Digital Transformation is built on four essential pillars
+                that help businesses modernize operations and work smarter.
+
+            </p>
+
+        </div>
+
+        <!-- 
+                PANELS
+         -->
+
+        <div class="swot-panels">
+
+
+            <!-- Process Automation -->
+
+
+            <div class="swot-panel" id="panel-automation"
+                style="--panel-color:#293681; --panel-color-rgb:41,54,129;">
+
+                <!-- Left -->
+                <div class="panel-letter">
+
+                    <div class="letter-rings">
+
+                        <div class="ring ring-outer"></div>
+
+                        <div class="ring ring-inner"></div>
+
+                        <svg class="letter-svg icon-gears" viewBox="0 0 100 100">
+
+                            <path id="automationIconPath" class="letter-shape"
+                                d="M 38 20 L 44 20 L 46 28 L 52 30 L 58 25 L 62 29 L 57 35 L 59 41 L 67 43 L 67 49 L 59 51 L 57 57 L 62 63 L 58 67 L 52 62 L 46 64 L 44 72 L 38 72 L 36 64 L 30 62 L 24 67 L 20 63 L 25 57 L 23 51 L 15 49 L 15 43 L 23 41 L 25 35 L 20 29 L 24 25 L 30 30 L 36 28 Z M 41 46 A 5 5 0 1 1 40.9 46 Z" />
+
+                            <g class="shooting-star">
+
+                                <line class="star-tail" x1="-14" y1="0" x2="0" y2="0" stroke="url(#trail-automation)"
+                                    stroke-width="2.6" />
+
+                                <circle class="star-head" cx="0" cy="0" r="4" />
+
+                                <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                                    <mpath href="#automationIconPath" />
+
+                                </animateMotion>
+
+                            </g>
+
+                            <defs>
+
+                                <linearGradient id="trail-automation" x1="0%" x2="100%">
+
+                                    <stop offset="0%" class="trail-start" />
+                                    <stop offset="100%" class="trail-end" />
+
+                                </linearGradient>
+
+                            </defs>
+
+                        </svg>
+
+                    </div>
+
+                </div>
+
+                <!-- Center -->
+
+                <div class="panel-content">
+
+                    <h3>
+
+                        Process Automation
+
+                    </h3>
+
+                    <p>
+
+                        We identify repetitive, manual tasks and automate
+                        them, freeing your team to focus on higher-value
+                        work instead of routine processes.
+
+                    </p>
+
+                </div>
+
+                <!-- Right -->
+
+                <div class="panel-icon">
+
+                    <div class="icon-ring">
+
+                        <i class="fas fa-gears"></i>
+
+                    </div>
+
+                </div>
+
+                <!-- Animated Elements -->
+
+                <div class="left-border"></div>
+
+                <div class="panel-light"></div>
+
+                <div class="panel-glass"></div>
+
+            </div>
+
+
+            <!-- Cloud Migration -->
+
+
+            <div class="swot-panel" id="panel-cloud"
+                style="--panel-color:#EC6530; --panel-color-rgb:236,101,48;">
+
+                <div class="panel-letter">
+
+                    <div class="letter-rings">
+
+                        <div class="ring ring-outer"></div>
+
+                        <div class="ring ring-inner"></div>
+
+                        <svg class="letter-svg icon-cloud" viewBox="0 0 100 100">
+
+                            <path id="cloudIconPath" class="letter-shape"
+                                d="M 30 68 C 18 68 12 60 12 52 C 12 44 18 38 26 37 C 28 26 38 18 50 18 C 62 18 71 26 73 36 C 82 37 88 44 88 52 C 88 61 81 68 71 68 Z" />
+
+                            <g class="shooting-star">
+
+                                <line class="star-tail" x1="-14" y1="0" x2="0" y2="0" stroke="url(#trail-cloud)"
+                                    stroke-width="2.6" />
+
+                                <circle class="star-head" cx="0" cy="0" r="4" />
+
+                                <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                                    <mpath href="#cloudIconPath" />
+
+                                </animateMotion>
+
+                            </g>
+
+                            <defs>
+
+                                <linearGradient id="trail-cloud" x1="0%" x2="100%">
+
+                                    <stop offset="0%" class="trail-start" />
+                                    <stop offset="100%" class="trail-end" />
+
+                                </linearGradient>
+
+                            </defs>
+
+                        </svg>
+
+                    </div>
+
+                </div>
+
+                <div class="panel-content">
+
+                    <h3>
+
+                        Cloud Migration
+
+                    </h3>
+
+                    <p>
+
+                        We move your systems and data to the cloud, giving
+                        your team secure, flexible access from anywhere
+                        without heavy on-site infrastructure.
+
+                    </p>
+
+                </div>
+
+                <div class="panel-icon">
+
+                    <div class="icon-ring">
+
+                        <i class="fas fa-cloud"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="left-border"></div>
+
+                <div class="panel-light"></div>
+
+                <div class="panel-glass"></div>
+
+            </div>
+
+
+            <!-- System Integration -->
+
+
+            <div class="swot-panel" id="panel-integration"
+                style="--panel-color:#8FDDDF; --panel-color-rgb:143,221,223;">
+
+                <div class="panel-letter">
+
+                    <div class="letter-rings">
+
+                        <div class="ring ring-outer"></div>
+
+                        <div class="ring ring-inner"></div>
+
+                        <svg class="letter-svg icon-integration" viewBox="0 0 100 100">
+
+                            <path id="integrationIconPath" class="letter-shape"
+                                d="M 22 22 A 10 10 0 1 1 21.9 22 Z M 78 22 A 10 10 0 1 1 77.9 22 Z M 50 78 A 10 10 0 1 1 49.9 78 Z M 30 28 L 45 45 M 70 28 L 55 45 M 50 55 L 50 65" />
+
+                            <g class="shooting-star">
+
+                                <line class="star-tail" x1="-14" y1="0" x2="0" y2="0" stroke="url(#trail-integration)"
+                                    stroke-width="2.6" />
+
+                                <circle class="star-head" cx="0" cy="0" r="4" />
+
+                                <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                                    <mpath href="#integrationIconPath" />
+
+                                </animateMotion>
+
+                            </g>
+
+                            <defs>
+
+                                <linearGradient id="trail-integration" x1="0%" x2="100%">
+
+                                    <stop offset="0%" class="trail-start" />
+                                    <stop offset="100%" class="trail-end" />
+
+                                </linearGradient>
+
+                            </defs>
+
+                        </svg>
+
+                    </div>
+
+                </div>
+
+                <div class="panel-content">
+
+                    <h3>
+
+                        System Integration
+
+                    </h3>
+
+                    <p>
+
+                        We connect the tools and platforms you already use,
+                        so data flows smoothly across your business without
+                        manual re-entry or silos.
+
+                    </p>
+
+                </div>
+
+                <div class="panel-icon">
+
+                    <div class="icon-ring">
+
+                        <i class="fas fa-diagram-project"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="left-border"></div>
+
+                <div class="panel-light"></div>
+
+                <div class="panel-glass"></div>
+
+            </div>
+
+
+            <!-- Data Strategy -->
+
+
+            <div class="swot-panel" id="panel-data"
+                style="--panel-color:#E05454; --panel-color-rgb:224,84,84;">
+
+                <div class="panel-letter">
+
+                    <div class="letter-rings">
+
+                        <div class="ring ring-outer"></div>
+
+                        <div class="ring ring-inner"></div>
+
+                        <svg class="letter-svg icon-database" viewBox="0 0 100 100">
+
+                            <path id="dataIconPath" class="letter-shape"
+                                d="M 50 22 C 68 22 82 27 82 34 C 82 41 68 46 50 46 C 32 46 18 41 18 34 C 18 27 32 22 50 22 Z M 18 34 L 18 66 C 18 73 32 78 50 78 C 68 78 82 73 82 66 L 82 34 M 18 50 C 18 57 32 62 50 62 C 68 62 82 57 82 50" />
+
+                            <g class="shooting-star">
+
+                                <line class="star-tail" x1="-14" y1="0" x2="0" y2="0" stroke="url(#trail-data)"
+                                    stroke-width="2.6" />
+
+                                <circle class="star-head" cx="0" cy="0" r="4" />
+
+                                <animateMotion dur="2.4s" repeatCount="indefinite" rotate="auto">
+
+                                    <mpath href="#dataIconPath" />
+
+                                </animateMotion>
+
+                            </g>
+
+                            <defs>
+
+                                <linearGradient id="trail-data" x1="0%" x2="100%">
+
+                                    <stop offset="0%" class="trail-start" />
+                                    <stop offset="100%" class="trail-end" />
+
+                                </linearGradient>
+
+                            </defs>
+
+                        </svg>
+
+                    </div>
+
+                </div>
+
+                <div class="panel-content">
+
+                    <h3>
+
+                        Data Strategy
+
+                    </h3>
+
+                    <p>
+
+                        We help you collect, organize and use data securely,
+                        turning scattered information into insight that
+                        supports confident business decisions.
+
+                    </p>
+
+                </div>
+
+                <div class="panel-icon">
+
+                    <div class="icon-ring">
+
+                        <i class="fas fa-database"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="left-border"></div>
+
+                <div class="panel-light"></div>
+
+                <div class="panel-glass"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- WHY DIGITAL TRANSFORMATION MATTERS -->
+<section class="swot-why-section">
+
+    <div class="why-sweep"></div>
+
+    <div class="why-container">
+
+        <!-- Heading -->
+
+        <div class="why-heading">
+
+            <span class="section-tag">
+
+                WHY IT MATTERS
+
+            </span>
+
+            <h2>
+
+                Why Digital Transformation Matters
+
+            </h2>
+
+            <p>
+
+                Businesses that modernize their operations move faster,
+                work smarter and stay ahead of competitors still relying
+                on outdated systems.
+
+            </p>
+
+        </div>
+
+        <!-- Content -->
+
+        <div class="why-grid">
+
+            <!-- Left Visual -->
+
+            <div class="why-visual">
+
+                <div class="why-rotating-ring"></div>
+
+                <div class="why-center-card">
+
+                    <span class="why-center-label">Digital Growth</span>
+
+                    <svg class="why-chart" viewBox="0 0 220 120">
+
+                        <path class="why-chart-path" d="M 10 95 L 50 75 L 90 85 L 130 45 L 170 55 L 210 15" />
+
+                        <circle class="why-chart-dot" cx="210" cy="15" r="4" />
+
+                    </svg>
+
+                </div>
+
+                <div class="why-orbit why-orbit-1">
+
+                    <span class="why-orbit-letter"><i class="fas fa-gears"></i></span>
+
+                    <span class="why-orbit-label">Automation</span>
+
+                </div>
+
+                <div class="why-orbit why-orbit-2">
+
+                    <span class="why-orbit-letter"><i class="fas fa-cloud"></i></span>
+
+                    <span class="why-orbit-label">Cloud</span>
+
+                </div>
+
+                <div class="why-orbit why-orbit-3">
+
+                    <span class="why-orbit-letter"><i class="fas fa-diagram-project"></i></span>
+
+                    <span class="why-orbit-label">Integration</span>
+
+                </div>
+
+                <div class="why-orbit why-orbit-4">
+
+                    <span class="why-orbit-letter"><i class="fas fa-database"></i></span>
+
+                    <span class="why-orbit-label">Data</span>
+
+                </div>
+
+            </div>
+
+            <!-- Right Accordion -->
+
+            <div class="why-accordion">
+
+                <!-- Item 1 -->
+
+                <div class="why-item active">
+
+                    <div class="why-item-header">
+
+                        <span class="why-number">01</span>
+
+                        <h4>Save Time With Automation</h4>
+
+                        <span class="why-toggle-icon">
+
+                            <i class="fas fa-plus"></i>
+
+                        </span>
+
+                    </div>
+
+                    <div class="why-item-body">
+
+                        <p>
+
+                            Automating repetitive tasks frees your team to
+                            focus on work that actually moves your business
+                            forward.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Item 2 -->
+
+                <div class="why-item">
+
+                    <div class="why-item-header">
+
+                        <span class="why-number">02</span>
+
+                        <h4>Work From Anywhere</h4>
+
+                        <span class="why-toggle-icon">
+
+                            <i class="fas fa-plus"></i>
+
+                        </span>
+
+                    </div>
+
+                    <div class="why-item-body">
+
+                        <p>
+
+                            Cloud migration gives your team secure access to
+                            systems and data from anywhere, anytime.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Item 3 -->
+
+                <div class="why-item">
+
+                    <div class="why-item-header">
+
+                        <span class="why-number">03</span>
+
+                        <h4>Eliminate Data Silos</h4>
+
+                        <span class="why-toggle-icon">
+
+                            <i class="fas fa-plus"></i>
+
+                        </span>
+
+                    </div>
+
+                    <div class="why-item-body">
+
+                        <p>
+
+                            Connected systems mean information flows
+                            smoothly, without manual re-entry or scattered
+                            tools.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Item 4 -->
+
+                <div class="why-item">
+
+                    <div class="why-item-header">
+
+                        <span class="why-number">04</span>
+
+                        <h4>Make Smarter Decisions</h4>
+
+                        <span class="why-toggle-icon">
+
+                            <i class="fas fa-plus"></i>
+
+                        </span>
+
+                    </div>
+
+                    <div class="why-item-body">
+
+                        <p>
+
+                            A clear data strategy turns scattered
+                            information into insight you can actually act
+                            on.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Item 5 -->
+
+                <div class="why-item">
+
+                    <div class="why-item-header">
+
+                        <span class="why-number">05</span>
+
+                        <h4>Stay Ahead of Competitors</h4>
+
+                        <span class="why-toggle-icon">
+
+                            <i class="fas fa-plus"></i>
+
+                        </span>
+
+                    </div>
+
+                    <div class="why-item-body">
+
+                        <p>
+
+                            Businesses that modernize early adapt faster to
+                            change and outperform those still catching up.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- INTERACTIVE DIGITAL TRANSFORMATION MATRIX -->
+<section class="swot-matrix-section">
+
+    <div class="matrix-glow-left"></div>
+    <div class="matrix-glow-right"></div>
+
+    <div class="matrix-container">
+
+        <!-- Heading -->
+
+        <div class="matrix-heading">
+
+            <span class="section-tag">
+
+                INTERACTIVE OVERVIEW
+
+            </span>
+
+            <h2>
+
+                Explore Our Approach in Action
+
+            </h2>
+
+            <p>
+
+                Hover over each pillar to see real examples of how we help
+                businesses modernize and work smarter.
+
+            </p>
+
+        </div>
+
+        <!-- Content -->
+
+        <div class="matrix-grid">
+
+            <!-- Left - Matrix -->
+
+            <div class="matrix-quadrants" id="digitalMatrixQuadrants">
+
+                <div class="quadrant market-quadrant" data-quadrant="automation"
+                    style="--q-color:#293681; --q-color-rgb:41,54,129;">
+
+                    <i class="fas fa-gears"></i>
+
+                    <span>Process Automation</span>
+
+                </div>
+
+                <div class="quadrant market-quadrant" data-quadrant="cloud"
+                    style="--q-color:#EC6530; --q-color-rgb:236,101,48;">
+
+                    <i class="fas fa-cloud"></i>
+
+                    <span>Cloud Migration</span>
+
+                </div>
+
+                <div class="quadrant market-quadrant" data-quadrant="integration"
+                    style="--q-color:#8FDDDF; --q-color-rgb:143,221,223;">
+
+                    <i class="fas fa-diagram-project"></i>
+
+                    <span>System Integration</span>
+
+                </div>
+
+                <div class="quadrant market-quadrant" data-quadrant="data"
+                    style="--q-color:#E05454; --q-color-rgb:224,84,84;">
+
+                    <i class="fas fa-database"></i>
+
+                    <span>Data Strategy</span>
+
+                </div>
+
+            </div>
+
+            <!-- Right - Detail Panel -->
+
+            <div class="matrix-detail" id="digitalMatrixDetail" style="--q-color:#293681; --q-color-rgb:41,54,129;">
+
+                <span class="matrix-detail-tag">PROCESS AUTOMATION</span>
+
+                <h3 id="digitalMatrixDetailTitle">Workflow Automation</h3>
+
+                <p id="digitalMatrixDetailDesc">
+
+                    We identify repetitive manual tasks and automate them,
+                    saving time and reducing errors across your business.
+
+                </p>
+
+                <ul class="matrix-detail-list" id="digitalMatrixDetailList">
+
+                    <li><i class="fas fa-check"></i> Workflow Automation</li>
+
+                    <li><i class="fas fa-check"></i> Task Scheduling</li>
+
+                    <li><i class="fas fa-check"></i> Error Reduction</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OUR DIGITAL TRANSFORMATION PROCESS -->
+<section class="swot-process-section">
+
+    <div class="process-radar"></div>
+
+    <div class="process-conic"></div>
+
+    <div class="process-container">
+
+        <!-- Heading -->
+
+        <div class="process-heading">
+
+            <span class="section-tag">
+
+                OUR PROCESS
+
+            </span>
+
+            <h2>
+
+                Our Digital Transformation Process
+
+            </h2>
+
+            <p>
+
+                A structured step-by-step approach that modernizes your
+                business without disrupting how you operate today.
+
+            </p>
+
+        </div>
+
+        <!-- Arch / Timeline -->
+
+        <div class="process-arch">
+
+            <svg class="process-connector" viewBox="0 0 1000 400" preserveAspectRatio="none">
+
+                <path d="M 40 340 Q 500 -40 960 340" />
+
+            </svg>
+
+            <div class="process-step step-1" style="--step-color:#293681; --step-color-rgb:41,54,129;">
+
+                <div class="step-node">
+
+                    <i class="fas fa-magnifying-glass"></i>
+
+                </div>
+
+                <span class="step-number">01</span>
+
+                <h4>Discover</h4>
+
+                <p>Understand your current systems, workflows and pain points.</p>
+
+            </div>
+
+            <div class="process-step step-2" style="--step-color:#EC6530; --step-color-rgb:236,101,48;">
+
+                <div class="step-node">
+
+                    <i class="fas fa-flask"></i>
+
+                </div>
+
+                <span class="step-number">02</span>
+
+                <h4>Research</h4>
+
+                <p>Identify the right tools and technologies for your business.</p>
+
+            </div>
+
+            <div class="process-step step-3" style="--step-color:#8FDDDF; --step-color-rgb:143,221,223;">
+
+                <div class="step-node">
+
+                    <i class="fas fa-chart-line"></i>
+
+                </div>
+
+                <span class="step-number">03</span>
+
+                <h4>Analyze</h4>
+
+                <p>Assess automation, integration and data opportunities.</p>
+
+            </div>
+
+            <div class="process-step step-4" style="--step-color:#E05454; --step-color-rgb:224,84,84;">
+
+                <div class="step-node">
+
+                    <i class="fas fa-chess"></i>
+
+                </div>
+
+                <span class="step-number">04</span>
+
+                <h4>Strategy</h4>
+
+                <p>Build a phased transformation plan aligned with your goals.</p>
+
+            </div>
+
+            <div class="process-step step-5" style="--step-color:#293681; --step-color-rgb:41,54,129;">
+
+                <div class="step-node">
+
+                    <i class="fas fa-list-check"></i>
+
+                </div>
+
+                <span class="step-number">05</span>
+
+                <h4>Recommen<br class="block md:hidden">dations</h4>
+
+                <p>Deliver clear, actionable recommen<br class="block md:hidden">dations ready for execution.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+ <!-- FAQ SECTION -->
+<section class="relative overflow-hidden py-24 lg:py-28" style="
+    background:
+    radial-gradient(circle at 15% 20%, rgba(65,101,183,.14), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(228,77,38,.12), transparent 40%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.015) 0px, rgba(255,255,255,.015) 1px, transparent 1px, transparent 40px),
+    linear-gradient(160deg, #041021 0%, #071B37 55%, #041021 100%);
+">
+
+    <!-- Glow -->
+    <div
+        class="absolute -left-40 top-1/3 w-[480px] h-[480px] bg-[#4165B7]/15 blur-[140px] rounded-full pointer-events-none">
+    </div>
+    <div
+        class="absolute -right-40 bottom-1/4 w-[480px] h-[480px] bg-[#E44D26]/15 blur-[140px] rounded-full pointer-events-none">
+    </div>
+
+    <div class="relative max-w-4xl mx-auto px-6 lg:px-10">
+
+        <!-- Heading -->
+
+        <div class="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+
+            <span class="text-[#E44D26] uppercase tracking-[4px] font-semibold text-sm">
+
+                FAQ
+
+            </span>
+
+            <h2 class="mt-5 text-2xl md:text-5xl font-bold text-white leading-tight">
+
+                Frequently Asked Questions
+
+            </h2>
+
+            <p class="mt-6 text-gray-400 leading-8">
+
+                Answers to common questions about our Digital Transformation
+                service and how it can help your business grow.
+
+            </p>
+
+        </div>
+
+        <!-- Accordion -->
+
+        <div class="flex flex-col gap-4 faq-accordion">
+
+            <!-- Item 1 -->
+
+            <div class="faq-item active">
+
+                <button class="faq-btn">
+
+                    <span>What does digital transformation involve?</span>
+
+                    <i class="fas fa-plus"></i>
+
+                </button>
+
+                <div class="faq-content">
+
+                    <p>
+
+                        It involves automating processes, migrating to the
+                        cloud, integrating your systems and building a
+                        clear data strategy.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Item 2 -->
+
+            <div class="faq-item">
+
+                <button class="faq-btn">
+
+                    <span>Will this disrupt our current operations?</span>
+
+                    <i class="fas fa-plus"></i>
+
+                </button>
+
+                <div class="faq-content">
+
+                    <p>
+
+                        No. We follow a phased approach designed to
+                        minimize disruption while modernizing your systems.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Item 3 -->
+
+            <div class="faq-item">
+
+                <button class="faq-btn">
+
+                    <span>Is cloud migration safe for our data?</span>
+
+                    <i class="fas fa-plus"></i>
+
+                </button>
+
+                <div class="faq-content">
+
+                    <p>
+
+                        Yes. We follow industry-standard security practices
+                        to keep your data safe throughout the migration
+                        process.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Item 4 -->
+
+            <div class="faq-item">
+
+                <button class="faq-btn">
+
+                    <span>Can you integrate our existing tools?</span>
+
+                    <i class="fas fa-plus"></i>
+
+                </button>
+
+                <div class="faq-content">
+
+                    <p>
+
+                        Absolutely. We connect the systems and software you
+                        already use so data flows smoothly across your
+                        business.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Item 5 -->
+
+            <div class="faq-item">
+
+                <button class="faq-btn">
+
+                    <span>How long does the transformation take?</span>
+
+                    <i class="fas fa-plus"></i>
+
+                </button>
+
+                <div class="faq-content">
+
+                    <p>
+
+                        Timelines vary based on scope, but most projects are
+                        delivered in phases over a few weeks to a few
+                        months.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FINAL CTA -->
+<section class="relative overflow-hidden py-24 lg:py-28 bg-[#071b38] cta-section">
+
+    <!-- Floating Particles -->
+    <span class="cta-particle" style="--p-color:#293681; top:15%; left:8%; animation-delay:0s;"></span>
+    <span class="cta-particle" style="--p-color:#EC6530; top:70%; left:12%; animation-delay:1s;"></span>
+    <span class="cta-particle" style="--p-color:#8FDDDF; top:20%; right:10%; animation-delay:2s;"></span>
+    <span class="cta-particle" style="--p-color:#E05454; top:65%; right:8%; animation-delay:1.5s;"></span>
+
+    <div class="relative max-w-5xl mx-auto px-6 lg:px-10">
+
+        <div class="cta-card">
+
+            <div class="cta-border-glow"></div>
+
+            <div class="relative z-10 text-center py-16 px-8 lg:py-20 lg:px-16">
+
+                <span
+                    class="inline-flex items-center px-5 py-2 rounded-full border border-[#E44D26]/40 bg-[#E44D26]/10 text-[#E44D26] text-sm font-semibold tracking-[2px]">
+
+                    GET STARTED
+
+                </span>
+
+                <h2 class="mt-7 text-2xl md:text-5xl font-bold leading-tight text-white">
+
+                    Ready to Modernize
+
+                    <span class="block">
+
+                        Your Business?
+
+                    </span>
+
+                </h2>
+
+                <p class="mt-7 text-slate-300 text-lg leading-8 max-w-xl mx-auto">
+
+                    Book your Digital Transformation Consultation today and
+                    start automating, integrating and scaling with
+                    confidence.
+
+                </p>
+
+                <div class="mt-10">
+
+                    <a href="contact.html" class="cta-btn">
+
+                        Contact Us
+
+                        <i class="fas fa-arrow-right ml-2"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+       
+
+</main>
+
+  
+       <button id="scrollTopBtn"
+        class="fixed bottom-6 right-6 w-12 h-12 bg-white text-black rounded-full shadow-lg flex items-center justify-center opacity-0 scale-0 transition-all duration-300 z-[9999]">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
   <footer>
     <!-- Top Part -->
@@ -463,6 +1963,13 @@
   </footer>
 
   <script src="script/nav.js"></script>
+  <script src="script/businessDevMenu/swot-hero.js"></script>
+  <script src="script/businessDevMenu/what-swot.js"></script>
+  <script src="script/businessDevMenu/swot-component.js"></script>
+  <script src="script/businessDevMenu/why-swot.js"></script>
+  <script src="script/businessDevMenu/digital-matrix.js"></script>
+  <script src="script/businessDevMenu/fqa.js"></script>
+  <script src="script/button.js"></script>
 
 </body>
 

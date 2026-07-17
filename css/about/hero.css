@@ -1,0 +1,249 @@
+/* 
+      ABOUT HERO + STORY
+*/
+
+.about-hero-section{
+
+    background:#050d1c;
+
+}
+
+.about-dot-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+
+    background-size:26px 26px;
+
+    -webkit-mask-image:radial-gradient(circle at 30% 30%, black 0%, transparent 70%);
+
+    mask-image:radial-gradient(circle at 30% 30%, black 0%, transparent 70%);
+
+    pointer-events:none;
+
+}
+
+.about-glow-left{
+
+    position:absolute;
+
+    left:-180px;
+
+    top:10%;
+
+    width:460px;
+
+    height:460px;
+
+    background:#2EA4FF;
+
+    opacity:.14;
+
+    filter:blur(150px);
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+}
+
+.about-glow-right{
+
+    position:absolute;
+
+    right:-180px;
+
+    bottom:5%;
+
+    width:460px;
+
+    height:460px;
+
+    background:#F16529;
+
+    opacity:.14;
+
+    filter:blur(150px);
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+}
+
+/* ==========================
+      Right Glass Card
+========================== */
+
+.about-hero-card{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:440px;
+
+    padding:44px 38px;
+
+    border-radius:28px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.03);
+
+    backdrop-filter:blur(18px);
+
+    overflow:hidden;
+
+}
+
+.about-hero-card-glow{
+
+    position:absolute;
+
+    top:-60px;
+
+    right:-60px;
+
+    width:220px;
+
+    height:220px;
+
+    background:radial-gradient(circle, rgba(46,164,255,.25), transparent 70%);
+
+    pointer-events:none;
+
+}
+
+.about-quote-icon{
+
+    color:#F16529;
+
+    font-size:30px;
+
+    opacity:.5;
+
+}
+
+.about-hero-quote{
+
+    margin-top:18px;
+
+    color:#fff;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+}
+
+.about-hero-divider{
+
+    margin:28px 0;
+
+    height:1px;
+
+    background:linear-gradient(90deg, rgba(46,164,255,.4), transparent);
+
+}
+
+.about-hero-badge{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(241,101,41,.15);
+
+    color:#F16529;
+
+    font-size:20px;
+
+    flex-shrink:0;
+
+}
+
+/* ==========================
+      Tablet
+========================== */
+
+@media(max-width:1024px){
+
+.about-hero-section{
+
+    padding-top:110px;
+
+}
+
+.about-hero-card{
+
+    padding:36px 30px;
+
+}
+
+.about-hero-quote{
+
+    font-size:19px;
+
+}
+
+}
+
+/* ==========================
+      Mobile
+========================== */
+
+@media(max-width:640px){
+
+.about-hero-section{
+
+    padding-top:100px;
+
+    padding-bottom:70px;
+
+}
+
+.about-hero-card{
+
+    padding:28px 24px;
+
+    border-radius:22px;
+
+}
+
+.about-hero-quote{
+
+    font-size:17px;
+
+}
+
+.about-hero-divider{
+
+    margin:22px 0;
+
+}
+
+.about-hero-badge{
+
+    width:44px;
+
+    height:44px;
+
+    font-size:17px;
+
+}
+
+}

@@ -1,0 +1,303 @@
+/*
+      SERVICE PAGE — FINAL CTA
+ */
+
+.service-cta-section {
+
+    position: relative;
+
+    background: #011335;
+
+}
+
+.cta-bg-glow-left {
+
+    position: absolute;
+
+    left: -180px;
+
+    top: 20%;
+
+    width: 440px;
+
+    height: 440px;
+
+    background: #2EA4FF;
+
+    opacity: .14;
+
+    filter: blur(150px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+.cta-bg-glow-right {
+
+    position: absolute;
+
+    right: -180px;
+
+    bottom: 15%;
+
+    width: 440px;
+
+    height: 440px;
+
+    background: #F16529;
+
+    opacity: .14;
+
+    filter: blur(150px);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+/* ==========================
+      Shooting Star Layer
+========================== */
+
+.cta-shooting-star-layer {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+}
+
+.cta-shoot {
+
+    position: absolute;
+
+    top: var(--top);
+
+    left: var(--left);
+
+    width: 2px;
+
+    height: 2px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow:
+
+        0 0 4px 1px #ffffff,
+
+        0 0 8px 2px rgba(46, 164, 255, .6);
+
+    opacity: 0;
+
+    animation: ctaShootFall 3.4s linear infinite;
+
+    animation-delay: var(--delay);
+
+}
+
+.cta-shoot::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 0;
+
+    width: 70px;
+
+    height: 1px;
+
+    background: linear-gradient(to left,
+
+            rgba(255, 255, 255, .85),
+
+            transparent);
+
+    transform: translateY(-50%);
+
+}
+
+@keyframes ctaShootFall {
+
+    0% {
+
+        transform: translate(0, 0);
+
+        opacity: 0;
+
+    }
+
+    4% {
+
+        opacity: 1;
+
+    }
+
+    18% {
+
+        transform: translate(260px, 260px);
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        transform: translate(260px, 260px);
+
+        opacity: 0;
+
+    }
+
+}
+
+/*
+      CTA Card
+ */
+
+.service-cta-card {
+
+    position: relative;
+
+    border-radius: 32px;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, .04);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+}
+
+.service-cta-border {
+
+    position: absolute;
+
+    inset: -2px;
+
+    border-radius: 32px;
+
+    padding: 2px;
+
+    background: conic-gradient(from 0deg,
+
+            #2EA4FF,
+
+            #F16529,
+
+            #2EA4FF,
+
+            #F16529,
+
+            #2EA4FF);
+
+    -webkit-mask:
+
+        linear-gradient(#fff 0 0) content-box,
+
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask-composite: exclude;
+
+    opacity: .4;
+
+    animation: serviceCtaBorderSpin 6s linear infinite;
+
+}
+
+@keyframes serviceCtaBorderSpin {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+/* ==========================
+      CTA Button
+========================== */
+
+.service-cta-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 16px 42px;
+
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #2EA4FF, #F16529);
+
+    color: #fff;
+
+    font-weight: 700;
+
+    font-size: 16px;
+
+    box-shadow: 0 15px 40px rgba(46, 164, 255, .25);
+
+    transition: .35s ease;
+
+}
+
+.service-cta-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 20px 50px rgba(241, 101, 41, .4);
+
+}
+
+.service-cta-btn i {
+
+    transition: .35s ease;
+
+}
+
+.service-cta-btn:hover i {
+
+    transform: translateX(4px);
+
+}
+
+@media(max-width:640px) {
+
+    .cta-shoot {
+
+        display: none;
+
+    }
+
+    .service-cta-btn {
+
+        padding: 14px 32px;
+
+        font-size: 15px;
+
+    }
+
+}

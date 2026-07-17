@@ -14,68 +14,11 @@
     <link rel="icon" type="image/png" href="picture/DL.png">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/digital-marketing.css">
 
 
-    <style>
-        .inter-text {
-            font-family: "Inter", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        /* Desktop dropdown animation */
-        .group-hover\:opacity-100 {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .group:hover .group-hover\:opacity-100 {
-            opacity: 1;
-        }
-
-        .group-hover\:visible {
-            visibility: hidden;
-            transition: visibility 0.3s ease;
-        }
-
-        .group:hover .group-hover\:visible {
-            visibility: visible;
-        }
-
-        /* Mobile dropdown animation */
-        .group-hover\:block {
-            display: none;
-            transition: all 0.3s ease;
-        }
-
-        .group:hover .group-hover\:block {
-            display: block;
-        }
-
-        /* Mobile menu animation */
-        #mobile-menu {
-      transition: max-height 0.3s ease-out;
-      max-height: 0;
-      overflow: hidden;
-    }
-
-    #mobile-menu:not(.hidden) {
-      max-height: calc(100vh - 90px);
-      overflow-y: auto;
-    }
-
-    .rotate-180 {
-      transform: rotate(180deg);
-    }
-
-       
-
-
-
-
-    </style>
+   
 </head>
 
 <body class="bg-[#0F1B2D] text-white flex flex-col min-h-screen inter-text">
@@ -83,17 +26,14 @@
     <!-- Navigation Bar -->
     <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
         <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-            <!-- Logo -->
-            <!-- <div>
-                <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
-
-            </div> -->
+      
+          
 
             
        <a href="index.html" class="flex items-center gap-3">
 
         <!-- Logo Image -->
-        <img class="h-14 w-34" src="picture/DL.png" alt="Digital Lord Logo">
+        <img class="h-9 w-auto sm:h-10 md:h-14" src="picture/DL.png" alt="Digital Lord Logo">
 
         <!-- Desktop Text -->
         <div class="hidden lg:flex flex-col justify-center font-['Inter'] leading-tight">
@@ -342,13 +282,42 @@
                     <!-- RIGHT CONTENT -->
                     <div>
 
-                        <span
-                            class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#2EA4FF]/30 bg-[#2EA4FF]/10 text-[#2EA4FF] text-sm mb-6">
+                        <!-- BREADCRUMB -->
+    <div
+        class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm text-gray-300 mb-6">
 
-                            <i class="fas fa-chart-line"></i>
-                            Digital Marketing Services
+        <a href="index.html" class="flex items-center gap-1 whitespace-nowrap hover:text-[#2EA4FF] transition">
 
-                        </span>
+            <i class="fas fa-house text-xs"></i>
+            Home
+
+        </a>
+
+        <span>
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+        </span>
+
+        <a href="service.html" class="whitespace-nowrap hover:text-[#2EA4FF] transition">
+            Service
+        </a>
+
+        <span>
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+        </span>
+
+        <span class="text-[#2EA4FF] whitespace-nowrap">
+            Digital Marketing
+        </span>
+
+    </div>
+
+    <span
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#2EA4FF]/30 bg-[#2EA4FF]/10 text-[#2EA4FF] text-sm mb-6">
+
+        <i class="fas fa-chart-line"></i>
+        Digital Marketing Services
+
+    </span>
 
                         <h1 class="text-2xl md:text-5xl font-bold leading-tight mb-6">
 

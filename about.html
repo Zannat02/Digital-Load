@@ -13,89 +13,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="picture/DL.png">
 
-  <style>
-    .inter-text {
-      font-family: "Inter", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-    }
 
-    /* Desktop dropdown animation */
-    .group-hover\:opacity-100 {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
+   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/about/hero.css">
+  <link rel="stylesheet" href="css/about/about.css">
+  <link rel="stylesheet" href="css/about/journey.css">
 
-    .group:hover .group-hover\:opacity-100 {
-      opacity: 1;
-    }
-
-    .group-hover\:visible {
-      visibility: hidden;
-      transition: visibility 0.3s ease;
-    }
-
-    .group:hover .group-hover\:visible {
-      visibility: visible;
-    }
-
-    /* Mobile dropdown animation */
-    .group-hover\:block {
-      display: none;
-      transition: all 0.3s ease;
-    }
-
-    .group:hover .group-hover\:block {
-      display: block;
-    }
-
-    /* Mobile menu animation */
-
-    /*#mobile-menu {
-      transition: max-height 0.3s ease-out;
-      max-height: 0;
-      overflow: hidden;
-    }
-
-    #mobile-menu:not(.hidden) {
-      max-height: 500px;
-      transition: max-height 0.5s ease-in;
-    }*/
-
-
-    #mobile-menu {
-      transition: max-height 0.3s ease-out;
-      max-height: 0;
-      overflow: hidden;
-    }
-
-    #mobile-menu:not(.hidden) {
-      max-height: calc(100vh - 90px);
-      overflow-y: auto;
-    }
-
-    .rotate-180 {
-      transform: rotate(180deg);
-    }
-  </style>
 </head>
 
 <body class="bg-[#0F172A] text-white inter-text">
-  <!-- Navigation Bar -->
+
 
   <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
     <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
       <!-- Logo -->
-      <!-- <div>
-        <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
-
-      </div> -->
+     
 
        <a href="index.html" class="flex items-center gap-3">
 
         <!-- Logo Image -->
-        <img class="h-14 w-34" src="picture/DL.png" alt="Digital Lord Logo">
+        <img class="h-9 w-auto sm:h-10 md:h-14" src="picture/DL.png" alt="Digital Lord Logo">
 
         <!-- Desktop Text -->
         <div class="hidden lg:flex flex-col justify-center font-['Inter'] leading-tight">
@@ -313,51 +250,456 @@
 
 
 
-  <!-- Main About Section -->
+<main class="flex-grow">
 
-  <section class="max-w-6xl mx-auto px-6 pt-32 pb-16">
-    <h1 class="text-4xl font-bold mb-12 text-center">About</h1>
+   
+    <!-- ABOUT HERO + STORY -->
+  
 
-    <div class="grid md:grid-cols-2 gap-10">
+    <section class="relative overflow-hidden about-hero-section pt-36 lg:pt-44 pb-20 lg:pb-28">
 
-      <!-- Left Column (vertical accent line) -->
-      <div class="relative pl-6 border-l-4 border-[#E44D26] space-y-6">
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">At Digital Lord, our mission is to empower businesses with
-            cutting-edge digital solutions that drive growth and innovation. With years of experience in the tech
-            industry, we bring together a team of talented professionals passionate about delivering results.</p>
-        </div>
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">We specialize in crafting high-quality, cost-effective
-            digital products tailored to your business needs. From startups to enterprises, we help organizations build
-            a strong digital foundation that stands out in a competitive landscape.</p>
-        </div>
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">What sets us apart is our commitment to innovation,
-            transparency, and client satisfaction. We don’t just build websites or apps — we build relationships based
-            on trust, communication, and shared success.</p>
-        </div>
-      </div>
+        <div class="about-dot-grid"></div>
+        <div class="about-glow-left"></div>
+        <div class="about-glow-right"></div>
 
-      <!-- Right Column -->
-      <div class="space-y-6">
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">Our team continuously learns and adapts to the ever-changing
-            world of technology, ensuring that our solutions are modern, scalable, and future-ready.</p>
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+
+            <!-- Breadcrumb -->
+
+            <div class="flex items-center gap-3 text-sm mb-10">
+
+                <a href="index.html" class="flex items-center gap-2 text-slate-300 hover:text-[#2EA4FF] duration-300">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Home
+
+                </a>
+
+                <i class="fa-solid fa-angle-right text-xs text-slate-500"></i>
+
+                <span class="text-[#2EA4FF] font-medium">
+
+                    About
+
+                </span>
+
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- LEFT -->
+
+                <div>
+
+                    <span
+                        class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#2EA4FF]/30 bg-[#2EA4FF]/10 text-[#2EA4FF] text-xs tracking-[3px] uppercase font-semibold">
+
+                        <span class="w-2 h-2 rounded-full bg-[#2EA4FF]"></span>
+
+                        About Digital Lord
+
+                    </span>
+
+                    <h1 class="mt-7 text-3xl md:text-5xl xl:text-6xl font-bold leading-tight text-white">
+
+                        We Build Digital
+
+                        <span class="block">
+
+                            Products That
+
+                        </span>
+
+                        <span class="text-[#F16529]">
+
+                            Drive Real Growth
+
+                        </span>
+
+                    </h1>
+
+                    <p class="mt-8 text-slate-300 text-lg leading-8 max-w-xl">
+
+                        At Digital Lord, our mission is to empower businesses
+                        with cutting-edge digital solutions that drive growth
+                        and innovation. We specialize in crafting high-quality,
+                        cost-effective digital products tailored to your
+                        business needs, from startups to enterprises.
+
+                    </p>
+
+                    <p class="mt-5 text-slate-400 leading-8 max-w-xl">
+
+                        What sets us apart is our commitment to innovation,
+                        transparency and client satisfaction. We don't just
+                        build websites or apps, we build relationships based
+                        on trust, communication and shared success.
+
+                    </p>
+
+                    <!-- Stats -->
+
+                    <div class="grid grid-cols-3 gap-5 mt-12">
+
+                        <div>
+
+                            <h3 class="text-3xl font-bold text-[#2EA4FF]">
+
+                                120+
+
+                            </h3>
+
+                            <p class="text-slate-400 text-sm mt-2">
+
+                                Projects Delivered
+
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="text-3xl font-bold text-[#F16529]">
+
+                                98%
+
+                            </h3>
+
+                            <p class="text-slate-400 text-sm mt-2">
+
+                                Client Satisfaction
+
+                            </p>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="text-3xl font-bold text-[#2EA4FF]">
+
+                                24/7
+
+                            </h3>
+
+                            <p class="text-slate-400 text-sm mt-2">
+
+                                Expert Support
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT - Glass Highlight Card -->
+
+                <div class="relative flex justify-center">
+
+                    <div class="about-hero-card">
+
+                        <div class="about-hero-card-glow"></div>
+
+                        <i class="fa-solid fa-quote-left about-quote-icon"></i>
+
+                        <p class="about-hero-quote">
+
+                            Choose Digital Lord, where your digital
+                            transformation begins and grows.
+
+                        </p>
+
+                        <div class="about-hero-divider"></div>
+
+                        <div class="flex items-center gap-4">
+
+                            <div class="about-hero-badge">
+
+                                <i class="fa-solid fa-award"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4 class="text-white font-semibold">
+
+                                    Trusted by Growing Businesses
+
+                                </h4>
+
+                                <p class="text-slate-400 text-sm mt-1">
+
+                                    Across e-commerce, healthcare & finance
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow">
-          <p class="text-gray-300 text-lg leading-relaxed">We serve clients across industries — from e-commerce and
-            education to healthcare and finance — and treat every project as a new opportunity to exceed expectations.
-          </p>
+
+    </section>
+
+
+
+
+<!-- WHAT SETS US APART -->
+
+
+<section class="relative overflow-hidden about-values-section py-24 lg:py-28">
+
+    <div class="values-stripes"></div>
+    <div class="values-glow"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 lg:px-8">
+
+        <!-- Heading -->
+
+        <div class="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+
+            <span
+                class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#F16529]/30 bg-[#F16529]/10 text-[#F16529] text-xs tracking-[3px] uppercase font-semibold">
+
+                <span class="w-2 h-2 rounded-full bg-[#F16529]"></span>
+
+                What Drives Us
+
+            </span>
+
+            <h2 class="mt-6 text-3xl md:text-5xl font-bold leading-tight">
+
+                What Sets Us Apart
+
+            </h2>
+
+            <p class="mt-6 text-slate-300 text-lg leading-8">
+
+                The principles that guide every project we deliver and every
+                relationship we build.
+
+            </p>
+
         </div>
-        <div class="bg-[#1e293b] p-6 rounded-lg shadow border-l-4 border-[#E44D26]">
-          <p class="text-[#E44D26] font-semibold italic leading-relaxed">Choose Digital Lord – where your digital
-            transformation begins and grows.</p>
+
+        <!-- Values Grid -->
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="value-panel" style="--v-color:#2EA4FF; --v-color-rgb:46,164,255;">
+
+                <div class="value-icon-wrap">
+
+                    <i class="fa-solid fa-bullseye"></i>
+
+                </div>
+
+                <h3>Our Mission</h3>
+
+                <p>To empower businesses with digital solutions that create real, measurable growth.</p>
+
+                <div class="value-glow"></div>
+
+            </div>
+
+            <div class="value-panel" style="--v-color:#F16529; --v-color-rgb:241,101,41;">
+
+                <div class="value-icon-wrap">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </div>
+
+                <h3>Our Vision</h3>
+
+                <p>To be a trusted digital partner for businesses building for the long term.</p>
+
+                <div class="value-glow"></div>
+
+            </div>
+
+            <div class="value-panel" style="--v-color:#2EA4FF; --v-color-rgb:46,164,255;">
+
+                <div class="value-icon-wrap">
+
+                    <i class="fa-solid fa-handshake"></i>
+
+                </div>
+
+                <h3>Transparency</h3>
+
+                <p>Clear communication and honest collaboration at every stage of the project.</p>
+
+                <div class="value-glow"></div>
+
+            </div>
+
+            <div class="value-panel" style="--v-color:#F16529; --v-color-rgb:241,101,41;">
+
+                <div class="value-icon-wrap">
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                </div>
+
+                <h3>Innovation</h3>
+
+                <p>We stay ahead of trends so your business always has a modern edge.</p>
+
+                <div class="value-glow"></div>
+
+            </div>
+
         </div>
-      </div>
 
     </div>
-  </section>
+
+</section>
+
+
+<!-- OUR JOURNEY -->
+
+
+<section class="relative overflow-hidden about-journey-section py-24 lg:py-28">
+
+    <div class="journey-radar"></div>
+    <div class="journey-conic"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6 lg:px-8">
+
+        <!-- Heading -->
+
+        <div class="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+
+            <span
+                class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#2EA4FF]/30 bg-[#2EA4FF]/10 text-[#2EA4FF] text-xs tracking-[3px] uppercase font-semibold">
+
+                <span class="w-2 h-2 rounded-full bg-[#2EA4FF]"></span>
+
+                Our Journey
+
+            </span>
+
+            <h2 class="mt-6 text-3xl md:text-5xl font-bold leading-tight">
+
+                Milestones That Shaped Us
+
+            </h2>
+
+            <p class="mt-6 text-slate-300 text-lg leading-8">
+
+                From a small idea to a growing digital partner trusted by
+                businesses across industries.
+
+            </p>
+
+        </div>
+
+        <!-- Timeline -->
+
+        <div class="journey-timeline">
+
+            <div class="journey-item" style="--j-color:#2EA4FF; --j-color-rgb:46,164,255;">
+
+                <div class="journey-dot">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+                <div class="journey-content">
+
+                    <span class="journey-year">2019</span>
+
+                    <h4>The Idea Was Born</h4>
+
+                    <p>Digital Lord started with a simple goal, helping businesses build a real digital presence.</p>
+
+                </div>
+
+            </div>
+
+            <div class="journey-item" style="--j-color:#F16529; --j-color-rgb:241,101,41;">
+
+                <div class="journey-dot">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+                <div class="journey-content">
+
+                    <span class="journey-year">2020</span>
+
+                    <h4>First Client Projects</h4>
+
+                    <p>We delivered our first web and app projects, building trust one client at a time.</p>
+
+                </div>
+
+            </div>
+
+            <div class="journey-item" style="--j-color:#2EA4FF; --j-color-rgb:46,164,255;">
+
+                <div class="journey-dot">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div class="journey-content">
+
+                    <span class="journey-year">2022</span>
+
+                    <h4>Growing the Team</h4>
+
+                    <p>We expanded into marketing, security and business development to serve clients end to end.</p>
+
+                </div>
+
+            </div>
+
+            <div class="journey-item" style="--j-color:#F16529; --j-color-rgb:241,101,41;">
+
+                <div class="journey-dot">
+
+                    <i class="fa-solid fa-globe"></i>
+
+                </div>
+
+                <div class="journey-content">
+
+                    <span class="journey-year">2024</span>
+
+                    <h4>Serving Businesses Globally</h4>
+
+                    <p>Today we support startups and enterprises across industries with full digital solutions.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+ <button id="scrollTopBtn"
+        class="fixed bottom-6 right-6 w-12 h-12 bg-white text-black rounded-full shadow-lg flex items-center justify-center opacity-0 scale-0 transition-all duration-300 z-[9999]">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
   <footer>
     <!-- Top Part -->
@@ -463,6 +805,7 @@
   </footer>
 
   <script src="script/nav.js"></script>
+  <script src="script/button.js"></script>
 
 </body>
 

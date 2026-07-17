@@ -12,79 +12,28 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="icon" type="image/png" href="picture/DL.png">
 
-  <style>
-    .inter-text {
-      font-family: "Inter", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-    }
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/contact-us/what-brings.css">
+  <link rel="stylesheet" href="css/contact-us/our-misson.css">
+  <link rel="stylesheet" href="css/contact-us/dashborad.css">
+  <link rel="stylesheet" href="css/contact-us/form.css">
 
-    /* Desktop dropdown animation */
-    .group-hover\:opacity-100 {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
 
-    .group:hover .group-hover\:opacity-100 {
-      opacity: 1;
-    }
-
-    .group-hover\:visible {
-      visibility: hidden;
-      transition: visibility 0.3s ease;
-    }
-
-    .group:hover .group-hover\:visible {
-      visibility: visible;
-    }
-
-    /* Mobile dropdown animation */
-    .group-hover\:block {
-      display: none;
-      transition: all 0.3s ease;
-    }
-
-    .group:hover .group-hover\:block {
-      display: block;
-    }
-
-    /* Mobile menu animation */
-       #mobile-menu {
-      transition: max-height 0.3s ease-out;
-      max-height: 0;
-      overflow: hidden;
-    }
-
-    #mobile-menu:not(.hidden) {
-      max-height: calc(100vh - 90px);
-      overflow-y: auto;
-    }
-
-    .rotate-180 {
-      transform: rotate(180deg);
-    }
-
-    
-  </style>
 </head>
 
-<body class="bg-[#0F172A] text-white font-sans">
+<body class="inter-text">
 
-  <!-- Navigation Bar --> 
-   <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
+  <!-- Navigation Bar -->
+  <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
     <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
       <!-- Logo -->
-        <!-- <div>
-        <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
-      
-      </div> -->
 
-      
-       <a href="index.html" class="flex items-center gap-3">
+
+
+      <a href="index.html" class="flex items-center gap-3">
 
         <!-- Logo Image -->
-        <img class="h-14 w-34" src="picture/DL.png" alt="Digital Lord Logo">
+        <img class="h-9 w-auto sm:h-10 md:h-14" src="picture/DL.png" alt="Digital Lord Logo">
 
         <!-- Desktop Text -->
         <div class="hidden lg:flex flex-col justify-center font-['Inter'] leading-tight">
@@ -130,7 +79,7 @@
 
 
 
-         <!-- Business Development Dropdown -->
+        <!-- Business Development Dropdown -->
         <div class="relative group">
           <a href="businessDevelopment.html" class="text-white hover:text-gray-300 transition-colors flex items-center">
             Business Development
@@ -173,7 +122,7 @@
         </div>
 
 
-      
+
 
         <a href="contact.html" class="text-white hover:text-gray-300">Contact Us</a>
       </nav>
@@ -226,58 +175,58 @@
         </div>
 
 
-          <!-- Business Development Mobile Dropdown -->
+        <!-- Business Development Mobile Dropdown -->
 
-          <div class="relative">
+        <div class="relative">
 
 
-            <div class="flex justify-between items-center text-white ">
+          <div class="flex justify-between items-center text-white ">
 
-              <a href="businessDevelopment.html" class="flex-1 hover:bg-slate-800 rounded transition-colors">
+            <a href="businessDevelopment.html" class="flex-1 hover:bg-slate-800 rounded transition-colors">
 
-                Business Development
+              Business Development
 
-              </a>
+            </a>
 
-              <button id="mobile-business-btn" class="ml-3 px-2">
+            <button id="mobile-business-btn" class="ml-3 px-2">
 
-                <i id="business-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
-                </i>
+              <i id="business-arrow" class="fas fa-chevron-down text-sm transition-transform duration-300">
+              </i>
 
-              </button>
-
-            </div>
-
-            <div id="mobile-business-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
-
-              <a href="swotAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                SWOT Analysis
-              </a>
-
-              <a href="pestelAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                PESTEL Analysis
-              </a>
-
-              <a href="marketResearch.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                Market Research & Strategy
-              </a>
-
-              <a href="branding.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                Branding
-              </a>
-
-              <a href="startupSupport.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                Startup & SME Support
-              </a>
-
-              <a href="digitalTransformation.html"
-                class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
-                Digital Transformation
-              </a>
-
-            </div>
+            </button>
 
           </div>
+
+          <div id="mobile-business-dropdown" class="hidden bg-slate-800 rounded-md mt-1 ml-3 overflow-hidden">
+
+            <a href="swotAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+              SWOT Analysis
+            </a>
+
+            <a href="pestelAnalysis.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+              PESTEL Analysis
+            </a>
+
+            <a href="marketResearch.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+              Market Research & Strategy
+            </a>
+
+            <a href="branding.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+              Branding
+            </a>
+
+            <a href="startupSupport.html" class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+              Startup & SME Support
+            </a>
+
+            <a href="digitalTransformation.html"
+              class="block px-4 py-2 text-white hover:bg-slate-900 transition-colors">
+              Digital Transformation
+            </a>
+
+          </div>
+
+        </div>
 
 
 
@@ -290,103 +239,891 @@
 
 
 
-  <!-- Top Section -->
-  <section class="bg-gradient-to-b from-[#E44D26] to-[#000150] pt-32 pb-16 text-center px-4">
-    <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
-    <p class="max-w-2xl mx-auto text-gray-200">
-      We’d love to hear from you! Whether you have a question about our services or want to discuss your next big
-      project, we’re here to help.
-    </p>
-  </section>
+  <main class="flex-grow">
+    <!-- Top Section -->
+    <section class="bg-gradient-to-b from-[#E44D26] to-[#000150] pt-32 pb-16 text-center px-4">
+      <h1 class="text-2xl  md:text-5xl font-bold mb-4">Let's Build Something Extraordinary</h1>
+      <p class="max-w-2xl mx-auto text-gray-200">
+        Whether you need a website, mobile app,
+        digital marketing, or business strategy—
+        our team is ready to help.
+      </p>
+      <!-- Breadcrumb -->
+      <div class="inline-flex items-center gap-2 mt-6 px-5 py-2">
 
-  <!-- Contact Form Section -->
-  
-  <section class="bg-[#041021] py-16 px-4">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+        <a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-[#2EA4FF] transition">
 
-      <!--Form -->
-      <div class="bg-black border border-[#E44D26] rounded-lg p-6">
-        <form id="contactForm" class="space-y-6">
+          <i class="fa-solid fa-house text-sm "></i>
 
-          <!-- Full Name -->
-          <div>
-            <input type="text" id="name" placeholder="Full Name *"
-              class="w-full px-4 py-2 rounded bg-white text-black placeholder-gray-500 focus:outline-none" />
-            <p id="nameError" class="text-red-500 text-sm mt-1 hidden">Full Name is required</p>
-          </div>
+          <span class="text-sm font-medium">
+            Home
+          </span>
 
-          <!-- Email -->
-          <div>
-            <input type="email" id="email" placeholder="Email *"
-              class="w-full px-4 py-2 rounded bg-white text-black placeholder-gray-500 focus:outline-none" />
-            <p id="emailError" class="text-red-500 text-sm mt-1 hidden">Valid Email is required</p>
-          </div>
+        </a>
 
-          <!-- Message -->
-          <div>
-            <textarea id="message" rows="5" placeholder="Message *"
-              class="w-full px-4 py-2 rounded bg-white text-black placeholder-gray-500 focus:outline-none"></textarea>
-            <p id="messageError" class="text-red-500 text-sm mt-1 hidden">Message is required</p>
-          </div>
+        <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
 
-          <!-- Submit -->
-          <button type="submit" class="w-full bg-[#E44D26] hover:bg-[#c53c1d] text-white py-2 px-6 rounded transition">
-            SUBMIT NOW
-          </button>
-        </form>
+        <span class="text-sm font-semibold text-[#2EA4FF]">
+          Contact Us
+        </span>
+
+      </div>
+    </section>
+
+
+
+
+    <!-- WHAT BRINGS YOU HERE TODAY -->
+
+
+    <section class="what-brings-section relative overflow-hidden py-24">
+
+      <!-- Background Effects -->
+      <div class="wb-glow wb-glow-1"></div>
+      <div class="wb-glow wb-glow-2"></div>
+
+      <div class="max-w-7xl mx-auto px-5 relative z-10">
+
+        <!-- Section Heading -->
+        <div class="text-center max-w-3xl mx-auto">
+
+          <span class="wb-badge">
+            Let's Build Something Amazing
+          </span>
+
+          <h2 class="wb-title mt-5">
+            What Brings You
+            <span>Here Today?</span>
+          </h2>
+
+          <p class="wb-description mt-6">
+            Whether you're launching a startup, growing your business,
+            or looking for digital transformation, we're here to help
+            you turn ideas into impactful solutions.
+          </p>
+
+        </div>
+
+        <!-- Cards -->
+        <div class="wb-grid mt-16">
+
+          <!-- Card 1 -->
+          <a href="contact.html" class="wb-card">
+
+            <div class="wb-icon">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+
+            <h3>
+              Website Development
+            </h3>
+
+            <p>
+              Modern, responsive websites built for performance,
+              user experience, and business growth.
+            </p>
+
+            <div class="wb-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+          </a>
+
+          <!-- Card 2 -->
+          <a href="contact.html" class="wb-card">
+
+            <div class="wb-icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+
+            <h3>
+              Mobile App Development
+            </h3>
+
+            <p>
+              Native and cross-platform applications designed
+              for seamless mobile experiences.
+            </p>
+
+            <div class="wb-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+          </a>
+
+          <!-- Card 3 -->
+          <a href="contact.html" class="wb-card">
+
+            <div class="wb-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <h3>
+              Digital Marketing
+            </h3>
+
+            <p>
+              Expand your reach with strategic SEO,
+              social media, and digital campaigns.
+            </p>
+
+            <div class="wb-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+          </a>
+
+          <!-- Card 4 -->
+          <a href="contact.html" class="wb-card">
+
+            <div class="wb-icon">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+
+            <h3>
+              Business Development
+            </h3>
+
+            <p>
+              Smart strategies that help businesses
+              scale, innovate, and stay competitive.
+            </p>
+
+            <div class="wb-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+          </a>
+
+          <!-- Card 5 -->
+          <a href="contact.html" class="wb-card">
+
+            <div class="wb-icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+            <h3>
+              E-Commerce Solutions
+            </h3>
+
+            <p>
+              Launch secure online stores that deliver
+              exceptional shopping experiences.
+            </p>
+
+            <div class="wb-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+          </a>
+
+          <!-- Card 6 -->
+          <a href="contact.html" class="wb-card">
+
+            <div class="wb-icon">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <h3>
+              Custom Digital Solution
+            </h3>
+
+            <p>
+              Have a unique idea? Let's discuss a
+              tailored solution built around your goals.
+            </p>
+
+            <div class="wb-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+          </a>
+
+        </div>
+
+        <!-- Bottom CTA -->
+
+        <div class="wb-bottom mt-16">
+
+          <p>
+            Not sure which solution is right for you?
+          </p>
+
+          <h3>
+            Tell us your vision — we'll help you find the perfect digital solution.
+          </h3>
+
+        </div>
+
       </div>
 
-      <!-- Right: Contact Info -->
-      <div class="flex flex-col justify-center space-y-6 text-center md:text-left">
-        <div class="flex items-center space-x-3">
-        
-          <svg class="w-6 h-6 fill-current text-[#2EA4FF]" viewBox="0 0 24 24">
-            <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 
+    </section>
+
+
+
+
+
+    <!-- YOUR VISION → OUR EXECUTION -->
+
+
+    <section class="vision-section">
+
+      <!-- Background Effects -->
+      <div class="vision-glow vision-glow-1"></div>
+      <div class="vision-glow vision-glow-2"></div>
+
+      <div class="max-w-7xl mx-auto px-5 relative z-10">
+
+        <!-- Heading -->
+
+        <div class="text-center max-w-4xl mx-auto mb-24">
+
+          <span
+            class="inline-flex items-center px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-[#E44D26] text-sm font-semibold">
+            Our Creative Journey
+          </span>
+
+          <h2 class="mt-6 text-2xl md:text-5xl font-bold text-white leading-tight">
+
+            Your Vision
+
+            <span class="text-[#E44D26]">→</span>
+
+            Our Execution
+
+          </h2>
+
+          <p class="mt-6 text-gray-300 text-base leading-8 max-w-3xl mx-auto">
+
+            Every successful digital product begins with a simple conversation.
+            We transform your ideas into impactful solutions through a structured,
+            transparent, and collaborative process.
+
+          </p>
+
+        </div>
+
+
+
+        <!-- Timeline -->
+
+        <div class="vision-timeline">
+
+          <!-- Step 01 -->
+
+          <div class="vision-item left">
+
+            <div class="vision-number">
+              01
+            </div>
+
+            <div class="vision-card p-8">
+
+              <div class="vision-icon">
+                <i class="fa-regular fa-comments"></i>
+              </div>
+
+              <h3 class="text-2xl font-bold text-white mb-4">
+                You Share
+              </h3>
+
+              <p class="text-gray-300 leading-8">
+                Tell us about your ideas, business goals, and challenges.
+                Every successful project begins with understanding your vision.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Step 02 -->
+
+          <div class="vision-item right">
+
+            <div class="vision-number">
+              02
+            </div>
+
+            <div class="vision-card p-8">
+
+              <div class="vision-icon">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+              </div>
+
+              <h3 class="text-2xl font-bold text-white mb-4">
+                We Discover
+              </h3>
+
+              <p class="text-gray-300 leading-8">
+                We carefully analyze your requirements, research opportunities,
+                and create the best strategy tailored to your business.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Step 03 -->
+
+          <div class="vision-item left">
+
+            <div class="vision-number">
+              03
+            </div>
+
+            <div class="vision-card p-8">
+
+              <div class="vision-icon">
+                <i class="fa-solid fa-pen-ruler"></i>
+              </div>
+
+              <h3 class="text-2xl font-bold text-white mb-4">
+                We Design
+              </h3>
+
+              <p class="text-gray-300 leading-8">
+                Our designers craft intuitive user experiences and modern
+                interfaces that perfectly reflect your brand identity.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Step 04 -->
+
+          <div class="vision-item right">
+
+            <div class="vision-number">
+              04
+            </div>
+
+            <div class="vision-card p-8">
+
+              <div class="vision-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+
+              <h3 class="text-2xl font-bold text-white mb-4">
+                We Develop
+              </h3>
+
+              <p class="text-gray-300 leading-8">
+                Using modern technologies, we build secure, scalable,
+                and high-performance digital products with precision.
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- Step 05 -->
+
+          <div class="vision-item left">
+
+            <div class="vision-number">
+              05
+            </div>
+
+            <div class="vision-card p-8">
+
+              <div class="vision-icon">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+
+              <h3 class="text-2xl font-bold text-white mb-4">
+                You Launch
+              </h3>
+
+              <p class="text-gray-300 leading-8">
+                After testing and optimization, your solution goes live,
+                empowering your business to grow with confidence.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Bottom Text -->
+
+        <div class="text-center max-w-3xl mx-auto mt-16">
+
+          <h3 class="text-2xl md:text-4xl font-bold text-white">
+
+            Turning ideas into digital success —
+
+            one step at a time.
+
+          </h3>
+
+          <p class="mt-5 text-gray-300 leading-8">
+
+            From your first conversation to the final launch,
+            we're committed to delivering solutions that create lasting value.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+
+    </section>
+
+
+
+
+
+
+    <!-- BUSINESS GROWTH DASHBOARD -->
+
+
+    <section class="growth-dashboard-section py-20 md:py-28 relative overflow-hidden">
+
+      <!-- Background Elements -->
+      <div class="growth-shape growth-shape-1"></div>
+      <div class="growth-shape growth-shape-2"></div>
+
+      <div class="max-w-7xl mx-auto px-5 relative z-10">
+
+        <!-- Heading -->
+
+        <div class="text-center max-w-4xl mx-auto mb-16">
+
+          <span
+            class="inline-flex items-center px-5 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-[#E44D26] text-sm font-semibold">
+
+            Performance Dashboard
+
+          </span>
+
+          <h2 class="mt-6 text-2xl md:text-5xl font-bold text-white leading-tight">
+
+            Business Growth Dashboard
+
+          </h2>
+
+          <p class="mt-6 text-gray-300 text-base leading-8 max-w-3xl mx-auto">
+
+            Real results backed by strategy, innovation, and execution.
+            We focus on measurable outcomes that help businesses scale
+            with confidence.
+
+          </p>
+
+        </div>
+
+        <!-- Dashboard Area -->
+
+        <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+
+          <!-- Chart Area -->
+
+          <div class="lg:col-span-7 growth-chart-card p-8 md:p-10">
+
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-10">
+
+              Performance Overview
+
+            </h3>
+
+            <!-- Projects -->
+
+            <div class="mb-8">
+
+              <div class="flex justify-between mb-3">
+
+                <span class="text-gray-300">
+                  Projects Delivered
+                </span>
+
+                <span class="text-white font-semibold">
+                  120+
+                </span>
+
+              </div>
+
+              <div class="growth-bar-bg">
+                <div class="growth-bar projects-bar"></div>
+              </div>
+
+            </div>
+
+            <!-- Satisfaction -->
+
+            <div class="mb-8">
+
+              <div class="flex justify-between mb-3">
+
+                <span class="text-gray-300">
+                  Client Satisfaction
+                </span>
+
+                <span class="text-white font-semibold">
+                  98%
+                </span>
+
+              </div>
+
+              <div class="growth-bar-bg">
+                <div class="growth-bar satisfaction-bar"></div>
+              </div>
+
+            </div>
+
+            <!-- Industries -->
+
+            <div class="mb-8">
+
+              <div class="flex justify-between mb-3">
+
+                <span class="text-gray-300">
+                  Industries Served
+                </span>
+
+                <span class="text-white font-semibold">
+                  15+
+                </span>
+
+              </div>
+
+              <div class="growth-bar-bg">
+                <div class="growth-bar industries-bar"></div>
+              </div>
+
+            </div>
+
+            <!-- Support -->
+
+            <div>
+
+              <div class="flex justify-between mb-3">
+
+                <span class="text-gray-300">
+                  Dedicated Support
+                </span>
+
+                <span class="text-white font-semibold">
+                  24/7
+                </span>
+
+              </div>
+
+              <div class="growth-bar-bg">
+                <div class="growth-bar support-bar"></div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Stats Area -->
+
+          <div class="lg:col-span-5">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 h-full">
+
+              <!-- Card 1 -->
+
+              <div class="growth-stat-card">
+
+                <h3>120+</h3>
+
+                <p>
+                  Projects Delivered
+                </p>
+
+              </div>
+
+              <!-- Card 2 -->
+
+              <div class="growth-stat-card">
+
+                <h3>98%</h3>
+
+                <p>
+                  Client Satisfaction
+                </p>
+
+              </div>
+
+              <!-- Card 3 -->
+
+              <div class="growth-stat-card">
+
+                <h3>15+</h3>
+
+                <p>
+                  Industries Served
+                </p>
+
+              </div>
+
+              <!-- Card 4 -->
+
+              <div class="growth-stat-card">
+
+                <h3>24/7</h3>
+
+                <p>
+                  Dedicated Support
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Bottom Text -->
+
+        <div class="text-center max-w-4xl mx-auto mt-16">
+
+          <h3 class="text-2xl md:text-4xl font-bold text-white">
+
+            Helping businesses grow through technology,
+            strategy, and innovation.
+
+          </h3>
+
+          <p class="mt-5 text-gray-300 leading-8">
+
+            We don't just deliver projects — we create measurable impact
+            that drives long-term success.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- Contact Form Section -->
+
+    <section class="contact-form-section  bg-[#041021] py-16 px-4">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <!--Form -->
+        <div class="bg-black border border-[#E44D26] rounded-lg p-6">
+          <form id="contactForm" class="space-y-6">
+
+            <!-- Full Name -->
+            <div>
+              <input type="text" id="name" placeholder="Full Name *"
+                class="w-full px-4 py-2 rounded bg-white text-black placeholder-gray-500 focus:outline-none" />
+              <p id="nameError" class="text-red-500 text-sm mt-1 hidden">Full Name is required</p>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <input type="email" id="email" placeholder="Email *"
+                class="w-full px-4 py-2 rounded bg-white text-black placeholder-gray-500 focus:outline-none" />
+              <p id="emailError" class="text-red-500 text-sm mt-1 hidden">Valid Email is required</p>
+            </div>
+
+            <!-- Message -->
+            <div>
+              <textarea id="message" rows="5" placeholder="Message *"
+                class="w-full px-4 py-2 rounded bg-white text-black placeholder-gray-500 focus:outline-none"></textarea>
+              <p id="messageError" class="text-red-500 text-sm mt-1 hidden">Message is required</p>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit"
+              class="w-full bg-[#E44D26] hover:bg-[#c53c1d] text-white py-2 px-6 rounded transition">
+              SUBMIT NOW
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Contact Info -->
+        <div class="flex flex-col justify-center space-y-6 text-center md:text-left">
+          <div class="flex items-center space-x-3">
+
+            <svg class="w-6 h-6 fill-current text-[#2EA4FF]" viewBox="0 0 24 24">
+              <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 
           0-2.5-1.12-2.5-2.5s1.12-2.5 
           2.5-2.5 2.5 1.12 2.5 2.5-1.12 
           2.5-2.5 2.5z" />
-          </svg>
-          <p class="text-gray-300">Digital Lord, London, UK</p>
-        </div>
+            </svg>
+            <p class="text-gray-300">Digital Lord, London, UK</p>
+          </div>
 
-        <div class="flex items-center space-x-3">
-          <!-- Phone Icon -->
-          <svg class="w-6 h-6 fill-current text-[#2EA4FF]" viewBox="0 0 24 24">
-            <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 
+          <div class="flex items-center space-x-3">
+            <!-- Phone Icon -->
+            <svg class="w-6 h-6 fill-current text-[#2EA4FF]" viewBox="0 0 24 24">
+              <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 
           1 0 011.05-.24c1.12.37 2.33.57 3.54.57a1 1 0 011 
           1V20a1 1 0 01-1 1C10.29 21 3 13.71 3 
           5a1 1 0 011-1h3.5a1 1 0 011 
           1c0 1.21.2 2.42.57 3.54.14.37.05.78-.24 
           1.05l-2.21 2.2z" />
-          </svg>
-          <p class="text-gray-300">+44 7824 770279</p>
-        </div>
+            </svg>
+            <p class="text-gray-300">+44 7824 770279</p>
+          </div>
 
-        <div class="flex items-center space-x-3">
-          <!-- Email Icon -->
-          <svg class="w-6 h-6 fill-current text-[#2EA4FF]" viewBox="0 0 24 24">
-            <path d="M20 4H4c-1.1 0-2 .9-2 
+          <div class="flex items-center space-x-3">
+            <!-- Email Icon -->
+            <svg class="w-6 h-6 fill-current text-[#2EA4FF]" viewBox="0 0 24 24">
+              <path d="M20 4H4c-1.1 0-2 .9-2 
           2v12c0 1.1.9 2 2 
           2h16c1.1 0 2-.9 
           2-2V6c0-1.1-.9-2-2-2zm0 
           4l-8 5-8-5V6l8 5 
           8-5v2z" />
-          </svg>
-          <p class="text-gray-300">info@digitallord.com</p>
+            </svg>
+            <p class="text-gray-300">info@digitallord.com</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
 
-  <!-- Join Community Section -->
-  <section class="bg-[#0F172A] py-12 text-center">
-    <h2 class="text-2xl font-bold mb-6">Join the Digital Lord community</h2>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#" class="bg-[#E44D26] hover:bg-[#c53c1d] text-white py-2 px-6 rounded transition">Get Started</a>
-      <a href="#" class="bg-[#000150] hover:bg-[#0d0d8c] text-white py-2 px-6 rounded transition">Learn More</a>
-    </div>
-  </section>
+
+
+
+    <!-- THANK YOU SECTION -->
+
+    <section class="thank-you-section py-20 relative overflow-hidden">
+
+      <!-- Background Glow -->
+      <div class="thank-glow thank-glow-1"></div>
+      <div class="thank-glow thank-glow-2"></div>
+
+      <div class="max-w-5xl mx-auto px-5 relative z-10">
+
+        <div class="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 md:p-14 text-center">
+
+          <!-- Badge -->
+
+          <span
+            class="inline-flex items-center px-5 py-2 rounded-full border border-[#E44D26]/20 bg-[#E44D26]/10 text-[#E44D26] text-sm font-semibold">
+
+            Thank You
+
+          </span>
+
+          <!-- Heading -->
+
+          <h2 class="mt-6 text-2xl md:text-5xl font-bold text-white leading-tight">
+
+            We Look Forward to Hearing From You
+
+          </h2>
+
+          <!-- Description -->
+
+          <p class="mt-6 max-w-3xl mx-auto text-gray-300 leading-8">
+
+            Thank you for considering <span class="text-white font-semibold">Digital Lord</span>.
+            Whether you have a question, an idea, or a complete project in mind,
+            we're here to listen and help you find the right solution.
+
+          </p>
+
+          <!-- Features -->
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+
+            <!-- Item -->
+
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-[#E44D26] transition">
+
+              <div
+                class="w-14 h-14 mx-auto rounded-full bg-[#E44D26]/15 flex items-center justify-center text-[#E44D26] text-2xl">
+
+                <i class="fa-solid fa-clock"></i>
+
+              </div>
+
+              <h3 class="text-white font-semibold mt-5">
+
+                Quick Response
+
+              </h3>
+
+              <p class="text-gray-400 mt-2 text-sm leading-7">
+
+                Our team typically replies within 24 hours.
+
+              </p>
+
+            </div>
+
+            <!-- Item -->
+
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-[#2EA4FF] transition">
+
+              <div
+                class="w-14 h-14 mx-auto rounded-full bg-[#2EA4FF]/15 flex items-center justify-center text-[#2EA4FF] text-2xl">
+
+                <i class="fa-solid fa-comments"></i>
+
+              </div>
+
+              <h3 class="text-white font-semibold mt-5">
+
+                Transparent Communication
+
+              </h3>
+
+              <p class="text-gray-400 mt-2 text-sm leading-7">
+
+                We keep every conversation clear, honest, and professional.
+
+              </p>
+
+            </div>
+
+            <!-- Item -->
+
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-[#E44D26] transition">
+
+              <div
+                class="w-14 h-14 mx-auto rounded-full bg-[#E44D26]/15 flex items-center justify-center text-[#E44D26] text-2xl">
+
+                <i class="fa-solid fa-handshake"></i>
+
+              </div>
+
+              <h3 class="text-white font-semibold mt-5">
+
+                Long-Term Partnership
+
+              </h3>
+
+              <p class="text-gray-400 mt-2 text-sm leading-7">
+
+                Our goal is to build lasting relationships, not just complete projects.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+
+
+  <button id="scrollTopBtn"
+    class="fixed bottom-6 right-6 w-12 h-12 bg-white text-black rounded-full shadow-lg flex items-center justify-center opacity-0 scale-0 transition-all duration-300 z-[9999]">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <!-- Footer -->
   <footer>
@@ -494,9 +1231,10 @@
 
   <script src="script/nav.js"></script>
   <script src="script/contact-form-validation.js"></script>
-  
+
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script  src="script/emailjs-config.js"></script>
+  <script src="script/emailjs-config.js"></script>
+  <script src="script/button.js"></script>
 
 
 </body>

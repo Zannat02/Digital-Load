@@ -14,13 +14,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="icon" type="image/png" href="picture/DL.png">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/nav.css">
+
     <style>
-        .inter-text {
-            font-family: "Inter", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-        }
+       
 
         header {
             transition: all 0.3s ease;
@@ -100,58 +98,7 @@
             color: #F16529;
         }
 
-
-
-
-        /* Desktop dropdown animation */
-        .group-hover\:opacity-100 {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .group:hover .group-hover\:opacity-100 {
-            opacity: 1;
-        }
-
-        .group-hover\:visible {
-            visibility: hidden;
-            transition: visibility 0.3s ease;
-        }
-
-        .group:hover .group-hover\:visible {
-            visibility: visible;
-        }
-
-        /* Mobile dropdown animation */
-        .group-hover\:block {
-            display: none;
-            transition: all 0.3s ease;
-        }
-
-        .group:hover .group-hover\:block {
-            display: block;
-        }
-
-        /* Mobile menu animation */
-         #mobile-menu {
-      transition: max-height 0.3s ease-out;
-      max-height: 0;
-      overflow: hidden;
-    }
-
-    #mobile-menu:not(.hidden) {
-      max-height: calc(100vh - 90px);
-      overflow-y: auto;
-    }
-
-    .rotate-180 {
-      transform: rotate(180deg);
-    }
-
-        
-      
-
-        @media (max-width: 767px) {
+     @media (max-width: 767px) {
 
             .project-card {
                 position: relative !important;
@@ -167,17 +114,14 @@
     <!-- Navigation Bar -->
     <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
         <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-            <!-- Logo -->
-            <!-- <div>
-                <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
-
-            </div> -->
+          
+         
 
             
        <a href="index.html" class="flex items-center gap-3">
 
         <!-- Logo Image -->
-        <img class="h-14 w-34" src="picture/DL.png" alt="Digital Lord Logo">
+        <img class="h-9 w-auto sm:h-10 md:h-14" src="picture/DL.png" alt="Digital Lord Logo">
 
         <!-- Desktop Text -->
         <div class="hidden lg:flex flex-col justify-center font-['Inter'] leading-tight">
@@ -409,24 +353,31 @@
                     results.
                 </p>
 
-                <!-- Breadcrumb -->
-                <div class="flex justify-center items-center gap-3 mt-8 text-sm">
+               
+               <!-- Breadcrumb -->
+<div class="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-8 text-xs sm:text-sm text-gray-300">
 
-                    <a href="index.html"
-                        class="flex items-center gap-2 text-gray-300 hover:text-[#2EA4FF] transition duration-300">
+    <a href="index.html"
+        class="flex items-center gap-1 whitespace-nowrap hover:text-[#2EA4FF] transition duration-300">
 
-                        <i class="fas fa-house text-xs"></i>
-                        Home
+        <i class="fas fa-house text-xs"></i>
+        Home
 
-                    </a>
+    </a>
 
-                    <i class="fas fa-chevron-right text-xs text-gray-400"></i>
+    <i class="fas fa-chevron-right text-xs text-gray-400"></i>
 
-                    <span class="text-[#E44D26]">
-                        Web Development
-                    </span>
+    <a href="service.html" class="whitespace-nowrap hover:text-[#2EA4FF] transition duration-300">
+        Service
+    </a>
 
-                </div>
+    <i class="fas fa-chevron-right text-xs text-gray-400"></i>
+
+    <span class="text-[#2EA4FF] whitespace-nowrap">
+        Web Development
+    </span>
+
+</div>
 
             </div>
 

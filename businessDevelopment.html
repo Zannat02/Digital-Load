@@ -12,65 +12,13 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="icon" type="image/png" href="picture/DL.png">
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/approces-bd.css">
     <link rel="stylesheet" href="css/why-choose-bd.css">
     <link rel="stylesheet" href="css/industry-bd.css">
     <link rel="stylesheet" href="css/cta-bd.css">
 
-    <style>
-        .inter-text {
-            font-family: "Inter", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        /* Desktop dropdown animation */
-        .group-hover\:opacity-100 {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .group:hover .group-hover\:opacity-100 {
-            opacity: 1;
-        }
-
-        .group-hover\:visible {
-            visibility: hidden;
-            transition: visibility 0.3s ease;
-        }
-
-        .group:hover .group-hover\:visible {
-            visibility: visible;
-        }
-
-        /* Mobile dropdown animation */
-        .group-hover\:block {
-            display: none;
-            transition: all 0.3s ease;
-        }
-
-        .group:hover .group-hover\:block {
-            display: block;
-        }
-
-        /* Mobile menu animation */
-
-        #mobile-menu {
-            transition: max-height 0.3s ease-out;
-            max-height: 0;
-            overflow: hidden;
-        }
-
-        #mobile-menu:not(.hidden) {
-            max-height: calc(100vh - 90px);
-            overflow-y: auto;
-        }
-
-        .rotate-180 {
-            transform: rotate(180deg);
-        }
-    </style>
+   
 </head>
 
 <body class="bg-[#0F172A] text-white inter-text">
@@ -79,16 +27,13 @@
     <header class="fixed top-0 left-0 w-full z-[999] bg-[#041021] ">
         <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
             <!-- Logo -->
-            <!-- <div>
-                <img class="h-16 w-40" src="picture/lord-logo2.png" alt="Logo" class="w-8 h-8">
-
-            </div> -->
+          
 
             
        <a href="index.html" class="flex items-center gap-3">
 
         <!-- Logo Image -->
-        <img class="h-14 w-34" src="picture/DL.png" alt="Digital Lord Logo">
+        <img class="h-9 w-auto sm:h-10 md:h-14" src="picture/DL.png" alt="Digital Lord Logo">
 
         <!-- Desktop Text -->
         <div class="hidden lg:flex flex-col justify-center font-['Inter'] leading-tight">
