@@ -1,3 +1,7 @@
+  body{
+    background:red !important;
+}
+
 
     .bg-hero {
       background-image: url('../picture/techBg.png');
