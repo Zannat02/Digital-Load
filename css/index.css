@@ -1,9 +1,4 @@
-  body{
-    background:red !important;
-}
-
-
-    .bg-hero {
+.bg-hero {
       background-image: url('../picture/techBg.png');
       background-size: cover;
       min-height: 100vh;
