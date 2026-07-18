@@ -191,6 +191,9 @@
 
 @media(max-width:1024px) {
 
+
+
+
        .swot-matrix {
 
               width: 320px;
@@ -231,7 +234,9 @@
 */
 
 @media(max-width:768px) {
+     
 
+         
 
 
        .swot-matrix {
@@ -254,14 +259,10 @@
 
        }
 
-       .hero-btn-primary,
-       .hero-btn-secondary {
-
-              width: 100%;
-
-       }
+     
 
 }
+
 
 
 

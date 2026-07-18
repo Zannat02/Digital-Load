@@ -13,16 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="icon" type="image/png" href="picture/DL.png">
 
-    <!-- <link rel="stylesheet" href="css/nav.css"> -->
+    <link rel="stylesheet" href="css/nav.css">
     <style>
-        .inter-text {
-            font-family: "Inter", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-
         /* hero section effect */
         @keyframes fadeInUp {
 
@@ -38,52 +30,7 @@
 
         }
 
-        /* Desktop dropdown animation */
-        .group-hover\:opacity-100 {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .group:hover .group-hover\:opacity-100 {
-            opacity: 1;
-        }
-
-        .group-hover\:visible {
-            visibility: hidden;
-            transition: visibility 0.3s ease;
-        }
-
-        .group:hover .group-hover\:visible {
-            visibility: visible;
-        }
-
-        
-        .group-hover\:block {
-            display: none;
-            transition: all 0.3s ease;
-        }
-
-        .group:hover .group-hover\:block {
-            display: block;
-        }
-
-     
-
-
-        #mobile-menu {
-            transition: max-height 0.3s ease-out;
-            max-height: 0;
-            overflow: hidden;
-        }
-
-        #mobile-menu:not(.hidden) {
-            max-height: calc(100vh - 90px);
-            overflow-y: auto;
-        }
-
-        .rotate-180 {
-            transform: rotate(180deg);
-        }
+  
 
         /* GLOW BORDER */
         .service-card {
@@ -154,6 +101,50 @@
             justify-content: center;
             color: #F16529;
             font-size: 22px;
+        }
+
+     
+
+       @media (orientation: landscape) and (max-height: 500px) {
+
+            .mobile-hero-section {
+                min-height: 100svh;
+            }
+
+            .hero-slide-content {
+                align-items: flex-start !important;
+                padding-top: 6rem;
+            }
+
+            .hero-slide-content > div {
+                padding-bottom: 3.5rem !important;
+            }
+
+            .hero-slide-content h1 {
+                font-size: 1.4rem !important;
+                margin-bottom: 0.5rem !important;
+                line-height: 1.25 !important;
+            }
+
+            .hero-slide-content p {
+                font-size: 0.75rem !important;
+                margin-bottom: 0.75rem !important;
+                line-height: 1.5 !important;
+            }
+
+            .hero-slide-content .mb-6 {
+                margin-bottom: 0.75rem !important;
+            }
+
+            .hero-dots {
+                bottom: 0.5rem !important;
+            }
+
+            .hero-dots button {
+                width: 8px !important;
+                height: 8px !important;
+            }
+
         }
     </style>
 </head>
@@ -292,7 +283,7 @@
                 <div class="relative">
                     <div class="flex justify-between items-center text-white ">
 
-                        <a href="service.html" class="flex-1 py-2  over:bg-slate-800 rounded transition-colors">
+                        <a href="service.html" class="flex-1 py-2  hover:bg-slate-800 rounded transition-colors">
 
                             Services
 
@@ -402,7 +393,7 @@
 
 
         <!-- HERO SECTION -->
-        <section class="relative min-h-[100svh] overflow-hidden flex items-center pt-28 md:pt-32 lg:pt-32">
+        <section class="relative min-h-[100svh] overflow-hidden flex items-center pt-28 md:pt-32 lg:pt-32 mobile-hero-section">
 
             <!-- SLIDER -->
             <div id="heroSlider" class="absolute inset-0">
@@ -418,50 +409,11 @@
                     <div class="absolute inset-0 bg-[#041021]/70"></div>
 
                     <!-- CONTENT -->
-                    <div class="relative z-20 h-full flex items-center justify-center text-center">
+                    <div class="relative z-20 h-full flex items-center justify-center text-center hero-slide-content">
 
                         <div class="max-w-4xl px-6 pb-16 sm:pb-6">
 
-                            <!-- BREADCRUMB -->
-                            <!-- <div
-                                class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs sm:text-sm text-gray-300 mb-6 animate-[fadeInUp_0.6s_ease]">
-
-                                <a href="index.html"
-                                    class="flex items-center gap-1 whitespace-nowrap hover:text-[#2EA4FF] transition">
-
-                                    <i class="fas fa-house text-xs"></i>
-                                    Home
-                                </a>
-
-                                <span>
-                                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                                </span>
-
-                                <a href="service.html" class="whitespace-nowrap hover:text-[#2EA4FF] transition">
-                                    Service
-                                </a>
-
-                                <span>
-                                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                                </span>
-
-                                <span class="text-[#2EA4FF] whitespace-nowrap">
-                                    Mobile App Development
-                                </span>
-
-                            </div>
-
-                           
-                            <h1
-                                class="text-3xl md:text-5xl font-bold leading-tight text-white mb-6 animate-[fadeInUp_1s_ease]">
-
-                                Build Smart
-                                <span class="text-[#2EA4FF]">
-                                    Mobile Apps
-                                </span>
-                                For Business
-
-                            </h1> -->
+                          
 
                                  <!-- BREADCRUMB -->
                             <div
@@ -541,46 +493,11 @@
 
                     <div class="absolute inset-0 bg-[#041021]/70"></div>
 
-                    <div class="relative z-20 h-full flex items-center justify-center text-center">
+                    <div class="relative z-20 h-full flex items-center justify-center text-center hero-slide-content">
 
                         <div class="max-w-4xl px-6 pb-16 sm:pb-6">
 
-                            <!-- <div
-                                class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs sm:text-sm text-gray-300 mb-6 animate-[fadeInUp_0.6s_ease]">
-
-                                <a href="index.html"
-                                    class="flex items-center gap-1 whitespace-nowrap hover:text-[#2EA4FF] transition">
-                                    <i class="fas fa-house text-xs"></i>
-                                    Home
-                                </a>
-
-                                <span>
-                                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                                </span>
-
-                                <a href="service.html" class="whitespace-nowrap hover:text-[#2EA4FF] transition">
-                                    Service
-                                </a>
-
-                                <span>
-                                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                                </span>
-
-                                <span class="text-[#2EA4FF] whitespace-nowrap">
-                                    Mobile App Development
-                                </span>
-
-                            </div>
-
-                            <h1
-                                class="text-3xl md:text-5xl font-bold leading-tight text-white mb-6 animate-[fadeInUp_1s_ease]">
-
-                                Modern UI &
-                                <span class="text-[#2EA4FF]">
-                                    Smooth Experience
-                                </span>
-
-                            </h1> -->
+                           
                                <div
                                 class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs sm:text-sm text-gray-300 mb-6 animate-[fadeInUp_0.6s_ease]">
 
@@ -654,45 +571,11 @@
 
                     <div class="absolute inset-0 bg-[#041021]/75"></div>
 
-                    <div class="relative z-20 h-full flex items-center justify-center text-center">
+                    <div class="relative z-20 h-full flex items-center justify-center text-center hero-slide-content">
 
                         <div class="max-w-4xl px-6 pb-16 sm:pb-6">
 
-                            <!-- <div
-                                class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs sm:text-sm text-gray-300 mb-6 animate-[fadeInUp_0.6s_ease]">
-
-                                <a href="index.html"
-                                    class="flex items-center gap-1 whitespace-nowrap hover:text-[#2EA4FF] transition">
-                                    <i class="fas fa-house text-xs"></i>
-                                    Home
-                                </a>
-
-                                <span>
-                                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                                </span>
-
-                                <a href="service.html" class="whitespace-nowrap hover:text-[#2EA4FF] transition">
-                                    Service
-                                </a>
-
-                                <span>
-                                    <i class="fa-solid fa-chevron-right text-xs"></i>
-                                </span>
-
-                                <span class="text-[#2EA4FF] whitespace-nowrap">
-                                    Mobile App Development
-                                </span>
-
-                            </div>
-
-                            <h1 class="text-3xl md:text-5xl font-bold text-white mb-6 animate-[fadeInUp_1s_ease]">
-
-                                Android & iOS
-                                <span class="text-[#2EA4FF]">
-                                    App Solutions
-                                </span>
-
-                            </h1> -->
+                          
 
                             <div class="max-w-4xl px-6 pb-16 sm:pb-6">
 
@@ -762,7 +645,7 @@
             </div>
 
             <!-- DOTS -->
-            <div class="absolute bottom-4 sm:bottom-6 lg:bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-30">
+            <div class="absolute bottom-4 sm:bottom-6 lg:bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-30 hero-dots">
                
                 <!-- absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3 z-30 -->
                 <button class="dot w-3 h-3 rounded-full bg-white"></button>

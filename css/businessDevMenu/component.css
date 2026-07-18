@@ -1124,7 +1124,7 @@ filter:drop-shadow(0 0 12px rgba(var(--panel-color-rgb),.55));
 
 /* ======================================================
       EXTRA SCROLL-DELAY FOR 5TH & 6TH PANEL
-      (PESTEL only — SWOT never has a 5th/6th panel,
+      
      ====================================================== */
 
 .swot-panel:nth-child(5).show {
