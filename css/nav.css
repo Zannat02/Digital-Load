@@ -1,55 +1,74 @@
  .inter-text {
-      font-family: "Inter", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-    }
+   font-family: "Inter", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+ }
 
-    /* Desktop dropdown animation */
-    /* .group-hover\:opacity-100 {
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
 
-    .group:hover .group-hover\:opacity-100 {
-      opacity: 1;
-    } */
 
-    .group-hover\:visible {
+ /* .group-hover\:visible {
       visibility: hidden;
       transition: visibility 0.3s ease;
     }
 
     .group:hover .group-hover\:visible {
       visibility: visible;
-    }
+    } */
 
-    /* Mobile dropdown animation */
-    .group-hover\:block {
-      display: none;
-      transition: all 0.3s ease;
-    }
+ /* Mobile dropdown animation */
+ .group-hover\:block {
+   display: none;
+   transition: all 0.3s ease;
+ }
 
-    .group:hover .group-hover\:block {
-      display: block;
-    }
+ .group:hover .group-hover\:block {
+   display: block;
+ }
 
-    /* Mobile menu animation */
-
-   
+ /* Mobile menu animation */
 
 
-    #mobile-menu {
-      transition: max-height 0.3s ease-out;
-      max-height: 0;
-      overflow: hidden;
-    }
 
-    #mobile-menu:not(.hidden) {
-      max-height: calc(100vh - 90px);
-      overflow-y: auto;
-    }
 
-    .rotate-180 {
-      transform: rotate(180deg);
-    }
+ #mobile-menu {
+   transition: max-height 0.3s ease-out;
+   max-height: 0;
+   overflow: hidden;
+ }
+
+ #mobile-menu:not(.hidden) {
+   max-height: calc(100vh - 90px);
+   overflow-y: auto;
+ }
+
+ .rotate-180 {
+   transform: rotate(180deg);
+ }
+
+
+
+ .group>div[class*="group-hover"] {
+   -webkit-transform: translateZ(0);
+   transform: translateZ(0);
+   will-change: opacity;
+   backface-visibility: hidden;
+   -webkit-mask-image: -webkit-radial-gradient(white, black);
+ }
+
+
+ @media (hover: none) {
+
+   header nav {
+     display: none !important;
+   }
+
+   #hamburger-btn {
+     display: flex !important;
+   }
+
+   #mobile-menu:not(.hidden) {
+     display: block !important;
+   }
+
+ }

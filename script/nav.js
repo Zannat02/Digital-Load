@@ -273,27 +273,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
-  // window.addEventListener('resize', function () {
-  //   if (window.innerWidth >= 1024 && mobileMenu) {
-  //     mobileMenu.classList.add('hidden');
-  //     if (hamburgerBtn) hamburgerBtn.setAttribute('aria-expanded', 'false');
-
-  //     if (hamburgerIcon && closeIcon) {
-  //       hamburgerIcon.classList.remove('hidden');
-  //       closeIcon.classList.add('hidden');
-  //     }
-
-  //     dropdownOpen = false;
-  //     if (mobileDropdown) mobileDropdown.classList.add('hidden');
-  //   }
-
-
-  //   businessDropdownOpen = false;
-
-  //   if (mobileBusinessDropdown) {
-  //     mobileBusinessDropdown.classList.add('hidden');
-  //   }
-  // });
 
 
 
