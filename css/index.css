@@ -399,3 +399,30 @@
       }
     }
   
+
+
+    /* Safari Dropdown Fix */
+.group > div[class*="group-hover"] {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: opacity;
+  backface-visibility: hidden;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+/* Touch devices (tablet + mobile) always get hamburger nav, like Android */
+@media (hover: none) {
+
+  header nav {
+    display: none !important;
+  }
+
+  #hamburger-btn {
+    display: flex !important;
+  }
+
+  #mobile-menu:not(.hidden) {
+    display: block !important;
+  }
+
+}
