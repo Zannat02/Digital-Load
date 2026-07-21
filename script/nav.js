@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
         display: none !important;
       }
 
-   #hamburger-btn {
+      #hamburger-btn {
         display: flex !important;
         align-items: center;
         justify-content: center;
@@ -159,11 +159,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     
-      #mobile-dropdown {
-      margin-left: 0 !important;
-    }
+   
 
-    /* Touch devices (tablet + mobile), regardless of width, get hamburger nav like Android */
+   
     @media (hover: none) {
 
       header nav {
@@ -180,7 +178,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-    /* Desktop Safari dropdown fix: force-open class controlled by JS below */
+   
+
     .group.force-open > div[class*="group-hover"] {
       opacity: 1 !important;
       visibility: visible !important;
@@ -220,33 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   if (hamburgerBtn && mobileMenu) {
-    // hamburgerBtn.addEventListener('click', function () {
-    //   mobileMenu.classList.toggle('hidden');
-    //   hamburgerBtn.setAttribute('aria-expanded', String(!mobileMenu.classList.contains('hidden')));
-
-
-    //   if (mobileMenu.classList.contains('hidden')) {
-    //     if (hamburgerIcon && closeIcon) {
-    //       hamburgerIcon.classList.remove('hidden');
-    //       closeIcon.classList.add('hidden');
-    //     }
-    //   } else {
-    //     if (hamburgerIcon && closeIcon) {
-    //       hamburgerIcon.classList.add('hidden');
-    //       closeIcon.classList.remove('hidden');
-    //     }
-    //   }
-
-
-    //   dropdownOpen = false;
-    //   if (mobileDropdown) mobileDropdown.classList.add('hidden');
-
-
-    //   businessDropdownOpen = false;
-
-    //   if (mobileBusinessDropdown)
-    //     mobileBusinessDropdown.classList.add('hidden');
-    // });
+    
 
     hamburgerBtn.addEventListener('click', function () {
 
