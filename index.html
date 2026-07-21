@@ -15,11 +15,11 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="picture/DL.png">
 
-   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/index.css">
 
 
- 
+
 
 </head>
 
@@ -31,7 +31,7 @@
   <header class="fixed top-0 left-0 w-full z-[999] bg-zinc-700/10 backdrop-blur-md shadow-sm">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
-    
+
 
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-3">
@@ -70,10 +70,18 @@
             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
             </svg></a>
-          <div class="absolute left-0 mt-2 w-56 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden ">
+          <!-- <div class="absolute left-0 mt-2 w-56 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden "> -->
 
-             
-
+          <div class="absolute left-0 top-full w-56 mt-1
+  bg-gray-100 text-gray-900
+  rounded-md shadow-lg
+  opacity-0 invisible
+  pointer-events-none
+  transition-opacity duration-200
+  group-hover:opacity-100
+  group-hover:visible
+  group-hover:pointer-events-auto
+  z-50">
             <a href="mobileApp.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">Mobile App
               Development</a>
             <a href="digitalMarketing.html"
@@ -98,10 +106,19 @@
 
           </a>
 
-          <div
-            class="absolute left-0 mt-2 w-64 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+          <!-- <div
+            class="absolute left-0 mt-2 w-64 bg-gray-100 text-gray-900 rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 overflow-hidden"> -->
 
-    
+          <div class="absolute left-0 top-full w-56 mt-1
+  bg-gray-100 text-gray-900
+  rounded-md shadow-lg
+  opacity-0 invisible
+  pointer-events-none
+  transition-opacity duration-200
+  group-hover:opacity-100
+  group-hover:visible
+  group-hover:pointer-events-auto
+  z-50">
 
             <a href="swotAnalysis.html" class="block px-4 py-2 hover:bg-gray-200 transition-colors duration-150">
               SWOT Analysis
@@ -422,19 +439,19 @@
 
     <!-- CARD 5 -->
     <div onclick="event.stopPropagation(); goToPage('businessDevelopment.html')"
-      class="service-card second-color relative p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all text-center pt-20 mx-auto w-full max-w-xs cursor-pointer" >
+      class="service-card second-color relative p-10 rounded-xl shadow-md hover:shadow-lg hover:-translate-y-1 transition-all text-center pt-20 mx-auto w-full max-w-xs cursor-pointer">
 
-        <div class=" mb-4 flex justify-center">
-      <i class="fa-brands fa-searchengin text-white text-5xl"></i>
-    </div>
-    <h3 class="text-sm font-semibold secondtext-color">Business Development</h3>
+      <div class=" mb-4 flex justify-center">
+        <i class="fa-brands fa-searchengin text-white text-5xl"></i>
+      </div>
+      <h3 class="text-sm font-semibold secondtext-color">Business Development</h3>
 
-    <div class="learn-btn absolute left-1/2 -translate-x-1/2 bottom-[-22px]">
-      <button class="learn-more-btn">
-        <span>Learn More</span>
-        <span class="arrow">→</span>
-      </button>
-    </div>
+      <div class="learn-btn absolute left-1/2 -translate-x-1/2 bottom-[-22px]">
+        <button class="learn-more-btn">
+          <span>Learn More</span>
+          <span class="arrow">→</span>
+        </button>
+      </div>
     </div>
 
     </div>
@@ -1582,9 +1599,9 @@ flex-shrink-0 h-[390px] flex flex-col justify-between text-left relative">
   <script src="script/index-fqa-section.js"></script>
   <script type="module" src="script/fqa-animation.js"></script>
 
-  <script  src="script/contact-form-validation.js"></script>
+  <script src="script/contact-form-validation.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script  src="script/emailjs-config.js"></script>
+  <script src="script/emailjs-config.js"></script>
 
 
   <script src="script/button.js"></script>

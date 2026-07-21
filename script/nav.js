@@ -162,28 +162,15 @@ document.addEventListener('DOMContentLoaded', function () {
    
 
    
-    @media (hover: none) {
-
-      header nav {
-        display: none !important;
-      }
-
-      #hamburger-btn {
-        display: flex !important;
-      }
-
-      #mobile-menu:not(.hidden) {
-        display: block !important;
-      }
-
-    }
+  
 
    
 
-    .group.force-open > div[class*="group-hover"] {
-      opacity: 1 !important;
-      visibility: visible !important;
-    }
+  .group.force-open > div{
+    opacity:1!important;
+    visibility:visible!important;
+    pointer-events:auto!important;
+}
     
   `;
   document.head.appendChild(mobileHeaderStyles);

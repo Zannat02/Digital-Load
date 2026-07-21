@@ -7,14 +7,7 @@
 
 
 
- /* .group-hover\:visible {
-      visibility: hidden;
-      transition: visibility 0.3s ease;
-    }
 
-    .group:hover .group-hover\:visible {
-      visibility: visible;
-    } */
 
    /* Mobile dropdown animation */
     #mobile-dropdown {
@@ -35,7 +28,7 @@
 
 
 
- #mobile-menu {
+ /* #mobile-menu {
    transition: max-height 0.3s ease-out;
    max-height: 0;
    overflow: hidden;
@@ -44,12 +37,48 @@
  #mobile-menu:not(.hidden) {
    max-height: calc(100vh - 90px);
    overflow-y: auto;
- }
+ } */
+
+ #mobile-menu{
+    display:block;
+    max-height:0;
+    overflow:hidden;
+
+    transition:
+        max-height .30s ease,
+        opacity .25s ease;
+
+    opacity:0;
+    visibility:hidden;
+
+    -webkit-overflow-scrolling:touch;
+}
+
+#mobile-menu:not(.hidden){
+
+    max-height:calc(100vh - 90px);
+
+    opacity:1;
+
+    visibility:visible;
+
+    overflow-y:auto;
+}
 
  .rotate-180 {
    transform: rotate(180deg);
  }
 
+
+ @supports (-webkit-touch-callout: none) {
+
+  .group > div {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: opacity;
+  }
+
+}
 
 
  
