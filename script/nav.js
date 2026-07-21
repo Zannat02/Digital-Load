@@ -158,8 +158,53 @@ document.addEventListener('DOMContentLoaded', function () {
         margin-left: 0 !important;
       }
     }
+    
+      #mobile-dropdown {
+      margin-left: 0 !important;
+    }
+
+    /* Touch devices (tablet + mobile), regardless of width, get hamburger nav like Android */
+    @media (hover: none) {
+
+      header nav {
+        display: none !important;
+      }
+
+      #hamburger-btn {
+        display: flex !important;
+      }
+
+      #mobile-menu:not(.hidden) {
+        display: block !important;
+      }
+
+    }
+
+    /* Desktop Safari dropdown fix: force-open class controlled by JS below */
+    .group.force-open > div[class*="group-hover"] {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    
   `;
   document.head.appendChild(mobileHeaderStyles);
+
+  // Desktop Safari dropdown fix: JS-controlled hover instead of pure CSS :hover
+  if (window.matchMedia('(hover: hover)').matches) {
+
+    document.querySelectorAll('header .group').forEach(function (groupEl) {
+
+      groupEl.addEventListener('mouseenter', function () {
+        groupEl.classList.add('force-open');
+      });
+
+      groupEl.addEventListener('mouseleave', function () {
+        groupEl.classList.remove('force-open');
+      });
+
+    });
+
+  }
 
 
   if (hamburgerIcon && closeIcon) {

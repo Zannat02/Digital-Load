@@ -16,7 +16,11 @@
       visibility: visible;
     } */
 
- /* Mobile dropdown animation */
+   /* Mobile dropdown animation */
+    #mobile-dropdown {
+      transition: all 0.3s ease;
+    }
+
  .group-hover\:block {
    display: none;
    transition: all 0.3s ease;
@@ -48,27 +52,4 @@
 
 
 
- .group>div[class*="group-hover"] {
-   -webkit-transform: translateZ(0);
-   transform: translateZ(0);
-   will-change: opacity;
-   backface-visibility: hidden;
-   -webkit-mask-image: -webkit-radial-gradient(white, black);
- }
-
-
- @media (hover: none) {
-
-   header nav {
-     display: none !important;
-   }
-
-   #hamburger-btn {
-     display: flex !important;
-   }
-
-   #mobile-menu:not(.hidden) {
-     display: block !important;
-   }
-
- }
+ 

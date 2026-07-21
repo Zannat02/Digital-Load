@@ -15,12 +15,12 @@
     }
 
 
-    .inter-text {
+    /* .inter-text {
       font-family: "Inter", sans-serif;
       font-optical-sizing: auto;
       font-weight: 400;
       font-style: normal;
-    }
+    } */
 
     .primary-color {
       background-color: #F16529;
@@ -294,7 +294,7 @@
 
 
 
-    #mobile-menu {
+    /* #mobile-menu {
       transition: max-height 0.3s ease-out;
       max-height: 0;
       overflow: hidden;
@@ -303,19 +303,18 @@
     #mobile-menu:not(.hidden) {
       max-height: calc(100vh - 90px);
       overflow-y: auto;
-    }
+    } */
 
-    /* Mobile dropdown animation */
-    #mobile-dropdown {
-      transition: all 0.3s ease;
-    }
 
-    .rotate-180 {
+
+  
+
+    /* .rotate-180 {
       transform: rotate(180deg);
-    }
+    } */
 
     /* Responsive adjustments */
-    @media (min-width: 1024px) {
+    /* @media (min-width: 1024px) {
       #mobile-menu {
         display: none !important;
       }
@@ -345,7 +344,9 @@
       #hamburger-btn {
         display: block !important;
       }
-    }
+    } */
+
+
 
     /* Mobile behavior */
     @media (max-width: 1023px) {
@@ -401,28 +402,3 @@
   
 
 
-    /* Safari Dropdown Fix */
-.group > div[class*="group-hover"] {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: opacity;
-  backface-visibility: hidden;
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
-}
-
-/* Touch devices (tablet + mobile) always get hamburger nav, like Android */
-@media (hover: none) {
-
-  header nav {
-    display: none !important;
-  }
-
-  #hamburger-btn {
-    display: flex !important;
-  }
-
-  #mobile-menu:not(.hidden) {
-    display: block !important;
-  }
-
-}
