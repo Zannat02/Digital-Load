@@ -1,4 +1,4 @@
- .inter-text {
+ /* .inter-text {
    font-family: "Inter", sans-serif;
    font-optical-sizing: auto;
    font-weight: 400;
@@ -39,4 +39,75 @@
 
 
 
+ */
 
+
+ .inter-text {
+   font-family: "Inter", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+ }
+
+
+
+
+
+  
+   #mobile-dropdown {
+      transition: all 0.3s ease;
+    }
+
+
+
+
+
+
+ #mobile-menu {
+   transition: max-height 0.3s ease-out;
+   max-height: 0;
+   overflow: hidden;
+ }
+
+ #mobile-menu:not(.hidden) {
+   /* Fallback for browsers without dvh (e.g. older Safari) */
+   max-height: calc(100vh - 90px);
+   /* iOS Safari: 100vh includes the URL bar, so the menu overshoots the
+      visible viewport and its lower items sit off-screen. dvh tracks the
+      actual visible height and fixes this. Chrome/Firefox support it too. */
+   max-height: calc(100dvh - 90px);
+   overflow-y: auto;
+ }
+
+
+
+ /* -------------------------------------------------------------------------
+    Safari/WebKit fix: an element with backdrop-filter clips ALL of its
+    descendants to its own border-box. The header is ~88px tall, so the
+    absolutely-positioned dropdowns and mobile menu (which paint BELOW the
+    header) get clipped in Safari — only the sliver inside the header shows,
+    the rest flashes during the transition (layer promotion) then vanishes.
+    Chrome/Firefox do NOT clip backdrop-filter descendants, which is why they
+    work. Fix: strip backdrop-filter from the header itself and re-create the
+    blur on a ::before layer that contains no children, so nothing is clipped.
+    ------------------------------------------------------------------------- */
+ header.backdrop-blur-md {
+   -webkit-backdrop-filter: none !important;
+   backdrop-filter: none !important;
+ }
+
+ header.backdrop-blur-md::before {
+   content: "";
+   position: absolute;
+   inset: 0;
+   z-index: -1;
+   pointer-events: none;
+   -webkit-backdrop-filter: blur(12px);
+   backdrop-filter: blur(12px);
+ }
+
+
+
+ .rotate-180 {
+   transform: rotate(180deg);
+ }
