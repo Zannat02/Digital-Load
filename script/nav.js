@@ -286,6 +286,9 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+
+  alert('nav.js is running'); 
+
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const hamburgerIcon = document.getElementById('hamburger-icon');
