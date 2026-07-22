@@ -294,57 +294,7 @@
 
 
 
-    /* #mobile-menu {
-      transition: max-height 0.3s ease-out;
-      max-height: 0;
-      overflow: hidden;
-    }
-
-    #mobile-menu:not(.hidden) {
-      max-height: calc(100vh - 90px);
-      overflow-y: auto;
-    } */
-
-
-
-  
-
-    /* .rotate-180 {
-      transform: rotate(180deg);
-    } */
-
-    /* Responsive adjustments */
-    /* @media (min-width: 1024px) {
-      #mobile-menu {
-        display: none !important;
-      }
-
-      #hamburger-btn {
-        display: none !important;
-      }
-
-      nav.hidden.md\:flex {
-        display: flex !important;
-      }
-
-      .hidden.md\:block {
-        display: block !important;
-      }
-    }
-
-    @media (max-width: 767px) {
-      nav.space-x-6.hidden.md\:flex {
-        display: none !important;
-      }
-
-      .hidden.md\:block {
-        display: none !important;
-      }
-
-      #hamburger-btn {
-        display: block !important;
-      }
-    } */
+   
 
 
 
